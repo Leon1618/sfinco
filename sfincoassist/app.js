@@ -766,18 +766,37 @@ Object.keys(tabButtons).forEach((btnId) => {
 
 /* ---------- 7. Text size + light mode toggles ---------- */
 
-const textSizeToggle = document.getElementById("text-size-toggle");
-function applyTextSize(large) {
-  document.body.classList.toggle("large-text", large);
-  textSizeToggle.setAttribute("aria-pressed", String(large));
-  textSizeToggle.textContent = large ? "Aa Normal text" : "Aa Larger text";
+const textSizeLevels = ["normal", "large", "xlarge"];
+const textSizeLabels = { normal: "Normal", large: "Large", xlarge: "Extra large" };
+const textSizeDownBtn = document.getElementById("text-size-down");
+const textSizeUpBtn = document.getElementById("text-size-up");
+const textSizeCurrent = document.getElementById("text-size-current");
+
+function applyTextSize(level) {
+  document.body.classList.remove("text-large", "text-xlarge");
+  if (level === "large") document.body.classList.add("text-large");
+  if (level === "xlarge") document.body.classList.add("text-xlarge");
+  textSizeCurrent.textContent = textSizeLabels[level];
+  textSizeDownBtn.disabled = level === "normal";
+  textSizeUpBtn.disabled = level === "xlarge";
 }
-textSizeToggle.addEventListener("click", () => {
-  const large = !document.body.classList.contains("large-text");
-  localStorage.setItem(TEXT_SIZE_KEY, large ? "1" : "0");
-  applyTextSize(large);
+
+function setTextSize(level) {
+  localStorage.setItem(TEXT_SIZE_KEY, level);
+  applyTextSize(level);
+}
+
+textSizeDownBtn.addEventListener("click", () => {
+  const index = textSizeLevels.indexOf(document.body.classList.contains("text-xlarge") ? "xlarge" : document.body.classList.contains("text-large") ? "large" : "normal");
+  setTextSize(textSizeLevels[Math.max(0, index - 1)]);
 });
-applyTextSize(localStorage.getItem(TEXT_SIZE_KEY) === "1");
+textSizeUpBtn.addEventListener("click", () => {
+  const index = textSizeLevels.indexOf(document.body.classList.contains("text-xlarge") ? "xlarge" : document.body.classList.contains("text-large") ? "large" : "normal");
+  setTextSize(textSizeLevels[Math.min(textSizeLevels.length - 1, index + 1)]);
+});
+
+const savedTextSize = localStorage.getItem(TEXT_SIZE_KEY);
+applyTextSize(textSizeLevels.includes(savedTextSize) ? savedTextSize : "normal");
 
 const themeToggle = document.getElementById("theme-toggle");
 function applyTheme(light) {

@@ -12,7 +12,11 @@
 <header class="topbar">
   <div class="header-controls">
     <button id="theme-toggle" class="header-btn" type="button" aria-pressed="false">☀ Light mode</button>
-    <button id="text-size-toggle" class="header-btn" type="button" aria-pressed="false">Aa Larger text</button>
+    <div class="text-size-group" role="group" aria-label="Text size">
+      <button id="text-size-down" class="header-btn text-size-btn" type="button" aria-label="Smaller text">A<span class="text-size-small">a</span></button>
+      <span id="text-size-current" class="text-size-current">Normal</span>
+      <button id="text-size-up" class="header-btn text-size-btn" type="button" aria-label="Larger text">A<span class="text-size-big">a</span></button>
+    </div>
   </div>
   <h1>SfincoAssist</h1>
   <p class="subtitle">Straightforward help</p>
@@ -24,22 +28,28 @@
 
 <nav class="tabs" role="tablist">
   <button class="tab-btn active" id="tab-btn-today" role="tab" aria-selected="true" aria-controls="tab-today">
-    <span class="tab-icon" aria-hidden="true">💡</span><span class="tab-label">Today</span>
+    <span class="tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-4 12.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26A7 7 0 0 0 12 2zm-2 17h4v1a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-1z"/></svg></span>
+    <span class="tab-label">Today</span>
   </button>
   <button class="tab-btn" id="tab-btn-scam" role="tab" aria-selected="false" aria-controls="tab-scam">
-    <span class="tab-icon" aria-hidden="true">🔍</span><span class="tab-label">Check a message</span>
+    <span class="tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 2a8 8 0 1 0 4.9 14.32l5.39 5.39 1.41-1.41-5.39-5.39A8 8 0 0 0 10 2zm0 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12z"/></svg></span>
+    <span class="tab-label">Check a message</span>
   </button>
   <button class="tab-btn" id="tab-btn-contacts" role="tab" aria-selected="false" aria-controls="tab-contacts">
-    <span class="tab-icon" aria-hidden="true">📞</span><span class="tab-label">Who to call</span>
+    <span class="tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/></svg></span>
+    <span class="tab-label">Who to call</span>
   </button>
   <button class="tab-btn" id="tab-btn-aisafety" role="tab" aria-selected="false" aria-controls="tab-aisafety">
-    <span class="tab-icon" aria-hidden="true">🛡️</span><span class="tab-label">AI Safety</span>
+    <span class="tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 5v6c0 5 3.4 9.3 8 11 4.6-1.7 8-6 8-11V5l-8-3zm0 2.2 6 2.25V11c0 4-2.6 7.5-6 8.9C8.6 18.5 6 15 6 11V6.45l6-2.25z"/></svg></span>
+    <span class="tab-label">AI Safety</span>
   </button>
   <button class="tab-btn" id="tab-btn-practice" role="tab" aria-selected="false" aria-controls="tab-practice">
-    <span class="tab-icon" aria-hidden="true">🎯</span><span class="tab-label">Practice</span>
+    <span class="tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2"/></svg></span>
+    <span class="tab-label">Practice</span>
   </button>
   <button class="tab-btn" id="tab-btn-reminders" role="tab" aria-selected="false" aria-controls="tab-reminders">
-    <span class="tab-icon" aria-hidden="true">📅</span><span class="tab-label">Important Dates</span>
+    <span class="tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 2v2H5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zm12 7v10H5V9h14z"/></svg></span>
+    <span class="tab-label">Important Dates</span>
   </button>
 </nav>
 
@@ -266,9 +276,13 @@
     <details class="disclosure">
       <summary>How to protect yourself</summary>
       <div class="disclosure-body">
-        <p>Agree on a family codeword for emergencies: something only you and close family know, to check on the phone if a call ever feels urgent or off.</p>
-        <p>Before investing based on something you saw online, check the person or company on <strong>ASIC's free Professional Registers</strong>. A real financial adviser or firm will be listed there.</p>
-        <p>Good spelling and grammar don't prove a message is genuine any more. AI can write perfectly well too. Judge a message by what it's asking you to do, not how well it's written.</p>
+        <ul class="tip-list">
+          <li>Agree on a family codeword for emergencies: something only you and close family know, to check over the phone if a call ever feels urgent or off.</li>
+          <li>If a "family member" call feels off, try a video call back instead of just ringing the same number. Voices can be cloned, but faking a live video convincingly is much harder.</li>
+          <li>Before investing based on something you saw online, check the person or company on <strong>ASIC's free Professional Registers</strong>. A real financial adviser or firm will be listed there.</li>
+          <li>Watch for glitches in videos: mismatched lip movement, jerky facial expressions, or audio that doesn't quite line up. These are common signs of a faked video.</li>
+          <li>Good spelling and grammar don't prove a message is genuine any more. AI can write perfectly well too. Judge a message by what it's asking you to do, not how well it's written.</li>
+        </ul>
       </div>
     </details>
 
