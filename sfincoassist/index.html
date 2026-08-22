@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SfincoAssist: Phase 1 prototype</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="header-controls">
+    <button id="theme-toggle" class="header-btn" type="button" aria-pressed="false">☀ Light mode</button>
+    <button id="text-size-toggle" class="header-btn" type="button" aria-pressed="false">Aa Larger text</button>
+  </div>
+  <h1>SfincoAssist</h1>
+  <p class="subtitle">Straightforward help</p>
+</header>
+
+<div class="notice">
+  <strong>Phase 1 prototype.</strong> Nothing here is connected to any bank account. Checking a message stays on your device, and nothing is uploaded or stored anywhere.
+</div>
+
+<nav class="tabs" role="tablist">
+  <button class="tab-btn active" id="tab-btn-today" role="tab" aria-selected="true" aria-controls="tab-today">
+    <span class="tab-icon" aria-hidden="true">💡</span><span class="tab-label">Today</span>
+  </button>
+  <button class="tab-btn" id="tab-btn-scam" role="tab" aria-selected="false" aria-controls="tab-scam">
+    <span class="tab-icon" aria-hidden="true">🔍</span><span class="tab-label">Check a message</span>
+  </button>
+  <button class="tab-btn" id="tab-btn-contacts" role="tab" aria-selected="false" aria-controls="tab-contacts">
+    <span class="tab-icon" aria-hidden="true">📞</span><span class="tab-label">Who to call</span>
+  </button>
+  <button class="tab-btn" id="tab-btn-aisafety" role="tab" aria-selected="false" aria-controls="tab-aisafety">
+    <span class="tab-icon" aria-hidden="true">🛡️</span><span class="tab-label">AI Safety</span>
+  </button>
+  <button class="tab-btn" id="tab-btn-practice" role="tab" aria-selected="false" aria-controls="tab-practice">
+    <span class="tab-icon" aria-hidden="true">🎯</span><span class="tab-label">Practice</span>
+  </button>
+  <button class="tab-btn" id="tab-btn-reminders" role="tab" aria-selected="false" aria-controls="tab-reminders">
+    <span class="tab-icon" aria-hidden="true">📅</span><span class="tab-label">Important Dates</span>
+  </button>
+</nav>
+
+<main>
+  <section id="tab-today" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-today">
+    <h2>Today's tip</h2>
+    <p id="tip-date" class="tip-date"></p>
+    <div class="sample-card notice tip-card">
+      <span class="tag" id="tip-title"></span>
+      <p id="tip-body"></p>
+    </div>
+    <p class="tip-footer">A new one every day. Come back tomorrow for the next.</p>
+
+    <div class="next-cta">
+      <p>Got a message that feels off right now?</p>
+      <button type="button" id="today-check-btn">Check it here</button>
+    </div>
+  </section>
+
+  <section id="tab-scam" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-btn-scam">
+    <h2>Not sure about a message?</h2>
+    <p>Paste the text of a suspicious SMS, email, or message below, or upload a screenshot and we'll read it for you. A link on its own works too. We'll point out anything that matches known scam tactics. No judgement, just a second pair of eyes.</p>
+
+    <form id="scam-check-form">
+      <label for="scam-text">Paste the message or link here</label>
+      <textarea id="scam-text" rows="5" placeholder="e.g. Your account will be suspended. Click here to verify within 24 hours..."></textarea>
+
+      <label class="file-input-label" for="screenshot-input">Or upload a screenshot instead</label>
+      <input type="file" id="screenshot-input" accept="image/*">
+      <p id="ocr-status" class="ocr-status hidden">Reading your screenshot… this can take a few seconds.</p>
+
+      <button type="submit">Check this for me</button>
+    </form>
+
+    <div id="scam-result"></div>
+
+    <details class="disclosure">
+      <summary>Your recent checks</summary>
+      <div class="disclosure-body">
+        <div class="history-header">
+          <span></span>
+          <button id="clear-history-btn" class="link-btn" type="button">Clear history</button>
+        </div>
+        <div id="scam-history"></div>
+        <p id="history-empty" class="empty-state">Nothing checked yet. Your recent checks will show up here.</p>
+      </div>
+    </details>
+
+    <details class="disclosure">
+      <summary>Real examples doing the rounds</summary>
+      <div class="disclosure-body">
+        <div id="scam-alerts"></div>
+      </div>
+    </details>
+
+    <div class="next-cta">
+      <p>Found something worrying?</p>
+      <button type="button" id="scam-next-btn">See who to call</button>
+    </div>
+  </section>
+
+  <section id="tab-contacts" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-btn-contacts">
+    <h2>Who to call when something feels off</h2>
+    <p>If a message asks you to call a number it gives you, don't. Use one of these instead, or a number you already trust. To report a scam online, visit <strong>scamwatch.gov.au</strong>. That one's a website form, there's no phone line for it.</p>
+
+    <div class="contact-card">
+      <div class="contact-info">
+        <strong>Australian Cyber Security Hotline (ACSC)</strong>
+        <p>The Australian Cyber Security Centre's 24/7 line, the main government number for cybercrime, hacking, and online scams.</p>
+        <span class="contact-detail">1300 292 371</span>
+      </div>
+      <button class="read-aloud" data-text="Australian Cyber Security Hotline, run by the A C S C. The main government number for cybercrime, hacking, and online scams. 1300 292 371.">Read aloud</button>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-info">
+        <strong>IDCARE</strong>
+        <p>Free support if your identity or details have been compromised.</p>
+        <span class="contact-detail">1800 595 160</span>
+      </div>
+      <button class="read-aloud" data-text="IDCARE. Free support if your identity or details have been compromised. 1800 595 160.">Read aloud</button>
+    </div>
+
+    <details class="disclosure">
+      <summary>More numbers (banks, telcos, deliveries, tolls, government)</summary>
+      <div class="disclosure-body">
+        <h4>Government</h4>
+        <div class="contact-card">
+          <div class="contact-info">
+            <strong>Services Australia</strong>
+            <p>For fake myGov, Centrelink, or Medicare messages.</p>
+            <span class="contact-detail">1800 941 126</span>
+          </div>
+          <button class="read-aloud" data-text="Services Australia. For fake myGov, Centrelink, or Medicare messages. 1800 941 126.">Read aloud</button>
+        </div>
+        <div class="contact-card">
+          <div class="contact-info">
+            <strong>Australian Taxation Office</strong>
+            <p>For fake ATO or tax messages.</p>
+            <span class="contact-detail">1800 008 540</span>
+          </div>
+          <button class="read-aloud" data-text="Australian Taxation Office. For fake ATO or tax messages. 1800 008 540.">Read aloud</button>
+        </div>
+
+        <h4>Banks</h4>
+        <div class="contact-card">
+          <div class="contact-info">
+            <strong>CommBank</strong>
+            <p>Report a scam or suspicious activity.</p>
+            <span class="contact-detail">13 22 21</span>
+          </div>
+          <button class="read-aloud" data-text="CommBank. Report a scam or suspicious activity. 13 22 21.">Read aloud</button>
+        </div>
+        <div class="contact-card">
+          <div class="contact-info">
+            <strong>Westpac</strong>
+            <p>Telephone banking and fraud reporting.</p>
+            <span class="contact-detail">13 20 32</span>
+          </div>
+          <button class="read-aloud" data-text="Westpac. Telephone banking and fraud reporting. 13 20 32.">Read aloud</button>
+        </div>
+        <div class="contact-card">
+          <div class="contact-info">
+            <strong>ANZ</strong>
+            <p>Report a scam or suspicious activity.</p>
+            <span class="contact-detail">13 13 14</span>
+          </div>
+          <button class="read-aloud" data-text="A N Z. Report a scam or suspicious activity. 13 13 14.">Read aloud</button>
+        </div>
+        <div class="contact-card">
+          <div class="contact-info">
+            <strong>NAB</strong>
+            <p>Say "fraud" when prompted to get through faster.</p>
+            <span class="contact-detail">13 22 65</span>
+          </div>
+          <button class="read-aloud" data-text="NAB. Say fraud when prompted to get through faster. 13 22 65.">Read aloud</button>
+        </div>
+
+        <h4>Phone &amp; internet providers</h4>
+        <div class="contact-card">
+          <div class="contact-info">
+            <strong>Telstra</strong>
+            <p>Say "fraud" for scam calls, or forward a scam text to 7726 free.</p>
+            <span class="contact-detail">13 22 00</span>
+          </div>
+          <button class="read-aloud" data-text="Telstra. Say fraud for scam calls, or forward a scam text to 7726 free. 13 22 00.">Read aloud</button>
+        </div>
+        <div class="contact-card">
+          <div class="contact-info">
+            <strong>Optus</strong>
+            <p>General customer service. Optus has no separate scam line, so also report to Scamwatch.</p>
+            <span class="contact-detail">13 39 37</span>
+          </div>
+          <button class="read-aloud" data-text="Optus. General customer service. Optus has no separate scam line, so also report to Scamwatch. 13 39 37.">Read aloud</button>
+        </div>
+
+        <h4>Post &amp; deliveries</h4>
+        <div class="contact-card">
+          <div class="contact-info">
+            <strong>Australia Post</strong>
+            <p>For fake delivery or customs fee texts.</p>
+            <span class="contact-detail">13 76 78</span>
+          </div>
+          <button class="read-aloud" data-text="Australia Post. For fake delivery or customs fee texts. 13 76 78.">Read aloud</button>
+        </div>
+
+        <h4>Toll roads</h4>
+        <div class="contact-card">
+          <div class="contact-info">
+            <strong>Linkt</strong>
+            <p>For fake "unpaid toll" texts (covers CityLink, M2, and most Australian toll roads).</p>
+            <span class="contact-detail">13 33 31</span>
+          </div>
+          <button class="read-aloud" data-text="Linkt. For fake unpaid toll texts. Covers CityLink, M2, and most Australian toll roads. 13 33 31.">Read aloud</button>
+        </div>
+        <div class="contact-card">
+          <div class="contact-info">
+            <strong>EastLink</strong>
+            <p>Melbourne's EastLink runs its own separate account system to Linkt.</p>
+            <span class="contact-detail">(03) 9955 1400</span>
+          </div>
+          <button class="read-aloud" data-text="EastLink. Melbourne's EastLink runs its own separate account system to Linkt. 03 9955 1400.">Read aloud</button>
+        </div>
+      </div>
+    </details>
+
+    <details class="disclosure" id="trusted-contact-details">
+      <summary>Your trusted contact</summary>
+      <div class="disclosure-body">
+        <p>Save a family member or friend's number here so it's always one tap away.</p>
+        <form id="trusted-contact-form">
+          <label for="trusted-name">Their name</label>
+          <input type="text" id="trusted-name" placeholder="e.g. Sarah">
+
+          <label for="trusted-phone">Their phone number</label>
+          <input type="tel" id="trusted-phone" placeholder="e.g. 0412 345 678">
+
+          <button type="submit">Save contact</button>
+        </form>
+        <div id="trusted-contact-display"></div>
+      </div>
+    </details>
+
+    <div class="next-cta">
+      <p>Curious how AI is changing scams?</p>
+      <button type="button" id="contacts-next-btn">See AI Safety</button>
+    </div>
+  </section>
+
+  <section id="tab-aisafety" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-btn-aisafety">
+    <h2>AI is changing how scams look</h2>
+    <p>Scammers are starting to use the same AI tools everyone else is, to clone voices, fake videos, and write more convincing messages. It's still fairly rare in Australia, but worth knowing about.</p>
+
+    <div class="sample-card urgent">
+      <span class="tag">The "it's me, I need help" call</span>
+      <p>Scammers can now clone a voice from just a few seconds of audio, sometimes taken from a video posted online. If you get a call that sounds exactly like a family member urgently asking for money, hang up and call them back on the number you already have for them.</p>
+    </div>
+
+    <div class="sample-card urgent">
+      <span class="tag">Investments "endorsed" by celebrities</span>
+      <p>Fake videos of well-known news presenters, politicians, or business figures promoting a secret trading platform are increasingly convincing. Real public figures don't make money by tipping you off to investments online. Watch for the conversation quickly moving to WhatsApp or Telegram.</p>
+    </div>
+
+    <details class="disclosure">
+      <summary>How to protect yourself</summary>
+      <div class="disclosure-body">
+        <p>Agree on a family codeword for emergencies: something only you and close family know, to check on the phone if a call ever feels urgent or off.</p>
+        <p>Before investing based on something you saw online, check the person or company on <strong>ASIC's free Professional Registers</strong>. A real financial adviser or firm will be listed there.</p>
+        <p>Good spelling and grammar don't prove a message is genuine any more. AI can write perfectly well too. Judge a message by what it's asking you to do, not how well it's written.</p>
+      </div>
+    </details>
+
+    <div class="next-cta">
+      <p>Want to get better at spotting these?</p>
+      <button type="button" id="aisafety-next-btn">Try the practice quiz</button>
+    </div>
+  </section>
+
+  <section id="tab-practice" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-btn-practice">
+    <h2>Spot the scam</h2>
+
+    <div class="sample-card notice">
+      <p>Scams impersonating trusted names cost Australians millions every year. One recent wave of fake celebrity investment ads alone was linked to $7.4 million in reported losses. The good news: pausing to check is usually all it takes to avoid one. A bit of practice makes that pause easier.</p>
+    </div>
+
+    <p>Have a read and decide: scam, or the real deal?</p>
+    <div id="quiz-container"></div>
+
+    <div class="next-cta">
+      <p>Want a hand remembering important dates too?</p>
+      <button type="button" id="practice-next-btn">Go to Important Dates</button>
+    </div>
+  </section>
+
+  <section id="tab-reminders" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-btn-reminders">
+    <div class="add-reminder">
+      <h2>Add an important date</h2>
+      <p>Bills, renewals, interest rates expiring, birthdays: anything worth a nudge.</p>
+      <form id="reminder-form">
+        <label for="reminder-text">What's it about?</label>
+        <input type="text" id="reminder-text" placeholder="e.g. Term deposit rate expires, or Mum's birthday" required>
+
+        <label for="reminder-category">What kind of date is it?</label>
+        <select id="reminder-category">
+          <option value="bill">Bill or subscription</option>
+          <option value="renewal">Renewal or licence (rego, insurance, passport)</option>
+          <option value="financial">Financial deadline (term deposit, loan rate)</option>
+          <option value="birthday">Birthday or anniversary</option>
+          <option value="other" selected>Something else</option>
+        </select>
+
+        <label for="reminder-date">When?</label>
+        <input type="date" id="reminder-date" required>
+
+        <label for="reminder-priority">How important is it?</label>
+        <select id="reminder-priority">
+          <option value="notice">Just so you know</option>
+          <option value="soon" selected>Coming up</option>
+          <option value="urgent">Needs attention now</option>
+        </select>
+
+        <label for="reminder-repeat">Does this repeat?</label>
+        <select id="reminder-repeat">
+          <option value="none" selected>No, just once</option>
+          <option value="weekly">Every week</option>
+          <option value="monthly">Every month</option>
+          <option value="yearly">Every year</option>
+        </select>
+
+        <button type="submit">Add it</button>
+      </form>
+    </div>
+
+    <div class="reminder-list">
+      <h2>Your important dates</h2>
+      <div id="reminders"></div>
+      <p id="empty-state" class="empty-state">Nothing saved yet. Add one above to see how it looks.</p>
+
+      <details class="disclosure">
+        <summary>More options</summary>
+        <div class="disclosure-body">
+          <div class="backup-actions">
+            <button id="export-btn" type="button">Save my dates to a file</button>
+            <label class="file-input-label" for="import-input">Load dates from a file</label>
+            <input type="file" id="import-input" accept="application/json">
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <div class="next-cta">
+      <p>That's everything. See today's tip again?</p>
+      <button type="button" id="reminders-next-btn">Back to Today</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>SfincoAssist Phase 1: scam-checking and important dates only. No live financial data is read or stored by this prototype.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
