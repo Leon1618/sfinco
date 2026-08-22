@@ -100,24 +100,59 @@ a:hover {
   color: var(--ink);
 }
 
+nav.primary-nav {
+  width: 100%;
+}
+
 nav.primary-nav ul {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
   margin: 0;
   padding: 0;
 }
 
 nav.primary-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
   text-decoration: none;
   color: var(--ink);
   font-weight: 600;
-  font-size: 0.98rem;
+  font-size: 0.92rem;
 }
 
 nav.primary-nav a:hover {
   color: var(--lime);
+  border-color: var(--lime);
+}
+
+@media (min-width: 700px) {
+  nav.primary-nav {
+    width: auto;
+  }
+
+  nav.primary-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.4rem;
+  }
+
+  nav.primary-nav a {
+    display: inline;
+    height: auto;
+    padding: 0;
+    border: none;
+    background: none;
+    font-size: 0.98rem;
+  }
 }
 
 /* Buttons */
