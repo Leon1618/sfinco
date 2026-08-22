@@ -257,39 +257,6 @@ section > .container > h2 {
   text-decoration: none;
 }
 
-/* About */
-
-.about-flex {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-@media (min-width: 700px) {
-  .about-flex {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-  .about-flex .about-photo {
-    flex: 0 0 160px;
-  }
-}
-
-.about-photo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: var(--blue-tint);
-  border: 2px solid var(--blue);
-  color: var(--blue);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Georgia, serif;
-  font-size: 2.4rem;
-  font-weight: 700;
-}
-
 /* Callout boxes */
 
 .callout {
@@ -391,6 +358,19 @@ section > .container > h2 {
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 0.9rem 1.2rem;
+}
+
+.series-list li a:not(.tag) {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.series-list li a:not(.tag):hover {
+  color: var(--lime);
 }
 
 .series-list .num {
