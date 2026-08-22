@@ -191,8 +191,13 @@ nav.primary-nav a:hover {
 .btn-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 0.9rem;
   margin-top: 1.6rem;
+}
+
+.btn-row:has(> :only-child) {
+  justify-content: center;
 }
 
 .store-badge {
@@ -574,6 +579,10 @@ form.enquiry textarea:focus {
 form.enquiry textarea {
   min-height: 130px;
   resize: vertical;
+}
+
+form.enquiry .btn-row {
+  margin-top: 0;
 }
 
 /* Cyber Awareness */
