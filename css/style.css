@@ -160,6 +160,11 @@ nav.primary-nav a:hover {
   margin-top: 1.6rem;
 }
 
+.store-badge {
+  opacity: 0.55;
+  cursor: default;
+}
+
 /* Hero */
 
 .hero {
@@ -542,6 +547,54 @@ form.enquiry textarea:focus {
 form.enquiry textarea {
   min-height: 130px;
   resize: vertical;
+}
+
+/* Cyber Awareness */
+
+.score-line {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.7rem;
+  margin: 0.9rem 0;
+}
+
+.score-line .band {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--lime);
+}
+
+.score-line .band-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.note-preview {
+  list-style: none;
+  padding: 0;
+  margin: 0.9rem 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.note-preview li {
+  font-size: 0.92rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  padding-top: 0.6rem;
+}
+
+.note-preview li:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.note-preview .note-when {
+  color: var(--lime);
+  font-weight: 700;
+  margin-right: 0.3rem;
 }
 
 /* Footer */
