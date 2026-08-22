@@ -370,19 +370,6 @@ section > .container > h2 {
   padding: 0.9rem 1.2rem;
 }
 
-.series-list li a:not(.tag) {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  color: var(--ink);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.series-list li a:not(.tag):hover {
-  color: var(--lime);
-}
-
 .series-list .num {
   font-family: Georgia, serif;
   font-weight: 700;
