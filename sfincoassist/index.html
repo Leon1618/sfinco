@@ -11,19 +11,25 @@
 
 <header class="topbar">
   <div class="header-controls">
-    <button id="theme-toggle" class="header-btn" type="button" aria-pressed="false">☀ Light mode</button>
+    <button id="theme-toggle" class="header-btn theme-toggle-btn" type="button" aria-pressed="false">☀ Light</button>
     <div class="text-size-group" role="group" aria-label="Text size">
-      <button id="text-size-down" class="header-btn text-size-btn" type="button" aria-label="Smaller text">A<span class="text-size-small">a</span></button>
-      <span id="text-size-current" class="text-size-current">Normal</span>
-      <button id="text-size-up" class="header-btn text-size-btn" type="button" aria-label="Larger text">A<span class="text-size-big">a</span></button>
+      <button class="text-size-option" data-level="normal" aria-pressed="true" type="button">
+        <span class="text-size-glyph size-normal">A</span><span class="text-size-caption">Normal</span>
+      </button>
+      <button class="text-size-option" data-level="large" aria-pressed="false" type="button">
+        <span class="text-size-glyph size-large">A</span><span class="text-size-caption">Large</span>
+      </button>
+      <button class="text-size-option" data-level="xlarge" aria-pressed="false" type="button">
+        <span class="text-size-glyph size-xlarge">A</span><span class="text-size-caption">Extra large</span>
+      </button>
     </div>
   </div>
   <h1>SfincoAssist</h1>
-  <p class="subtitle">Straightforward help</p>
+  <p class="subtitle">Straightforward help, whenever you need</p>
 </header>
 
 <div class="notice">
-  <strong>Phase 1 prototype.</strong> Nothing here is connected to any bank account. Checking a message stays on your device, and nothing is uploaded or stored anywhere.
+  <strong>Phase 1 prototype.</strong> Checking a message stays on your device, and nothing is uploaded or stored anywhere.
 </div>
 
 <nav class="tabs" role="tablist">

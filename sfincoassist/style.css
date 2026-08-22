@@ -57,34 +57,49 @@ body {
 
 .text-size-group {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  align-items: stretch;
+  gap: 0.3rem;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 0.3rem 0.5rem;
+  border-radius: 8px;
+  padding: 0.3rem;
 }
 
-.text-size-btn {
+.text-size-option {
   background: none;
   border: none;
-  padding: 0.2rem 0.4rem;
-  font-weight: 700;
-}
-
-.text-size-btn .text-size-small { font-size: 0.7em; }
-.text-size-btn .text-size-big { font-size: 1.3em; }
-
-.text-size-current {
+  border-radius: 6px;
   color: var(--muted);
-  font-size: 0.85rem;
-  min-width: 4.5em;
-  text-align: center;
+  padding: 0.4rem 0.6rem;
+  margin: 0;
+  min-height: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.15rem;
+  cursor: pointer;
 }
 
-.text-size-btn:disabled {
-  opacity: 0.35;
-  cursor: not-allowed;
+.text-size-option:hover { color: var(--ink); }
+
+.text-size-glyph {
+  font-weight: 700;
+  line-height: 1;
+}
+
+.text-size-glyph.size-normal { font-size: 0.85rem; }
+.text-size-glyph.size-large { font-size: 1.15rem; }
+.text-size-glyph.size-xlarge { font-size: 1.5rem; }
+
+.text-size-caption {
+  font-size: 0.65rem;
+  white-space: nowrap;
+}
+
+.text-size-option[aria-pressed="true"] {
+  background: var(--lime);
+  color: var(--bg-deep);
 }
 
 body.text-large { font-size: 24px; }

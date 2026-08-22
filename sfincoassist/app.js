@@ -767,18 +767,15 @@ Object.keys(tabButtons).forEach((btnId) => {
 /* ---------- 7. Text size + light mode toggles ---------- */
 
 const textSizeLevels = ["normal", "large", "xlarge"];
-const textSizeLabels = { normal: "Normal", large: "Large", xlarge: "Extra large" };
-const textSizeDownBtn = document.getElementById("text-size-down");
-const textSizeUpBtn = document.getElementById("text-size-up");
-const textSizeCurrent = document.getElementById("text-size-current");
+const textSizeOptions = document.querySelectorAll(".text-size-option");
 
 function applyTextSize(level) {
   document.body.classList.remove("text-large", "text-xlarge");
   if (level === "large") document.body.classList.add("text-large");
   if (level === "xlarge") document.body.classList.add("text-xlarge");
-  textSizeCurrent.textContent = textSizeLabels[level];
-  textSizeDownBtn.disabled = level === "normal";
-  textSizeUpBtn.disabled = level === "xlarge";
+  textSizeOptions.forEach((btn) => {
+    btn.setAttribute("aria-pressed", String(btn.dataset.level === level));
+  });
 }
 
 function setTextSize(level) {
@@ -786,13 +783,8 @@ function setTextSize(level) {
   applyTextSize(level);
 }
 
-textSizeDownBtn.addEventListener("click", () => {
-  const index = textSizeLevels.indexOf(document.body.classList.contains("text-xlarge") ? "xlarge" : document.body.classList.contains("text-large") ? "large" : "normal");
-  setTextSize(textSizeLevels[Math.max(0, index - 1)]);
-});
-textSizeUpBtn.addEventListener("click", () => {
-  const index = textSizeLevels.indexOf(document.body.classList.contains("text-xlarge") ? "xlarge" : document.body.classList.contains("text-large") ? "large" : "normal");
-  setTextSize(textSizeLevels[Math.min(textSizeLevels.length - 1, index + 1)]);
+textSizeOptions.forEach((btn) => {
+  btn.addEventListener("click", () => setTextSize(btn.dataset.level));
 });
 
 const savedTextSize = localStorage.getItem(TEXT_SIZE_KEY);
@@ -802,7 +794,7 @@ const themeToggle = document.getElementById("theme-toggle");
 function applyTheme(light) {
   document.body.classList.toggle("light-theme", light);
   themeToggle.setAttribute("aria-pressed", String(light));
-  themeToggle.textContent = light ? "🌙 Dark mode" : "☀ Light mode";
+  themeToggle.textContent = light ? "🌙 Dark" : "☀ Light";
 }
 themeToggle.addEventListener("click", () => {
   const light = !document.body.classList.contains("light-theme");
