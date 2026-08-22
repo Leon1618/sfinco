@@ -4,6 +4,8 @@ Internal process note. No paid tools — a filled-in template and a bank transfe
 
 ## Before the first invoice goes out
 
+**Fill in the real ABN and bank details in the template below** — they're marked `PLACEHOLDER` on purpose so a blank field can't slip through unnoticed into a real client email.
+
 **Confirm your GST registration status.** Under $75,000 turnover, you're not required to register for GST — and if you're not registered, you legally can't charge GST on an invoice or word it as GST-inclusive/exclusive. This decides how every invoice below gets filled in, so settle it once, not per client.
 
 ## Process
@@ -21,7 +23,7 @@ Simple sequential scheme, enough for basic bookkeeping without needing a tool: `
 
 ```
 SFINCO
-Leo Tavares · ABN [your ABN]
+Leo Tavares · ABN [PLACEHOLDER — your ABN, 11 digits, e.g. 12 345 678 901]
 Noosa, Sunshine Coast, Queensland
 hello@sfinco.com.au
 
@@ -42,9 +44,9 @@ SMB Cyber Audit — [Client business name]        $[amount] AUD
                                         Total    $[total] AUD
 
 Payment by direct bank transfer:
-Account name: [account name]
-BSB: [BSB]
-Account number: [account number]
+Account name: [PLACEHOLDER — name on the account, e.g. "Leo Tavares" or "Sfinco"]
+BSB: [PLACEHOLDER — 6 digits, e.g. 064-000]
+Account number: [PLACEHOLDER — your account number]
 Reference: [invoice number]
 
 Thanks for having us take a look. Questions about this invoice or the
