@@ -389,6 +389,62 @@ section > .container > h2 {
   flex-shrink: 0;
 }
 
+.series-list li:has(> details) {
+  display: block;
+  padding: 0;
+}
+
+.series-list summary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ink);
+  padding: 0.9rem 1.2rem;
+}
+
+.series-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.series-list .series-title {
+  flex: 1;
+}
+
+.series-list .chevron {
+  flex-shrink: 0;
+  width: 1em;
+  text-align: center;
+  color: var(--lime);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.series-list .chevron::before {
+  content: "+";
+}
+
+.series-list details[open] .chevron::before {
+  content: "\2212";
+}
+
+.series-list .series-detail {
+  padding: 0 1.2rem 1.2rem;
+  border-top: 1px solid var(--border);
+}
+
+.series-list .series-detail p {
+  margin-top: 1rem;
+  color: var(--muted);
+}
+
+.series-list .series-detail .btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+}
+
 /* Process steps */
 
 .step-list {
