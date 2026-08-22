@@ -8,4 +8,10 @@ This folder is for the actual audit product (methodology, intake form, report te
 - [`report-template.md`](report-template.md) — the client-facing report itself: duplicate per engagement, fill in the brackets. Matches Stage 4 of the methodology — summary, Cyber Confidence Score, ranked action list, findings by domain with Fix now/Fix soon/Good to know ratings, what's going well, and the retainer offer.
 - [`pricing-worksheet.md`](pricing-worksheet.md) — internal tool to turn intake answers into a fixed quote: a $500 base fee plus add-ons for team size, device count, extra software, direct card handling, sensitive data, and multi-site setups, floored at $500 and capped at $2,000.
 
-All four planned docs are in place. See `docs/pillars-and-guides.md` in the repo root for pillar detail ($500–$2,000 per engagement, remote-first, Sunshine Coast SMBs).
+**Operational readiness — what's needed to actually take a paying client:**
+
+- [`engagement-agreement-template.md`](engagement-agreement-template.md) — the contract: scope, fee, timeline, confidentiality, and a liability clause flagged clearly as needing a solicitor's review before it's relied on. Also flags professional indemnity insurance as worth looking into before the first client.
+- [`privacy-notice.md`](privacy-notice.md) — plain-English client data handling notice. Covers where Sfinco likely sits under the Privacy Act's small business exemption (and where that exemption doesn't reach — health service providers are never exempt regardless of turnover).
+- [`invoicing.md`](invoicing.md) — no paid tools: a fill-in invoice template, a sequential numbering scheme, and a flag to confirm GST registration status before the first invoice goes out.
+
+The five product-methodology docs (above) are all in place; the three operational docs are first drafts, not yet battle-tested against a real engagement. See `docs/pillars-and-guides.md` in the repo root for pillar detail ($500–$2,000 per engagement, remote-first, Sunshine Coast SMBs).
