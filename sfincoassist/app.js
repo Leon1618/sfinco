@@ -267,7 +267,7 @@ document.getElementById("clear-history-btn").addEventListener("click", () => {
 /* ---------- 5. Share / print a result ---------- */
 
 function resultToText(text, matches) {
-  const lines = ["SfincoAssist scam check:"];
+  const lines = ["Sfinco scam check:"];
   if (matches.length === 0) {
     lines.push("No obvious warning signs found. If it still feels off, trust that instinct.");
   } else {
@@ -650,9 +650,7 @@ function setTheme(light) {
 themeOptions.forEach((btn) => {
   btn.addEventListener("click", () => setTheme(btn.dataset.theme === "light"));
 });
-const savedTheme = localStorage.getItem(THEME_KEY);
-const systemPrefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
-applyTheme(savedTheme === null ? systemPrefersLight : savedTheme === "1");
+applyTheme(localStorage.getItem(THEME_KEY) === "1");
 
 renderScamAlerts();
 renderHistory();
