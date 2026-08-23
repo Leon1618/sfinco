@@ -494,6 +494,7 @@ section > .container > h2 {
 
 .series-list .series-title {
   flex: 1;
+  min-width: 0;
 }
 
 .series-list .chevron {
