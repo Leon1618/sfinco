@@ -1,4 +1,3 @@
-const STORAGE_KEY = "sfincoassist-reminders";
 const TEXT_SIZE_KEY = "sfincoassist-text-size";
 const THEME_KEY = "sfincoassist-theme";
 const HISTORY_KEY = "sfincoassist-history";
@@ -27,27 +26,6 @@ document.getElementById("undo-toast-btn").addEventListener("click", () => {
   if (undoRestore) undoRestore();
   undoRestore = null;
 });
-
-const priorityLabels = {
-  notice: "Just so you know",
-  soon: "Coming up",
-  urgent: "Needs attention now",
-};
-
-const repeatLabels = {
-  none: "",
-  weekly: "Repeats weekly",
-  monthly: "Repeats monthly",
-  yearly: "Repeats yearly",
-};
-
-const categoryLabels = {
-  bill: "Bill",
-  renewal: "Renewal",
-  financial: "Financial deadline",
-  birthday: "Birthday",
-  other: "Other",
-};
 
 /* ---------- Tip of the day ---------- */
 
@@ -98,18 +76,13 @@ document.getElementById("aisafety-next-btn").addEventListener("click", () => {
   document.getElementById("tab-btn-practice").click();
 });
 document.getElementById("practice-next-btn").addEventListener("click", () => {
-  document.getElementById("tab-btn-reminders").click();
+  document.getElementById("tab-btn-latest").click();
 });
-document.getElementById("reminders-next-btn").addEventListener("click", () => {
+document.getElementById("latest-next-btn").addEventListener("click", () => {
   document.getElementById("tab-btn-today").click();
 });
 
 const scamAlerts = [
-  {
-    tag: "Did you know",
-    priority: "notice",
-    text: "Your streaming subscription renews in 3 days for $22.99. Still using it?",
-  },
   {
     tag: "Heads up",
     priority: "urgent",
@@ -121,9 +94,34 @@ const scamAlerts = [
     text: "Watch for texts claiming a toll or parcel delivery fee is \"overdue\" with a link to pay. Go to the real website yourself instead of clicking the link.",
   },
   {
-    tag: "Coming up",
-    priority: "soon",
-    text: "Your car registration is due in 9 days. Want a reminder closer to the date?",
+    tag: "Heads up",
+    priority: "urgent",
+    text: "A text claiming your myGov identity has been \"suspended due to unusual activity\" is doing the rounds, with a link to \"update your details.\" myGov never contacts you this way. Log in directly at my.gov.au instead, if you want to check.",
+  },
+  {
+    tag: "Heads up",
+    priority: "urgent",
+    text: "Some scammers are now cloning a family member's voice from a few seconds of audio, then calling in a panic asking for money via gift cards or a bank transfer. Hang up and call them back on their usual number to check.",
+  },
+  {
+    tag: "Heads up",
+    priority: "urgent",
+    text: "A pop-up claiming \"your computer has a virus, call Microsoft support now\" with a phone number is a scam. Real tech companies don't put their phone number in a pop-up. Just close the browser tab.",
+  },
+  {
+    tag: "Heads up",
+    priority: "urgent",
+    text: "Fake videos of well-known news presenters or business figures \"endorsing\" a secret investment platform are circulating on social media. Real public figures don't tip you off to secret trading platforms.",
+  },
+  {
+    tag: "Did you know",
+    priority: "notice",
+    text: "After any major bushfire or flood, fake charity appeals tend to follow within days. A genuine charity will never pressure you to donate immediately via gift card or wire transfer.",
+  },
+  {
+    tag: "Heads up",
+    priority: "urgent",
+    text: "An email claiming your gas or electricity account is \"overdue\" and threatening disconnection within 24 hours, with a link to pay, is a common template scammers reuse across different energy providers.",
   },
 ];
 
@@ -396,7 +394,7 @@ document.getElementById("scam-check-form").addEventListener("submit", (e) => {
 });
 
 function renderScamAlerts() {
-  const container = document.getElementById("scam-alerts");
+  const container = document.getElementById("latest-scams");
   container.innerHTML = "";
   scamAlerts.forEach((alert) => {
     const card = document.createElement("div");
@@ -583,48 +581,6 @@ function renderQuiz() {
   container.append(progress, messageCard, choices);
 }
 
-/* ---------- Reminders ---------- */
-
-function loadReminders() {
-  const raw = localStorage.getItem(STORAGE_KEY);
-  return raw ? JSON.parse(raw) : [];
-}
-
-function saveReminders(reminders) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(reminders));
-}
-
-function toDateString(date) {
-  const y = date.getFullYear();
-  const m = String(date.getMonth() + 1).padStart(2, "0");
-  const d = String(date.getDate()).padStart(2, "0");
-  return `${y}-${m}-${d}`;
-}
-
-function addDays(dateStr, days) {
-  const date = new Date(dateStr + "T00:00:00");
-  date.setDate(date.getDate() + days);
-  return toDateString(date);
-}
-
-function addYears(dateStr, years) {
-  const date = new Date(dateStr + "T00:00:00");
-  date.setFullYear(date.getFullYear() + years);
-  return toDateString(date);
-}
-
-function nextOccurrence(dateStr, repeat) {
-  if (repeat === "weekly") return addDays(dateStr, 7);
-  if (repeat === "monthly") return addDays(dateStr, 30);
-  if (repeat === "yearly") return addYears(dateStr, 1);
-  return dateStr;
-}
-
-function formatDate(dateStr) {
-  const date = new Date(dateStr + "T00:00:00");
-  return date.toLocaleDateString("en-AU", { weekday: "long", day: "numeric", month: "long" });
-}
-
 function speak(text) {
   if (!("speechSynthesis" in window)) return;
   window.speechSynthesis.cancel();
@@ -632,165 +588,6 @@ function speak(text) {
   utterance.lang = "en-AU";
   window.speechSynthesis.speak(utterance);
 }
-
-/* ---------- 6. Add reminder to calendar (.ics) ---------- */
-
-function downloadIcs(reminder) {
-  const dateDigits = reminder.date.replace(/-/g, "");
-  const stamp = new Date().toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
-  const ics = [
-    "BEGIN:VCALENDAR",
-    "VERSION:2.0",
-    "PRODID:-//Sfinco//SfincoAssist//EN",
-    "BEGIN:VEVENT",
-    `UID:${reminder.id}@sfincoassist`,
-    `DTSTAMP:${stamp}`,
-    `DTSTART;VALUE=DATE:${dateDigits}`,
-    `SUMMARY:${reminder.text}`,
-    "END:VEVENT",
-    "END:VCALENDAR",
-  ].join("\r\n");
-
-  const blob = new Blob([ics], { type: "text/calendar" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "reminder.ics";
-  a.click();
-  URL.revokeObjectURL(url);
-}
-
-function renderReminders() {
-  const reminders = loadReminders().sort((a, b) => a.date.localeCompare(b.date));
-  const container = document.getElementById("reminders");
-  const emptyState = document.getElementById("empty-state");
-
-  container.innerHTML = "";
-  emptyState.style.display = reminders.length ? "none" : "block";
-
-  reminders.forEach((reminder) => {
-    const card = document.createElement("div");
-    card.className = `reminder-card ${reminder.priority}`;
-    const repeatNote = repeatLabels[reminder.repeat] || "";
-
-    const meta = document.createElement("div");
-    meta.className = "reminder-meta";
-    const tag = document.createElement("span");
-    tag.className = "tag";
-    const categoryLabel = categoryLabels[reminder.category] || categoryLabels.other;
-    tag.textContent = `${categoryLabel} · ${priorityLabels[reminder.priority]}` + (repeatNote ? " · " + repeatNote : "");
-    meta.appendChild(tag);
-
-    const body = document.createElement("p");
-    body.textContent = `${reminder.text} · ${formatDate(reminder.date)}`;
-
-    const actions = document.createElement("div");
-    actions.className = "reminder-actions";
-
-    const readBtn = document.createElement("button");
-    readBtn.className = "read-aloud";
-    readBtn.textContent = "Read aloud";
-    readBtn.addEventListener("click", () => speak(`${reminder.text}, ${formatDate(reminder.date)}`));
-
-    const calendarBtn = document.createElement("button");
-    calendarBtn.textContent = "Add to calendar";
-    calendarBtn.addEventListener("click", () => downloadIcs(reminder));
-
-    const snoozeBtn = document.createElement("button");
-    snoozeBtn.className = "snooze";
-    snoozeBtn.textContent = "Snooze 3 days";
-    snoozeBtn.addEventListener("click", () => {
-      const current = loadReminders();
-      const match = current.find((r) => r.id === reminder.id);
-      if (match) match.date = addDays(match.date, 3);
-      saveReminders(current);
-      renderReminders();
-    });
-
-    const isRecurring = reminder.repeat && reminder.repeat !== "none";
-    const doneBtn = document.createElement("button");
-    doneBtn.className = "done";
-    doneBtn.textContent = isRecurring ? "Done for now" : "Done";
-    doneBtn.addEventListener("click", () => {
-      let current = loadReminders();
-      const match = current.find((r) => r.id === reminder.id);
-      if (match && match.repeat && match.repeat !== "none") {
-        match.date = nextOccurrence(match.date, match.repeat);
-        saveReminders(current);
-        renderReminders();
-      } else {
-        current = current.filter((r) => r.id !== reminder.id);
-        saveReminders(current);
-        renderReminders();
-        showUndo(`"${match.text}" removed.`, () => {
-          const restored = loadReminders();
-          restored.push(match);
-          saveReminders(restored);
-          renderReminders();
-        });
-      }
-    });
-
-    actions.append(readBtn, calendarBtn, snoozeBtn, doneBtn);
-    card.append(meta, body, actions);
-    container.appendChild(card);
-  });
-}
-
-document.getElementById("reminder-form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const text = document.getElementById("reminder-text").value.trim();
-  const date = document.getElementById("reminder-date").value;
-  const category = document.getElementById("reminder-category").value;
-  const priority = document.getElementById("reminder-priority").value;
-  const repeat = document.getElementById("reminder-repeat").value;
-  if (!text || !date) return;
-
-  const reminders = loadReminders();
-  reminders.push({ id: crypto.randomUUID(), text, date, category, priority, repeat });
-  saveReminders(reminders);
-
-  e.target.reset();
-  document.getElementById("reminder-category").value = "other";
-  document.getElementById("reminder-priority").value = "soon";
-  document.getElementById("reminder-repeat").value = "none";
-  renderReminders();
-});
-
-document.getElementById("export-btn").addEventListener("click", () => {
-  const data = JSON.stringify(loadReminders(), null, 2);
-  const blob = new Blob([data], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "sfincoassist-reminders.json";
-  a.click();
-  URL.revokeObjectURL(url);
-});
-
-document.getElementById("import-input").addEventListener("change", (e) => {
-  const file = e.target.files[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = () => {
-    try {
-      const imported = JSON.parse(reader.result);
-      if (Array.isArray(imported)) {
-        const previous = loadReminders();
-        saveReminders(imported);
-        renderReminders();
-        showUndo("Your dates were replaced with the file's contents.", () => {
-          saveReminders(previous);
-          renderReminders();
-        });
-      }
-    } catch {
-      alert("That file doesn't look like a Sfinco dates file.");
-    }
-  };
-  reader.readAsText(file);
-  e.target.value = "";
-});
 
 /* ---------- Tabs ---------- */
 
@@ -800,7 +597,7 @@ const tabButtons = {
   "tab-btn-contacts": "tab-contacts",
   "tab-btn-aisafety": "tab-aisafety",
   "tab-btn-practice": "tab-practice",
-  "tab-btn-reminders": "tab-reminders",
+  "tab-btn-latest": "tab-latest",
 };
 Object.keys(tabButtons).forEach((btnId) => {
   document.getElementById(btnId).addEventListener("click", () => {
@@ -857,7 +654,6 @@ const savedTheme = localStorage.getItem(THEME_KEY);
 const systemPrefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
 applyTheme(savedTheme === null ? systemPrefersLight : savedTheme === "1");
 
-renderReminders();
 renderScamAlerts();
 renderHistory();
 renderTrustedContact();

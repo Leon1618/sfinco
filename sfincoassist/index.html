@@ -62,9 +62,9 @@
       <span class="tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2"/></svg></span>
       <span class="tab-label">Practice</span>
     </button>
-    <button class="tab-btn" id="tab-btn-reminders" role="tab" aria-selected="false" aria-controls="tab-reminders">
-      <span class="tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 2v2H5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zm12 7v10H5V9h14z"/></svg></span>
-      <span class="tab-label">Important Dates</span>
+    <button class="tab-btn" id="tab-btn-latest" role="tab" aria-selected="false" aria-controls="tab-latest">
+      <span class="tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg></span>
+      <span class="tab-label">Scam Alerts</span>
     </button>
   </nav>
 
@@ -109,13 +109,6 @@
         </div>
         <div id="scam-history"></div>
         <p id="history-empty" class="empty-state">Nothing checked yet. Your recent checks will show up here.</p>
-      </div>
-    </details>
-
-    <details class="disclosure">
-      <summary>Real examples doing the rounds</summary>
-      <div class="disclosure-body">
-        <div id="scam-alerts"></div>
       </div>
     </details>
 
@@ -317,76 +310,67 @@
     <div id="quiz-container" role="status" aria-live="polite"></div>
 
     <div class="next-cta">
-      <p>Want a hand remembering important dates too?</p>
-      <button type="button" id="practice-next-btn">Go to Important Dates</button>
+      <p>Want to see what's currently doing the rounds?</p>
+      <button type="button" id="practice-next-btn">See Scam Alerts</button>
     </div>
   </section>
 
-  <section id="tab-reminders" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-btn-reminders">
-    <div class="add-reminder">
-      <h2>Add an important date</h2>
-      <p>Bills, renewals, interest rates expiring, birthdays: anything worth a nudge.</p>
-      <form id="reminder-form">
-        <label for="reminder-text">What's it about?</label>
-        <input type="text" id="reminder-text" placeholder="e.g. Term deposit rate expires, or Mum's birthday" required>
+  <section id="tab-latest" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-btn-latest">
+    <h2>What's doing the rounds</h2>
+    <p>A running list of real scam patterns currently targeting Australians, so you can recognise one before it reaches you. Not sure about something you've actually received? Use "Check a message" instead.</p>
 
-        <label for="reminder-category">What kind of date is it?</label>
-        <select id="reminder-category">
-          <option value="bill">Bill or subscription</option>
-          <option value="renewal">Renewal or licence (rego, insurance, passport)</option>
-          <option value="financial">Financial deadline (term deposit, loan rate)</option>
-          <option value="birthday">Birthday or anniversary</option>
-          <option value="other" selected>Something else</option>
-        </select>
+    <div id="latest-scams" class="sample-alerts"></div>
 
-        <label for="reminder-date">When?</label>
-        <input type="date" id="reminder-date" required>
-
-        <label for="reminder-priority">How important is it?</label>
-        <select id="reminder-priority">
-          <option value="notice">Just so you know</option>
-          <option value="soon" selected>Coming up</option>
-          <option value="urgent">Needs attention now</option>
-        </select>
-
-        <label for="reminder-repeat">Does this repeat?</label>
-        <select id="reminder-repeat">
-          <option value="none" selected>No, just once</option>
-          <option value="weekly">Every week</option>
-          <option value="monthly">Every month</option>
-          <option value="yearly">Every year</option>
-        </select>
-
-        <button type="submit">Add it</button>
-      </form>
-    </div>
-
-    <div class="reminder-list">
-      <h2>Your important dates</h2>
-      <div id="reminders"></div>
-      <p id="empty-state" class="empty-state">Nothing saved yet. Add one above to see how it looks.</p>
-
-      <details class="disclosure">
-        <summary>More options</summary>
-        <div class="disclosure-body">
-          <div class="backup-actions">
-            <button id="export-btn" type="button">Save my dates to a file</button>
-            <label class="file-input-label" for="import-input">Load dates from a file</label>
-            <input type="file" id="import-input" accept="application/json">
+    <details class="disclosure">
+      <summary>Other free tools worth knowing</summary>
+      <div class="disclosure-body">
+        <div class="contact-card">
+          <div class="contact-info">
+            <strong>Have I Been Pwned</strong>
+            <p>Check if your email address has turned up in a known data breach. Free, and one of the most trusted tools of its kind. Look for "Notify me" on the site to get a free automatic email if you're ever caught up in a future breach. Note: it only covers email addresses, not phone numbers.</p>
+            <span class="contact-detail">haveibeenpwned.com</span>
           </div>
         </div>
-      </details>
-    </div>
+        <div class="contact-card">
+          <div class="contact-info">
+            <strong>OAIC Notifiable Data Breaches</strong>
+            <p>The Australian Government's official list of reported data breaches, so you can check if a company you use has had one.</p>
+            <span class="contact-detail">oaic.gov.au</span>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-info">
+            <strong>ReportCyber</strong>
+            <p>Report a cybercrime directly to the Australian Government, separate from calling the ACSC hotline.</p>
+            <span class="contact-detail">cyber.gov.au/report</span>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-info">
+            <strong>eSafety Commissioner</strong>
+            <p>Help and reporting for online harassment, image-based abuse, or other harmful content.</p>
+            <span class="contact-detail">esafety.gov.au</span>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-info">
+            <strong>ASIC's Professional Registers</strong>
+            <p>Check whether a financial adviser or investment firm is actually licensed before trusting them with money.</p>
+            <span class="contact-detail">asic.gov.au</span>
+          </div>
+        </div>
+      </div>
+    </details>
 
     <div class="next-cta">
       <p>That's everything. See today's tip again?</p>
-      <button type="button" id="reminders-next-btn">Back to Today</button>
+      <button type="button" id="latest-next-btn">Back to Today</button>
     </div>
   </section>
 </main>
 
 <footer>
-  <p>SfincoAssist Phase 1: scam-checking and important dates only. No live financial data is read or stored by this prototype.</p>
+  <p>SfincoAssist Phase 1: scam-checking and awareness only. No live financial data is read or stored by this prototype.</p>
 </footer>
 
 <div id="undo-toast" class="undo-toast hidden" role="status" aria-live="polite">
