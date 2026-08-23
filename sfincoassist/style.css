@@ -14,12 +14,19 @@
 
 * { box-sizing: border-box; }
 
+html { font-size: 100%; }
+
+/* Text-size control scales the root, so every rem-based measurement in this
+   file (headers, buttons, labels, spacing) grows together, not just body text. */
+html.text-large { font-size: 120%; }
+html.text-xlarge { font-size: 140%; }
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background: var(--bg);
   color: var(--ink);
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 1.6;
 }
 
@@ -35,10 +42,13 @@ body {
 
 .header-controls {
   display: flex;
+  align-items: stretch;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  flex-wrap: nowrap;
+  gap: 0.4rem;
   margin-bottom: 1rem;
+  overflow-x: auto;
+  padding: 0 0.5rem;
 }
 
 .header-btn {
@@ -46,23 +56,61 @@ body {
   border: 1px solid var(--border);
   color: var(--ink);
   border-radius: 6px;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.9rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
   cursor: pointer;
   margin: 0;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .header-btn:hover { border-color: var(--blue); }
 
-.text-size-group {
+.theme-toggle-group {
   display: flex;
   align-items: stretch;
-  gap: 0.3rem;
+  gap: 0.2rem;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 0.3rem;
+  padding: 0.25rem;
+  flex-shrink: 0;
+}
+
+.theme-toggle-option {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  color: var(--muted);
+  padding: 0.4rem 0.55rem;
+  margin: 0;
+  min-height: 44px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.theme-toggle-option .tab-icon svg { width: 1.1em; height: 1.1em; }
+
+.theme-toggle-option:hover { color: var(--ink); }
+
+.theme-toggle-option[aria-pressed="true"] {
+  background: var(--lime);
+  color: var(--bg-deep);
+}
+
+.text-size-group {
+  display: flex;
+  align-items: stretch;
+  gap: 0.2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.25rem;
+  flex-shrink: 0;
 }
 
 .text-size-option {
@@ -70,14 +118,15 @@ body {
   border: none;
   border-radius: 6px;
   color: var(--muted);
-  padding: 0.4rem 0.6rem;
+  padding: 0.3rem 0.45rem;
   margin: 0;
   min-height: 44px;
+  min-width: 44px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  gap: 0.15rem;
+  gap: 0.1rem;
   cursor: pointer;
 }
 
@@ -88,12 +137,12 @@ body {
   line-height: 1;
 }
 
-.text-size-glyph.size-normal { font-size: 0.85rem; }
-.text-size-glyph.size-large { font-size: 1.15rem; }
-.text-size-glyph.size-xlarge { font-size: 1.5rem; }
+.text-size-glyph.size-normal { font-size: 0.8rem; }
+.text-size-glyph.size-large { font-size: 1.05rem; }
+.text-size-glyph.size-xlarge { font-size: 1.35rem; }
 
 .text-size-caption {
-  font-size: 0.65rem;
+  font-size: 0.58rem;
   white-space: nowrap;
 }
 
@@ -101,12 +150,6 @@ body {
   background: var(--lime);
   color: var(--bg-deep);
 }
-
-body.text-large { font-size: 24px; }
-body.text-large .topbar h1 { font-size: 2.5rem; }
-
-body.text-xlarge { font-size: 28px; }
-body.text-xlarge .topbar h1 { font-size: 2.8rem; }
 
 .notice {
   max-width: var(--max-width);
@@ -231,7 +274,7 @@ body.text-xlarge .topbar h1 { font-size: 2.8rem; }
 
 .disclosure .contact-card:last-child { margin-bottom: 0; }
 
-.disclosure-body h4 {
+.disclosure-body h3 {
   color: var(--muted);
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -239,7 +282,7 @@ body.text-xlarge .topbar h1 { font-size: 2.8rem; }
   margin: 1.25rem 0 0.5rem;
 }
 
-.disclosure-body h4:first-child { margin-top: 0; }
+.disclosure-body h3:first-child { margin-top: 0; }
 
 .tip-list {
   margin: 0;
@@ -274,6 +317,11 @@ textarea {
 .scam-intro, .scam-outro {
   font-weight: 600;
   color: var(--ink);
+}
+
+.scam-empty-notice {
+  color: var(--muted);
+  font-style: italic;
 }
 
 .tip-date {
@@ -473,8 +521,14 @@ body.light-theme form {
   margin-bottom: 0.75rem;
 }
 
-.contact-info p { margin: 0.2rem 0; font-size: 0.9rem; }
-.contact-detail { color: var(--muted); font-size: 0.9rem; }
+.contact-info p { margin: 0.2rem 0; font-size: 0.9rem; color: var(--muted); }
+.contact-detail {
+  display: block;
+  color: var(--ink);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 0.3rem;
+}
 
 .contact-card .read-aloud {
   flex-shrink: 0;
@@ -575,8 +629,47 @@ body.light-theme form {
 
 .quiz-next-row button { margin: 0; }
 
+/* ---------- Undo toast (for reversible destructive actions) ---------- */
+
+.undo-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--ink);
+  color: var(--bg-deep);
+  border-radius: 10px;
+  padding: 0.85rem 1rem 0.85rem 1.25rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  max-width: calc(100vw - 2rem);
+}
+
+.undo-toast.hidden { display: none; }
+
+.undo-toast span { font-weight: 600; }
+
+.undo-toast button {
+  background: var(--lime);
+  color: var(--bg-deep);
+  margin: 0;
+  flex-shrink: 0;
+  padding: 0.5rem 0.9rem;
+  min-height: 40px;
+}
+
+/* ---------- Focus visibility ---------- */
+
+:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 2px;
+}
+
 @media print {
-  header, .notice, .tabs, #scam-check-form, .history-block, .sample-alerts, footer, .share-row {
+  header, .notice, .tabs, #scam-check-form, .history-block, .sample-alerts, footer, .share-row, .undo-toast {
     display: none !important;
   }
   body { background: #FFFFFF; color: #000000; }

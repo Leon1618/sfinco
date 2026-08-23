@@ -3,9 +3,9 @@
   "configurations": [
     {
       "name": "sfinco-static",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "4500"],
-      "port": 4500
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "python3 -m http.server $PORT"],
+      "autoPort": true
     }
   ]
 }

@@ -4,6 +4,30 @@ const THEME_KEY = "sfincoassist-theme";
 const HISTORY_KEY = "sfincoassist-history";
 const CONTACT_KEY = "sfincoassist-trusted-contact";
 
+/* ---------- Undo toast: lets a destructive action be reversed instead of confirmed upfront ---------- */
+
+let undoTimeout = null;
+let undoRestore = null;
+
+function showUndo(message, restoreFn) {
+  clearTimeout(undoTimeout);
+  undoRestore = restoreFn;
+  const toast = document.getElementById("undo-toast");
+  document.getElementById("undo-toast-message").textContent = message;
+  toast.classList.remove("hidden");
+  undoTimeout = setTimeout(() => {
+    toast.classList.add("hidden");
+    undoRestore = null;
+  }, 10000);
+}
+
+document.getElementById("undo-toast-btn").addEventListener("click", () => {
+  clearTimeout(undoTimeout);
+  document.getElementById("undo-toast").classList.add("hidden");
+  if (undoRestore) undoRestore();
+  undoRestore = null;
+});
+
 const priorityLabels = {
   notice: "Just so you know",
   soon: "Coming up",
@@ -232,8 +256,14 @@ function renderHistory() {
 }
 
 document.getElementById("clear-history-btn").addEventListener("click", () => {
+  const previous = loadHistory();
+  if (previous.length === 0) return;
   saveHistory([]);
   renderHistory();
+  showUndo("History cleared.", () => {
+    saveHistory(previous);
+    renderHistory();
+  });
 });
 
 /* ---------- 5. Share / print a result ---------- */
@@ -273,7 +303,13 @@ function copyToClipboard(text, button) {
 function renderScamResult(text, matches, hasText) {
   const result = document.getElementById("scam-result");
   result.innerHTML = "";
-  if (!hasText) return;
+  if (!hasText) {
+    const empty = document.createElement("p");
+    empty.className = "scam-empty-notice";
+    empty.textContent = "Paste a message or link first, or upload a screenshot, then press \"Check this for me\".";
+    result.appendChild(empty);
+    return;
+  }
 
   const wrapper = document.createElement("div");
   wrapper.className = "scam-result";
@@ -680,11 +716,19 @@ function renderReminders() {
       const match = current.find((r) => r.id === reminder.id);
       if (match && match.repeat && match.repeat !== "none") {
         match.date = nextOccurrence(match.date, match.repeat);
+        saveReminders(current);
+        renderReminders();
       } else {
         current = current.filter((r) => r.id !== reminder.id);
+        saveReminders(current);
+        renderReminders();
+        showUndo(`"${match.text}" removed.`, () => {
+          const restored = loadReminders();
+          restored.push(match);
+          saveReminders(restored);
+          renderReminders();
+        });
       }
-      saveReminders(current);
-      renderReminders();
     });
 
     actions.append(readBtn, calendarBtn, snoozeBtn, doneBtn);
@@ -732,11 +776,16 @@ document.getElementById("import-input").addEventListener("change", (e) => {
     try {
       const imported = JSON.parse(reader.result);
       if (Array.isArray(imported)) {
+        const previous = loadReminders();
         saveReminders(imported);
         renderReminders();
+        showUndo("Your dates were replaced with the file's contents.", () => {
+          saveReminders(previous);
+          renderReminders();
+        });
       }
     } catch {
-      alert("That file doesn't look like a Sfinco reminders file.");
+      alert("That file doesn't look like a Sfinco dates file.");
     }
   };
   reader.readAsText(file);
@@ -770,9 +819,9 @@ const textSizeLevels = ["normal", "large", "xlarge"];
 const textSizeOptions = document.querySelectorAll(".text-size-option");
 
 function applyTextSize(level) {
-  document.body.classList.remove("text-large", "text-xlarge");
-  if (level === "large") document.body.classList.add("text-large");
-  if (level === "xlarge") document.body.classList.add("text-xlarge");
+  document.documentElement.classList.remove("text-large", "text-xlarge");
+  if (level === "large") document.documentElement.classList.add("text-large");
+  if (level === "xlarge") document.documentElement.classList.add("text-xlarge");
   textSizeOptions.forEach((btn) => {
     btn.setAttribute("aria-pressed", String(btn.dataset.level === level));
   });
@@ -790,18 +839,23 @@ textSizeOptions.forEach((btn) => {
 const savedTextSize = localStorage.getItem(TEXT_SIZE_KEY);
 applyTextSize(textSizeLevels.includes(savedTextSize) ? savedTextSize : "normal");
 
-const themeToggle = document.getElementById("theme-toggle");
+const themeOptions = document.querySelectorAll(".theme-toggle-option");
 function applyTheme(light) {
   document.body.classList.toggle("light-theme", light);
-  themeToggle.setAttribute("aria-pressed", String(light));
-  themeToggle.textContent = light ? "🌙 Dark" : "☀ Light";
+  themeOptions.forEach((btn) => {
+    btn.setAttribute("aria-pressed", String((btn.dataset.theme === "light") === light));
+  });
 }
-themeToggle.addEventListener("click", () => {
-  const light = !document.body.classList.contains("light-theme");
+function setTheme(light) {
   localStorage.setItem(THEME_KEY, light ? "1" : "0");
   applyTheme(light);
+}
+themeOptions.forEach((btn) => {
+  btn.addEventListener("click", () => setTheme(btn.dataset.theme === "light"));
 });
-applyTheme(localStorage.getItem(THEME_KEY) === "1");
+const savedTheme = localStorage.getItem(THEME_KEY);
+const systemPrefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+applyTheme(savedTheme === null ? systemPrefersLight : savedTheme === "1");
 
 renderReminders();
 renderScamAlerts();
