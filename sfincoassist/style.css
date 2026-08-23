@@ -261,12 +261,15 @@ body {
 .app-dialog {
   max-width: 480px;
   width: calc(100vw - 3rem);
+  max-height: 85vh;
+  max-height: 85dvh;
   margin: auto;
   background: var(--bg);
   color: var(--ink);
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 1.5rem;
+  overflow-y: auto;
 }
 
 .app-dialog::backdrop {
