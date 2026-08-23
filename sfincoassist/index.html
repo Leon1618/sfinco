@@ -10,33 +10,79 @@
 <body>
 
 <header class="topbar">
-  <div class="header-controls">
-    <div class="theme-toggle-group" role="group" aria-label="Theme">
-      <button class="theme-toggle-option" data-theme="light" aria-pressed="true" type="button">
-        <span class="tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M4.22 4.22l1.77 1.77M17.99 17.99l1.77 1.77M2 12h2.5M19.5 12H22M4.22 19.78l1.77-1.77M17.99 6.01l1.77-1.77" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg></span>
-        <span class="theme-toggle-label">Light</span>
-      </button>
-      <button class="theme-toggle-option" data-theme="dark" aria-pressed="false" type="button">
-        <span class="tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.75 15A9.72 9.72 0 0 1 18 15.75c-5.39 0-9.75-4.36-9.75-9.75 0-1.33.27-2.6.75-3.75A9.75 9.75 0 1 0 21.75 15z"/></svg></span>
-        <span class="theme-toggle-label">Dark</span>
-      </button>
-    </div>
-    <div class="text-size-group" role="group" aria-label="Text size">
-      <button class="text-size-option" data-level="normal" aria-pressed="true" type="button">
-        <span class="text-size-glyph size-normal">A</span><span class="text-size-caption">Normal</span>
-      </button>
-      <button class="text-size-option" data-level="large" aria-pressed="false" type="button">
-        <span class="text-size-glyph size-large">A</span><span class="text-size-caption">Large</span>
-      </button>
-      <button class="text-size-option" data-level="xlarge" aria-pressed="false" type="button">
-        <span class="text-size-glyph size-xlarge">A</span><span class="text-size-caption">Extra large</span>
-      </button>
-    </div>
+  <div class="top-bar-row">
+    <button id="profile-btn" class="icon-btn" type="button" aria-haspopup="dialog" aria-label="Profile and settings">
+      <span id="profile-avatar" class="profile-avatar" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-4.42 0-8 2.24-8 5v1a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1c0-2.76-3.58-5-8-5z"/></svg>
+      </span>
+    </button>
+    <span class="brand-mark">Sfinco</span>
+    <button id="help-btn" class="icon-btn" type="button" aria-haspopup="dialog" aria-label="Help">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 17a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm1.3-6.3c-.6.35-.8.6-.8 1.3a1 1 0 1 1-2 0c0-1.5.6-2.2 1.4-2.7.7-.44 1.1-.72 1.1-1.4 0-.72-.63-1.4-1.7-1.4-.95 0-1.5.4-1.83 1.05a1 1 0 1 1-1.79-.9C8.28 7.53 9.4 6.5 11.3 6.5c2.1 0 3.7 1.4 3.7 3.4 0 1.5-.83 2.2-1.7 2.8z"/></svg>
+    </button>
   </div>
-  <h1>Sfinco</h1>
-  <p class="full-name">Personal Cyber Awareness Assistant</p>
-  <p class="subtitle">Straightforward help, whenever you need</p>
+
+  <h1 id="greeting">Hi there</h1>
+
+  <form id="search-form" class="search-form" role="search" autocomplete="off">
+    <label for="search-input" class="visually-hidden">Search Sfinco</label>
+    <svg class="search-icon" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M10 2a8 8 0 1 0 4.9 14.32l5.39 5.39 1.41-1.41-5.39-5.39A8 8 0 0 0 10 2zm0 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12z"/></svg>
+    <input type="search" id="search-input" placeholder="Search, try 'scam' or a contact name">
+    <button type="button" id="voice-search-btn" class="icon-btn" aria-label="Search by voice">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-2.08A7 7 0 0 0 19 12h-2z"/></svg>
+    </button>
+  </form>
+  <p id="voice-search-status" class="voice-search-status hidden" role="status" aria-live="polite"></p>
+  <div id="search-results" class="search-results hidden" role="listbox" aria-label="Search results"></div>
 </header>
+
+<dialog id="profile-dialog" class="app-dialog">
+  <h2>Your profile</h2>
+  <form id="profile-name-form">
+    <label for="profile-name-input">Your name</label>
+    <input type="text" id="profile-name-input" placeholder="e.g. Sam" autocomplete="given-name">
+    <button type="submit">Save name</button>
+  </form>
+
+  <h3>Display</h3>
+  <div class="theme-toggle-group" role="group" aria-label="Theme">
+    <button class="theme-toggle-option" data-theme="light" aria-pressed="true" type="button">
+      <span class="tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M4.22 4.22l1.77 1.77M17.99 17.99l1.77 1.77M2 12h2.5M19.5 12H22M4.22 19.78l1.77-1.77M17.99 6.01l1.77-1.77" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg></span>
+      <span class="theme-toggle-label">Light</span>
+    </button>
+    <button class="theme-toggle-option" data-theme="dark" aria-pressed="false" type="button">
+      <span class="tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.75 15A9.72 9.72 0 0 1 18 15.75c-5.39 0-9.75-4.36-9.75-9.75 0-1.33.27-2.6.75-3.75A9.75 9.75 0 1 0 21.75 15z"/></svg></span>
+      <span class="theme-toggle-label">Dark</span>
+    </button>
+  </div>
+  <div class="text-size-group" role="group" aria-label="Text size">
+    <button class="text-size-option" data-level="normal" aria-pressed="true" type="button">
+      <span class="text-size-glyph size-normal">A</span><span class="text-size-caption">Normal</span>
+    </button>
+    <button class="text-size-option" data-level="large" aria-pressed="false" type="button">
+      <span class="text-size-glyph size-large">A</span><span class="text-size-caption">Large</span>
+    </button>
+    <button class="text-size-option" data-level="xlarge" aria-pressed="false" type="button">
+      <span class="text-size-glyph size-xlarge">A</span><span class="text-size-caption">Extra large</span>
+    </button>
+  </div>
+
+  <h3>Your data</h3>
+  <p>Sfinco runs entirely on this device. Nothing is uploaded anywhere. You can clear everything saved here at any time.</p>
+  <button id="clear-data-btn" type="button" class="danger-btn">Clear my data</button>
+
+  <button id="profile-close-btn" type="button" class="dialog-close">Close</button>
+</dialog>
+
+<dialog id="help-dialog" class="app-dialog">
+  <h2>About this prototype</h2>
+  <div class="notice">
+    <strong>Phase 1 prototype.</strong> Checking a message stays on your device, and nothing is uploaded or stored anywhere.
+  </div>
+  <p>Sfinco helps you spot scams before they catch you out: check a suspicious message, find who to call, and practise spotting the tricks scammers use. Nothing here is connected to a bank account, and no live financial data is read.</p>
+  <p>Tap the search bar to jump straight to a section or a contact number, or use the microphone to search by voice.</p>
+  <button id="help-close-btn" type="button" class="dialog-close">Close</button>
+</dialog>
 
 <main>
   <nav class="tabs" role="tablist">

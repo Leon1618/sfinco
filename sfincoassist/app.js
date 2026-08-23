@@ -27,6 +27,75 @@ document.getElementById("undo-toast-btn").addEventListener("click", () => {
   undoRestore = null;
 });
 
+/* ---------- Profile: name, greeting, dialogs ---------- */
+
+const USERNAME_KEY = "sfincoassist-username";
+const personIconSvg = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-4.42 0-8 2.24-8 5v1a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1c0-2.76-3.58-5-8-5z"/></svg>';
+
+function applyGreeting() {
+  const name = localStorage.getItem(USERNAME_KEY);
+  document.getElementById("greeting").textContent = name ? `Hi ${name}` : "Hi there";
+  document.getElementById("profile-name-input").value = name || "";
+  const avatar = document.getElementById("profile-avatar");
+  avatar.innerHTML = name ? "" : personIconSvg;
+  avatar.textContent = name ? name.trim().charAt(0).toUpperCase() : "";
+}
+
+document.getElementById("profile-name-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const name = document.getElementById("profile-name-input").value.trim();
+  if (name) {
+    localStorage.setItem(USERNAME_KEY, name);
+  } else {
+    localStorage.removeItem(USERNAME_KEY);
+  }
+  applyGreeting();
+});
+
+const profileDialog = document.getElementById("profile-dialog");
+const helpDialog = document.getElementById("help-dialog");
+
+function openDialog(dialog) {
+  document.querySelectorAll("dialog[open]").forEach((d) => {
+    if (d !== dialog) d.close();
+  });
+  dialog.showModal();
+}
+
+document.getElementById("profile-btn").addEventListener("click", () => openDialog(profileDialog));
+document.getElementById("help-btn").addEventListener("click", () => openDialog(helpDialog));
+document.getElementById("profile-close-btn").addEventListener("click", () => profileDialog.close());
+document.getElementById("help-close-btn").addEventListener("click", () => helpDialog.close());
+
+[profileDialog, helpDialog].forEach((dialog) => {
+  dialog.addEventListener("click", (e) => {
+    if (e.target === dialog) dialog.close();
+  });
+});
+
+document.getElementById("clear-data-btn").addEventListener("click", () => {
+  const snapshot = {
+    username: localStorage.getItem(USERNAME_KEY),
+    history: localStorage.getItem(HISTORY_KEY),
+    contact: localStorage.getItem(CONTACT_KEY),
+  };
+  localStorage.removeItem(USERNAME_KEY);
+  localStorage.removeItem(HISTORY_KEY);
+  localStorage.removeItem(CONTACT_KEY);
+  applyGreeting();
+  renderHistory();
+  renderTrustedContact();
+  profileDialog.close();
+  showUndo("Your data was cleared.", () => {
+    if (snapshot.username) localStorage.setItem(USERNAME_KEY, snapshot.username);
+    if (snapshot.history) localStorage.setItem(HISTORY_KEY, snapshot.history);
+    if (snapshot.contact) localStorage.setItem(CONTACT_KEY, snapshot.contact);
+    applyGreeting();
+    renderHistory();
+    renderTrustedContact();
+  });
+});
+
 /* ---------- Tip of the day ---------- */
 
 const dailyTips = [
@@ -652,8 +721,172 @@ themeOptions.forEach((btn) => {
 });
 applyTheme(localStorage.getItem(THEME_KEY) === "1");
 
+/* ---------- Search ---------- */
+
+function buildSearchIndex() {
+  const index = [];
+
+  Object.keys(tabButtons).forEach((btnId) => {
+    const btn = document.getElementById(btnId);
+    const label = btn.querySelector(".tab-label").textContent;
+    index.push({
+      label,
+      description: "Go to this section",
+      keywords: label.toLowerCase(),
+      action: () => btn.click(),
+    });
+  });
+
+  document.querySelectorAll(".contact-card").forEach((card) => {
+    const nameEl = card.querySelector(".contact-info strong");
+    if (!nameEl) return;
+    const name = nameEl.textContent;
+    const descEl = card.querySelector(".contact-info p");
+    const detailEl = card.querySelector(".contact-detail");
+    const desc = descEl ? descEl.textContent : "";
+    const detail = detailEl ? detailEl.textContent : "";
+    const detailsParent = card.closest("details");
+    index.push({
+      label: name,
+      description: detail ? `${desc} ${detail}` : desc,
+      keywords: `${name} ${desc} ${detail}`.toLowerCase(),
+      action: () => {
+        document.getElementById("tab-btn-contacts").click();
+        if (detailsParent) detailsParent.open = true;
+        setTimeout(() => card.scrollIntoView({ behavior: "smooth", block: "center" }), 50);
+      },
+    });
+  });
+
+  scamAlerts.forEach((alert) => {
+    index.push({
+      label: alert.tag,
+      description: alert.text,
+      keywords: `${alert.tag} ${alert.text}`.toLowerCase(),
+      action: () => document.getElementById("tab-btn-latest").click(),
+    });
+  });
+
+  return index;
+}
+
+let searchIndex = [];
+
+function renderSearchResults(matches, hasQuery) {
+  const results = document.getElementById("search-results");
+  results.innerHTML = "";
+
+  if (!hasQuery) {
+    results.classList.add("hidden");
+    return;
+  }
+
+  if (matches.length === 0) {
+    const empty = document.createElement("p");
+    empty.className = "search-empty";
+    empty.textContent = 'No matches. Try a different word, or use "Check a message" for something you\'ve actually received.';
+    results.appendChild(empty);
+  } else {
+    matches.forEach((item) => {
+      const row = document.createElement("button");
+      row.type = "button";
+      row.className = "search-result-row";
+      row.setAttribute("role", "option");
+
+      const label = document.createElement("strong");
+      label.textContent = item.label;
+      row.appendChild(label);
+
+      if (item.description) {
+        const desc = document.createElement("span");
+        desc.textContent = item.description;
+        row.appendChild(desc);
+      }
+
+      row.addEventListener("click", () => {
+        item.action();
+        document.getElementById("search-input").value = "";
+        results.classList.add("hidden");
+      });
+
+      results.appendChild(row);
+    });
+  }
+
+  results.classList.remove("hidden");
+}
+
+function runSearch(query) {
+  const q = query.trim().toLowerCase();
+  if (!q) {
+    renderSearchResults([], false);
+    return;
+  }
+  const matches = searchIndex.filter((item) => item.keywords.includes(q)).slice(0, 6);
+  renderSearchResults(matches, true);
+}
+
+document.getElementById("search-input").addEventListener("input", (e) => runSearch(e.target.value));
+document.getElementById("search-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const first = document.querySelector(".search-result-row");
+  if (first) first.click();
+});
+
+/* ---------- Voice search ---------- */
+
+const SpeechRecognitionCtor = window.SpeechRecognition || window.webkitSpeechRecognition;
+const voiceBtn = document.getElementById("voice-search-btn");
+const voiceStatus = document.getElementById("voice-search-status");
+
+if (SpeechRecognitionCtor) {
+  const recognition = new SpeechRecognitionCtor();
+  recognition.lang = "en-AU";
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
+
+  let listening = false;
+
+  recognition.addEventListener("start", () => {
+    listening = true;
+    voiceBtn.classList.add("listening");
+    voiceStatus.textContent = "Listening…";
+    voiceStatus.classList.remove("hidden");
+  });
+
+  recognition.addEventListener("result", (e) => {
+    const transcript = e.results[0][0].transcript;
+    document.getElementById("search-input").value = transcript;
+    runSearch(transcript);
+  });
+
+  recognition.addEventListener("end", () => {
+    listening = false;
+    voiceBtn.classList.remove("listening");
+    voiceStatus.classList.add("hidden");
+  });
+
+  recognition.addEventListener("error", () => {
+    voiceStatus.textContent = "Didn't catch that. Try typing instead.";
+    setTimeout(() => voiceStatus.classList.add("hidden"), 3000);
+  });
+
+  voiceBtn.addEventListener("click", () => {
+    if (listening) {
+      recognition.stop();
+    } else {
+      recognition.start();
+    }
+  });
+} else {
+  voiceBtn.disabled = true;
+  voiceBtn.title = "Voice search isn't supported in this browser";
+}
+
 renderScamAlerts();
 renderHistory();
 renderTrustedContact();
 renderQuiz();
 renderTipOfDay();
+applyGreeting();
+searchIndex = buildSearchIndex();
