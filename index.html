@@ -13,6 +13,10 @@
 <header class="site-header">
   <div class="container">
     <a class="brand" href="index.html">Sfinco</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </label>
     <nav class="primary-nav" aria-label="Primary">
       <ul>
         <li><a href="guides.html">Safety Guides</a></li>
@@ -81,14 +85,6 @@
   </div>
 </section>
 
-<section>
-  <div class="container">
-    <div class="callout blue">
-      <h3>A note on what's live today</h3>
-      <p>Sfinco SMB Cyber Awareness and Audits are open for booking now, and the first Sfinco Safety Guide is on its way. Sfinco Personal Cyber Awareness Assistant and the Sfinco Digital Vault are still in development. Nothing on this site connects to your bank accounts or financial data. When those tools do launch, anything involving your money will always meet the relevant Australian regulatory requirements first.</p>
-    </div>
-  </div>
-</section>
 
 <footer class="site-footer">
   <div class="container">
@@ -97,6 +93,14 @@
     <div>&copy; 2026 Sfinco. All rights reserved.</div>
   </div>
 </footer>
+
+<script>
+document.querySelectorAll(".primary-nav a").forEach(function(a) {
+  a.addEventListener("click", function() {
+    document.getElementById("nav-toggle").checked = false;
+  });
+});
+</script>
 
 </body>
 </html>

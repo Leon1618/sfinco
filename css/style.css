@@ -80,8 +80,9 @@ a:hover {
 .site-header .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 1rem;
-  flex-wrap: nowrap;
 }
 
 .brand {
@@ -100,43 +101,102 @@ a:hover {
   color: var(--ink);
 }
 
+.nav-toggle-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-toggle-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.nav-toggle-label span {
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--ink);
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.nav-toggle-input:checked ~ .nav-toggle-label span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle-input:checked ~ .nav-toggle-label span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle-input:checked ~ .nav-toggle-label span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 nav.primary-nav {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  display: none;
+  width: 100%;
+  order: 3;
+}
+
+.nav-toggle-input:checked ~ nav.primary-nav {
+  display: block;
 }
 
 nav.primary-nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: nowrap;
-  gap: 1.1rem;
+  flex-direction: column;
+  gap: 0.6rem;
   margin: 0;
-  padding: 0;
-}
-
-nav.primary-nav li {
-  flex-shrink: 0;
+  padding: 1rem 0 0;
 }
 
 nav.primary-nav a {
-  display: inline-block;
-  white-space: nowrap;
+  display: block;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
   text-decoration: none;
   color: var(--ink);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 nav.primary-nav a:hover {
   color: var(--lime);
+  border-color: var(--lime);
 }
 
 @media (min-width: 700px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  nav.primary-nav {
+    display: block;
+    width: auto;
+    order: 0;
+  }
+
   nav.primary-nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 1.4rem;
+    padding-top: 0;
   }
 
   nav.primary-nav a {
+    display: inline;
+    padding: 0;
+    border: none;
+    background: none;
     font-size: 0.98rem;
   }
 }
