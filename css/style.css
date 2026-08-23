@@ -80,15 +80,15 @@ a:hover {
 .site-header .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .brand {
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  flex-shrink: 0;
   text-decoration: none;
   color: var(--ink);
   font-family: Georgia, serif;
@@ -101,56 +101,42 @@ a:hover {
 }
 
 nav.primary-nav {
-  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 nav.primary-nav ul {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.6rem;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.1rem;
   margin: 0;
   padding: 0;
 }
 
+nav.primary-nav li {
+  flex-shrink: 0;
+}
+
 nav.primary-nav a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 100%;
-  padding: 0.6rem 0.8rem;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--surface);
+  display: inline-block;
+  white-space: nowrap;
   text-decoration: none;
   color: var(--ink);
   font-weight: 600;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
 }
 
 nav.primary-nav a:hover {
   color: var(--lime);
-  border-color: var(--lime);
 }
 
 @media (min-width: 700px) {
-  nav.primary-nav {
-    width: auto;
-  }
-
   nav.primary-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem 1.4rem;
+    gap: 1.4rem;
   }
 
   nav.primary-nav a {
-    display: inline;
-    height: auto;
-    padding: 0;
-    border: none;
-    background: none;
     font-size: 0.98rem;
   }
 }
