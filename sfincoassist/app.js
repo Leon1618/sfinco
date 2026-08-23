@@ -32,13 +32,24 @@ document.getElementById("undo-toast-btn").addEventListener("click", () => {
 const USERNAME_KEY = "sfincoassist-username";
 const personIconSvg = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0 2c-4.42 0-8 2.24-8 5v1a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1c0-2.76-3.58-5-8-5z"/></svg>';
 
+function timeOfDayGreeting() {
+  const hour = new Date().getHours();
+  if (hour >= 5 && hour < 12) return "Good morning";
+  if (hour >= 12 && hour < 17) return "Good afternoon";
+  return "Good evening";
+}
+
 function applyGreeting() {
   const name = localStorage.getItem(USERNAME_KEY);
-  document.getElementById("greeting").textContent = name ? `Hi ${name}` : "Hi there";
+  const greeting = timeOfDayGreeting();
+  document.getElementById("greeting").textContent = name ? `${greeting}, ${name}` : greeting;
   document.getElementById("profile-name-input").value = name || "";
   const avatar = document.getElementById("profile-avatar");
-  avatar.innerHTML = name ? "" : personIconSvg;
-  avatar.textContent = name ? name.trim().charAt(0).toUpperCase() : "";
+  if (name) {
+    avatar.textContent = name.trim().charAt(0).toUpperCase();
+  } else {
+    avatar.innerHTML = personIconSvg;
+  }
 }
 
 document.getElementById("profile-name-form").addEventListener("submit", (e) => {
@@ -151,46 +162,61 @@ document.getElementById("latest-next-btn").addEventListener("click", () => {
   document.getElementById("tab-btn-today").click();
 });
 
+const scamAlertCategories = [
+  { key: "phone", label: "Phone calls" },
+  { key: "text", label: "Text messages" },
+  { key: "email", label: "Email" },
+  { key: "online", label: "Online & social media" },
+];
+
 const scamAlerts = [
   {
+    category: "phone",
     tag: "Heads up",
     priority: "urgent",
     text: "There's a scam call going around the Sunshine Coast where someone pretends to be from your bank and asks for your BSB and account number. Your real bank will never ask for this over the phone.",
   },
   {
-    tag: "Heads up",
-    priority: "urgent",
-    text: "Watch for texts claiming a toll or parcel delivery fee is \"overdue\" with a link to pay. Go to the real website yourself instead of clicking the link.",
-  },
-  {
-    tag: "Heads up",
-    priority: "urgent",
-    text: "A text claiming your myGov identity has been \"suspended due to unusual activity\" is doing the rounds, with a link to \"update your details.\" myGov never contacts you this way. Log in directly at my.gov.au instead, if you want to check.",
-  },
-  {
+    category: "phone",
     tag: "Heads up",
     priority: "urgent",
     text: "Some scammers are now cloning a family member's voice from a few seconds of audio, then calling in a panic asking for money via gift cards or a bank transfer. Hang up and call them back on their usual number to check.",
   },
   {
+    category: "text",
+    tag: "Heads up",
+    priority: "urgent",
+    text: "Watch for texts claiming a toll or parcel delivery fee is \"overdue\" with a link to pay. Go to the real website yourself instead of clicking the link.",
+  },
+  {
+    category: "text",
+    tag: "Heads up",
+    priority: "urgent",
+    text: "A text claiming your myGov identity has been \"suspended due to unusual activity\" is doing the rounds, with a link to \"update your details.\" myGov never contacts you this way. Log in directly at my.gov.au instead, if you want to check.",
+  },
+  {
+    category: "email",
+    tag: "Heads up",
+    priority: "urgent",
+    text: "An email claiming your gas or electricity account is \"overdue\" and threatening disconnection within 24 hours, with a link to pay, is a common template scammers reuse across different energy providers.",
+  },
+  {
+    category: "online",
     tag: "Heads up",
     priority: "urgent",
     text: "A pop-up claiming \"your computer has a virus, call Microsoft support now\" with a phone number is a scam. Real tech companies don't put their phone number in a pop-up. Just close the browser tab.",
   },
   {
+    category: "online",
     tag: "Heads up",
     priority: "urgent",
     text: "Fake videos of well-known news presenters or business figures \"endorsing\" a secret investment platform are circulating on social media. Real public figures don't tip you off to secret trading platforms.",
   },
   {
+    category: "online",
     tag: "Did you know",
     priority: "notice",
     text: "After any major bushfire or flood, fake charity appeals tend to follow within days. A genuine charity will never pressure you to donate immediately via gift card or wire transfer.",
-  },
-  {
-    tag: "Heads up",
-    priority: "urgent",
-    text: "An email claiming your gas or electricity account is \"overdue\" and threatening disconnection within 24 hours, with a link to pay, is a common template scammers reuse across different energy providers.",
   },
 ];
 
@@ -465,16 +491,36 @@ document.getElementById("scam-check-form").addEventListener("submit", (e) => {
 function renderScamAlerts() {
   const container = document.getElementById("latest-scams");
   container.innerHTML = "";
-  scamAlerts.forEach((alert) => {
-    const card = document.createElement("div");
-    card.className = `sample-card ${alert.priority}`;
-    const tag = document.createElement("span");
-    tag.className = "tag";
-    tag.textContent = alert.tag;
-    const text = document.createElement("p");
-    text.textContent = alert.text;
-    card.append(tag, text);
-    container.appendChild(card);
+
+  scamAlertCategories.forEach((category, index) => {
+    const alertsInCategory = scamAlerts.filter((a) => a.category === category.key);
+    if (alertsInCategory.length === 0) return;
+
+    const details = document.createElement("details");
+    details.className = "disclosure";
+    if (index === 0) details.open = true;
+
+    const summary = document.createElement("summary");
+    summary.textContent = `${category.label} (${alertsInCategory.length})`;
+    details.appendChild(summary);
+
+    const body = document.createElement("div");
+    body.className = "disclosure-body";
+
+    alertsInCategory.forEach((alert) => {
+      const card = document.createElement("div");
+      card.className = `sample-card ${alert.priority}`;
+      const tag = document.createElement("span");
+      tag.className = "tag";
+      tag.textContent = alert.tag;
+      const text = document.createElement("p");
+      text.textContent = alert.text;
+      card.append(tag, text);
+      body.appendChild(card);
+    });
+
+    details.appendChild(body);
+    container.appendChild(details);
   });
 }
 
@@ -668,6 +714,7 @@ const tabButtons = {
   "tab-btn-practice": "tab-practice",
   "tab-btn-latest": "tab-latest",
 };
+const tabsNav = document.querySelector(".tabs");
 Object.keys(tabButtons).forEach((btnId) => {
   document.getElementById(btnId).addEventListener("click", () => {
     Object.entries(tabButtons).forEach(([id, panelId]) => {
@@ -676,6 +723,7 @@ Object.keys(tabButtons).forEach((btnId) => {
       document.getElementById(id).setAttribute("aria-selected", String(isActive));
       document.getElementById(panelId).classList.toggle("hidden", !isActive);
     });
+    tabsNav.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });
 
