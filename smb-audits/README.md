@@ -7,6 +7,7 @@ This folder is for the actual audit product (methodology, intake form, report te
 - [`cyber-awareness.md`](cyber-awareness.md) — the Cyber Awareness component: what the optional retainer actually delivers (a plain-English Cyber Confidence Score, a recurring Sfinco Check-in note), and a roadmap note on the future self-serve web app (Year 2+, not started).
 - [`report-template.md`](report-template.md) — the client-facing report itself: duplicate per engagement, fill in the brackets. Matches Stage 4 of the methodology — summary, Cyber Confidence Score, ranked action list, findings by domain with Fix now/Fix soon/Good to know ratings, what's going well, and the retainer offer.
 - [`pricing-worksheet.md`](pricing-worksheet.md) — internal tool to turn intake answers into a fixed quote: a $500 base fee plus add-ons for team size, device count, extra software, direct card handling, sensitive data, and multi-site setups, floored at $500 and capped at $2,000.
+- [`findings-library.md`](findings-library.md) — for each of the 15 checklist items, canned Yes/No language: what's going well vs. what we found → why it matters → what to do, with a typical Fix now/Fix soon/Good to know rating. Feeds straight into the report template's findings sections.
 
 **Operational readiness — what's needed to actually take a paying client:**
 
