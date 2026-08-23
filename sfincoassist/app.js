@@ -169,6 +169,8 @@ const scamAlertCategories = [
   { key: "online", label: "Online & social media", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="12" r="2.3"/><circle cx="18" cy="6" r="2.3"/><circle cx="18" cy="18" r="2.3"/><path d="M8.16 10.9 15.84 7.1M8.16 13.1l7.68 3.8" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>' },
 ];
 
+const SCAM_ALERTS_LAST_REVIEWED = "24 August 2026";
+
 const scamAlerts = [
   {
     category: "phone",
@@ -199,6 +201,18 @@ const scamAlerts = [
     tag: "Heads up",
     priority: "urgent",
     text: "An email claiming your gas or electricity account is \"overdue\" and threatening disconnection within 24 hours, with a link to pay, is a common template scammers reuse across different energy providers.",
+  },
+  {
+    category: "email",
+    tag: "Heads up",
+    priority: "urgent",
+    text: "An email asking you to \"confirm your banking details\" to receive a refund or an unexpected payment is phishing. A genuine refund never needs your online banking login or card PIN to be released.",
+  },
+  {
+    category: "email",
+    tag: "Heads up",
+    priority: "urgent",
+    text: "An email claiming to have hacked your webcam or have compromising footage of you, and demanding cryptocurrency to stop it being sent to your contacts, is almost always a mass-sent bluff with nothing behind it. Delete it and don't reply.",
   },
   {
     category: "online",
@@ -489,6 +503,8 @@ document.getElementById("scam-check-form").addEventListener("submit", (e) => {
 });
 
 function renderScamAlerts() {
+  document.getElementById("scam-alerts-updated").textContent = `Last reviewed ${SCAM_ALERTS_LAST_REVIEWED}.`;
+
   const container = document.getElementById("latest-scams");
   container.innerHTML = "";
 
@@ -575,7 +591,7 @@ document.getElementById("trusted-contact-form").addEventListener("submit", (e) =
   renderTrustedContact();
 });
 
-document.querySelectorAll("#tab-contacts .read-aloud").forEach((btn) => {
+document.querySelectorAll(".read-aloud[data-text]").forEach((btn) => {
   btn.addEventListener("click", () => speak(btn.dataset.text));
 });
 
