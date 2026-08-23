@@ -47,10 +47,18 @@ p { margin: 0 0 1.1em; color: var(--muted); }
 
 a {
   color: var(--lime);
+  transition: color 0.15s ease;
 }
 
 a:hover {
   color: var(--blue);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+  }
 }
 
 .eyebrow {
@@ -139,13 +147,15 @@ a:hover {
 }
 
 nav.primary-nav {
-  display: none;
   width: 100%;
   order: 3;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
 }
 
 .nav-toggle-input:checked ~ nav.primary-nav {
-  display: block;
+  max-height: 400px;
 }
 
 nav.primary-nav ul {
@@ -167,6 +177,7 @@ nav.primary-nav a {
   color: var(--ink);
   font-weight: 600;
   font-size: 0.95rem;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 nav.primary-nav a:hover {
@@ -180,9 +191,10 @@ nav.primary-nav a:hover {
   }
 
   nav.primary-nav {
-    display: block;
     width: auto;
     order: 0;
+    max-height: none;
+    overflow: visible;
   }
 
   nav.primary-nav ul {
@@ -211,6 +223,11 @@ nav.primary-nav a:hover {
   font-weight: 700;
   font-size: 1rem;
   border: 2px solid transparent;
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.12s ease;
+}
+
+.btn:active {
+  transform: scale(0.97);
 }
 
 .btn-primary {
@@ -309,6 +326,13 @@ section > .container > h2 {
   padding: 1.6rem;
   display: flex;
   flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--lime);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
 }
 
 .pillar-card h3 {
@@ -351,6 +375,12 @@ section > .container > h2 {
   margin-top: 1rem;
   font-weight: 700;
   text-decoration: none;
+  display: inline-block;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.pillar-card a.card-link:hover {
+  transform: translateX(4px);
 }
 
 /* Callout boxes */
@@ -486,6 +516,11 @@ section > .container > h2 {
   font-weight: 600;
   color: var(--ink);
   padding: 0.9rem 1.2rem;
+  transition: background-color 0.15s ease;
+}
+
+.series-list summary:hover {
+  background-color: var(--bg-deep);
 }
 
 .series-list summary::-webkit-details-marker {
@@ -515,6 +550,15 @@ section > .container > h2 {
 }
 
 .series-list .series-detail {
+  overflow: hidden;
+  max-height: 0;
+  padding: 0 1.2rem;
+  border-top: 0 solid var(--border);
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.series-list details[open] .series-detail {
+  max-height: 600px;
   padding: 0 1.2rem 1.2rem;
   border-top: 1px solid var(--border);
 }
@@ -615,6 +659,7 @@ form.enquiry textarea {
   font-size: 1rem;
   font-family: inherit;
   color: var(--ink);
+  transition: border-color 0.15s ease;
 }
 
 form.enquiry input:focus,
@@ -706,6 +751,45 @@ form.enquiry .btn-row {
   margin-right: 0.3rem;
 }
 
+/* Safety panel */
+
+.safety-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--lime);
+  border-radius: 12px;
+  padding: 1.8rem;
+  margin-top: 2rem;
+}
+
+.safety-numbers {
+  display: grid;
+  gap: 1.1rem;
+  margin: 1.2rem 0 0.4rem;
+  padding: 0;
+}
+
+@media (min-width: 700px) {
+  .safety-numbers {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.safety-numbers dt {
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 0.95rem;
+}
+
+.safety-numbers dd {
+  margin: 0.2rem 0 0;
+}
+
+.safety-numbers dd a {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
 /* Footer */
 
 .site-footer {
@@ -717,10 +801,45 @@ form.enquiry .btn-row {
   background: var(--bg-deep);
 }
 
-.site-footer .container {
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.4rem;
+}
+
+@media (min-width: 700px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.footer-block h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--lime);
+  margin: 0 0 0.6rem;
+}
+
+.footer-block p {
+  margin: 0 0 0.3rem;
+}
+
+.footer-block .footer-phone {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.footer-bottom {
   display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
 }
 
 .site-footer a {

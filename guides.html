@@ -156,9 +156,22 @@
 
 <footer class="site-footer">
   <div class="container">
-    <div><strong>Sfinco</strong> &middot; Noosa, Sunshine Coast, Queensland, Australia</div>
-    <div><a href="mailto:hello@sfinco.com.au">hello@sfinco.com.au</a></div>
-    <div>&copy; 2026 Sfinco. All rights reserved.</div>
+    <div class="footer-grid">
+      <div class="footer-block">
+        <h3>Get in touch</h3>
+        <p>Sfinco &middot; Noosa, Sunshine Coast, Queensland, Australia</p>
+        <p><a href="mailto:hello@sfinco.com.au">hello@sfinco.com.au</a></p>
+        <p><a href="audits.html#enquire">Send an enquiry &rarr;</a></p>
+      </div>
+      <div class="footer-block">
+        <h3>Feeling unsure about something?</h3>
+        <p>Never call a number a message gives you. If in doubt, call the Australian Cyber Security Hotline direct, any time.</p>
+        <p><a class="footer-phone" href="tel:1300292371">1300 292 371</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Sfinco. All rights reserved.</span>
+    </div>
   </div>
 </footer>
 
@@ -166,6 +179,30 @@
 document.querySelectorAll(".primary-nav a").forEach(function(a) {
   a.addEventListener("click", function() {
     document.getElementById("nav-toggle").checked = false;
+  });
+});
+
+document.querySelectorAll(".series-list details").forEach(function (details) {
+  var summary = details.querySelector("summary");
+  var content = details.querySelector(".series-detail");
+  if (!summary || !content) return;
+  summary.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (details.open) {
+      content.style.maxHeight = content.scrollHeight + "px";
+      content.offsetHeight;
+      content.style.maxHeight = "0px";
+      content.addEventListener("transitionend", function close() {
+        details.open = false;
+        content.style.maxHeight = "";
+        content.removeEventListener("transitionend", close);
+      }, { once: true });
+    } else {
+      details.open = true;
+      content.style.maxHeight = "0px";
+      content.offsetHeight;
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
   });
 });
 </script>
