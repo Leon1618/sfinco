@@ -395,9 +395,20 @@ body {
   min-height: 48px;
   display: flex;
   align-items: center;
+  gap: 0.5rem;
   background: var(--surface);
   list-style: none;
 }
+
+.disclosure summary .tab-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--muted);
+}
+
+.disclosure summary .tab-icon svg { width: 1.1em; height: 1.1em; }
 
 .disclosure summary::-webkit-details-marker { display: none; }
 

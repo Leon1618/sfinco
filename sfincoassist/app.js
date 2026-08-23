@@ -163,10 +163,10 @@ document.getElementById("latest-next-btn").addEventListener("click", () => {
 });
 
 const scamAlertCategories = [
-  { key: "phone", label: "Phone calls" },
-  { key: "text", label: "Text messages" },
-  { key: "email", label: "Email" },
-  { key: "online", label: "Online & social media" },
+  { key: "phone", label: "Phone calls", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/></svg>' },
+  { key: "text", label: "Text messages", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h3v4l5-4h8a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4z"/></svg>' },
+  { key: "email", label: "Email", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>' },
+  { key: "online", label: "Online & social media", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="12" r="2.3"/><circle cx="18" cy="6" r="2.3"/><circle cx="18" cy="18" r="2.3"/><path d="M8.16 10.9 15.84 7.1M8.16 13.1l7.68 3.8" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>' },
 ];
 
 const scamAlerts = [
@@ -501,7 +501,13 @@ function renderScamAlerts() {
     if (index === 0) details.open = true;
 
     const summary = document.createElement("summary");
-    summary.textContent = `${category.label} (${alertsInCategory.length})`;
+    const iconSpan = document.createElement("span");
+    iconSpan.className = "tab-icon";
+    iconSpan.setAttribute("aria-hidden", "true");
+    iconSpan.innerHTML = category.icon;
+    const labelSpan = document.createElement("span");
+    labelSpan.textContent = `${category.label} (${alertsInCategory.length})`;
+    summary.append(iconSpan, labelSpan);
     details.appendChild(summary);
 
     const body = document.createElement("div");
