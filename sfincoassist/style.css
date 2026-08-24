@@ -557,9 +557,20 @@ button:hover { opacity: 0.9; }
 
 .sample-card p { margin: 0.3rem 0 0; color: var(--ink); }
 
+.sample-card-title {
+  display: block;
+  color: var(--ink);
+  font-size: 1.05rem;
+  margin-top: 0.4rem;
+}
+
 .sample-card.urgent { border-left-color: var(--red); }
 .sample-card.soon { border-left-color: var(--amber); }
 .sample-card.notice { border-left-color: var(--blue); }
+.sample-card.trending { border-left-color: var(--amber); }
+
+.section-heading { margin-top: 2rem; }
+.section-heading:first-of-type { margin-top: 1.5rem; }
 
 .tag {
   display: inline-block;

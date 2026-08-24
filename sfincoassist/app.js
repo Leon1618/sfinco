@@ -169,67 +169,93 @@ const scamAlertCategories = [
   { key: "online", label: "Online & social media", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="12" r="2.3"/><circle cx="18" cy="6" r="2.3"/><circle cx="18" cy="18" r="2.3"/><path d="M8.16 10.9 15.84 7.1M8.16 13.1l7.68 3.8" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>' },
 ];
 
-const SCAM_ALERTS_LAST_REVIEWED = "24 August 2026";
-
 const scamAlerts = [
   {
     category: "phone",
-    tag: "Heads up",
-    priority: "urgent",
-    text: "There's a scam call going around the Sunshine Coast where someone pretends to be from your bank and asks for your BSB and account number. Your real bank will never ask for this over the phone.",
+    tactic: "new",
+    tag: "New tactic",
+    priority: "trending",
+    title: "AI-cloned voice calls",
+    text: "It only takes a few seconds of audio from a video or voicemail to clone someone's voice convincingly. If you get a panicked call from a \"family member\" asking for money by gift card or bank transfer, hang up and call them back on their usual number to check it's really them.",
+  },
+  {
+    category: "online",
+    tactic: "new",
+    tag: "New tactic",
+    priority: "trending",
+    title: "Deepfake celebrity endorsements",
+    text: "Fake videos of well-known news presenters or business figures \"endorsing\" a secret investment platform are circulating on social media, generated with AI to look and sound convincing. Real public figures don't tip you off to secret trading platforms.",
+  },
+  {
+    category: "online",
+    tactic: "new",
+    tag: "New tactic",
+    priority: "trending",
+    title: "Fake QR codes (quishing)",
+    text: "Scammers sometimes stick a fake QR code sticker over a real one, on parking meters, cafe tables, or parcel slips, leading to a fake payment page instead of the real one. Look for a sticker that seems peeled or slightly crooked, and type the website in yourself if you're not sure.",
+  },
+  {
+    category: "online",
+    tactic: "new",
+    tag: "New tactic",
+    priority: "trending",
+    title: "AI chatbots building trust before asking for money",
+    text: "Some romance and investment scams now use AI chatbots that can chat naturally with hundreds of people at once, building a friendship or relationship for weeks before asking for money. A connection that eventually asks for money, especially in cryptocurrency, is a warning sign no matter how genuine it felt.",
   },
   {
     category: "phone",
     tag: "Heads up",
     priority: "urgent",
-    text: "Some scammers are now cloning a family member's voice from a few seconds of audio, then calling in a panic asking for money via gift cards or a bank transfer. Hang up and call them back on their usual number to check.",
+    title: "Fake bank call asking for account details",
+    text: "There's a scam call going around the Sunshine Coast where someone pretends to be from your bank and asks for your BSB and account number. Your real bank will never ask for this over the phone.",
   },
   {
     category: "text",
     tag: "Heads up",
     priority: "urgent",
+    title: "Fake toll or delivery fee text",
     text: "Watch for texts claiming a toll or parcel delivery fee is \"overdue\" with a link to pay. Go to the real website yourself instead of clicking the link.",
   },
   {
     category: "text",
     tag: "Heads up",
     priority: "urgent",
+    title: "Fake myGov \"account suspended\" text",
     text: "A text claiming your myGov identity has been \"suspended due to unusual activity\" is doing the rounds, with a link to \"update your details.\" myGov never contacts you this way. Log in directly at my.gov.au instead, if you want to check.",
   },
   {
     category: "email",
     tag: "Heads up",
     priority: "urgent",
+    title: "Fake overdue energy bill email",
     text: "An email claiming your gas or electricity account is \"overdue\" and threatening disconnection within 24 hours, with a link to pay, is a common template scammers reuse across different energy providers.",
   },
   {
     category: "email",
     tag: "Heads up",
     priority: "urgent",
+    title: "Fake refund asking for banking details",
     text: "An email asking you to \"confirm your banking details\" to receive a refund or an unexpected payment is phishing. A genuine refund never needs your online banking login or card PIN to be released.",
   },
   {
     category: "email",
     tag: "Heads up",
     priority: "urgent",
+    title: "Webcam \"hacked\" extortion email",
     text: "An email claiming to have hacked your webcam or have compromising footage of you, and demanding cryptocurrency to stop it being sent to your contacts, is almost always a mass-sent bluff with nothing behind it. Delete it and don't reply.",
   },
   {
     category: "online",
     tag: "Heads up",
     priority: "urgent",
+    title: "Fake \"virus detected\" pop-up",
     text: "A pop-up claiming \"your computer has a virus, call Microsoft support now\" with a phone number is a scam. Real tech companies don't put their phone number in a pop-up. Just close the browser tab.",
-  },
-  {
-    category: "online",
-    tag: "Heads up",
-    priority: "urgent",
-    text: "Fake videos of well-known news presenters or business figures \"endorsing\" a secret investment platform are circulating on social media. Real public figures don't tip you off to secret trading platforms.",
   },
   {
     category: "online",
     tag: "Did you know",
     priority: "notice",
+    title: "Fake charity appeals after disasters",
     text: "After any major bushfire or flood, fake charity appeals tend to follow within days. A genuine charity will never pressure you to donate immediately via gift card or wire transfer.",
   },
 ];
@@ -502,14 +528,33 @@ document.getElementById("scam-check-form").addEventListener("submit", (e) => {
   }
 });
 
+function buildAlertCard(alert) {
+  const card = document.createElement("div");
+  card.className = `sample-card ${alert.priority}`;
+  const tag = document.createElement("span");
+  tag.className = "tag";
+  tag.textContent = alert.tag;
+  const title = document.createElement("strong");
+  title.className = "sample-card-title";
+  title.textContent = alert.title;
+  const text = document.createElement("p");
+  text.textContent = alert.text;
+  card.append(tag, title, text);
+  return card;
+}
+
 function renderScamAlerts() {
-  document.getElementById("scam-alerts-updated").textContent = `Last reviewed ${SCAM_ALERTS_LAST_REVIEWED}.`;
+  const newTactics = document.getElementById("new-tactics");
+  newTactics.innerHTML = "";
+  scamAlerts
+    .filter((a) => a.tactic === "new")
+    .forEach((alert) => newTactics.appendChild(buildAlertCard(alert)));
 
   const container = document.getElementById("latest-scams");
   container.innerHTML = "";
 
   scamAlertCategories.forEach((category, index) => {
-    const alertsInCategory = scamAlerts.filter((a) => a.category === category.key);
+    const alertsInCategory = scamAlerts.filter((a) => a.category === category.key && a.tactic !== "new");
     if (alertsInCategory.length === 0) return;
 
     const details = document.createElement("details");
@@ -529,17 +574,7 @@ function renderScamAlerts() {
     const body = document.createElement("div");
     body.className = "disclosure-body";
 
-    alertsInCategory.forEach((alert) => {
-      const card = document.createElement("div");
-      card.className = `sample-card ${alert.priority}`;
-      const tag = document.createElement("span");
-      tag.className = "tag";
-      tag.textContent = alert.tag;
-      const text = document.createElement("p");
-      text.textContent = alert.text;
-      card.append(tag, text);
-      body.appendChild(card);
-    });
+    alertsInCategory.forEach((alert) => body.appendChild(buildAlertCard(alert)));
 
     details.appendChild(body);
     container.appendChild(details);
