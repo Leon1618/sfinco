@@ -27,9 +27,14 @@ Output: a scope note (which of the domains below are in play) and a fixed quote 
 
 ### 2. Remote risk review
 
-The technical core of the audit. Conducted as one or more screen-share sessions with whoever holds admin access (often the owner), plus some checks Leo can run independently without touching client systems. Typically 2–4 hours of active review depending on scope.
+The technical core of the audit, in two parts rather than one long screen-share block:
 
-See **Assessment domains** below for what's actually checked in this stage.
+- **2a. Guided Self-Check (async, client's own time, ~15–20 min).** Sent once the quote's accepted. Covers the checks a client can honestly self-report with a plain-English explanation — password habits, update status, backup practices, and the like. See `self-check-guide.md` for the client-facing version.
+- **2b. Verify Call (live, 30–45 min).** A short, focused screen-share for what genuinely needs Leo's eye directly — MFA status, admin access, payment handling — plus anything that came back unclear from the self-check. This is also where the trust-building conversation happens, not a box-ticking formality.
+
+Plus a handful of checks Leo runs independently either way (email authentication via public DNS lookup), no client involved.
+
+See `review-item-modes.md` for exactly which of the 20 checks lands where and why, and **Assessment domains** below for what's actually checked across the whole stage.
 
 ### 3. Findings and risk rating
 
@@ -75,7 +80,7 @@ What's actually reviewed. Not every domain applies to every business — scope i
 - General staff awareness of phishing and invoice-fraud scams — a few plain questions during intake, not a formal test.
 
 **Devices and software**
-- Operating system and software update status across business-owned devices (walked through live on a screen-share).
+- Operating system and software update status across business-owned devices (self-checked by the client, see `review-item-modes.md`).
 - Antivirus/endpoint protection presence and currency.
 - Screen lock and encryption status, especially on laptops that leave the premises.
 - BYO device policy, if any — what happens when staff use personal phones for business email or POS apps.
