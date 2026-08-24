@@ -1,6 +1,5 @@
 const TEXT_SIZE_KEY = "sfincoassist-text-size";
 const THEME_KEY = "sfincoassist-theme";
-const HISTORY_KEY = "sfincoassist-history";
 const CONTACT_KEY = "sfincoassist-trusted-contact";
 
 /* ---------- Undo toast: lets a destructive action be reversed instead of confirmed upfront ---------- */
@@ -87,22 +86,17 @@ document.getElementById("help-close-btn").addEventListener("click", () => helpDi
 document.getElementById("clear-data-btn").addEventListener("click", () => {
   const snapshot = {
     username: localStorage.getItem(USERNAME_KEY),
-    history: localStorage.getItem(HISTORY_KEY),
     contact: localStorage.getItem(CONTACT_KEY),
   };
   localStorage.removeItem(USERNAME_KEY);
-  localStorage.removeItem(HISTORY_KEY);
   localStorage.removeItem(CONTACT_KEY);
   applyGreeting();
-  renderHistory();
   renderTrustedContact();
   profileDialog.close();
   showUndo("Your data was cleared.", () => {
     if (snapshot.username) localStorage.setItem(USERNAME_KEY, snapshot.username);
-    if (snapshot.history) localStorage.setItem(HISTORY_KEY, snapshot.history);
     if (snapshot.contact) localStorage.setItem(CONTACT_KEY, snapshot.contact);
     applyGreeting();
-    renderHistory();
     renderTrustedContact();
   });
 });
@@ -338,67 +332,6 @@ function checkMessage(text) {
   return textFlags.concat(checkLinks(text));
 }
 
-function loadHistory() {
-  const raw = localStorage.getItem(HISTORY_KEY);
-  return raw ? JSON.parse(raw) : [];
-}
-
-function saveHistory(history) {
-  localStorage.setItem(HISTORY_KEY, JSON.stringify(history.slice(0, 10)));
-}
-
-function addHistoryEntry(text, matchCount) {
-  const history = loadHistory();
-  const snippet = text.length > 70 ? text.slice(0, 70) + "…" : text;
-  history.unshift({
-    id: crypto.randomUUID(),
-    snippet,
-    date: new Date().toISOString(),
-    matchCount,
-  });
-  saveHistory(history);
-}
-
-function renderHistory() {
-  const container = document.getElementById("scam-history");
-  const empty = document.getElementById("history-empty");
-  const history = loadHistory();
-
-  container.innerHTML = "";
-  empty.style.display = history.length ? "none" : "block";
-
-  history.forEach((entry) => {
-    const row = document.createElement("div");
-    row.className = "history-row";
-
-    const badge = document.createElement("span");
-    badge.className = `tag ${entry.matchCount > 0 ? "flagged" : "clear"}`;
-    badge.textContent = entry.matchCount > 0 ? `${entry.matchCount} flag${entry.matchCount > 1 ? "s" : ""}` : "Looked clear";
-
-    const text = document.createElement("span");
-    text.className = "history-snippet";
-    text.textContent = entry.snippet;
-
-    const when = document.createElement("span");
-    when.className = "history-date";
-    when.textContent = new Date(entry.date).toLocaleDateString("en-AU", { day: "numeric", month: "short" });
-
-    row.append(badge, text, when);
-    container.appendChild(row);
-  });
-}
-
-document.getElementById("clear-history-btn").addEventListener("click", () => {
-  const previous = loadHistory();
-  if (previous.length === 0) return;
-  saveHistory([]);
-  renderHistory();
-  showUndo("History cleared.", () => {
-    saveHistory(previous);
-    renderHistory();
-  });
-});
-
 /* ---------- 5. Share / print a result ---------- */
 
 function resultToText(text, matches) {
@@ -522,10 +455,19 @@ document.getElementById("scam-check-form").addEventListener("submit", (e) => {
   const text = document.getElementById("scam-text").value.trim();
   const matches = checkMessage(text);
   renderScamResult(text, matches, text.length > 0);
-  if (text.length > 0) {
-    addHistoryEntry(text, matches.length);
-    renderHistory();
-  }
+});
+
+const EXAMPLE_SCAM_TEXT = "Australia Post: Your parcel has a $3.20 customs fee that must be paid within 24 hours or it will be returned to sender. Pay here: auspost-fee-check.com";
+const EXAMPLE_GENUINE_TEXT = "Hi Leo, it's Grace from book club. Next meet-up is Thursday 7pm at the Noosaville library, see you then!";
+
+document.getElementById("try-scam-example-btn").addEventListener("click", () => {
+  document.getElementById("scam-text").value = EXAMPLE_SCAM_TEXT;
+  document.getElementById("scam-check-form").requestSubmit();
+});
+
+document.getElementById("try-genuine-example-btn").addEventListener("click", () => {
+  document.getElementById("scam-text").value = EXAMPLE_GENUINE_TEXT;
+  document.getElementById("scam-check-form").requestSubmit();
 });
 
 function buildAlertCard(alert) {
@@ -1268,7 +1210,6 @@ if (SpeechRecognitionCtor) {
 }
 
 renderScamAlerts();
-renderHistory();
 renderTrustedContact();
 startQuizRound();
 renderQuiz();

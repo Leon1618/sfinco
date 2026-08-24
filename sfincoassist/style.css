@@ -544,8 +544,6 @@ button:hover { opacity: 0.9; }
 
 .sample-alerts { margin-top: 2rem; }
 
-.empty-state { color: var(--muted); font-style: italic; }
-
 .sample-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -682,16 +680,6 @@ body.light-theme form {
   }
 }
 
-/* ---------- Scam-check history ---------- */
-
-.history-block { margin-top: 2rem; }
-
-.history-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .link-btn {
   background: none;
   border: none;
@@ -703,27 +691,10 @@ body.light-theme form {
   cursor: pointer;
 }
 
-.history-row {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.6rem 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 0.9rem;
-}
-
-.history-row .tag.flagged { color: var(--red); }
-.history-row .tag.clear { color: var(--blue); }
-
-.history-snippet {
-  flex: 1;
+.example-row {
   color: var(--muted);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  margin-bottom: 1rem;
 }
-
-.history-date { color: var(--muted); font-size: 0.8rem; white-space: nowrap; }
 
 /* ---------- Share / print ---------- */
 
@@ -822,7 +793,7 @@ body.light-theme form {
 }
 
 @media print {
-  header, .notice, .tabs, #scam-check-form, .history-block, .sample-alerts, footer, .share-row, .undo-toast {
+  header, .notice, .tabs, #scam-check-form, .example-row, .sample-alerts, footer, .share-row, .undo-toast {
     display: none !important;
   }
   body { background: #FFFFFF; color: #000000; }
