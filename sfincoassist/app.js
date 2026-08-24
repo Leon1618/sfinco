@@ -663,25 +663,201 @@ const quizItems = [
     isScam: false,
     explanation: "A real council domain, a normal due date, and a phone number you can independently look up to confirm.",
   },
+  {
+    text: "Facebook Marketplace: Hi, I'm interested in your couch! I'll pay via PayPal, but you'll need to upgrade to a Business account first, here's a link to do that.",
+    isScam: true,
+    explanation: "There's no such thing as needing to \"upgrade\" your PayPal account to receive a payment. This is a common Marketplace scam that ends with your account details being stolen.",
+  },
+  {
+    text: "Hi love, it's your neighbour Pat from number 12. Bin day's been moved to Thursday this week because of the public holiday.",
+    isScam: false,
+    explanation: "A normal, low-key message with no links, no money, and nothing needing an urgent response.",
+  },
+  {
+    text: "Microsoft Security Alert: We've detected 3 viruses on your computer. Call 1800 XXX XXX immediately to avoid data loss.",
+    isScam: true,
+    explanation: "Microsoft doesn't monitor your computer and hand you a phone number to call. This is the classic tech support scam, aimed at getting remote access to your computer.",
+  },
+  {
+    text: "Your prescription is ready for pickup at Terrace Pharmacy, Noosaville. Open until 6pm today.",
+    isScam: false,
+    explanation: "A routine, low-stakes message with no links or requests, just information.",
+  },
+  {
+    text: "Hi, I saw your profile and felt an instant connection. I'm an engineer currently working on an oil rig, can we chat on WhatsApp instead of here?",
+    isScam: true,
+    explanation: "Moving straight to a private app, a vague overseas job, and an instant declaration of connection are hallmarks of a romance scam that usually ends with a request for money.",
+  },
+  {
+    text: "Your GP appointment with Dr Chen is confirmed for Tuesday 10:30am at Noosa Civic Medical Centre.",
+    isScam: false,
+    explanation: "A standard appointment confirmation, no links, no payment requests.",
+  },
+  {
+    text: "INVESTMENT ALERT: Turn $250 into $4,000 in 7 days with our AI trading bot, as seen on Sunrise and 60 Minutes! Limited spots, join now.",
+    isScam: true,
+    explanation: "Guaranteed high returns in a short time, plus a fake claim of being featured on TV, are strong signs of an investment scam. No legitimate trading bot can guarantee profits.",
+  },
+  {
+    text: "Reminder from Sunshine Coast Council Library: \"The Thursday Murder Club\" is due back on 3 September.",
+    isScam: false,
+    explanation: "A routine library reminder, nothing to click, nothing to pay.",
+  },
 ];
 
+const redFlagItems = [
+  {
+    text: "Your parcel could not be delivered due to an unpaid customs fee of $2.99. Pay now to reschedule delivery: http://auspost-redelivery.info",
+    options: ["an unpaid customs fee of $2.99", "Pay now to reschedule delivery", "http://auspost-redelivery.info"],
+    correctIndex: 2,
+    explanation: "That web address isn't the real auspost.com.au. A fake or lookalike link is one of the strongest scam signs there is, even when the rest of the message sounds mundane.",
+  },
+  {
+    text: "CommBank Alert: Unusual activity detected on your account. Verify immediately or your card will be suspended: bit.ly/cba-secure",
+    options: ["Unusual activity detected on your account", "Verify immediately or your card will be suspended", "bit.ly/cba-secure"],
+    correctIndex: 2,
+    explanation: "A shortened link like this hides where it actually leads. Real banks link straight to their own website, never through a bit.ly address. The urgent tone is worth noticing too, but the hidden link is the clearest tell.",
+  },
+  {
+    text: "Congratulations! You've been selected to win a $500 Coles gift card. Claim now before it expires: claim-reward-au.com",
+    options: ["You've been selected to win a $500 Coles gift card", "Claim now before it expires", "claim-reward-au.com"],
+    correctIndex: 0,
+    explanation: "An unexpected prize for a competition you never entered is the classic sign of a prize scam, no matter how official the rest of it looks.",
+  },
+  {
+    text: "myGov: Your account has unusual activity and will be suspended. Update your details now at mygov-secure-update.com",
+    options: ["unusual activity and will be suspended", "Update your details now", "mygov-secure-update.com"],
+    correctIndex: 2,
+    explanation: "Real government websites end in .gov.au. This one doesn't, and that's the giveaway even though the rest of the message sounds urgent and official.",
+  },
+  {
+    text: "Your electricity account is overdue. Service will be disconnected within 24 hours unless you pay now: energy-billpay-au.net",
+    options: ["Your electricity account is overdue", "disconnected within 24 hours unless you pay now", "energy-billpay-au.net"],
+    correctIndex: 1,
+    explanation: "A 24-hour deadline is designed to rush you into paying before you stop and check. No genuine energy provider disconnects that fast over an unpaid bill.",
+  },
+  {
+    text: "You're eligible for a $310 tax refund. To receive it, confirm your online banking login and card PIN here.",
+    options: ["eligible for a $310 tax refund", "confirm your online banking login and card PIN", "here"],
+    correctIndex: 1,
+    explanation: "A genuine refund never needs your online banking login or card PIN to be released. Anyone asking for both at once is phishing.",
+  },
+  {
+    text: "Nan, it's me, I've been in an accident and I need $2,000 for the tow truck right now, please don't tell Mum and Dad.",
+    options: ["I've been in an accident", "I need $2,000 for the tow truck right now", "please don't tell Mum and Dad"],
+    correctIndex: 2,
+    explanation: "Asking you to keep it secret from family is a major warning sign on its own, it's there to stop you checking the story with anyone else. Hang up and call the person back on their usual number.",
+  },
+  {
+    text: "Your Woolworths order #48213 has been packed and is on its way. Track it here: woolworths.com.au/orders",
+    options: ["has been packed and is on its way", "Track it here", "woolworths.com.au/orders"],
+    correctIndex: -1,
+    explanation: "A real, spelled-out domain, no pressure, and no request for money or personal details. This one looks genuine.",
+  },
+  {
+    text: "Reminder: your rates notice from Noosa Council is due 15 September. Pay online at noosa.qld.gov.au or call 5329 6500.",
+    options: ["due 15 September", "Pay online at noosa.qld.gov.au", "or call 5329 6500"],
+    correctIndex: -1,
+    explanation: "A real council domain, a normal due date, and a phone number you could look up independently to confirm. Nothing here is pushing you to act in a hurry.",
+  },
+  {
+    text: "Hi Mum, it's Sarah. Running 10 minutes late for lunch at Massimo's in Noosa Junction, sorry!",
+    options: ["Running 10 minutes late for lunch", "at Massimo's in Noosa Junction", "sorry!"],
+    correctIndex: -1,
+    explanation: "No links, no urgency, no request for money or details, just a normal message from someone you know.",
+  },
+];
+
+const QUIZ_ROUND_SIZE = 6;
+const REDFLAG_ROUND_SIZE = 5;
+const STREAK_KEY = "sfincoassist-quiz-streak";
+const BEST_STREAK_KEY = "sfincoassist-quiz-best-streak";
+
+function shuffledIndices(n) {
+  const arr = Array.from({ length: n }, (_, i) => i);
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function nextRotatedIndices(poolSize, count, storageKey) {
+  let state = null;
+  try {
+    state = JSON.parse(localStorage.getItem(storageKey));
+  } catch (e) {
+    state = null;
+  }
+  if (!state || !Array.isArray(state.queue) || state.poolSize !== poolSize) {
+    state = { queue: shuffledIndices(poolSize), poolSize };
+  }
+  const picked = [];
+  while (picked.length < count) {
+    if (state.queue.length === 0) state.queue = shuffledIndices(poolSize);
+    picked.push(state.queue.shift());
+  }
+  localStorage.setItem(storageKey, JSON.stringify(state));
+  return picked;
+}
+
+function getStreak() {
+  return Number(localStorage.getItem(STREAK_KEY) || 0);
+}
+
+function getBestStreak() {
+  return Number(localStorage.getItem(BEST_STREAK_KEY) || 0);
+}
+
+function renderStreak() {
+  const el = document.getElementById("quiz-streak");
+  if (!el) return;
+  const streak = getStreak();
+  const best = getBestStreak();
+  if (streak > 0) {
+    el.textContent = `Current streak: ${streak} in a row. Best: ${best}.`;
+  } else if (best > 0) {
+    el.textContent = `Best streak: ${best} in a row. Play a round below to beat it.`;
+  } else {
+    el.textContent = "Play a round below to start your streak.";
+  }
+}
+
+function recordAnswer(correct) {
+  let streak = getStreak();
+  let best = getBestStreak();
+  streak = correct ? streak + 1 : 0;
+  if (streak > best) best = streak;
+  localStorage.setItem(STREAK_KEY, String(streak));
+  localStorage.setItem(BEST_STREAK_KEY, String(best));
+  renderStreak();
+}
+
+let quizRoundItems = [];
 let quizIndex = 0;
 let quizScore = 0;
+
+function startQuizRound() {
+  const count = Math.min(QUIZ_ROUND_SIZE, quizItems.length);
+  const idx = nextRotatedIndices(quizItems.length, count, "sfincoassist-quiz-rotation");
+  quizRoundItems = idx.map((i) => quizItems[i]);
+}
 
 function renderQuiz() {
   const container = document.getElementById("quiz-container");
   container.innerHTML = "";
 
-  if (quizIndex >= quizItems.length) {
+  if (quizIndex >= quizRoundItems.length) {
     const summary = document.createElement("div");
     summary.className = "sample-card notice";
     const p = document.createElement("p");
-    p.textContent = `You got ${quizScore} out of ${quizItems.length}. Every bit of practice makes the real thing easier to spot.`;
+    p.textContent = `You got ${quizScore} out of ${quizRoundItems.length}. Every bit of practice makes the real thing easier to spot.`;
     summary.appendChild(p);
     const restartBtn = document.createElement("button");
     restartBtn.type = "button";
     restartBtn.textContent = "Try again";
     restartBtn.addEventListener("click", () => {
+      startQuizRound();
       quizIndex = 0;
       quizScore = 0;
       renderQuiz();
@@ -693,11 +869,11 @@ function renderQuiz() {
     return;
   }
 
-  const item = quizItems[quizIndex];
+  const item = quizRoundItems[quizIndex];
 
   const progress = document.createElement("p");
   progress.className = "quiz-progress";
-  progress.textContent = `Message ${quizIndex + 1} of ${quizItems.length}`;
+  progress.textContent = `Message ${quizIndex + 1} of ${quizRoundItems.length}`;
 
   const messageCard = document.createElement("div");
   messageCard.className = "sample-card notice quiz-message";
@@ -718,6 +894,7 @@ function renderQuiz() {
 
   const answer = (guessedScam) => {
     const correct = guessedScam === item.isScam;
+    recordAnswer(correct);
     if (correct) quizScore += 1;
 
     const feedback = document.createElement("div");
@@ -731,7 +908,7 @@ function renderQuiz() {
 
     const nextBtn = document.createElement("button");
     nextBtn.type = "button";
-    nextBtn.textContent = quizIndex + 1 < quizItems.length ? "Next" : "See my results";
+    nextBtn.textContent = quizIndex + 1 < quizRoundItems.length ? "Next" : "See my results";
     nextBtn.addEventListener("click", () => {
       quizIndex += 1;
       renderQuiz();
@@ -751,6 +928,108 @@ function renderQuiz() {
 
   choices.append(scamBtn, okBtn);
   container.append(progress, messageCard, choices);
+}
+
+let redFlagRoundItems = [];
+let redFlagIndex = 0;
+let redFlagScore = 0;
+
+function startRedFlagRound() {
+  const count = Math.min(REDFLAG_ROUND_SIZE, redFlagItems.length);
+  const idx = nextRotatedIndices(redFlagItems.length, count, "sfincoassist-redflag-rotation");
+  redFlagRoundItems = idx.map((i) => redFlagItems[i]);
+}
+
+function renderRedFlag() {
+  const container = document.getElementById("redflag-container");
+  container.innerHTML = "";
+
+  if (redFlagIndex >= redFlagRoundItems.length) {
+    const summary = document.createElement("div");
+    summary.className = "sample-card notice";
+    const p = document.createElement("p");
+    p.textContent = `You got ${redFlagScore} out of ${redFlagRoundItems.length}. Every bit of practice makes the real thing easier to spot.`;
+    summary.appendChild(p);
+    const restartBtn = document.createElement("button");
+    restartBtn.type = "button";
+    restartBtn.textContent = "Try again";
+    restartBtn.addEventListener("click", () => {
+      startRedFlagRound();
+      redFlagIndex = 0;
+      redFlagScore = 0;
+      renderRedFlag();
+    });
+    const restartRow = document.createElement("div");
+    restartRow.className = "quiz-next-row";
+    restartRow.appendChild(restartBtn);
+    container.append(summary, restartRow);
+    return;
+  }
+
+  const item = redFlagRoundItems[redFlagIndex];
+
+  const progress = document.createElement("p");
+  progress.className = "quiz-progress";
+  progress.textContent = `Message ${redFlagIndex + 1} of ${redFlagRoundItems.length}`;
+
+  const messageCard = document.createElement("div");
+  messageCard.className = "sample-card notice quiz-message";
+  const messageText = document.createElement("p");
+  messageText.textContent = item.text;
+  messageCard.appendChild(messageText);
+
+  const prompt = document.createElement("p");
+  prompt.textContent = "Which part gives it away?";
+
+  const choices = document.createElement("div");
+  choices.className = "quiz-choices redflag-choices";
+
+  const allOptions = item.options
+    .map((text, i) => ({ text, isCorrect: i === item.correctIndex }))
+    .concat([{ text: "Nothing here looks suspicious", isCorrect: item.correctIndex === -1 }]);
+
+  const buttons = allOptions.map((opt) => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.textContent = opt.text;
+    return btn;
+  });
+
+  const answer = (chosenCorrect) => {
+    recordAnswer(chosenCorrect);
+    if (chosenCorrect) redFlagScore += 1;
+
+    const feedback = document.createElement("div");
+    feedback.className = `sample-card ${chosenCorrect ? "notice" : "urgent"}`;
+    const tag = document.createElement("span");
+    tag.className = "tag";
+    tag.textContent = chosenCorrect ? "Nice pick-up" : "Here's the tell";
+    const p = document.createElement("p");
+    p.textContent = item.explanation;
+    feedback.append(tag, p);
+
+    const nextBtn = document.createElement("button");
+    nextBtn.type = "button";
+    nextBtn.textContent = redFlagIndex + 1 < redFlagRoundItems.length ? "Next" : "See my results";
+    nextBtn.addEventListener("click", () => {
+      redFlagIndex += 1;
+      renderRedFlag();
+    });
+
+    const nextRow = document.createElement("div");
+    nextRow.className = "quiz-next-row";
+    nextRow.appendChild(nextBtn);
+
+    buttons.forEach((b) => (b.disabled = true));
+    container.append(feedback, nextRow);
+  };
+
+  buttons.forEach((btn, i) => {
+    btn.addEventListener("click", () => answer(allOptions[i].isCorrect));
+  });
+
+  choices.append(...buttons);
+  container.append(progress, messageCard, prompt, choices);
 }
 
 function speak(text) {
@@ -991,7 +1270,11 @@ if (SpeechRecognitionCtor) {
 renderScamAlerts();
 renderHistory();
 renderTrustedContact();
+startQuizRound();
 renderQuiz();
+startRedFlagRound();
+renderRedFlag();
+renderStreak();
 renderTipOfDay();
 applyGreeting();
 searchIndex = buildSearchIndex();

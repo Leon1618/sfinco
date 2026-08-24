@@ -764,6 +764,16 @@ body.light-theme form {
   cursor: not-allowed;
 }
 
+.redflag-choices {
+  flex-direction: column;
+}
+
+.redflag-choices button {
+  flex: none;
+  text-align: left;
+  white-space: normal;
+}
+
 .quiz-next-row {
   display: flex;
   justify-content: flex-end;

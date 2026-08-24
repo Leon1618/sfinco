@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sfinco Personal Cyber Awareness Assistant</title>
-<link rel="stylesheet" href="style.css?v=20260824">
+<link rel="stylesheet" href="style.css?v=20260824b">
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
 </head>
 <body>
@@ -357,7 +357,7 @@
   </section>
 
   <section id="tab-practice" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-btn-practice">
-    <h2>Spot the scam</h2>
+    <h2>Practice spotting scams</h2>
 
     <div class="sample-card notice">
       <p>Scams impersonating trusted names cost Australians millions every year. One recent wave of fake celebrity investment ads alone was linked to $7.4 million in reported losses. The good news: pausing to check is usually all it takes to avoid one. A bit of practice makes that pause easier.</p>
@@ -397,8 +397,15 @@
       </div>
     </details>
 
+    <p id="quiz-streak" class="tip-footer"></p>
+
+    <h3 class="section-heading">Game 1: Spot the scam</h3>
     <p>Have a read and decide: scam, or the real deal?</p>
     <div id="quiz-container" role="status" aria-live="polite"></div>
+
+    <h3 class="section-heading">Game 2: Spot the red flag</h3>
+    <p>Read the message, then tap the part that gives it away. Sometimes nothing does.</p>
+    <div id="redflag-container" role="status" aria-live="polite"></div>
 
     <div class="next-cta">
       <p>Want to see what's currently doing the rounds?</p>
@@ -478,6 +485,6 @@
   <button id="undo-toast-btn" type="button">Undo</button>
 </div>
 
-<script src="app.js?v=20260824"></script>
+<script src="app.js?v=20260824b"></script>
 </body>
 </html>
