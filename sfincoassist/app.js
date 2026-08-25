@@ -974,6 +974,184 @@ function renderRedFlag() {
   container.append(progress, messageCard, prompt, choices);
 }
 
+const callScenarios = [
+  {
+    title: "Bank fraud department",
+    steps: [
+      {
+        caller: "Hi, this is Sarah from CommBank's fraud team. We've noticed a suspicious $1,200 transfer from your account just now. Can you confirm your account number and the security code we just texted you so I can stop it?",
+        choices: [
+          { text: "Give the account number and the code", correct: false, feedback: "A real bank will never ask you to read out a one-time code over the phone. That code is the one thing standing between a scammer and your account." },
+          { text: "Say you'll call the bank back on the number on your card", correct: true },
+        ],
+      },
+      {
+        caller: "Wait, don't hang up, if you do the transfer will go through in the next few minutes. I need you to stay on the line and confirm your date of birth right now.",
+        choices: [
+          { text: "Stay on the line and give your date of birth", correct: false, feedback: "Creating panic to stop you hanging up is a classic pressure tactic. Real banks are fine with you calling back, there's no transfer that can't be stopped by hanging up." },
+          { text: "Hang up anyway and call the number on the back of your card", correct: true },
+        ],
+      },
+    ],
+    safeOutcome: "You hung up and called the bank yourself. Turns out there was no suspicious transfer, the call was a scam. Well played.",
+  },
+  {
+    title: "Grandchild in trouble",
+    steps: [
+      {
+        caller: "Nan, it's me, I'm in so much trouble, I crashed the car and I need $3,000 for the tow and the police are here. Please don't tell Mum and Dad, can you just transfer it now?",
+        choices: [
+          { text: "Transfer the money straight away", correct: false, feedback: "Urgency plus a request to keep it secret from family is one of the strongest scam combinations there is, especially now that voices can be cloned convincingly from just a few seconds of audio." },
+          { text: "Say you'll call them back on their usual number first", correct: true },
+        ],
+      },
+      {
+        caller: "No, don't hang up, this phone is borrowed, you won't be able to reach me. Please just send it to this account now.",
+        choices: [
+          { text: "Send the money to the account they give you", correct: false, feedback: "Insisting you can't call back on a normal number, and pushing a new account to pay into, are both major warning signs. A real emergency doesn't fall apart just because you double check." },
+          { text: "Hang up and call your grandchild's actual number, or another family member, to check", correct: true },
+        ],
+      },
+    ],
+    safeOutcome: "You checked with the family directly instead of acting on the call alone. Turns out it wasn't them. Trusting that instinct paid off.",
+  },
+  {
+    title: "Tech support call",
+    steps: [
+      {
+        caller: "Hello, this is Telstra technical support, we've detected a virus on your home network coming from your computer. I need to remote into your computer right now to remove it before it spreads.",
+        choices: [
+          { text: "Let them remote into your computer", correct: false, feedback: "No phone or internet provider monitors your computer for viruses or calls you out of the blue to fix it. Giving remote access hands over full control of your computer and everything on it." },
+          { text: "Say no and hang up", correct: true },
+        ],
+      },
+      {
+        caller: "The caller rings straight back: wait, if you hang up your internet will be cut off within the hour. I just need your account PIN to stop that happening.",
+        choices: [
+          { text: "Give them the account PIN to avoid losing internet", correct: false, feedback: "Threatening to cut off a service unless you act immediately is designed to panic you into handing over details. No provider disconnects you like that over the phone." },
+          { text: "Hang up again and call your provider yourself using the number on a bill", correct: true },
+        ],
+      },
+    ],
+    safeOutcome: "You didn't let the pressure rush you, and checked with the provider directly. That's exactly the right move.",
+  },
+];
+
+let callScenario = null;
+let callStepIndex = 0;
+
+function startCallRound() {
+  const idx = nextRotatedIndices(callScenarios.length, 1, "sfincoassist-callsim-rotation");
+  callScenario = callScenarios[idx[0]];
+  callStepIndex = 0;
+}
+
+function renderCallSim() {
+  const container = document.getElementById("callsim-container");
+  container.innerHTML = "";
+
+  const step = callScenario.steps[callStepIndex];
+
+  if (!step) {
+    const summary = document.createElement("div");
+    summary.className = "sample-card notice";
+    const tag = document.createElement("span");
+    tag.className = "tag";
+    tag.textContent = "Call handled safely";
+    const p = document.createElement("p");
+    p.textContent = callScenario.safeOutcome;
+    summary.append(tag, p);
+
+    const restartBtn = document.createElement("button");
+    restartBtn.type = "button";
+    restartBtn.textContent = "Try another call";
+    restartBtn.addEventListener("click", () => {
+      startCallRound();
+      renderCallSim();
+    });
+    const restartRow = document.createElement("div");
+    restartRow.className = "quiz-next-row";
+    restartRow.appendChild(restartBtn);
+    container.append(summary, restartRow);
+    return;
+  }
+
+  const progress = document.createElement("p");
+  progress.className = "quiz-progress";
+  progress.textContent = `${callScenario.title}: step ${callStepIndex + 1} of ${callScenario.steps.length}`;
+
+  const messageCard = document.createElement("div");
+  messageCard.className = "sample-card notice quiz-message";
+  const callerTag = document.createElement("span");
+  callerTag.className = "tag";
+  callerTag.textContent = "Caller says";
+  const callerText = document.createElement("p");
+  callerText.textContent = step.caller;
+  messageCard.append(callerTag, callerText);
+
+  const prompt = document.createElement("p");
+  prompt.textContent = "What do you do?";
+
+  const choices = document.createElement("div");
+  choices.className = "quiz-choices redflag-choices";
+
+  const buttons = step.choices.map((choice) => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.textContent = choice.text;
+    return btn;
+  });
+
+  const isLastStep = callStepIndex + 1 >= callScenario.steps.length;
+
+  const answer = (choice) => {
+    recordAnswer(choice.correct);
+
+    const feedback = document.createElement("div");
+    feedback.className = `sample-card ${choice.correct ? "notice" : "urgent"}`;
+    const tag = document.createElement("span");
+    tag.className = "tag";
+    tag.textContent = choice.correct ? "Good move" : "That's how the scam works";
+    const p = document.createElement("p");
+    p.textContent = choice.correct
+      ? isLastStep
+        ? "That's the safer move."
+        : "That's the safer move. The caller tries a different angle."
+      : choice.feedback;
+    feedback.append(tag, p);
+
+    const nextBtn = document.createElement("button");
+    nextBtn.type = "button";
+    if (choice.correct) {
+      nextBtn.textContent = isLastStep ? "See what happened" : "Next";
+      nextBtn.addEventListener("click", () => {
+        callStepIndex += 1;
+        renderCallSim();
+      });
+    } else {
+      nextBtn.textContent = "Try another call";
+      nextBtn.addEventListener("click", () => {
+        startCallRound();
+        renderCallSim();
+      });
+    }
+
+    const nextRow = document.createElement("div");
+    nextRow.className = "quiz-next-row";
+    nextRow.appendChild(nextBtn);
+
+    buttons.forEach((b) => (b.disabled = true));
+    container.append(feedback, nextRow);
+  };
+
+  buttons.forEach((btn, i) => {
+    btn.addEventListener("click", () => answer(step.choices[i]));
+  });
+
+  choices.append(...buttons);
+  container.append(progress, messageCard, prompt, choices);
+}
+
 function speak(text) {
   if (!("speechSynthesis" in window)) return;
   window.speechSynthesis.cancel();
@@ -1215,6 +1393,8 @@ startQuizRound();
 renderQuiz();
 startRedFlagRound();
 renderRedFlag();
+startCallRound();
+renderCallSim();
 renderStreak();
 renderTipOfDay();
 applyGreeting();
