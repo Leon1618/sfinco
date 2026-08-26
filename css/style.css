@@ -9,7 +9,7 @@
   --lime-tint: rgba(217, 164, 65, 0.12);
   --blue: #6FB1E8;
   --blue-tint: rgba(111, 177, 232, 0.12);
-  --purple: #A78BFA;
+  --purple: #BBA6FC;
   --purple-tint: rgba(167, 139, 250, 0.12);
   --max-width: 1080px;
 }
@@ -82,7 +82,7 @@ a:hover {
 .site-header {
   border-bottom: 1px solid var(--border);
   padding: 1.1rem 0;
-  background: var(--bg-deep);
+  background: #000000;
 }
 
 .site-header .container {
@@ -1259,70 +1259,6 @@ form.enquiry .btn-row {
 .convergence-section .section-intro {
   margin-left: auto;
   margin-right: auto;
-}
-
-.convergence-card {
-  max-width: 560px;
-  margin: 2.5rem auto 0;
-  padding: 1.5rem;
-  border-radius: 40px;
-  background: var(--bg-deep);
-  border: 1px solid var(--border);
-}
-
-.convergence-graphic {
-  border-radius: 28px;
-  overflow: hidden;
-}
-
-.convergence-graphic svg {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.convergence-graphic .orb {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: orb-pulse 9s ease-in-out infinite;
-}
-
-.convergence-graphic .orb-b {
-  animation-delay: 2s;
-}
-
-.convergence-graphic .orb-c {
-  animation-delay: 4s;
-}
-
-@keyframes orb-pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.06); }
-}
-
-.convergence-legend {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.convergence-legend span {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.convergence-legend .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  display: inline-block;
 }
 
 /* Cyber fact widget */
