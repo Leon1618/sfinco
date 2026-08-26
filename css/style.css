@@ -762,10 +762,104 @@ form.enquiry .btn-row {
   max-width: 700px;
 }
 
-.blog-feed {
-  max-width: 700px;
+.blog-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  max-width: 960px;
   margin: 0 auto;
   padding: 1rem 1.25rem 3rem;
+}
+
+@media (min-width: 900px) {
+  .blog-layout {
+    grid-template-columns: 1fr 230px;
+    align-items: start;
+  }
+}
+
+.blog-main {
+  min-width: 0;
+}
+
+.feed-month-heading {
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid var(--border);
+}
+
+.feed-month-heading:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.blog-archive {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.2rem 1.3rem;
+}
+
+@media (min-width: 900px) {
+  .blog-archive {
+    position: sticky;
+    top: 1.5rem;
+  }
+}
+
+.blog-archive h3 {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--lime);
+  margin: 0 0 0.8rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.archive-year {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.archive-year + .archive-year {
+  margin-top: 1rem;
+}
+
+.archive-year-label {
+  display: block;
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 0.92rem;
+  margin-bottom: 0.35rem;
+}
+
+.archive-months {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 0.2rem;
+}
+
+.archive-months li {
+  margin-bottom: 0.3rem;
+}
+
+.archive-months a {
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.archive-months a:hover {
+  color: var(--lime);
 }
 
 .feed-item {
