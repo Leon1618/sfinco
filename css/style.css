@@ -751,50 +751,195 @@ form.enquiry .btn-row {
   transform: translateX(4px);
 }
 
-/* Blog */
+/* Blog: Medium-inspired reading layout */
 
-.blog-grid {
-  display: grid;
-  gap: 1.4rem;
-  margin-top: 2rem;
+.blog-hero {
+  padding: 3.5rem 0 2rem;
+  background: var(--bg-deep);
 }
 
-.blog-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.6rem;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+.blog-hero .container {
+  max-width: 700px;
 }
 
-.blog-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--lime);
+.blog-feed {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 3rem;
 }
 
-.blog-meta {
-  font-size: 0.85rem;
-  color: var(--muted);
+.feed-item {
+  padding: 2.2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.feed-item:last-child {
+  border-bottom: none;
+}
+
+.feed-item h2 {
   margin-bottom: 0.5rem;
-  display: block;
+  font-size: clamp(1.4rem, 4vw, 1.7rem);
 }
 
-.blog-card h3 {
-  margin-bottom: 0.5rem;
-}
-
-.blog-card h3 a {
+.feed-item h2 a {
   color: var(--ink);
   text-decoration: none;
   transition: color 0.15s ease;
 }
 
-.blog-card h3 a:hover {
+.feed-item h2 a:hover {
   color: var(--lime);
+}
+
+.feed-excerpt {
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.byline {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.byline-avatar {
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--lime-tint);
+  color: var(--lime);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, serif;
+  font-weight: 700;
+}
+
+.feed-byline .byline-avatar {
+  width: 26px;
+  height: 26px;
+  font-size: 0.8rem;
+}
+
+.feed-byline {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.feed-byline .byline-name {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Post page */
+
+.post-hero {
+  padding: 3rem 0 0;
+}
+
+.post-hero .container {
+  max-width: 700px;
+}
+
+.post-back {
+  display: inline-block;
+  margin-bottom: 1.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.post-hero h1 {
+  font-size: clamp(2rem, 6vw, 2.9rem);
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+
+.post-subtitle {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--muted);
+  margin: 0 0 1.8rem;
+}
+
+.post-byline {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1.3rem 0;
+  margin-bottom: 2.2rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.post-byline .byline-avatar {
+  width: 46px;
+  height: 46px;
+  font-size: 1.2rem;
+}
+
+.post-byline .byline-name {
+  display: block;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.post-byline .byline-meta {
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 
 .post-body {
   max-width: 700px;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+.post-body h2 {
+  margin-top: 2.4rem;
+  font-size: 1.5rem;
+}
+
+.post-body p {
+  margin-bottom: 1.5rem;
+}
+
+.pull-quote {
+  border-left: 3px solid var(--lime);
+  padding: 0.2rem 0 0.2rem 1.5rem;
+  margin: 2.2rem 0;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.post-footer-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  max-width: 700px;
+}
+
+.post-footer-author .byline-avatar {
+  width: 46px;
+  height: 46px;
+  font-size: 1.2rem;
+}
+
+.post-footer-author p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.post-footer-author strong {
+  color: var(--ink);
 }
 
 /* Cyber Awareness */
