@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | sfinco</title>
+<meta name="description" content="Short, plain-English posts on current scams, digital safety tips, small business security, and updates on building Sfinco.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">sfinco</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </label>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="guides.html">Safety Guides</a></li>
+        <li><a href="audits.html">SMB Cyber Awareness and Audits</a></li>
+        <li><a href="sfincoassist.html">Personal Cyber Awareness Assistant</a></li>
+        <li><a href="resources.html">Free Resources</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="audits.html#enquire">Get in touch</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">From Sfinco</span>
+    <h1>Short reads on staying a step ahead.</h1>
+    <p class="lede">Scam patterns doing the rounds, plain-English safety tips, small business advice, and the occasional update on how Sfinco itself is coming along. Nothing here takes more than a few minutes to read.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="blog-grid">
+      <div class="blog-card">
+        <span class="blog-meta">Example post &middot; Scam alerts</span>
+        <h3><a href="blog/fake-toll-text-scam.html">The fake toll text is back, and it's getting better</a></h3>
+        <p>Texts claiming you owe an unpaid Linkt or EastLink toll are circulating again, and this version is more convincing than earlier ones. Here's exactly what to look for, and what to do instead of clicking.</p>
+        <a class="card-link" href="blog/fake-toll-text-scam.html">Read the post &rarr;</a>
+      </div>
+    </div>
+
+    <div class="callout">
+      <h3>More posts on the way</h3>
+      <p>This is a new section for Sfinco, so there's only one post here for now. New ones will cover current scams, quick safety tips, small business advice, and updates on Sfinco itself as it grows.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-block">
+        <h3>Get in touch</h3>
+        <p>Sfinco &middot; Noosa, Sunshine Coast, Queensland, Australia</p>
+        <p><a href="mailto:hello@sfinco.com.au">hello@sfinco.com.au</a></p>
+        <p><a href="audits.html#enquire">Send an enquiry &rarr;</a></p>
+      </div>
+      <div class="footer-block">
+        <h3>Feeling unsure about something?</h3>
+        <p>Never call a number a message gives you. If in doubt, call the Australian Cyber Security Hotline direct, any time.</p>
+        <p><a class="footer-phone" href="tel:1300292371">1300 292 371</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Sfinco. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll(".primary-nav a").forEach(function(a) {
+  a.addEventListener("click", function() {
+    document.getElementById("nav-toggle").checked = false;
+  });
+});
+</script>
+
+</body>
+</html>
