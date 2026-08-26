@@ -799,6 +799,11 @@ form.enquiry .btn-row {
   border-top: none;
 }
 
+.blog-layout > aside {
+  display: grid;
+  gap: 1.5rem;
+}
+
 .blog-archive {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -807,9 +812,10 @@ form.enquiry .btn-row {
 }
 
 @media (min-width: 900px) {
-  .blog-archive {
+  .blog-layout > aside {
     position: sticky;
     top: 1.5rem;
+    align-self: start;
   }
 }
 
@@ -1208,3 +1214,135 @@ form.enquiry .btn-row {
 .site-footer a:hover {
   color: var(--lime);
 }
+
+/* Texture and glow (Aura-inspired polish) */
+
+.grid-texture {
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 34px 34px;
+  pointer-events: none;
+}
+
+.grid-texture::after {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  max-width: 140vw;
+  height: 700px;
+  background: radial-gradient(circle, rgba(231, 255, 0, 0.07), transparent 70%);
+  pointer-events: none;
+}
+
+.grid-texture .container {
+  position: relative;
+}
+
+/* Convergence graphic */
+
+.convergence-section {
+  text-align: center;
+}
+
+.convergence-section .section-intro {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.convergence-graphic {
+  max-width: 480px;
+  margin: 2.5rem auto 0;
+}
+
+.convergence-graphic svg {
+  width: 100%;
+  height: auto;
+}
+
+.convergence-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.convergence-legend span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.convergence-legend .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Cyber fact widget */
+
+.fact-widget {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.2rem 1.3rem;
+  margin-top: 1.5rem;
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fact-widget h3 {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--lime);
+  margin: 0 0 0.8rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.fact-widget blockquote {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ink);
+  flex-grow: 1;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.fact-widget .fact-dots {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.9rem;
+}
+
+.fact-widget .fact-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border);
+}
+
+.fact-widget .fact-dots span.is-active {
+  background: var(--lime);
+}
+

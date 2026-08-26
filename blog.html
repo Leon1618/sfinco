@@ -148,18 +148,26 @@
 
   </div>
 
-  <aside class="blog-archive">
-    <h3>Archive</h3>
-    <ul class="archive-year">
-      <li>
-        <span class="archive-year-label">2026</span>
-        <ul class="archive-months">
-          <li><a href="#aug-2026">August (4)</a></li>
-          <li><a href="#jul-2026">July (5)</a></li>
-          <li><a href="#jun-2026">June (2)</a></li>
-        </ul>
-      </li>
-    </ul>
+  <aside>
+    <div class="blog-archive">
+      <h3>Archive</h3>
+      <ul class="archive-year">
+        <li>
+          <span class="archive-year-label">2026</span>
+          <ul class="archive-months">
+            <li><a href="#aug-2026">August (4)</a></li>
+            <li><a href="#jul-2026">July (5)</a></li>
+            <li><a href="#jun-2026">June (2)</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="fact-widget">
+      <h3>Did you know?</h3>
+      <blockquote id="fact-text">The word &ldquo;malware&rdquo; is just short for &ldquo;malicious software.&rdquo;</blockquote>
+      <div class="fact-dots" id="fact-dots" aria-hidden="true"></div>
+    </div>
   </aside>
 </div>
 
@@ -190,6 +198,42 @@ document.querySelectorAll(".primary-nav a").forEach(function(a) {
     document.getElementById("nav-toggle").checked = false;
   });
 });
+
+var cyberFacts = [
+  "The word “malware” is just short for “malicious software.”",
+  "The first computer virus, called Creeper, appeared in 1971. It didn't steal anything, it just displayed the message “I'm the creeper, catch me if you can!”",
+  "The term “firewall” is borrowed from real building construction: a physical wall built to stop fire spreading between sections of a building.",
+  "“123456” and “password” have topped worst-password lists for over a decade, despite endless warnings.",
+  "Bluetooth is named after a 10th-century Danish king, Harald “Bluetooth” Gormsson, known for uniting rival tribes, much like the technology unites devices.",
+  "The @ symbol was chosen for email addresses in 1971 simply because it was a rarely used character unlikely to appear in anyone's name.",
+  "CAPTCHA stands for “Completely Automated Public Turing test to tell Computers and Humans Apart.”",
+  "The terms “white hat” and “black hat” hacker borrow from old Western films, where the good guys wore white hats and the villains wore black."
+];
+
+(function () {
+  var factEl = document.getElementById("fact-text");
+  var dotsEl = document.getElementById("fact-dots");
+  if (!factEl || !dotsEl) return;
+
+  cyberFacts.forEach(function (_, i) {
+    var dot = document.createElement("span");
+    if (i === 0) dot.className = "is-active";
+    dotsEl.appendChild(dot);
+  });
+
+  var current = 0;
+  setInterval(function () {
+    current = (current + 1) % cyberFacts.length;
+    factEl.style.opacity = 0;
+    setTimeout(function () {
+      factEl.textContent = cyberFacts[current];
+      factEl.style.opacity = 1;
+      Array.prototype.forEach.call(dotsEl.children, function (d, i) {
+        d.className = i === current ? "is-active" : "";
+      });
+    }, 300);
+  }, 7000);
+})();
 </script>
 
 </body>
