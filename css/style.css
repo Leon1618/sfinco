@@ -328,13 +328,15 @@ section > .container > h2 {
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: auto, 18px 18px, 18px 18px;
   border: 1px solid var(--border);
-  border-radius: 0;
-  clip-path: polygon(18px 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%, 0 18px);
+  border-radius: 14px;
   padding: 1.8rem 1.6rem 1.6rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  /* !important: .reveal-stagger > * sets its own transition shorthand on this same element for the
+     scroll-in fade, and shares equal specificity with this rule but comes later in the file, which
+     would otherwise silently strip the border-color/box-shadow transitions below on hover. */
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.9s ease, box-shadow 0.9s ease, opacity 0.6s ease !important;
 }
 
 .pillar-grid .pillar-card:nth-child(1) { --accent: var(--blue); }
@@ -349,6 +351,7 @@ section > .container > h2 {
   left: 0;
   right: 0;
   height: 3px;
+  border-radius: 14px 14px 0 0;
   background: linear-gradient(90deg, transparent, var(--accent), transparent);
   opacity: 0.75;
 }
@@ -362,8 +365,9 @@ section > .container > h2 {
   height: 28px;
   border-right: 2px solid var(--accent);
   border-bottom: 2px solid var(--accent);
+  border-radius: 0 0 14px 0;
   opacity: 0.45;
-  transition: opacity 0.25s ease;
+  transition: opacity 0.9s ease;
 }
 
 .pillar-card:hover {
