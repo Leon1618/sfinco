@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sfinco Personal Cyber Awareness Assistant</title>
-<link rel="stylesheet" href="style.css?v=20260826a">
+<link rel="stylesheet" href="style.css?v=20260827a">
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
 </head>
 <body>
@@ -120,7 +120,11 @@
 
     <div class="next-cta">
       <p>Got a message that feels off right now?</p>
-      <button type="button" id="today-check-btn">Check it here</button>
+      <div class="next-cta-actions">
+        <button type="button" id="today-check-btn">Check it here</button>
+        <span class="next-cta-or">or</span>
+        <a class="btn-message-us" href="mailto:hello@sfinco.com.au">Message us</a>
+      </div>
     </div>
   </section>
 
@@ -145,7 +149,11 @@
 
     <div class="next-cta">
       <p>Found something worrying?</p>
-      <button type="button" id="scam-next-btn">See who to call</button>
+      <div class="next-cta-actions">
+        <button type="button" id="scam-next-btn">See who to call</button>
+        <span class="next-cta-or">or</span>
+        <a class="btn-message-us" href="mailto:hello@sfinco.com.au">Message us</a>
+      </div>
     </div>
   </section>
 
@@ -301,12 +309,12 @@
     <h2>AI is changing how scams look</h2>
     <p>Scammers are starting to use the same AI tools everyone else is, to clone voices, fake videos, and write more convincing messages. It's still fairly rare in Australia, but worth knowing about.</p>
 
-    <div class="sample-card urgent">
+    <div class="sample-card notice">
       <span class="tag">The "it's me, I need help" call</span>
       <p>Scammers can now clone a voice from just a few seconds of audio, sometimes taken from a video posted online. If you get a call that sounds exactly like a family member urgently asking for money, hang up and call them back on the number you already have for them.</p>
     </div>
 
-    <div class="sample-card urgent">
+    <div class="sample-card notice">
       <span class="tag">Investments "endorsed" by celebrities</span>
       <p>Fake videos of well-known news presenters, politicians, or business figures promoting a secret trading platform are increasingly convincing. Real public figures don't make money by tipping you off to investments online. Watch for the conversation quickly moving to WhatsApp or Telegram.</p>
     </div>
@@ -479,6 +487,6 @@
   <button id="undo-toast-btn" type="button">Undo</button>
 </div>
 
-<script src="app.js?v=20260826a"></script>
+<script src="app.js?v=20260827a"></script>
 </body>
 </html>

@@ -405,7 +405,7 @@ body {
   flex-shrink: 0;
   font-size: 1rem;
   line-height: 1;
-  color: var(--muted);
+  color: var(--blue);
 }
 
 .disclosure summary .tab-icon svg { width: 1.1em; height: 1.1em; }
@@ -507,6 +507,43 @@ textarea {
 
 .next-cta p { margin: 0; }
 .next-cta button { margin: 0 0 0 auto; white-space: nowrap; }
+
+.next-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin: 0 0 0 auto;
+}
+
+.next-cta-actions button {
+  margin: 0;
+}
+
+.next-cta-or {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.btn-message-us {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-message-us:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
 
 form {
   display: flex;
