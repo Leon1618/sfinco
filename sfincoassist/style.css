@@ -124,6 +124,7 @@ body {
   font-size: 1rem;
   color: var(--ink);
   min-width: 0;
+  min-height: 44px;
 }
 
 .search-form input[type="search"]::-webkit-search-cancel-button { display: none; }
@@ -306,77 +307,57 @@ body {
   color: var(--muted);
 }
 
+/* Icon tiles at every screen size (not just phones): six text-plus-icon
+   tabs never fit on one line within this app's fixed-width column, on
+   any device, so a single touch-friendly grid style avoids that instead
+   of switching to a cramped, wrapping link row on wider screens. */
 .tabs {
   max-width: var(--max-width);
   margin: 1.5rem auto 0;
   padding: 0 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
 }
 
 .tab-btn {
-  background: none;
-  border: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0.75rem 0.4rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
   color: var(--muted);
   font-size: 1rem;
   font-weight: 700;
-  padding: 0.9rem 0.3rem;
-  margin: 0 0.75rem 0 0;
   cursor: pointer;
-  border-bottom: 3px solid transparent;
-  border-radius: 0;
-  min-height: 48px;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
+  min-height: 72px;
+  display: flex;
+  text-align: center;
 }
 
-.tab-btn .tab-icon { font-size: 1rem; line-height: 1; display: inline-flex; }
+.tab-btn .tab-icon { font-size: 1.5rem; line-height: 1; display: inline-flex; }
 .tab-btn .tab-icon svg { width: 1em; height: 1em; }
+.tab-btn .tab-label { font-size: 0.78rem; line-height: 1.2; }
 
-.tab-btn:hover { color: var(--ink); opacity: 1; }
+.tab-btn:hover { color: var(--ink); }
 
 .tab-btn.active {
-  color: var(--lime);
-  border-bottom-color: var(--lime);
+  background: var(--lime);
+  border-color: var(--lime);
+  color: var(--bg-deep);
 }
 
 .tab-panel.hidden { display: none; }
 
-/* Icon tiles on narrow screens, so tabs stay easy to scan and tap one-handed */
-@media (max-width: 640px) {
-  .tabs {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.6rem;
-    border-bottom: none;
-    padding: 0 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .tab-btn {
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.3rem;
-    margin: 0;
-    padding: 0.75rem 0.4rem;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    min-height: 72px;
-    text-align: center;
-  }
-
-  .tab-btn .tab-icon { font-size: 1.5rem; }
-  .tab-btn .tab-label { font-size: 0.78rem; line-height: 1.2; }
-
-  .tab-btn.active {
-    background: var(--lime);
-    border-color: var(--lime);
-    color: var(--bg-deep);
-  }
+@media (min-width: 560px) {
+  .tab-btn { min-height: 84px; }
+  .tab-btn .tab-icon { font-size: 1.7rem; }
+  .tab-btn .tab-label { font-size: 0.85rem; }
 }
 
 /* ---------- Progressive disclosure ---------- */
@@ -565,6 +546,7 @@ input, select, button {
   background: var(--bg-deep);
   color: var(--ink);
   font-family: inherit;
+  min-height: 44px;
 }
 
 button {
