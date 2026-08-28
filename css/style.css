@@ -1325,6 +1325,11 @@ form.enquiry .btn-row {
   text-align: center;
 }
 
+.convergence-section h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .convergence-section .section-intro {
   margin-left: auto;
   margin-right: auto;
