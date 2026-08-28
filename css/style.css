@@ -1041,6 +1041,20 @@ form.enquiry .btn-row {
   color: var(--muted);
 }
 
+.post-hero-image {
+  margin: 0 0 2.4rem;
+  height: clamp(220px, 40vw, 420px);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.post-hero-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .post-body {
   max-width: 700px;
   font-size: 1.08rem;
