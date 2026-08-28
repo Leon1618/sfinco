@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sfinco Personal Cyber Awareness Assistant</title>
-<link rel="stylesheet" href="style.css?v=20260828d">
+<link rel="stylesheet" href="style.css?v=20260829a">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#2B2019">
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
@@ -444,21 +444,37 @@
 
     <p id="quiz-streak" class="tip-footer"></p>
 
-    <h3 class="section-heading">Practice 1: Spot the scam</h3>
-    <p>Have a read and decide: scam, or the real deal?</p>
-    <div id="quiz-container" role="status" aria-live="polite"></div>
+    <details class="disclosure" open>
+      <summary>Practice 1: Spot the scam</summary>
+      <div class="disclosure-body">
+        <p>Have a read and decide: scam, or the real deal?</p>
+        <div id="quiz-container" role="status" aria-live="polite"></div>
+      </div>
+    </details>
 
-    <h3 class="section-heading">Practice 2: Spot the red flag</h3>
-    <p>Read the message, then tap the part that gives it away. Sometimes nothing does.</p>
-    <div id="redflag-container" role="status" aria-live="polite"></div>
+    <details class="disclosure">
+      <summary>Practice 2: Spot the red flag</summary>
+      <div class="disclosure-body">
+        <p>Read the message, then tap the part that gives it away. Sometimes nothing does.</p>
+        <div id="redflag-container" role="status" aria-live="polite"></div>
+      </div>
+    </details>
 
-    <h3 class="section-heading">Practice 3: Handle the call</h3>
-    <p>A phone call is playing out. Read what the caller says, then choose how you'd respond. One wrong move and the call is over, so take your time.</p>
-    <div id="callsim-container" role="status" aria-live="polite"></div>
+    <details class="disclosure">
+      <summary>Practice 3: Handle the call</summary>
+      <div class="disclosure-body">
+        <p>A phone call is playing out. Read what the caller says, then choose how you'd respond. One wrong move and the call is over, so take your time.</p>
+        <div id="callsim-container" role="status" aria-live="polite"></div>
+      </div>
+    </details>
 
-    <h3 class="section-heading">Practice 4: Spot the fake website</h3>
-    <p>Scammers copy a well-known site almost perfectly, the address is usually the only thing that gives it away. Which of these is the real one?</p>
-    <div id="fakesite-container" role="status" aria-live="polite"></div>
+    <details class="disclosure">
+      <summary>Practice 4: Spot the fake website</summary>
+      <div class="disclosure-body">
+        <p>Scammers copy a well-known site almost perfectly, the address is usually the only thing that gives it away. Which of these is the real one?</p>
+        <div id="fakesite-container" role="status" aria-live="polite"></div>
+      </div>
+    </details>
 
     <div class="next-cta">
       <p>Want to see what's currently doing the rounds?</p>
@@ -538,6 +554,6 @@
   <button id="undo-toast-btn" type="button">Undo</button>
 </div>
 
-<script src="app.js?v=20260828d"></script>
+<script src="app.js?v=20260829a"></script>
 </body>
 </html>
