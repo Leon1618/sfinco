@@ -356,28 +356,10 @@ section > .container > h2 {
   opacity: 0.75;
 }
 
-.pillar-card::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 28px;
-  height: 28px;
-  border-right: 2px solid var(--accent);
-  border-bottom: 2px solid var(--accent);
-  border-radius: 0 0 14px 0;
-  opacity: 0.45;
-  transition: opacity 0.9s ease;
-}
-
 .pillar-card:hover {
   transform: translateY(-6px);
   border-color: var(--accent);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-.pillar-card:hover::after {
-  opacity: 1;
 }
 
 .pillar-card h3 {
