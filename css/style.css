@@ -479,22 +479,15 @@ section > .container > h2 {
 
 .book-cover {
   position: relative;
-  flex: 0 0 190px;
-  width: 190px;
-  height: 288px;
+  flex: 0 0 168px;
+  width: 168px;
+  height: 320px;
   margin: 0 8px 8px 0;
-  background:
-    radial-gradient(140% 90% at 20% 0%, rgba(255, 255, 255, 0.14), transparent 55%),
-    linear-gradient(160deg, var(--blue) 0%, var(--bg-deep) 68%);
-  border-radius: 3px 10px 10px 3px;
-  color: #fff;
+  border-radius: 3px 8px 8px 3px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  padding: 1.5rem 1.1rem 1.2rem;
   font-family: Georgia, serif;
+  overflow: hidden;
   box-shadow:
     0 18px 34px rgba(0, 0, 0, 0.45),
     6px 6px 0 0 var(--surface),
@@ -508,39 +501,57 @@ section > .container > h2 {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 16px;
+  left: 14px;
   width: 2px;
   background: rgba(0, 0, 0, 0.3);
-  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.08);
+  z-index: 1;
 }
 
-.book-cover::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 5px;
-  background: var(--lime);
-  border-radius: 0 0 10px 3px;
+.book-cover-art {
+  position: relative;
+  flex: 1;
+  background-color: var(--bg-deep);
+  background-image:
+    linear-gradient(rgba(217, 164, 65, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(217, 164, 65, 0.12) 1px, transparent 1px),
+    radial-gradient(circle, rgba(111, 177, 232, 0.55) 1.4px, transparent 1.6px);
+  background-size: 14px 14px, 14px 14px, 28px 28px;
+  background-position: 0 0, 0 0, 7px 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  padding: 1.4rem 1rem;
+  color: #fff;
+  text-align: center;
 }
 
 .book-cover-icon {
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   color: var(--lime);
   opacity: 0.9;
 }
 
 .book-cover .vol {
   color: var(--lime);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
+.book-cover-title-plate {
+  background: #fff;
+  border-top: 3px solid var(--lime);
+  padding: 0.9rem 0.8rem 1.1rem;
+  text-align: center;
+}
+
 .book-cover .title {
-  font-size: 1.45rem;
+  color: var(--bg-deep);
+  font-size: 1.3rem;
   font-weight: 700;
   line-height: 1.15;
 }
