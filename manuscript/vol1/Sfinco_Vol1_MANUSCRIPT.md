@@ -142,11 +142,11 @@ What scammers are after — and how they get in
 
 > **▶ REAL STORY**
 >
-> Margaret, 71, from the Sunshine Coast, received a text message from what appeared to be her bank. It said her account had been flagged for suspicious activity and she needed to verify her details immediately. The link looked right. The logo looked right. She clicked it, entered her name, date of birth, and internet banking password. Within four hours, $14,000 had been transferred out of her account. Margaret is not careless. She is intelligent, experienced, and careful with her money. She was targeted by professionals — and she had no idea what to look for.
+> Diane, 71, from the Sunshine Coast, received a text message from what appeared to be her bank. It said her account had been flagged for suspicious activity and she needed to verify her details immediately. The link looked right. The logo looked right. She clicked it, entered her name, date of birth, and internet banking password. Within four hours, $14,000 had been transferred out of her account. Diane is not careless. She is intelligent, experienced, and careful with her money. She was targeted by professionals — and she had no idea what to look for.
 
 
 
-Stories like Margaret's are not rare. They happen every day across Australia — to people of all ages, all backgrounds, and all levels of technical experience. The Australian Competition and Consumer Commission reported over $3.1 billion lost to scams in Australia in 2022 alone. That figure has grown every year since.
+Stories like Diane's are not rare. They happen every day across Australia — to people of all ages, all backgrounds, and all levels of technical experience. The Australian Competition and Consumer Commission reported over $3.1 billion lost to scams in Australia in 2022 alone. That figure has grown every year since.
 
 And the iPhone — one of the most popular and trusted devices in the world — sits right at the centre of it all.
 

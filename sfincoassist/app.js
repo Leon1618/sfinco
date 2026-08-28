@@ -662,7 +662,7 @@ const quizItems = [
     explanation: "The link isn't the real auspost.com.au, and small \"just pay a couple of dollars\" fees are a common trick to seem believable.",
   },
   {
-    text: "Hi Mum, it's Sarah. Running 10 minutes late for lunch at Massimo's in Noosa Junction, sorry!",
+    text: "Hi Mum, it's Chloe. Running 10 minutes late for lunch at Massimo's in Noosa Junction, sorry!",
     isScam: false,
     explanation: "No links, no urgency, no requests for money or details. Just a normal message from someone you know.",
   },
@@ -784,7 +784,7 @@ const redFlagItems = [
     explanation: "A real council domain, a normal due date, and a phone number you could look up independently to confirm. Nothing here is pushing you to act in a hurry.",
   },
   {
-    text: "Hi Mum, it's Sarah. Running 10 minutes late for lunch at Massimo's in Noosa Junction, sorry!",
+    text: "Hi Mum, it's Chloe. Running 10 minutes late for lunch at Massimo's in Noosa Junction, sorry!",
     options: ["Running 10 minutes late for lunch", "at Massimo's in Noosa Junction", "sorry!"],
     correctIndex: -1,
     explanation: "No links, no urgency, no request for money or details, just a normal message from someone you know.",
@@ -1060,7 +1060,7 @@ const callScenarios = [
     title: "Bank fraud department",
     steps: [
       {
-        caller: "Hi, this is Sarah from CommBank's fraud team. We've noticed a suspicious $1,200 transfer from your account just now. Can you confirm your account number and the security code we just texted you so I can stop it?",
+        caller: "Hi, this is Michelle from CommBank's fraud team. We've noticed a suspicious $1,200 transfer from your account just now. Can you confirm your account number and the security code we just texted you so I can stop it?",
         choices: [
           { text: "Give the account number and the code", correct: false, feedback: "A real bank will never ask you to read out a one-time code over the phone. That code is the one thing standing between a scammer and your account." },
           { text: "Say you'll call the bank back on the number on your card", correct: true },
