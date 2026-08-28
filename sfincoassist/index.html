@@ -4,8 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sfinco Personal Cyber Awareness Assistant</title>
-<link rel="stylesheet" href="style.css?v=20260828b">
+<link rel="stylesheet" href="style.css?v=20260828c">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2B2019">
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
 </head>
 <body>
 
@@ -67,6 +70,10 @@
     </button>
   </div>
 
+  <h3>Add to your home screen</h3>
+  <p id="install-instructions">On an iPhone or iPad: tap the Share button in Safari, then "Add to Home Screen". On Android: tap the menu button in Chrome, then "Install app". Either way, it opens like a normal app from then on, no app store needed.</p>
+  <button id="install-btn" type="button" class="hidden">Install this app</button>
+
   <h3>Your data</h3>
   <p>Sfinco runs entirely on this device. Nothing is uploaded anywhere. You can clear everything saved here at any time.</p>
   <button id="clear-data-btn" type="button" class="danger-btn">Clear my data</button>
@@ -79,6 +86,31 @@
   <p>Sfinco helps you spot scams before they catch you out: check a suspicious message, find who to call, and practise spotting the tricks scammers use. Nothing here is connected to a bank account, no live financial data is read, and nothing you type or say is uploaded anywhere else, it all stays on this device.</p>
   <p>Tap the search bar to jump straight to a section or a contact number, or use the microphone to search by voice.</p>
   <button id="help-close-btn" type="button" class="dialog-close">Close</button>
+</dialog>
+
+<dialog id="panic-dialog" class="app-dialog">
+  <h2>What to do right now</h2>
+  <p>Take these in order. Moving fast in the first hour makes the biggest difference.</p>
+  <ol class="panic-list">
+    <li><strong>Stop all contact.</strong> Hang up, don't reply, and don't send anything else.</li>
+    <li><strong>Call your bank immediately</strong> on the number on your card, not one from the scammer, and ask them to block or reverse the payment. <button type="button" id="panic-contacts-link" class="link-btn">See bank numbers &rarr;</button></li>
+    <li><strong>Change your passwords</strong> for any account you think was mentioned or logged into, starting with email and online banking.</li>
+    <li><strong>Report it</strong> to <strong>ReportCyber</strong> (cyber.gov.au/report) and to <strong>Scamwatch</strong> (scamwatch.gov.au), so others can be warned.</li>
+    <li><strong>If your identity was exposed</strong> (Medicare, licence, passport details), call <strong>IDCARE</strong> free on <a href="tel:1800595160">1800 595 160</a> for step-by-step help.</li>
+    <li><strong>Tell someone.</strong> A family member, friend, or the Australian Cyber Security Hotline on <a href="tel:1300292371">1300 292 371</a>. You don't have to sort this out alone.</li>
+  </ol>
+  <p class="tip-footer">Feeling embarrassed is completely normal, and completely unnecessary. Scammers are convincing on purpose, that's their whole job.</p>
+  <button id="panic-close-btn" type="button" class="dialog-close">Close</button>
+</dialog>
+
+<dialog id="qr-dialog" class="app-dialog">
+  <h2>Scan a QR code</h2>
+  <p>Point your camera at the QR code. We'll show you where it leads before you go anywhere near it, nothing is sent off this device.</p>
+  <div class="qr-video-wrap">
+    <video id="qr-video" playsinline muted></video>
+  </div>
+  <p id="qr-status" class="tip-footer" role="status" aria-live="polite">Starting camera…</p>
+  <button id="qr-close-btn" type="button" class="dialog-close">Cancel</button>
 </dialog>
 
 <main>
@@ -110,6 +142,11 @@
   </nav>
 
   <section id="tab-today" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-today">
+    <div class="panic-card">
+      <p><strong>Already sent money or details to a scammer, or think you have been?</strong></p>
+      <button type="button" id="panic-btn" class="danger-btn">What to do right now</button>
+    </div>
+
     <h2>Today's tip</h2>
     <p id="tip-date" class="tip-date"></p>
     <div class="sample-card notice tip-card">
@@ -141,6 +178,8 @@
       <label class="file-input-label" for="screenshot-input">Or upload a screenshot instead</label>
       <input type="file" id="screenshot-input" accept="image/*">
       <p id="ocr-status" class="ocr-status hidden" role="status" aria-live="polite">Reading your screenshot… this can take a few seconds.</p>
+
+      <button type="button" id="qr-scan-btn" class="file-input-label qr-scan-btn">Or scan a QR code instead</button>
 
       <button type="submit">Check this for me</button>
     </form>
@@ -348,6 +387,14 @@
       </div>
     </details>
 
+    <details class="disclosure">
+      <summary>Plain-English glossary</summary>
+      <div class="disclosure-body">
+        <p>Terms you'll come across in this app and elsewhere, explained without the jargon.</p>
+        <dl class="glossary-list" id="glossary-list"></dl>
+      </div>
+    </details>
+
     <div class="next-cta">
       <p>Want to get better at spotting these?</p>
       <button type="button" id="aisafety-next-btn">Try the practice quiz</button>
@@ -408,6 +455,10 @@
     <h3 class="section-heading">Practice 3: Handle the call</h3>
     <p>A phone call is playing out. Read what the caller says, then choose how you'd respond. One wrong move and the call is over, so take your time.</p>
     <div id="callsim-container" role="status" aria-live="polite"></div>
+
+    <h3 class="section-heading">Practice 4: Spot the fake website</h3>
+    <p>Scammers copy a well-known site almost perfectly, the address is usually the only thing that gives it away. Which of these is the real one?</p>
+    <div id="fakesite-container" role="status" aria-live="polite"></div>
 
     <div class="next-cta">
       <p>Want to see what's currently doing the rounds?</p>
@@ -487,6 +538,6 @@
   <button id="undo-toast-btn" type="button">Undo</button>
 </div>
 
-<script src="app.js?v=20260828b"></script>
+<script src="app.js?v=20260828c"></script>
 </body>
 </html>

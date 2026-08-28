@@ -64,6 +64,8 @@ document.getElementById("profile-name-form").addEventListener("submit", (e) => {
 
 const profileDialog = document.getElementById("profile-dialog");
 const helpDialog = document.getElementById("help-dialog");
+const panicDialog = document.getElementById("panic-dialog");
+const qrDialog = document.getElementById("qr-dialog");
 
 function openDialog(dialog) {
   document.querySelectorAll("dialog[open]").forEach((d) => {
@@ -76,8 +78,14 @@ document.getElementById("profile-btn").addEventListener("click", () => openDialo
 document.getElementById("help-btn").addEventListener("click", () => openDialog(helpDialog));
 document.getElementById("profile-close-btn").addEventListener("click", () => profileDialog.close());
 document.getElementById("help-close-btn").addEventListener("click", () => helpDialog.close());
+document.getElementById("panic-btn").addEventListener("click", () => openDialog(panicDialog));
+document.getElementById("panic-close-btn").addEventListener("click", () => panicDialog.close());
+document.getElementById("panic-contacts-link").addEventListener("click", () => {
+  panicDialog.close();
+  document.getElementById("tab-btn-contacts").click();
+});
 
-[profileDialog, helpDialog].forEach((dialog) => {
+[profileDialog, helpDialog, panicDialog, qrDialog].forEach((dialog) => {
   dialog.addEventListener("click", (e) => {
     if (e.target === dialog) dialog.close();
   });
@@ -449,6 +457,79 @@ document.getElementById("screenshot-input").addEventListener("change", (e) => {
 
   e.target.value = "";
 });
+
+let qrStream = null;
+let qrAnimationId = null;
+
+function stopQrScan() {
+  if (qrAnimationId) {
+    cancelAnimationFrame(qrAnimationId);
+    qrAnimationId = null;
+  }
+  if (qrStream) {
+    qrStream.getTracks().forEach((track) => track.stop());
+    qrStream = null;
+  }
+}
+
+function startQrScan() {
+  const video = document.getElementById("qr-video");
+  const status = document.getElementById("qr-status");
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d", { willReadFrequently: true });
+
+  if (!("mediaDevices" in navigator) || !navigator.mediaDevices.getUserMedia || typeof jsQR !== "function") {
+    status.textContent = "Camera scanning isn't supported in this browser. Try uploading a screenshot of the code instead.";
+    return;
+  }
+
+  status.textContent = "Starting camera…";
+
+  navigator.mediaDevices
+    .getUserMedia({ video: { facingMode: "environment" } })
+    .then((stream) => {
+      qrStream = stream;
+      video.srcObject = stream;
+      video.play();
+      status.textContent = "Point your camera at the QR code.";
+
+      const tick = () => {
+        if (!qrStream) return;
+        if (video.readyState === video.HAVE_ENOUGH_DATA) {
+          canvas.width = video.videoWidth;
+          canvas.height = video.videoHeight;
+          ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+          const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+          const code = jsQR(imageData.data, imageData.width, imageData.height);
+          if (code && code.data) {
+            status.textContent = "Found it!";
+            stopQrScan();
+            qrDialog.close();
+            document.getElementById("scam-text").value = code.data;
+            document.getElementById("scam-check-form").requestSubmit();
+            return;
+          }
+        }
+        qrAnimationId = requestAnimationFrame(tick);
+      };
+      qrAnimationId = requestAnimationFrame(tick);
+    })
+    .catch(() => {
+      status.textContent = "We couldn't access the camera. Check your browser's camera permission for this site, or upload a screenshot of the code instead.";
+    });
+}
+
+document.getElementById("qr-scan-btn").addEventListener("click", () => {
+  openDialog(qrDialog);
+  startQrScan();
+});
+
+document.getElementById("qr-close-btn").addEventListener("click", () => {
+  stopQrScan();
+  qrDialog.close();
+});
+
+qrDialog.addEventListener("close", stopQrScan);
 
 document.getElementById("scam-check-form").addEventListener("submit", (e) => {
   e.preventDefault();
@@ -1152,12 +1233,180 @@ function renderCallSim() {
   container.append(progress, messageCard, prompt, choices);
 }
 
+const fakeSiteItems = [
+  {
+    org: "Australia Post",
+    options: ["auspost.com.au", "auspost-redelivery.com"],
+    correctIndex: 0,
+    explanation: "The real Australia Post site is auspost.com.au. Anything with extra words tacked on before the .com is usually a lookalike built to catch people scanning quickly.",
+  },
+  {
+    org: "myGov",
+    options: ["mygov-au-secure.com", "my.gov.au"],
+    correctIndex: 1,
+    explanation: "Real Australian government sites end in .gov.au, not .com. A domain that just includes the word \"gov\" isn't the same thing as actually being government-issued.",
+  },
+  {
+    org: "CommBank",
+    options: ["commbank.com.au", "commbank-netbank-secure.com"],
+    correctIndex: 0,
+    explanation: "CommBank's real address is commbank.com.au. A longer address stuffed with reassuring words like \"secure\" is a common trick, real banks don't need to convince you that way.",
+  },
+  {
+    org: "Australian Taxation Office",
+    options: ["ato-refund-claim.com", "ato.gov.au"],
+    correctIndex: 1,
+    explanation: "The ATO's real site is ato.gov.au. A \"refund claim\" address promising money is designed to get you clicking before you check where it actually leads.",
+  },
+  {
+    org: "Linkt (toll roads)",
+    options: ["linkt.com.au", "linkt-toll-payment.net"],
+    correctIndex: 0,
+    explanation: "Linkt's real address is linkt.com.au. A .net address with \"payment\" added on is built to look official for just long enough to get your card details.",
+  },
+  {
+    org: "Services Australia",
+    options: ["centrelink-payments-au.com", "servicesaustralia.gov.au"],
+    correctIndex: 1,
+    explanation: "Centrelink is run by Services Australia, whose real site is servicesaustralia.gov.au. Again, look for .gov.au, not a .com address that just mentions Centrelink.",
+  },
+  {
+    org: "Woolworths",
+    options: ["woolworths.com.au", "woolworths-rewards-claim.com"],
+    correctIndex: 0,
+    explanation: "Woolworths' real address is woolworths.com.au. A separate \"rewards claim\" address is a common way to run a fake competition or points scam under a trusted name.",
+  },
+  {
+    org: "Telstra",
+    options: ["telstra-billing-update.com", "telstra.com.au"],
+    correctIndex: 1,
+    explanation: "Telstra's real address is telstra.com.au. A \"billing update\" address is built to catch you off guard about an unpaid bill that doesn't actually exist.",
+  },
+];
+
+const FAKESITE_ROUND_SIZE = 5;
+let fakeSiteRoundItems = [];
+let fakeSiteIndex = 0;
+let fakeSiteScore = 0;
+
+function startFakeSiteRound() {
+  const count = Math.min(FAKESITE_ROUND_SIZE, fakeSiteItems.length);
+  const idx = nextRotatedIndices(fakeSiteItems.length, count, "sfincoassist-fakesite-rotation");
+  fakeSiteRoundItems = idx.map((i) => fakeSiteItems[i]);
+}
+
+function renderFakeSite() {
+  const container = document.getElementById("fakesite-container");
+  container.innerHTML = "";
+
+  if (fakeSiteIndex >= fakeSiteRoundItems.length) {
+    const summary = document.createElement("div");
+    summary.className = "sample-card notice";
+    const p = document.createElement("p");
+    p.textContent = `You got ${fakeSiteScore} out of ${fakeSiteRoundItems.length}. Every bit of practice makes the real thing easier to spot.`;
+    summary.appendChild(p);
+
+    const restartBtn = document.createElement("button");
+    restartBtn.type = "button";
+    restartBtn.textContent = "Try again";
+    restartBtn.addEventListener("click", () => {
+      startFakeSiteRound();
+      fakeSiteIndex = 0;
+      fakeSiteScore = 0;
+      renderFakeSite();
+    });
+    const restartRow = document.createElement("div");
+    restartRow.className = "quiz-next-row";
+    restartRow.appendChild(restartBtn);
+    container.append(summary, restartRow);
+    return;
+  }
+
+  const item = fakeSiteRoundItems[fakeSiteIndex];
+
+  const progress = document.createElement("p");
+  progress.className = "quiz-progress";
+  progress.textContent = `Website ${fakeSiteIndex + 1} of ${fakeSiteRoundItems.length}`;
+
+  const prompt = document.createElement("p");
+  prompt.innerHTML = `Which of these is the real <strong>${item.org}</strong> website?`;
+
+  const choices = document.createElement("div");
+  choices.className = "quiz-choices redflag-choices";
+
+  const buttons = item.options.map((text, i) => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.textContent = text;
+    btn.addEventListener("click", () => answer(i === item.correctIndex));
+    return btn;
+  });
+
+  const answer = (correct) => {
+    recordAnswer(correct);
+    if (correct) fakeSiteScore += 1;
+
+    const feedback = document.createElement("div");
+    feedback.className = `sample-card ${correct ? "notice" : "urgent"}`;
+    const tag = document.createElement("span");
+    tag.className = "tag";
+    tag.textContent = correct ? "Nice pick-up" : "Here's the tell";
+    const p = document.createElement("p");
+    p.textContent = item.explanation;
+    feedback.append(tag, p);
+
+    const nextBtn = document.createElement("button");
+    nextBtn.type = "button";
+    nextBtn.textContent = fakeSiteIndex + 1 < fakeSiteRoundItems.length ? "Next" : "See my results";
+    nextBtn.addEventListener("click", () => {
+      fakeSiteIndex += 1;
+      renderFakeSite();
+    });
+
+    const nextRow = document.createElement("div");
+    nextRow.className = "quiz-next-row";
+    nextRow.appendChild(nextBtn);
+
+    buttons.forEach((b) => (b.disabled = true));
+    container.append(feedback, nextRow);
+  };
+
+  choices.append(...buttons);
+  container.append(progress, prompt, choices);
+}
+
 function speak(text) {
   if (!("speechSynthesis" in window)) return;
   window.speechSynthesis.cancel();
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = "en-AU";
   window.speechSynthesis.speak(utterance);
+}
+
+const glossaryTerms = [
+  { term: "Phishing", definition: "A fake email or website pretending to be from a real organisation, designed to trick you into handing over passwords or personal details." },
+  { term: "Smishing", definition: "Phishing that arrives by text message (SMS) instead of email, often a fake delivery, toll, or bank alert with a link." },
+  { term: "Vishing", definition: "Phishing that happens over a phone call, usually someone pretending to be your bank, the police, or a government department." },
+  { term: "Quishing", definition: "Phishing using a QR code instead of a link, often a fake sticker placed over a real one on a parking meter, menu, or parcel slip." },
+  { term: "Two-factor authentication (2FA)", definition: "A second check after your password, usually a code sent to your phone, so a stolen password alone isn't enough to get into your account." },
+  { term: "VPN", definition: "A tool that hides your internet connection's location and encrypts your traffic. Genuinely useful for privacy, but not something a real organisation will ever ask you to install to \"fix\" your account." },
+  { term: "Malware", definition: "Software designed to harm your device or steal information, often installed after clicking a link or opening an attachment from a scam message." },
+  { term: "Deepfake", definition: "An AI-generated video or audio clip made to look or sound like a real person saying something they never actually said." },
+  { term: "Spoofing", definition: "Faking the sender's name or number so a message looks like it's from your bank, a family member, or a business, when it isn't." },
+  { term: "Social engineering", definition: "The broad term for tricking someone into an action or a decision, rather than hacking a computer. Almost every scam is social engineering first." },
+];
+
+function renderGlossary() {
+  const list = document.getElementById("glossary-list");
+  if (!list) return;
+  list.innerHTML = "";
+  glossaryTerms.forEach((entry) => {
+    const dt = document.createElement("dt");
+    dt.textContent = entry.term;
+    const dd = document.createElement("dd");
+    dd.textContent = entry.definition;
+    list.append(dt, dd);
+  });
 }
 
 /* ---------- Tabs ---------- */
@@ -1268,6 +1517,20 @@ function buildSearchIndex() {
       description: alert.text,
       keywords: `${alert.tag} ${alert.text}`.toLowerCase(),
       action: () => document.getElementById("tab-btn-latest").click(),
+    });
+  });
+
+  glossaryTerms.forEach((entry) => {
+    const glossaryDetails = document.getElementById("glossary-list")?.closest("details");
+    index.push({
+      label: entry.term,
+      description: entry.definition,
+      keywords: `${entry.term} ${entry.definition} glossary meaning`.toLowerCase(),
+      action: () => {
+        document.getElementById("tab-btn-aisafety").click();
+        if (glossaryDetails) glossaryDetails.open = true;
+        setTimeout(() => glossaryDetails?.scrollIntoView({ behavior: "smooth", block: "center" }), 50);
+      },
     });
   });
 
@@ -1395,7 +1658,38 @@ startRedFlagRound();
 renderRedFlag();
 startCallRound();
 renderCallSim();
+startFakeSiteRound();
+renderFakeSite();
 renderStreak();
+renderGlossary();
 renderTipOfDay();
 applyGreeting();
 searchIndex = buildSearchIndex();
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("sw.js").catch(() => {});
+  });
+}
+
+let deferredInstallPrompt = null;
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  const installBtn = document.getElementById("install-btn");
+  installBtn.classList.remove("hidden");
+});
+
+document.getElementById("install-btn").addEventListener("click", () => {
+  if (!deferredInstallPrompt) return;
+  deferredInstallPrompt.prompt();
+  deferredInstallPrompt.userChoice.finally(() => {
+    deferredInstallPrompt = null;
+    document.getElementById("install-btn").classList.add("hidden");
+  });
+});
+
+window.addEventListener("appinstalled", () => {
+  document.getElementById("install-btn").classList.add("hidden");
+  document.getElementById("install-instructions").textContent = "Sfinco is installed on this device.";
+});

@@ -421,6 +421,23 @@ body {
 
 .disclosure-body h3:first-child { margin-top: 0; }
 
+.glossary-list {
+  margin: 1rem 0 0;
+}
+
+.glossary-list dt {
+  font-weight: 700;
+  color: var(--ink);
+  margin-top: 1.1rem;
+}
+
+.glossary-list dt:first-child { margin-top: 0; }
+
+.glossary-list dd {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+}
+
 .tip-list {
   margin: 0;
   padding-left: 1.3em;
@@ -436,6 +453,50 @@ body {
 }
 
 .tip-list li:last-child { margin-bottom: 0; }
+
+.panic-list {
+  margin: 0;
+  padding-left: 1.3em;
+}
+
+.panic-list li {
+  color: var(--ink);
+  margin-bottom: 1.1rem;
+}
+
+.panic-list li::marker {
+  color: var(--red);
+  font-weight: 700;
+}
+
+.panic-list li:last-child { margin-bottom: 0; }
+
+.panic-list a {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.panic-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--red);
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.panic-card p { margin: 0; color: var(--ink); flex: 1; min-width: 200px; }
+
+.panic-card .danger-btn {
+  margin: 0;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
 
 h2 { color: var(--ink); font-size: 1.4rem; margin: 0 0 0.75rem; }
 h3 { color: var(--ink); font-size: 1.1rem; margin: 0 0 0.5rem; }
@@ -611,6 +672,26 @@ button:hover { opacity: 0.9; }
 .file-input-label:hover { border-color: var(--blue); }
 
 #screenshot-input { display: none; }
+
+.qr-scan-btn {
+  text-align: left;
+  font-weight: 400;
+  margin: 0;
+}
+
+.qr-video-wrap {
+  background: var(--bg-deep);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+#qr-video {
+  display: block;
+  width: 100%;
+  max-height: 60vh;
+  background: #000;
+}
 
 .hidden { display: none; }
 
