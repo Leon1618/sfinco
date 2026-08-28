@@ -12,13 +12,18 @@
 
 <header class="site-header">
   <div class="container">
-    <a class="brand" href="../index.html">Sfinco</a>
+    <a class="brand" href="../index.html">sfinco</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Menu">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </label>
     <nav class="primary-nav" aria-label="Primary">
       <ul>
-        <li><a href="../guides.html">Sfinco Guides</a></li>
-        <li><a href="../audits.html">SMB Cyber Audits</a></li>
-        <li><a href="../sfincoassist.html">SfincoAssist</a></li>
-        <li><a href="../index.html#about">About Leo</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../resources.html">Free Resources</a></li>
+        <li><a href="../sfincoassist.html">Personal Cyber Awareness</a></li>
+        <li><a href="../audits.html">SMB Cyber Awareness and Audits</a></li>
+        <li><a href="../guides.html">Safety Guides</a></li>
         <li><a href="../audits.html#enquire">Get in touch</a></li>
       </ul>
     </nav>
@@ -44,6 +49,14 @@
     <div>&copy; 2026 Sfinco. All rights reserved.</div>
   </div>
 </footer>
+
+<script>
+document.querySelectorAll(".primary-nav a").forEach(function(a) {
+  a.addEventListener("click", function() {
+    document.getElementById("nav-toggle").checked = false;
+  });
+});
+</script>
 
 </body>
 </html>
