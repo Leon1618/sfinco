@@ -7,6 +7,7 @@
   --muted: #CBB79E;
   --lime: #D9A441;
   --blue: #6FB1E8;
+  --purple: #BBA6FC;
   --amber: #D9822E;
   --red: #ED7E5C;
   --max-width: 760px;
@@ -386,10 +387,17 @@ body {
   flex-shrink: 0;
   font-size: 1rem;
   line-height: 1;
-  color: var(--blue);
+  color: var(--muted);
 }
 
 .disclosure summary .tab-icon svg { width: 1.1em; height: 1.1em; }
+
+/* Scam Alerts categories pick up the same blue/gold/purple rotation as
+   the pillar tiles on the sfinco.com.au homepage, instead of one flat colour. */
+#latest-scams .disclosure:nth-child(1) .tab-icon { color: var(--blue); }
+#latest-scams .disclosure:nth-child(2) .tab-icon { color: var(--lime); }
+#latest-scams .disclosure:nth-child(3) .tab-icon { color: var(--purple); }
+#latest-scams .disclosure:nth-child(4) .tab-icon { color: var(--blue); }
 
 .disclosure summary::-webkit-details-marker { display: none; }
 
