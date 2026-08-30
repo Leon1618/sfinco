@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy | sfinco</title>
+<meta name="description" content="A plain-English explanation of what happens to your information when you use the Sfinco website or enquire about an SMB Cyber Audit.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">sfinco</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Menu">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </label>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="resources.html">Free Resources</a></li>
+        <li><a href="sfincoassist.html">Personal Cyber Awareness</a></li>
+        <li><a href="audits.html">SMB Cyber Awareness and Audits</a></li>
+        <li><a href="guides.html">Safety Guides</a></li>
+        <li><a href="audits.html#enquire">Get in touch</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">How your information is handled</span>
+    <h1>Privacy, in plain English</h1>
+    <p class="lede">Sfinco is a sole trader, not a data company. This page says exactly what happens to your information when you use this website or get in touch, without the usual wall of legal text.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>The enquiry form</h2>
+    <p>The "Enquire about an audit" form on the <a href="audits.html#enquire">SMB Cyber Audits page</a> opens your own email app and sends straight to hello@sfinco.com.au. Sfinco doesn't run a database or a server that stores what you type, it lands in Leo's inbox the same way any email would. It's kept there for as long as it's useful for following up, and deleted when it isn't.</p>
+
+    <h2>No tracking, no cookies</h2>
+    <p>This site doesn't run Google Analytics, advertising pixels, or any other tracking script. Nothing about your visit is collected or sold. If that ever changes, this page will change first.</p>
+
+    <h2>If you become an SMB Cyber Audit client</h2>
+    <p>An audit involves a closer look at how a business uses technology, which naturally means handling more information than a simple enquiry. That's covered by its own, more detailed client data handling notice, given to every client alongside the engagement agreement, before an audit begins. In short: no passwords or account credentials are ever collected, notes and reports stay on Leo's own device, nothing is shared with any third party, and everything is deleted 12 months after the report is delivered unless you ask for it sooner.</p>
+
+    <h2>Where Sfinco stands under the Privacy Act</h2>
+    <p>As a sole trader with turnover under $3 million, Sfinco most likely falls under the <strong>Privacy Act 1988</strong>'s small business exemption, meaning the Australian Privacy Principles don't strictly apply yet. Sfinco follows the practices on this page regardless of whether the exemption technically covers it, because that's what a client or visitor should reasonably expect, not because a law requires it.</p>
+
+    <h2>Questions</h2>
+    <p>If anything here is unclear, or you'd like to know what's held about you, corrected, or deleted early, email <a href="mailto:hello@sfinco.com.au">hello@sfinco.com.au</a>. Same address as everything else.</p>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-block">
+        <h3>Get in touch</h3>
+        <p>Sfinco &middot; Noosa, Sunshine Coast, Queensland, Australia</p>
+        <p><a href="mailto:hello@sfinco.com.au">hello@sfinco.com.au</a></p>
+        <p><a href="audits.html#enquire">Send an enquiry &rarr;</a></p>
+      </div>
+      <div class="footer-block">
+        <h3>Feeling unsure about something?</h3>
+        <p>Never call a number a message gives you. If in doubt, call the Australian Cyber Security Hotline direct, any time.</p>
+        <p><a class="footer-phone" href="tel:1300292371">1300 292 371</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Sfinco. All rights reserved. &middot; <a href="privacy.html">Privacy</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll(".primary-nav a").forEach(function(a) {
+  a.addEventListener("click", function() {
+    document.getElementById("nav-toggle").checked = false;
+  });
+});
+</script>
+
+</body>
+</html>
