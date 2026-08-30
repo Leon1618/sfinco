@@ -532,9 +532,10 @@ textarea {
 }
 
 .tip-date {
-  color: var(--muted);
+  color: var(--ink);
+  font-weight: 700;
   margin: 0 0 1rem;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
 }
 
 .tip-card { padding: 1.5rem; }

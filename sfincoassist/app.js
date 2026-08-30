@@ -137,13 +137,22 @@ function getDayOfYear(date) {
   return Math.floor(diff / 86400000);
 }
 
+function renderTipDate() {
+  const now = new Date();
+  const dateStr = now.toLocaleDateString("en-AU", { weekday: "long", day: "numeric", month: "long" });
+  const timeStr = now.toLocaleTimeString("en-AU", { hour: "2-digit", minute: "2-digit", hour12: false });
+  document.getElementById("tip-date").textContent = `${dateStr}, ${timeStr}`;
+}
+
 function renderTipOfDay() {
   const today = new Date();
   const tip = dailyTips[getDayOfYear(today) % dailyTips.length];
-  document.getElementById("tip-date").textContent = today.toLocaleDateString("en-AU", { weekday: "long", day: "numeric", month: "long" });
+  renderTipDate();
   document.getElementById("tip-title").textContent = tip.title;
   document.getElementById("tip-body").textContent = tip.body;
 }
+
+setInterval(renderTipDate, 30000);
 
 document.getElementById("today-check-btn").addEventListener("click", () => {
   document.getElementById("tab-btn-scam").click();
