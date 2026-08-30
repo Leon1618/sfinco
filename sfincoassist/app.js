@@ -212,6 +212,13 @@ const scamAlerts = [
     text: "There's a scam call going around the Sunshine Coast where someone pretends to be from your bank and asks for your BSB and account number. Your real bank will never ask for this over the phone.",
   },
   {
+    category: "phone",
+    tag: "Heads up",
+    priority: "urgent",
+    title: "Robocall claiming a warrant is out for your arrest",
+    text: "A recorded voice says you owe unpaid tax and police are on their way unless you press 1 to pay immediately by gift card or bank transfer. The ATO will never call threatening arrest or demanding instant payment like this. Just hang up.",
+  },
+  {
     category: "text",
     tag: "Heads up",
     priority: "urgent",
@@ -590,7 +597,7 @@ function renderScamAlerts() {
     iconSpan.setAttribute("aria-hidden", "true");
     iconSpan.innerHTML = category.icon;
     const labelSpan = document.createElement("span");
-    labelSpan.textContent = `${category.label} (${alertsInCategory.length})`;
+    labelSpan.textContent = category.label;
     summary.append(iconSpan, labelSpan);
     details.appendChild(summary);
 
