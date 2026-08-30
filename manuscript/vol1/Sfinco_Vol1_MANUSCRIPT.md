@@ -140,13 +140,15 @@ Part of the Sfinco Guides series — protecting Australians onlineSfinco Guides 
 
 What scammers are after — and how they get in
 
-> **▶ REAL STORY**
+> **▶ SOUNDS FAMILIAR?**
 >
 > Diane, 71, from the Sunshine Coast, received a text message from what appeared to be her bank. It said her account had been flagged for suspicious activity and she needed to verify her details immediately. The link looked right. The logo looked right. She clicked it, entered her name, date of birth, and internet banking password. Within four hours, $14,000 had been transferred out of her account. Diane is not careless. She is intelligent, experienced, and careful with her money. She was targeted by professionals — and she had no idea what to look for.
+>
+> *This is a composite example, built from patterns commonly reported to Scamwatch and IDCARE, not a specific real person. If it sounds familiar, that's exactly the point.*
 
 
 
-Stories like Diane's are not rare. They happen every day across Australia — to people of all ages, all backgrounds, and all levels of technical experience. The Australian Competition and Consumer Commission reported over $3.1 billion lost to scams in Australia in 2022 alone. That figure has grown every year since.
+Stories like Diane's are not rare. They happen every day across Australia — to people of all ages, all backgrounds, and all levels of technical experience. The Australian Competition and Consumer Commission reported over $3.1 billion lost to scams in Australia in 2022 alone, the worst year on record. Losses have fallen since that peak, but have stayed above $2 billion every year that's followed.
 
 And the iPhone — one of the most popular and trusted devices in the world — sits right at the centre of it all.
 
@@ -228,9 +230,11 @@ Vishing (voice phishing) involves a phone call, often from someone claiming to b
 
 They will sound professional and confident. They may already know your name, your address, or even part of your account number (this information is sometimes purchased from data breaches). And they will use urgency and fear to push you into acting quickly, before you have time to think clearly.
 
-> **▶ REAL STORY**
+> **▶ SOUNDS FAMILIAR?**
 >
-> A 68-year-old man in Brisbane received a call from someone claiming to be from the Commonwealth Bank fraud team. The caller knew his name, suburb, and the last four digits of his card. He was told his account had been compromised and he needed to transfer his savings to a 'safe account' immediately. He transferred $47,000 before a family member intervened. The bank cannot verify caller identity over the phone. Scammers exploit this completely.
+> A 68-year-old man in Brisbane received a call from someone claiming to be from the fraud team at Coastal Trust Bank. The caller knew his name, suburb, and the last four digits of his card. He was told his account had been compromised and he needed to transfer his savings to a 'safe account' immediately. He transferred $47,000 before a family member intervened. The bank cannot verify caller identity over the phone. Scammers exploit this completely.
+>
+> *This is a composite example, built from patterns commonly reported to Scamwatch and IDCARE, not a specific real bank or person. If it sounds familiar, that's exactly the point.*
 
 
 
@@ -534,9 +538,11 @@ It is also the account that scammers most want to get their hands on — because
 
 This chapter covers how to check whether your Apple ID is properly secured, how to set up two-factor authentication if you haven't already, and what to do in the scenarios that frighten people most — being locked out, or suspecting someone else has access.
 
-> **▶ REAL STORY**
+> **▶ SOUNDS FAMILIAR?**
 >
-> David, 74, from Caloundra, started getting emails from Apple saying his account had been used to make purchases he didn't recognise — apps, in-app purchases, subscriptions. He called the number in one of the emails. It wasn't Apple. It was a scammer who had already accessed his account and was now talking him into giving up his verification code. He lost access to his Apple ID for eleven days. Recovering it required a lengthy identity verification process with Apple Support. Two-factor authentication would have stopped this entirely — and it takes four minutes to set up.
+> David, 74, from Caloundra, started getting emails claiming to be from Apple saying his account had been used to make purchases he didn't recognise — apps, in-app purchases, subscriptions. He called the number in one of the emails. It wasn't Apple. It was a scammer who had already accessed his account and was now talking him into giving up his verification code. He lost access to his Apple ID for eleven days. Recovering it required a lengthy identity verification process with Apple Support. Two-factor authentication would have stopped this entirely — and it takes four minutes to set up.
+>
+> *This is a composite example, built from patterns commonly reported to Scamwatch and IDCARE, not a specific real person. If it sounds familiar, that's exactly the point.*
 
 
 
@@ -856,9 +862,11 @@ But over months and years of installing apps, those permissions accumulate. Many
 
 This chapter explains what each permission actually means in plain English, shows you how to do a full audit of what your apps can currently access, and walks you through revoking anything that should not be there. The whole process takes about fifteen minutes and is one of the most worthwhile things you can do for your privacy.
 
-> **▶ REAL STORY**
+> **▶ SOUNDS FAMILIAR?**
 >
 > A woman in her late sixties downloaded a free flashlight app from the App Store. She granted it access to her location and contacts because the app requested them at install. She never questioned it — a flashlight seems harmless. Six months later, a family member with a background in IT checked her phone and found the app had been sending her contact list to servers overseas every 48 hours. The app was removed from the App Store shortly after. Her contacts had already been harvested. The permission was granted in a single tap. It took eighteen months to notice.
+>
+> *This is a composite example, built from patterns commonly reported about app permission abuse, not a specific real person. If it sounds familiar, that's exactly the point.*
 
 
 
@@ -1417,9 +1425,11 @@ But public Wi-Fi networks carry risks that your home network does not. And some 
 
 This chapter explains how Wi-Fi security works in plain English, what the real risks of public networks are (and are not), how to configure your iPhone to connect safely, and what a VPN is and when it is genuinely worth using.
 
-> **▶ REAL STORY**
+> **▶ SOUNDS FAMILIAR?**
 >
 > A retired teacher from the Gold Coast was at a shopping centre café, using the free Wi-Fi to check her bank balance and pay a bill online. The network name was 'CafeWifi_Free' — identical to the name on the sign at the counter. What she did not know was that a second network with the same name had been set up nearby by someone with a laptop and basic software. Her internet traffic passed through that device before reaching the internet. Her banking session was visible. She was not hacked that day — but she easily could have been. This is called an 'evil twin' attack. It costs almost nothing to set up and is alarmingly common.
+>
+> *This is a composite example, illustrating a well-documented attack technique, not a specific real person. If it sounds familiar, that's exactly the point.*
 
 
 
@@ -1675,9 +1685,11 @@ The difference between a stressful but manageable situation and a genuine crisis
 
 This chapter walks you through setting up Find My properly, explains Activation Lock — the feature that makes a stolen iPhone essentially worthless to a thief — and gives you a clear, calm, step-by-step plan for exactly what to do in the first thirty minutes after your phone goes missing.
 
-> **▶ REAL STORY**
+> **▶ SOUNDS FAMILIAR?**
 >
 > A man in his seventies left his iPhone on a café table in Noosa while paying at the counter. By the time he turned around, it was gone. Because Find My was set up and his iPhone was linked to his Apple ID with two-factor authentication active, he was able to open Find My on his wife's iPad within minutes. He saw his phone moving along the highway toward Eumundi. He reported it to police with the live location, marked the phone as Lost, and it was recovered within two hours. Without Find My set up in advance, this would have been a permanent loss of the device and everything on it.
+>
+> *This is a composite example, not a specific real person, though a version of this happens to someone on the Sunshine Coast most weeks.*
 
 
 

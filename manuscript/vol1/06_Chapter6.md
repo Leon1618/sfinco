@@ -12,9 +12,11 @@ But public Wi-Fi networks carry risks that your home network does not. And some 
 
 This chapter explains how Wi-Fi security works in plain English, what the real risks of public networks are (and are not), how to configure your iPhone to connect safely, and what a VPN is and when it is genuinely worth using.
 
-> **▶ REAL STORY**
+> **▶ SOUNDS FAMILIAR?**
 >
 > A retired teacher from the Gold Coast was at a shopping centre café, using the free Wi-Fi to check her bank balance and pay a bill online. The network name was 'CafeWifi_Free' — identical to the name on the sign at the counter. What she did not know was that a second network with the same name had been set up nearby by someone with a laptop and basic software. Her internet traffic passed through that device before reaching the internet. Her banking session was visible. She was not hacked that day — but she easily could have been. This is called an 'evil twin' attack. It costs almost nothing to set up and is alarmingly common.
+>
+> *This is a composite example, illustrating a well-documented attack technique, not a specific real person. If it sounds familiar, that's exactly the point.*
 
 
 

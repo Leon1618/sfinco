@@ -12,9 +12,11 @@ The difference between a stressful but manageable situation and a genuine crisis
 
 This chapter walks you through setting up Find My properly, explains Activation Lock — the feature that makes a stolen iPhone essentially worthless to a thief — and gives you a clear, calm, step-by-step plan for exactly what to do in the first thirty minutes after your phone goes missing.
 
-> **▶ REAL STORY**
+> **▶ SOUNDS FAMILIAR?**
 >
 > A man in his seventies left his iPhone on a café table in Noosa while paying at the counter. By the time he turned around, it was gone. Because Find My was set up and his iPhone was linked to his Apple ID with two-factor authentication active, he was able to open Find My on his wife's iPad within minutes. He saw his phone moving along the highway toward Eumundi. He reported it to police with the live location, marked the phone as Lost, and it was recovered within two hours. Without Find My set up in advance, this would have been a permanent loss of the device and everything on it.
+>
+> *This is a composite example, not a specific real person, though a version of this happens to someone on the Sunshine Coast most weeks.*
 
 
 

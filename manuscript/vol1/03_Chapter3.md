@@ -12,9 +12,11 @@ It is also the account that scammers most want to get their hands on — because
 
 This chapter covers how to check whether your Apple ID is properly secured, how to set up two-factor authentication if you haven't already, and what to do in the scenarios that frighten people most — being locked out, or suspecting someone else has access.
 
-> **▶ REAL STORY**
+> **▶ SOUNDS FAMILIAR?**
 >
-> David, 74, from Caloundra, started getting emails from Apple saying his account had been used to make purchases he didn't recognise — apps, in-app purchases, subscriptions. He called the number in one of the emails. It wasn't Apple. It was a scammer who had already accessed his account and was now talking him into giving up his verification code. He lost access to his Apple ID for eleven days. Recovering it required a lengthy identity verification process with Apple Support. Two-factor authentication would have stopped this entirely — and it takes four minutes to set up.
+> David, 74, from Caloundra, started getting emails claiming to be from Apple saying his account had been used to make purchases he didn't recognise — apps, in-app purchases, subscriptions. He called the number in one of the emails. It wasn't Apple. It was a scammer who had already accessed his account and was now talking him into giving up his verification code. He lost access to his Apple ID for eleven days. Recovering it required a lengthy identity verification process with Apple Support. Two-factor authentication would have stopped this entirely — and it takes four minutes to set up.
+>
+> *This is a composite example, built from patterns commonly reported to Scamwatch and IDCARE, not a specific real person. If it sounds familiar, that's exactly the point.*
 
 
 

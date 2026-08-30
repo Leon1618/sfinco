@@ -12,9 +12,11 @@ But over months and years of installing apps, those permissions accumulate. Many
 
 This chapter explains what each permission actually means in plain English, shows you how to do a full audit of what your apps can currently access, and walks you through revoking anything that should not be there. The whole process takes about fifteen minutes and is one of the most worthwhile things you can do for your privacy.
 
-> **▶ REAL STORY**
+> **▶ SOUNDS FAMILIAR?**
 >
 > A woman in her late sixties downloaded a free flashlight app from the App Store. She granted it access to her location and contacts because the app requested them at install. She never questioned it — a flashlight seems harmless. Six months later, a family member with a background in IT checked her phone and found the app had been sending her contact list to servers overseas every 48 hours. The app was removed from the App Store shortly after. Her contacts had already been harvested. The permission was granted in a single tap. It took eighteen months to notice.
+>
+> *This is a composite example, built from patterns commonly reported about app permission abuse, not a specific real person. If it sounds familiar, that's exactly the point.*
 
 
 
