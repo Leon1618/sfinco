@@ -1543,7 +1543,7 @@ function buildSearchIndex() {
       description: entry.definition,
       keywords: `${entry.term} ${entry.definition} glossary meaning`.toLowerCase(),
       action: () => {
-        document.getElementById("tab-btn-aisafety").click();
+        document.getElementById("tab-btn-today").click();
         if (glossaryDetails) glossaryDetails.open = true;
         setTimeout(() => glossaryDetails?.scrollIntoView({ behavior: "smooth", block: "center" }), 50);
       },

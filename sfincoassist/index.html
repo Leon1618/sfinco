@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sfinco Personal Cyber Awareness Assistant</title>
-<link rel="stylesheet" href="style.css?v=20260830e">
+<link rel="stylesheet" href="style.css?v=20260830f">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#2B2019">
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
@@ -163,6 +163,14 @@
         <a class="btn-message-us" href="mailto:hello@sfinco.com.au">Message us</a>
       </div>
     </div>
+
+    <details class="disclosure">
+      <summary>Plain-English glossary</summary>
+      <div class="disclosure-body">
+        <p>Terms you'll come across in this app and elsewhere, explained without the jargon.</p>
+        <dl class="glossary-list" id="glossary-list"></dl>
+      </div>
+    </details>
   </section>
 
   <section id="tab-scam" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-btn-scam">
@@ -348,15 +356,25 @@
     <h2>AI is changing how scams look</h2>
     <p>Scammers are starting to use the same AI tools everyone else is, to clone voices, fake videos, and write more convincing messages. It's still fairly rare in Australia, but worth knowing about.</p>
 
-    <div class="sample-card notice">
-      <span class="tag">The "it's me, I need help" call</span>
-      <p>Scammers can now clone a voice from just a few seconds of audio, sometimes taken from a video posted online. If you get a call that sounds exactly like a family member urgently asking for money, hang up and call them back on the number you already have for them.</p>
-    </div>
+    <details class="disclosure" open>
+      <summary>AI scam examples</summary>
+      <div class="disclosure-body">
+        <div class="sample-card notice">
+          <span class="tag">The "it's me, I need help" call</span>
+          <p>Scammers can now clone a voice from just a few seconds of audio, sometimes taken from a video posted online. If you get a call that sounds exactly like a family member urgently asking for money, hang up and call them back on the number you already have for them.</p>
+        </div>
 
-    <div class="sample-card notice">
-      <span class="tag">Investments "endorsed" by celebrities</span>
-      <p>Fake videos of well-known news presenters, politicians, or business figures promoting a secret trading platform are increasingly convincing. Real public figures don't make money by tipping you off to investments online. Watch for the conversation quickly moving to WhatsApp or Telegram.</p>
-    </div>
+        <div class="sample-card notice">
+          <span class="tag">Investments "endorsed" by celebrities</span>
+          <p>Fake videos of well-known news presenters, politicians, or business figures promoting a secret trading platform are increasingly convincing. Real public figures don't make money by tipping you off to investments online. Watch for the conversation quickly moving to WhatsApp or Telegram.</p>
+        </div>
+
+        <div class="sample-card notice">
+          <span class="tag">The AI "friend" building trust for weeks</span>
+          <p>Some romance and investment scams now use AI chatbots that can chat naturally with hundreds of people at once, building what feels like a real friendship before eventually asking for money. However genuine the connection felt, being asked for money, especially in cryptocurrency, is the warning sign.</p>
+        </div>
+      </div>
+    </details>
 
     <details class="disclosure">
       <summary>How to protect yourself</summary>
@@ -384,14 +402,6 @@
           <li><strong>Threats and extortion scams.</strong> A caller claims to be from a trusted organisation and threatens arrest, deportation, or harm unless you pay immediately, or threatens to share private photos unless you pay them.</li>
           <li><strong>Unexpected money scams.</strong> A message claims you're owed money, or have won something you never entered for, then asks for a fee or your banking details to "release" it.</li>
         </ul>
-      </div>
-    </details>
-
-    <details class="disclosure">
-      <summary>Plain-English glossary</summary>
-      <div class="disclosure-body">
-        <p>Terms you'll come across in this app and elsewhere, explained without the jargon.</p>
-        <dl class="glossary-list" id="glossary-list"></dl>
       </div>
     </details>
 
@@ -561,6 +571,6 @@
   <button id="undo-toast-btn" type="button">Undo</button>
 </div>
 
-<script src="app.js?v=20260830e"></script>
+<script src="app.js?v=20260830f"></script>
 </body>
 </html>
