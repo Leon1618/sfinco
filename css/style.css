@@ -360,9 +360,10 @@ section > .container > h2 {
   background-size: auto, 18px 18px, 18px 18px;
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 1.8rem 1.6rem 1.6rem;
+  padding: 2.1rem 1.85rem 1.85rem;
   display: flex;
   flex-direction: column;
+  gap: 0.9rem;
   overflow: hidden;
   /* !important: .reveal-stagger > * sets its own transition shorthand on this same element for the
      scroll-in fade, and shares equal specificity with this rule but comes later in the file, which
@@ -377,11 +378,27 @@ section > .container > h2 {
 
 .pillar-icon {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
   color: var(--accent);
-  margin-bottom: 0.6rem;
+  background: var(--accent-tint, rgba(255, 255, 255, 0.05));
+  border: 1px solid var(--border);
+  border-radius: 12px;
 }
 
-.pillar-icon svg { width: 58px; height: 58px; }
+.pillar-grid .pillar-card:nth-child(1) .pillar-icon,
+.pillar-grid .pillar-card:nth-child(2) .pillar-icon {
+  background: var(--lime-tint);
+}
+
+.pillar-grid .pillar-card:nth-child(3) .pillar-icon,
+.pillar-grid .pillar-card:nth-child(4) .pillar-icon {
+  background: var(--purple-tint);
+}
+
+.pillar-icon svg { width: 30px; height: 30px; }
 
 .pillar-card::before {
   content: "";
@@ -402,12 +419,28 @@ section > .container > h2 {
 }
 
 .pillar-card h3 {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0;
+}
+
+.pillar-card .status-tag {
+  margin-bottom: 0;
 }
 
 .pillar-card p {
   color: var(--muted);
+  margin-bottom: 0;
   flex-grow: 1;
+}
+
+.pillar-card .card-note {
+  margin-top: 0;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  opacity: 0.75;
 }
 
 .status-tag {
@@ -457,7 +490,7 @@ section > .container > h2 {
 }
 
 .pillar-card a.card-link {
-  margin-top: 1rem;
+  margin-top: 0;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 0.85rem;
   font-weight: 700;
