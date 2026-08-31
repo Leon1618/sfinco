@@ -231,13 +231,31 @@ nav.primary-nav a:hover {
 }
 
 .btn-primary {
+  position: relative;
   background: var(--lime);
   color: var(--bg-deep);
+  overflow: hidden;
 }
 
 .btn-primary:hover {
   background: #fff;
   color: var(--bg-deep);
+}
+
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(115deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.btn-primary:hover::after {
+  left: 130%;
 }
 
 .btn-secondary {
@@ -261,6 +279,19 @@ nav.primary-nav a:hover {
 
 .btn-row:has(> :only-child) {
   justify-content: center;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-tag {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
 }
 
 .store-badge {
@@ -320,7 +351,8 @@ section > .container > h2 {
 }
 
 .pillar-card {
-  --accent: var(--blue);
+  --accent: var(--lime);
+  --accent-tint: var(--lime-tint);
   position: relative;
   background:
     linear-gradient(var(--surface), var(--surface)),
@@ -339,10 +371,24 @@ section > .container > h2 {
   transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.9s ease, box-shadow 0.9s ease, opacity 0.6s ease !important;
 }
 
-.pillar-grid .pillar-card:nth-child(1) { --accent: var(--blue); }
-.pillar-grid .pillar-card:nth-child(2) { --accent: var(--lime); }
-.pillar-grid .pillar-card:nth-child(3) { --accent: var(--purple); }
-.pillar-grid .pillar-card:nth-child(4) { --accent: var(--blue); }
+.pillar-grid .pillar-card:nth-child(1) { --accent: var(--lime); --accent-tint: var(--lime-tint); }
+.pillar-grid .pillar-card:nth-child(2) { --accent: var(--lime); --accent-tint: var(--lime-tint); }
+.pillar-grid .pillar-card:nth-child(3) { --accent: var(--purple); --accent-tint: var(--purple-tint); }
+.pillar-grid .pillar-card:nth-child(4) { --accent: var(--purple); --accent-tint: var(--purple-tint); }
+
+.pillar-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--accent-tint);
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.pillar-icon svg { width: 22px; height: 22px; }
 
 .pillar-card::before {
   content: "";
@@ -1368,12 +1414,17 @@ form.enquiry .btn-row {
   position: absolute;
   top: -30%;
   left: 50%;
-  transform: translateX(-50%);
   width: 900px;
   max-width: 140vw;
   height: 700px;
   background: radial-gradient(circle, rgba(217, 164, 65, 0.07), transparent 70%);
   pointer-events: none;
+  animation: glow-drift 24s ease-in-out infinite;
+}
+
+@keyframes glow-drift {
+  0%, 100% { transform: translate(-50%, 0) scale(1); }
+  50% { transform: translate(-46%, 2%) scale(1.05); }
 }
 
 .grid-texture .container {
