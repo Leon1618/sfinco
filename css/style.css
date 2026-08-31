@@ -909,12 +909,16 @@ form.enquiry .btn-row {
 /* Blog: Medium-inspired reading layout */
 
 .blog-hero {
-  padding: 3.5rem 0 2rem;
+  padding: 4rem 0 3.5rem;
   background: var(--bg-deep);
 }
 
 .blog-hero .container {
-  max-width: 700px;
+  max-width: 960px;
+}
+
+.blog-hero .lede {
+  max-width: 640px;
 }
 
 .blog-layout {
