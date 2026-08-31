@@ -914,18 +914,14 @@ form.enquiry .btn-row {
 }
 
 .blog-hero .container {
-  max-width: 960px;
-}
-
-.blog-hero .lede {
-  max-width: 640px;
+  max-width: 780px;
 }
 
 .blog-layout {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2.5rem;
-  max-width: 960px;
+  max-width: 780px;
   margin: 0 auto;
   padding: 1rem 1.25rem 3rem;
 }
