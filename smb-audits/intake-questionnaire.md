@@ -53,4 +53,4 @@ Needed to scope the engagement and quote it, not part of the ACSC checklist itse
 
 - Answers above, plus the "about the business" section, set the scope for Stage 2 (remote risk review) against the domains in `methodology.md`.
 - A "No" or "Not sure" here isn't a finding yet — it's a lead for what to check on the screen-share. The actual Fix Now / Fix Soon / Good to know rating only gets assigned once it's verified.
-- Use the answers to size the fixed quote ($500–$2,000 AUD) before the review is booked in.
+- Use the answers to size the fixed quote ($299–$799 AUD) before the review is booked in.

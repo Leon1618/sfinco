@@ -23,7 +23,7 @@ Covers, loosely:
 - Devices in use — owned by the business vs BYO — and roughly how many.
 - Anything the owner already suspects or worries about. This is often the most useful five minutes of the call.
 
-Output: a scope note (which of the domains below are in play) and a fixed quote within $500–$2,000 AUD, sent within 24 hours.
+Output: a scope note (which of the domains below are in play) and a fixed quote within $299–$799 AUD, sent within 24 hours.
 
 ### 2. Remote risk review
 

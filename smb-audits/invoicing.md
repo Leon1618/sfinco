@@ -12,7 +12,7 @@ Internal process note. No paid tools — a filled-in template and a bank transfe
 
 1. After the report is delivered, fill in the template below and export it as a PDF (any word processor's "save as PDF" is enough — no invoicing software needed at this volume).
 2. Send it in the same email as the report, or as a clear follow-up.
-3. Payment by direct bank transfer — no Stripe/Square cut eaten out of a $500–$2,000 engagement for what's essentially a single transaction.
+3. Payment by direct bank transfer — no Stripe/Square cut eaten out of a $299–$799 engagement for what's essentially a single transaction.
 4. Keep a copy of every invoice sent. The ATO requires business records to be kept for 5 years regardless of turnover.
 
 ## Invoice numbering

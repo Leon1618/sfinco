@@ -18,7 +18,7 @@ It is a trusted local brand and a community service that happens to use technolo
 
 ## The four pillars (full detail in `docs/pillars-and-guides.md`)
 
-1. **SMB Cyber Audits** — remote-first cybersecurity risk assessments for Sunshine Coast small businesses. $500–$2,000 per engagement. Designed, not yet launched.
+1. **SMB Cyber Audits** — remote-first cybersecurity risk assessments for Sunshine Coast small businesses. $299–$799 per engagement. Designed, not yet launched.
 2. **Sfinco Guides** — an 8-volume plain-English digital safety book series (Amazon KDP). Vol 1, *iPhone Protection*, is being finalised now. Brand colours: Blue `#1B4F8A`, Amber `#C47F00`.
 3. **SfincoAssist** — an AI financial companion for seniors (60–75). The heart of Sfinco. Phase 1 (buildable now, no accreditation needed) is an alert/reminder engine. Phase 2 (live Open Banking data) requires CDR accreditation, and possibly AFSL — flag this every time it comes up, don't build it into the site as a live feature yet.
 4. **Digital Estate Vault** — a SaaS vault for passwords, accounts, and digital legacy documents. Year 2+ product. Don't over-index the homepage on this.
