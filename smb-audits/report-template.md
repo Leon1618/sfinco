@@ -67,6 +67,10 @@ Grouped by the same six areas covered in the audit. Every finding: what we found
 
 This report is a picture of where things stood on [date] — it's not something that stays accurate on its own. If you'd like ongoing help, Sfinco offers a retainer that includes the Cyber Confidence Score re-checked at each catch-up and a short monthly note (the Sfinco Check-in) to help your team stay a step ahead. No pressure either way — if this report is all you need right now, that's completely fine.
 
+## If something goes wrong
+
+A one-page emergency plan is attached separately: who to call first, what to do in the first thirty minutes, and how to keep the business running while it's sorted out. Worth printing or saving somewhere the whole team can find it without asking first.
+
 ## A few things worth knowing
 
 This audit looked at risk and practice, not formal compliance — it isn't a certification against any standard, and it isn't a penetration test. If [Business] takes card payments directly (rather than through a provider like Square, Stripe, or an EFTPOS terminal), separate PCI DSS obligations apply and are worth a conversation with your payment provider. Nothing in this report is financial advice.

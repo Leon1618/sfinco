@@ -70,8 +70,8 @@ Items 13–15 don't get filed under one of the six domains in the report — per
 - **No:** No formal awareness training yet. This is exactly what the Sfinco Check-in is built for — a short monthly note rather than a one-off session nobody remembers by March.
 
 **14. Emergency plan**
-- **Yes:** There's already a plan for what happens if something goes wrong — genuinely rare among businesses this size, worth saying so plainly.
-- **No:** No plan yet for a compromised account or a ransom note turning up. Worth a simple one-pager: who to call, what to do first, how the team keeps operating for a day without the affected system. If this comes up during the review itself, it's reasonable to note it as a general finding rather than skip it entirely — just don't force it under one of the six domains.
+- **Yes:** There's already a plan for what happens if something goes wrong — genuinely rare among businesses this size, worth saying so plainly. Still worth offering the Sfinco one-pager (`incident-response-starter-template.md`) as a second, simpler reference alongside whatever they already have.
+- **No:** No plan yet for a compromised account or a ransom note turning up. This is exactly what `incident-response-starter-template.md` is for, it's delivered with every audit regardless of the answer here, so a "No" just means it lands as genuinely new rather than a nice-to-have. If this comes up during the review itself, it's reasonable to note it as a general finding rather than skip it entirely — just don't force it under one of the six domains.
 
 **15. ACSC Partnership Program registered**
 - **Either answer:** free registration gives access to threat alerts relevant to small businesses. Not registered isn't a risk finding, it's just an easy opportunity — always frame it that way, never as a gap.

@@ -57,11 +57,22 @@ A short written document (aim for something an owner can read end to end in 15�
 3. A single ranked action list at the front or back (not buried) — the "what to do first, second, third" the client actually needs.
 4. A short note on what's already being done well. Every audit finds at least one thing.
 
+Delivered alongside a filled-in copy of `incident-response-starter-template.md`, a one-page plain-English emergency plan (who to call, what to do in the first thirty minutes, how to keep operating). Every client gets one, not just those who ask, most small businesses don't have anything like it, and it costs little to include.
+
 Delivered as PDF, walked through live on a final call rather than just emailed cold — that call is where the retainer conversation happens naturally, if it happens at all.
 
 ### 5. Optional retainer
 
 Offered once, plainly, at the end of the final call: ongoing help working through the fix list, at a monthly rate to be scoped separately. Never a condition of the audit, never chased afterward.
+
+## How this maps to recognised frameworks
+
+Internal note, not client-facing. The six domains below aren't arbitrary, they're Sfinco's own plain-English translation of ground covered by nationally and internationally recognised frameworks (the ACSC's Essential Eight, the NIST Cyber Security Framework, the CIS Controls). None of that gets named to a client unless they specifically ask, and this audit is never sold or reported as certification against any of them, but it's worth Leo keeping the mapping in mind so nothing significant gets missed:
+
+- **Identify + Protect** (NIST) is the bulk of what a point-in-time audit can genuinely deliver: knowing what's there, and making sure it's locked down. Identity and access, devices and software, network, and payment/data handling all sit here.
+- **Detect** (NIST) is honestly outside what a one-off audit can offer, it needs ongoing eyes on the business, which is exactly what the Cyber Awareness retainer is for. Worth saying that plainly to a client if they ask why the audit doesn't cover it.
+- **Respond + Recover** (NIST) get a head start from the audit: the incident-response-starter-template.md one-pager covers Respond, and the backups-and-recovery domain covers Recover, but neither is a substitute for the fuller version a larger organisation would build.
+- The **CIS Controls** (18 areas, broader than the Essential Eight) are a useful cross-check when reviewing or expanding `findings-library.md` for gaps, particularly CIS 11 (Data Recovery), CIS 14 (Security Awareness and Skills Training), and CIS 17 (Incident Response Management), all of which map directly onto domains already covered here.
 
 ## Assessment domains
 
