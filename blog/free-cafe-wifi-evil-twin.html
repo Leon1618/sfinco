@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>That free cafe Wi-Fi might not be what it looks like | sfinco Blog</title>
+<meta name="description" content="Two networks with the same name can sit in the same room, and only one of them is the cafe's.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="../index.html">sfinco</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Menu">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </label>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../resources.html">Free Resources</a></li>
+        <li><a href="../sfincoassist.html">Personal Cyber Awareness</a></li>
+        <li><a href="../audits.html">SMB Cyber Awareness and Audits</a></li>
+        <li><a href="../guides.html">Safety Guides</a></li>
+        <li><a href="../audits.html#enquire">Get in touch</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+
+<section class="post-hero">
+  <div class="container">
+    <a class="post-back" href="../blog.html">&larr; All posts</a>
+    <span class="eyebrow">Scam alerts</span>
+    <h1>That free cafe Wi-Fi might not be what it looks like</h1>
+    <p class="post-subtitle">Two networks with the same name can sit in the same room, and only one of them is the cafe's.</p>
+    <div class="byline post-byline">
+      <span class="byline-avatar" aria-hidden="true">J</span>
+      <div>
+        <span class="byline-name">Jess Carter</span>
+        <span class="byline-meta">29 April 2026 &middot; 3 min read</span>
+      </div>
+    </div>
+    <figure class="post-hero-image">
+      <img src="../images/blog/free-cafe-wifi-evil-twin.jpg" alt="A woman sitting at a cafe window, using a laptop and phone." width="1260" height="1890">
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="container post-body">
+    <p>It's a genuinely simple trick. Someone sets up a Wi-Fi network with the same name as the cafe's real one, sometimes with a laptop and nothing more exotic than that, and waits for phones and laptops to connect automatically. Security researchers call it an "evil twin" network.</p>
+
+    <h2>Why it's so easy to fall for</h2>
+    <p>Most devices are set to rejoin networks they've used before without asking, which is convenient right up until a fake network borrows a familiar name. Once connected, whoever set it up can potentially see the traffic passing through, including anything not otherwise encrypted.</p>
+
+    <blockquote class="pull-quote">The network doesn't have to look suspicious. It just has to have the right name.</blockquote>
+
+    <h2>What actually helps</h2>
+    <p>Confirm the exact network name with staff rather than picking the first one that looks right, especially if you see two similar names. Avoid logging into anything sensitive, banking especially, on public Wi-Fi at all. A VPN adds a genuine layer of protection here specifically, since it encrypts the connection regardless of which network you've landed on.</p>
+
+    <div class="callout">
+      <h3>Related reading</h3>
+      <p>More on when a VPN is actually worth using in <a href="../blog/what-a-vpn-actually-does.html">this post</a>.</p>
+    </div>
+
+    <div class="post-footer-author">
+      <span class="byline-avatar" aria-hidden="true">J</span>
+      <p>Written by <strong>Jess Carter</strong>, who covers current scams for Sfinco. <a href="../blog.html">More posts &rarr;</a></p>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-block">
+        <h3>Get in touch</h3>
+        <p>Sfinco &middot; Noosa, Sunshine Coast, Queensland, Australia</p>
+        <p><a href="mailto:hello@sfinco.com.au">hello@sfinco.com.au</a></p>
+        <p><a class="btn btn-secondary" href="../audits.html#enquire">Get in touch</a></p>
+      </div>
+      <div class="footer-block">
+        <h3>Feeling unsure about something?</h3>
+        <p>Never call a number a message gives you. If in doubt, call the Australian Cyber Security Hotline direct, any time.</p>
+        <p><a class="footer-phone" href="tel:1300292371">1300 292 371</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Sfinco. All rights reserved. &middot; <a href="../privacy.html">Privacy</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll(".primary-nav a").forEach(function(a) {
+  a.addEventListener("click", function() {
+    document.getElementById("nav-toggle").checked = false;
+  });
+});
+</script>
+
+</body>
+</html>
