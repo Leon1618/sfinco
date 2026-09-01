@@ -10,7 +10,7 @@ Sfinco is simultaneously a business for financial independence, a body of work a
 
 ## Pillar 1 — SMB Cyber Audits
 
-Remote-first cybersecurity risk assessments for small businesses on the Sunshine Coast (cafes, clinics, real estate agencies, tradies, professional services). Plain-English risk report, actionable fixes, optional retainer. Leverages Leo's Security+ credentials and banking background. $299–$799 per audit, a short self-check plus a 30–45 min verify call rather than a long live session — see `smb-audits/pricing-worksheet.md` and `smb-audits/review-item-modes.md`. No face-to-face required — proposal-driven. Status: designed, not yet launched; first three Noosa clients are the near-term target.
+Remote-first cybersecurity risk assessments for small businesses on the Sunshine Coast (cafes, clinics, real estate agencies, tradies, professional services). Plain-English risk report, actionable fixes, optional retainer. Leverages Leo's Security+ credentials and banking background. Pricing: TBD (being adjusted, don't quote a figure until it's set), a short self-check plus a 30–45 min verify call rather than a long live session — see `smb-audits/pricing-worksheet.md` and `smb-audits/review-item-modes.md`. No face-to-face required — proposal-driven. Status: designed, not yet launched; first three Noosa clients are the near-term target.
 
 ## Pillar 2 — Sfinco Guides (publishing)
 
