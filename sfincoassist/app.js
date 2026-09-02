@@ -72,6 +72,7 @@ function openDialog(dialog) {
     if (d !== dialog) d.close();
   });
   dialog.showModal();
+  dialog.scrollTop = 0;
 }
 
 document.getElementById("profile-btn").addEventListener("click", () => openDialog(profileDialog));

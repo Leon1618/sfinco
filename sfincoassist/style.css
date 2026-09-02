@@ -314,7 +314,6 @@ body {
 .tabs {
   max-width: var(--max-width);
   margin: 1.5rem auto 0;
-  padding: 0 1.5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.6rem;
