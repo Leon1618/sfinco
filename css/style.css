@@ -9,8 +9,6 @@
   --lime-tint: rgba(217, 164, 65, 0.12);
   --blue: #6FB1E8;
   --blue-tint: rgba(111, 177, 232, 0.12);
-  --purple: #C48FDB;
-  --purple-tint: rgba(196, 143, 219, 0.12);
   --max-width: 1080px;
 }
 
@@ -371,10 +369,7 @@ section > .container > h2 {
   transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.9s ease, box-shadow 0.9s ease, opacity 0.6s ease !important;
 }
 
-.pillar-grid .pillar-card:nth-child(1) { --accent: var(--lime); }
-.pillar-grid .pillar-card:nth-child(2) { --accent: var(--lime); }
-.pillar-grid .pillar-card:nth-child(3) { --accent: var(--purple); }
-.pillar-grid .pillar-card:nth-child(4) { --accent: var(--purple); }
+.pillar-card { --accent: var(--lime); }
 
 .pillar-icon {
   display: flex;
@@ -383,19 +378,9 @@ section > .container > h2 {
   width: 56px;
   height: 56px;
   color: var(--accent);
-  background: var(--accent-tint, rgba(255, 255, 255, 0.05));
+  background: var(--lime-tint);
   border: 1px solid var(--border);
   border-radius: 12px;
-}
-
-.pillar-grid .pillar-card:nth-child(1) .pillar-icon,
-.pillar-grid .pillar-card:nth-child(2) .pillar-icon {
-  background: var(--lime-tint);
-}
-
-.pillar-grid .pillar-card:nth-child(3) .pillar-icon,
-.pillar-grid .pillar-card:nth-child(4) .pillar-icon {
-  background: var(--purple-tint);
 }
 
 .pillar-icon svg { width: 30px; height: 30px; }
@@ -480,8 +465,8 @@ section > .container > h2 {
 }
 
 .status-soon {
-  background: var(--purple-tint);
-  color: var(--purple);
+  background: var(--lime-tint);
+  color: var(--lime);
 }
 
 .status-fixsoon {
