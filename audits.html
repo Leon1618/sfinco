@@ -169,7 +169,16 @@
     <h2>Start with a conversation</h2>
     <p class="section-intro">Send through a few details and you'll hear back personally, usually within a couple of business days.</p>
 
-    <form class="enquiry" action="mailto:hello@sfinco.com.au" method="get" enctype="text/plain">
+    <div id="enquiry-sent" class="callout hidden">
+      <h3>Thanks, that's through</h3>
+      <p>Your enquiry has come through to Leo directly. You'll hear back personally, usually within a couple of business days.</p>
+    </div>
+
+    <form class="enquiry" id="enquiry-form" action="https://formsubmit.co/hello@sfinco.com.au" method="POST">
+      <input type="hidden" name="_subject" value="New Sfinco audit enquiry">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://sfinco.com.au/audits.html?sent=true#enquire">
+      <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off">
       <div>
         <label for="name">Your name</label>
         <input type="text" id="name" name="name" required>
@@ -231,6 +240,11 @@ document.querySelectorAll(".primary-nav a").forEach(function(a) {
     document.getElementById("nav-toggle").checked = false;
   });
 });
+
+if (new URLSearchParams(window.location.search).get("sent") === "true") {
+  document.getElementById("enquiry-form").classList.add("hidden");
+  document.getElementById("enquiry-sent").classList.remove("hidden");
+}
 </script>
 
 </body>

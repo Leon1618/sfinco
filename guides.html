@@ -66,6 +66,23 @@
           <span>$7.99 AUD e-book</span>
         </div>
         <p><em>Arriving on Amazon soon. This page will carry the direct link the moment it's live.</em></p>
+
+        <div id="notify-sent" class="hidden">
+          <p><strong>You're on the list.</strong> We'll email you the moment Volume 1 is live.</p>
+        </div>
+
+        <form class="enquiry" id="notify-form" action="https://formsubmit.co/hello@sfinco.com.au" method="POST">
+          <input type="hidden" name="_subject" value="Notify me: Sfinco Vol 1 launch">
+          <input type="hidden" name="_next" value="https://sfinco.com.au/guides.html?notified=true#vol-1">
+          <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off">
+          <div>
+            <label for="notify-email">Want to know the moment it's live?</label>
+            <input type="email" id="notify-email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="btn-row">
+            <button class="btn btn-primary" type="submit">Notify me</button>
+          </div>
+        </form>
       </div>
     </div>
 
@@ -195,6 +212,11 @@ document.querySelectorAll(".primary-nav a").forEach(function(a) {
     document.getElementById("nav-toggle").checked = false;
   });
 });
+
+if (new URLSearchParams(window.location.search).get("notified") === "true") {
+  document.getElementById("notify-form").classList.add("hidden");
+  document.getElementById("notify-sent").classList.remove("hidden");
+}
 
 document.querySelectorAll(".series-list details").forEach(function (details) {
   var summary = details.querySelector("summary");
