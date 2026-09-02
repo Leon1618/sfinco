@@ -7,8 +7,8 @@ One product, sold two ways — a plain-English review of an individual's phone a
 - [`intake-questionnaire.md`](intake-questionnaire.md) — the Stage 1 conversation script.
 - [`pricing.md`](pricing.md) — suggested flat $99 AUD, one-off, no worksheet needed.
 - [`report-template.md`](report-template.md) — the one-page client summary, duplicate per client.
+- [`privacy-notice.md`](privacy-notice.md) — client data handling notice, and the actual reasoning on where this differs from `smb-audits/privacy-notice.md`: not the small-business exemption (that still likely applies either way), but the Family Digital Safety Check's payer/subject split, handled as a hard consent rule in `family-framing.md` rather than a privacy-notice technicality.
 
-**Still outstanding:**
-- A short, plain-English privacy note for individual clients — `smb-audits/privacy-notice.md`'s small-business exemption reasoning doesn't apply here; personal information from an individual is a more direct Privacy Act obligation. Flagged in `methodology.md`, not yet written.
-- The two marketing pages on the live site (`check-up.html`, `family-check.html`).
-- ABN/bank details still needed in the invoicing step — same placeholders as `smb-audits/invoicing.md`, not duplicated here.
+The two marketing pages, [`check-up.html`](../check-up.html) and [`family-check.html`](../family-check.html), are live on the site and in the primary nav.
+
+**Still outstanding:** ABN/bank details in the invoicing step — same placeholders as `smb-audits/invoicing.md`, not duplicated here.
