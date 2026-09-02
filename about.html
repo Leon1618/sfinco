@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | sfinco</title>
+<meta name="description" content="Sfinco is a Sunshine Coast guardian for digital safety and financial confidence, built around one idea: protecting people who don't know they need protecting.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">sfinco</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Menu">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </label>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="resources.html">Free Resources</a></li>
+        <li><a href="sfincoassist.html">Personal Cyber Awareness</a></li>
+        <li><a href="check-up.html">Digital Check-up</a></li>
+        <li><a href="audits.html">SMB Cyber Awareness and Audits</a></li>
+        <li><a href="guides.html">Safety Guides</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="audits.html#enquire">Get in touch</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+
+<section class="hero grid-texture">
+  <div class="container">
+    <span class="eyebrow">Sunshine Coast, Queensland</span>
+    <h1>About Sfinco</h1>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p>Sfinco takes its name from the Sphinx, the ancient guardian remembered for protecting the wise and challenging anyone who meant harm. That's the idea the whole business is built around: protecting people who don't know they need protecting, whether that's a small business owner without anyone watching their systems, or someone quietly unsure about a text message that didn't feel quite right. Sfinco works across four connected areas from the Sunshine Coast: plain-English cyber audits for small businesses, an eight-book digital safety guide series, a personal cyber awareness assistant currently in development, and a digital vault for passwords and important documents further down the track.</p>
+
+    <p>Sfinco isn't a call centre and it isn't a tech company. It's a small, local, remote-first operation built on the idea that staying safer online shouldn't require a computer science degree to understand. No scare tactics, no jargon left unexplained, and nothing pushed on anyone who doesn't need it yet. Get in touch through any page on this site and you'll hear back personally, usually within a couple of business days, from right here on the Sunshine Coast.</p>
+
+    <div class="callout blue">
+      <h3>Want to know more?</h3>
+      <p>Have a question, a business that could use a cyber audit, or just want to say hello? <a href="audits.html#enquire">Get in touch</a>.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-block">
+        <h3>Get in touch</h3>
+        <p>Sfinco &middot; Noosa, Sunshine Coast, Queensland, Australia</p>
+        <p><a href="mailto:hello@sfinco.com.au">hello@sfinco.com.au</a></p>
+        <p><a class="btn btn-secondary" href="audits.html#enquire">Get in touch</a></p>
+      </div>
+      <div class="footer-block">
+        <h3>Feeling unsure about something?</h3>
+        <p>Never call a number a message gives you. If in doubt, call the Australian Cyber Security Hotline direct, any time.</p>
+        <p><a class="footer-phone" href="tel:1300292371">1300 292 371</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Sfinco. All rights reserved. &middot; <a href="privacy.html">Privacy</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll(".primary-nav a").forEach(function(a) {
+  a.addEventListener("click", function() {
+    document.getElementById("nav-toggle").checked = false;
+  });
+});
+</script>
+
+</body>
+</html>
