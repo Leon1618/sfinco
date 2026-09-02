@@ -2,6 +2,8 @@
 
 One flat price, no worksheet — this doesn't carry the variables the SMB audit does (no team size, no device count, no business systems in scope). Same price whether it's booked as a Personal Digital Check-up or a Family Digital Safety Check.
 
+**Not public yet.** Same decision as the SMB audit: no price is quoted on `check-up.html` or `family-check.html` while pricing across the site is being settled — both pages say "confirmed before anything else happens" instead. This figure is for Leo's own reference when quoting on the intake call, not a number to publish.
+
 **Suggested price: $99 AUD, one-off.**
 
 Reasoning, not a fixed rule:
