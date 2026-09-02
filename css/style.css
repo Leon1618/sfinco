@@ -1063,8 +1063,12 @@ form.enquiry .btn-row {
 }
 
 .feed-item {
-  padding: 2.2rem 0;
-  border-bottom: 1px solid var(--border);
+  padding: 1.8rem 0;
+  border-bottom: 1px dashed var(--border);
+}
+
+.feed-item:first-child {
+  padding-top: 0;
 }
 
 .feed-item:last-child {
@@ -1072,8 +1076,8 @@ form.enquiry .btn-row {
 }
 
 .feed-item h2 {
-  margin-bottom: 0.5rem;
-  font-size: clamp(1.4rem, 4vw, 1.7rem);
+  margin-bottom: 0.3rem;
+  font-size: clamp(1.3rem, 4vw, 1.55rem);
 }
 
 .feed-item h2 a {
@@ -1084,11 +1088,12 @@ form.enquiry .btn-row {
 
 .feed-item h2 a:hover {
   color: var(--lime);
+  text-decoration: underline;
 }
 
 .feed-excerpt {
   color: var(--muted);
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 
 .byline {
@@ -1109,20 +1114,18 @@ form.enquiry .btn-row {
   font-weight: 700;
 }
 
-.feed-byline .byline-avatar {
-  width: 26px;
-  height: 26px;
-  font-size: 0.8rem;
-}
-
 .feed-byline {
-  font-size: 0.85rem;
+  display: block;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 0.86rem;
   color: var(--muted);
 }
 
 .feed-byline .byline-name {
   color: var(--ink);
-  font-weight: 600;
+  font-weight: 700;
+  font-style: normal;
 }
 
 /* Post page */
