@@ -1548,5 +1548,13 @@ This audit looked at risk and practice, not formal compliance — it isn't a cer
       actionsEl.innerHTML = lines.map((l) => '<li><span class="cv-check"></span><span class="cv-label">' + l + '</span></li>').join('');
     }
   };
+
+  /* ---------- Deep-link support: dashboard.html#pricing etc, run last so every panel's own init has already populated its DOM ---------- */
+  (function initDeepLink() {
+    const target = location.hash.slice(1);
+    if (target && document.getElementById('panel-' + target)) {
+      showPanel(target);
+    }
+  })();
 </script>
 
