@@ -1,0 +1,697 @@
+<meta charset="UTF-8">
+<title>Sfinco — Cyber Awareness Concept</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+  :root{
+    --canvas-bg:#121516;
+    --canvas-surface:#1B1F21;
+    --canvas-border:#2E3335;
+    --canvas-ink:#F5F6F5;
+    --canvas-muted:#8B9194;
+    --accent-lime:#E7FF00;
+    --accent-blue:#4EA5FF;
+
+    --site-bg:#1E2426;
+    --site-bg-deep:#171B1D;
+    --site-surface:#2B2F31;
+    --site-border:#44494B;
+    --site-ink:#FFFFFF;
+    --site-muted:#9C9C9C;
+    --site-lime:#E7FF00;
+    --site-lime-tint:rgba(231,255,0,0.12);
+    --site-blue:#4EA5FF;
+    --site-blue-tint:rgba(78,165,255,0.12);
+    --site-purple:#A78BFA;
+    --site-purple-tint:rgba(167,139,250,0.12);
+
+    --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --serif: Georgia, "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+
+  body{
+    margin:0;
+    background:var(--canvas-bg);
+    color:var(--canvas-ink);
+    font-family:var(--sans);
+    line-height:1.6;
+  }
+
+  .canvas{
+    max-width:1040px;
+    margin:0 auto;
+    padding:4rem 1.5rem 6rem;
+  }
+
+  .intro{
+    max-width:640px;
+    margin:0 auto 3.5rem;
+    text-align:center;
+  }
+
+  .intro .kicker{
+    display:block;
+    font-family:var(--mono);
+    font-size:0.78rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--accent-lime);
+    margin-bottom:0.9rem;
+  }
+
+  .intro h1{
+    font-family:var(--serif);
+    font-size:clamp(1.9rem,4.5vw,2.6rem);
+    line-height:1.2;
+    margin:0 0 0.9rem;
+    text-wrap:balance;
+    color:var(--canvas-ink);
+  }
+
+  .intro p{
+    color:var(--canvas-muted);
+    font-size:1.02rem;
+    margin:0;
+  }
+
+  .section-label{
+    display:flex;
+    align-items:center;
+    gap:0.8rem;
+    max-width:920px;
+    margin:0 auto 1.1rem;
+  }
+
+  .section-label .tag{
+    font-family:var(--mono);
+    font-size:0.72rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--canvas-bg);
+    background:var(--accent-lime);
+    padding:0.28rem 0.6rem;
+    border-radius:3px;
+    white-space:nowrap;
+  }
+
+  .section-label .tag.concept{
+    background:transparent;
+    color:var(--accent-blue);
+    border:1px solid var(--accent-blue);
+  }
+
+  .section-label .caption{
+    font-size:0.92rem;
+    color:var(--canvas-muted);
+  }
+
+  /* --- browser chrome frame (site mockup) --- */
+
+  .frame{
+    max-width:920px;
+    margin:0 auto 5rem;
+    border-radius:10px;
+    overflow:hidden;
+    border:1px solid var(--canvas-border);
+    box-shadow:0 30px 60px -30px rgba(0,0,0,0.6);
+  }
+
+  .frame-chrome{
+    background:#0E1011;
+    padding:0.65rem 0.9rem;
+    display:flex;
+    align-items:center;
+    gap:0.9rem;
+    border-bottom:1px solid var(--canvas-border);
+  }
+
+  .frame-chrome .dots{
+    display:flex;
+    gap:0.36rem;
+    flex-shrink:0;
+  }
+
+  .frame-chrome .dots span{
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    background:#3A3F41;
+    display:block;
+  }
+
+  .frame-chrome .url{
+    font-family:var(--mono);
+    font-size:0.76rem;
+    color:var(--canvas-muted);
+    background:var(--canvas-bg);
+    border:1px solid var(--canvas-border);
+    border-radius:5px;
+    padding:0.3rem 0.7rem;
+    flex:1;
+  }
+
+  /* site styles, reused from css/style.css */
+
+  .site{
+    background:var(--site-bg);
+    color:var(--site-ink);
+    font-family:var(--sans);
+  }
+
+  .site h1, .site h2, .site h3{
+    font-family:var(--serif);
+    color:var(--site-ink);
+    line-height:1.2;
+    letter-spacing:-0.01em;
+    margin:0 0 0.5em;
+  }
+
+  .site h2{font-size:clamp(1.4rem,3.6vw,1.9rem);}
+  .site h3{font-size:1.15rem;}
+
+  .site p{margin:0 0 1.1em; color:var(--site-muted);}
+
+  .site .eyebrow{
+    color:var(--site-lime);
+    font-weight:700;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    font-size:0.8rem;
+    margin:0 0 0.6em;
+    display:block;
+  }
+
+  .site .container{
+    max-width:720px;
+    margin:0 auto;
+    padding:2.6rem 1.5rem;
+  }
+
+  .site .section-intro{
+    max-width:56ch;
+  }
+
+  .awareness-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1.1rem;
+    margin-top:1.6rem;
+  }
+
+  @media (max-width:640px){
+    .awareness-grid{grid-template-columns:1fr;}
+  }
+
+  .awareness-card{
+    background:var(--site-surface);
+    border:1px solid var(--site-border);
+    border-radius:8px;
+    padding:1.3rem 1.4rem;
+  }
+
+  .awareness-card .badge{
+    display:inline-block;
+    font-family:var(--mono);
+    font-size:0.68rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    padding:0.22rem 0.5rem;
+    border-radius:3px;
+    margin-bottom:0.7rem;
+  }
+
+  .badge.lime{background:var(--site-lime-tint); color:var(--site-lime);}
+  .badge.blue{background:var(--site-blue-tint); color:var(--site-blue);}
+
+  .awareness-card h3{margin-bottom:0.4em;}
+
+  .awareness-card p{font-size:0.95rem; margin-bottom:0.5em;}
+
+  .mini-score{
+    display:flex;
+    align-items:baseline;
+    gap:0.5rem;
+    font-family:var(--mono);
+    margin:0.7rem 0 0.9rem;
+  }
+
+  .mini-score .band{
+    font-size:1.5rem;
+    font-weight:600;
+    color:var(--site-lime);
+  }
+
+  .mini-score .of{
+    font-size:0.78rem;
+    color:var(--site-muted);
+  }
+
+  .mini-note-list{
+    list-style:none;
+    margin:0.7rem 0 0.9rem;
+    padding:0;
+    font-family:var(--mono);
+    font-size:0.82rem;
+    color:var(--site-muted);
+  }
+
+  .mini-note-list li{
+    padding:0.4rem 0;
+    border-top:1px solid var(--site-border);
+  }
+
+  .mini-note-list li:first-child{border-top:none;}
+
+  .mini-note-list .note-title{color:var(--site-ink); font-family:var(--sans);}
+
+  /* --- app window frame (dashboard concept) --- */
+
+  .app-chrome{
+    background:#0E1011;
+    padding:0.65rem 0.9rem;
+    display:flex;
+    align-items:center;
+    gap:0.9rem;
+    border-bottom:1px solid var(--canvas-border);
+  }
+
+  .app-chrome .url{
+    font-family:var(--mono);
+    font-size:0.76rem;
+    color:var(--canvas-muted);
+    background:var(--canvas-bg);
+    border:1px solid var(--canvas-border);
+    border-radius:5px;
+    padding:0.3rem 0.7rem;
+    flex:1;
+  }
+
+  .app-chrome .concept-pill{
+    font-family:var(--mono);
+    font-size:0.68rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--accent-blue);
+    border:1px solid var(--accent-blue);
+    border-radius:20px;
+    padding:0.22rem 0.6rem;
+    white-space:nowrap;
+  }
+
+  .app{
+    background:var(--site-bg);
+    display:grid;
+    grid-template-columns:180px 1fr;
+    min-height:520px;
+  }
+
+  @media (max-width:640px){
+    .app{grid-template-columns:1fr;}
+    .app-sidebar{display:none;}
+  }
+
+  .app-sidebar{
+    background:var(--site-bg-deep);
+    border-right:1px solid var(--site-border);
+    padding:1.4rem 1.1rem;
+  }
+
+  .app-sidebar .wordmark{
+    font-family:var(--serif);
+    font-weight:700;
+    font-size:1.05rem;
+    color:var(--site-ink);
+    margin-bottom:1.8rem;
+  }
+
+  .app-nav{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:0.15rem;
+  }
+
+  .app-nav li{
+    font-size:0.88rem;
+    color:var(--site-muted);
+    padding:0.5rem 0.6rem;
+    border-radius:5px;
+  }
+
+  .app-nav li.active{
+    background:var(--site-lime-tint);
+    color:var(--site-lime);
+    font-weight:600;
+  }
+
+  .app-main{
+    padding:1.6rem 1.8rem 2.2rem;
+  }
+
+  .app-topbar{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:1rem;
+    margin-bottom:1.5rem;
+    flex-wrap:wrap;
+  }
+
+  .app-topbar h2{
+    font-family:var(--serif);
+    color:var(--site-ink);
+    font-size:1.3rem;
+    margin:0;
+  }
+
+  .app-topbar .sub{
+    font-family:var(--mono);
+    font-size:0.78rem;
+    color:var(--site-muted);
+  }
+
+  .app-grid{
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    gap:1.1rem;
+  }
+
+  @media (max-width:760px){
+    .app-grid{grid-template-columns:1fr;}
+  }
+
+  .app-card{
+    background:var(--site-surface);
+    border:1px solid var(--site-border);
+    border-radius:9px;
+    padding:1.3rem;
+  }
+
+  .app-card .card-label{
+    font-family:var(--mono);
+    font-size:0.72rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--site-muted);
+    margin-bottom:0.9rem;
+  }
+
+  .score-row{
+    display:flex;
+    align-items:center;
+    gap:1.4rem;
+  }
+
+  .gauge{
+    --pct:68%;
+    width:104px;
+    height:104px;
+    border-radius:50%;
+    flex-shrink:0;
+    background:conic-gradient(var(--site-lime) var(--pct), var(--site-border) 0);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .gauge-inner{
+    width:78px;
+    height:78px;
+    border-radius:50%;
+    background:var(--site-surface);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .gauge-inner .band{
+    font-family:var(--mono);
+    font-weight:600;
+    font-size:0.95rem;
+    color:var(--site-lime);
+  }
+
+  .gauge-inner .band-label{
+    font-family:var(--mono);
+    font-size:0.6rem;
+    color:var(--site-muted);
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+  }
+
+  .score-copy p{
+    margin:0;
+    font-size:0.88rem;
+    color:var(--site-muted);
+  }
+
+  .domain-chips{
+    display:flex;
+    flex-direction:column;
+    gap:0.5rem;
+    margin-top:1.1rem;
+  }
+
+  .domain-chip{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-size:0.85rem;
+    padding:0.5rem 0.7rem;
+    background:var(--site-bg);
+    border:1px solid var(--site-border);
+    border-radius:6px;
+  }
+
+  .domain-chip .name{color:var(--site-ink);}
+
+  .domain-chip .status{
+    font-family:var(--mono);
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    padding:0.15rem 0.5rem;
+    border-radius:3px;
+  }
+
+  .status.strong{background:var(--site-lime-tint); color:var(--site-lime);}
+  .status.solid{background:var(--site-blue-tint); color:var(--site-blue);}
+  .status.building{background:var(--site-purple-tint); color:var(--site-purple);}
+
+  .checkin-item{
+    padding:0.9rem 0;
+    border-top:1px solid var(--site-border);
+  }
+
+  .checkin-item:first-child{border-top:none; padding-top:0;}
+
+  .checkin-item .meta{
+    font-family:var(--mono);
+    font-size:0.7rem;
+    color:var(--site-muted);
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    margin-bottom:0.3rem;
+  }
+
+  .checkin-item h4{
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:0.96rem;
+    color:var(--site-ink);
+    margin:0 0 0.25em;
+  }
+
+  .checkin-item p{
+    font-size:0.86rem;
+    margin:0;
+    color:var(--site-muted);
+  }
+
+  .sparkline-row{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    margin-top:1.1rem;
+  }
+
+  .sparkline-row svg{display:block;}
+
+  .sparkline-caption{
+    font-family:var(--mono);
+    font-size:0.7rem;
+    color:var(--site-muted);
+    margin-top:0.5rem;
+  }
+
+  .closing{
+    max-width:640px;
+    margin:0 auto;
+    text-align:center;
+  }
+
+  .closing h2{
+    font-family:var(--serif);
+    font-size:1.3rem;
+    color:var(--canvas-ink);
+    margin:0 0 0.8rem;
+  }
+
+  .closing p{
+    color:var(--canvas-muted);
+    font-size:0.97rem;
+    margin:0 0 0.5em;
+  }
+
+  .closing .status-line{
+    font-family:var(--mono);
+    font-size:0.82rem;
+    color:var(--accent-blue);
+    margin-top:1.2rem;
+  }
+</style>
+
+<div class="canvas">
+
+  <p style="text-align:center; margin:0 0 1.5rem;"><a href="../audits.html#awareness" style="color:var(--accent-blue); font-family:var(--mono); font-size:0.8rem; text-decoration:underline;">&larr; Back to SMB Cyber Audits</a></p>
+
+  <div class="intro">
+    <span class="kicker">SMB Cyber Audits &middot; Cyber Awareness</span>
+    <h1>What the Cyber Awareness piece could actually look like</h1>
+    <p>Two mockups below: a section that could be added to the live <code>audits.html</code> page today, and a concept sketch of the future self-serve dashboard. The first is close to buildable copy. The second is a sketch of a Year 2+ idea &mdash; nothing here is built.</p>
+  </div>
+
+  <div class="section-label">
+    <span class="tag">Addable now</span>
+    <span class="caption">New section for audits.html, after Pricing</span>
+  </div>
+
+  <div class="frame">
+    <div class="frame-chrome">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <div class="url">sfinco.com.au/audits.html#awareness</div>
+    </div>
+    <div class="site">
+      <div class="container">
+        <span class="eyebrow">After the audit</span>
+        <h2>Staying switched on, not just fixed once</h2>
+        <p class="section-intro">An audit gives you a clear picture on the day we run it. Cyber Awareness is the ongoing side &mdash; a plain-English score you can watch move over time, and a short monthly note to keep your team a step ahead, without turning into another thing in your inbox to dread.</p>
+
+        <div class="awareness-grid">
+          <div class="awareness-card">
+            <span class="badge lime">Your Cyber Confidence Score</span>
+            <div class="mini-score">
+              <span class="band">Solid</span>
+              <span class="of">basics covered, a few things to tighten</span>
+            </div>
+            <p>Scored off the same checklist your audit used. No jargon, no certificate &mdash; just a plain read on where things stand, updated at each check-in.</p>
+          </div>
+          <div class="awareness-card">
+            <span class="badge blue">The Sfinco Check-in</span>
+            <ul class="mini-note-list">
+              <li><span class="note-title">This month:</span> Invoice scams doing the rounds in Noosa</li>
+              <li><span class="note-title">Last month:</span> The one setting that stops most password theft</li>
+            </ul>
+            <p>One short, useful note a month for retainer clients. Five minutes, one topic, nothing scary.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label">
+    <span class="tag concept">Concept &mdash; not built</span>
+    <span class="caption">The future self-serve dashboard, Year 2+</span>
+  </div>
+
+  <div class="frame">
+    <div class="app-chrome">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <div class="url">app.sfinco.com.au (concept)</div>
+      <span class="concept-pill">Not built</span>
+    </div>
+    <div class="app">
+      <div class="app-sidebar">
+        <div class="wordmark">Sfinco</div>
+        <ul class="app-nav">
+          <li class="active">Overview</li>
+          <li>Cyber Confidence Score</li>
+          <li>Check-ins</li>
+          <li>Team</li>
+          <li>Settings</li>
+        </ul>
+      </div>
+      <div class="app-main">
+        <div class="app-topbar">
+          <h2>Noosa Coffee Co.</h2>
+          <span class="sub">Last audit: 14 Jul 2026 &middot; Next check-in: 12 Sep 2026</span>
+        </div>
+
+        <div class="app-grid">
+          <div class="app-card">
+            <div class="card-label">Cyber Confidence Score</div>
+            <div class="score-row">
+              <div class="gauge">
+                <div class="gauge-inner">
+                  <span class="band">Solid</span>
+                  <span class="band-label">Overall</span>
+                </div>
+              </div>
+              <div class="score-copy">
+                <p>Up from Building last quarter. Prepare your staff is the one still holding you back &mdash; worth a look before the next check-in.</p>
+              </div>
+            </div>
+            <div class="domain-chips">
+              <div class="domain-chip"><span class="name">Secure your accounts</span><span class="status strong">Strong</span></div>
+              <div class="domain-chip"><span class="name">Protect your devices</span><span class="status solid">Solid</span></div>
+              <div class="domain-chip"><span class="name">Prepare your staff</span><span class="status building">Building</span></div>
+            </div>
+            <div class="sparkline-row">
+              <svg width="100%" height="46" viewBox="0 0 220 46" preserveAspectRatio="none">
+                <polyline points="0,38 40,34 80,30 120,24 160,16 200,12" fill="none" stroke="#44494B" stroke-width="2"/>
+                <polyline points="0,38 40,34 80,30 120,24 160,16 200,12" fill="none" stroke="#E7FF00" stroke-width="2" stroke-linecap="round" stroke-dasharray="0" opacity="0.9"/>
+                <circle cx="200" cy="12" r="3.5" fill="#E7FF00"/>
+              </svg>
+            </div>
+            <div class="sparkline-caption">Score trend &middot; last 6 check-ins</div>
+          </div>
+
+          <div class="app-card">
+            <div class="card-label">Recent Check-ins</div>
+            <div class="checkin-item">
+              <div class="meta">Aug 2026 &middot; sent 3 days ago</div>
+              <h4>Invoice scams doing the rounds in Noosa</h4>
+              <p>What they look like, and the one habit that stops them cold.</p>
+            </div>
+            <div class="checkin-item">
+              <div class="meta">Jul 2026</div>
+              <h4>The one setting that stops most password theft</h4>
+              <p>Five minutes to turn on, covered on last month's audit call.</p>
+            </div>
+            <div class="checkin-item">
+              <div class="meta">Jun 2026</div>
+              <h4>Spotting a fake supplier email</h4>
+              <p>Three tells, with a real example from a Sunshine Coast client.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="closing">
+    <h2>Where each piece actually stands</h2>
+    <p>The top mockup is close to real copy &mdash; it could go into <code>audits.html</code> once you're ready to offer Cyber Awareness as part of the retainer. The dashboard below it is a sketch of the idea, not a spec; scoring and delivery stay fully manual (Leo, an email, a doc) until there's a real reason to build the app.</p>
+    <div class="status-line">Nothing shown here is live or built &mdash; concept only.</div>
+  </div>
+
+</div>
+

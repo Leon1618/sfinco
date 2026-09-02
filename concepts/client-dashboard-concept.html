@@ -1,0 +1,253 @@
+<meta charset="UTF-8">
+<title>Sfinco — Client Dashboard Concept</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+  :root {
+    --bg: #1E2426;
+    --bg-deep: #171B1D;
+    --surface: #2B2F31;
+    --border: #44494B;
+    --ink: #FFFFFF;
+    --muted: #9C9C9C;
+    --lime: #E7FF00;
+    --lime-tint: rgba(231, 255, 0, 0.12);
+    --blue: #4EA5FF;
+    --blue-tint: rgba(78, 165, 255, 0.12);
+    --purple: #A78BFA;
+    --purple-tint: rgba(167, 139, 250, 0.12);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .concept-flag {
+    background: var(--purple-tint);
+    border-bottom: 1px solid var(--purple);
+    color: var(--purple);
+    text-align: center;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 0.6rem 1rem;
+  }
+
+  .container { max-width: 720px; margin: 0 auto; padding: 0 1.25rem; }
+
+  h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--ink);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.5em;
+  }
+
+  h1 { font-size: clamp(1.7rem, 5vw, 2.2rem); font-weight: 700; }
+  h2 { font-size: 1.15rem; }
+
+  p { margin: 0 0 1em; color: var(--muted); }
+  a { color: var(--lime); }
+
+  .topbar {
+    background: var(--bg-deep);
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .brand-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+  .brand { font-family: Georgia, serif; font-weight: 700; font-size: 1.2rem; }
+
+  .greeting { color: var(--muted); font-size: 0.92rem; }
+  .greeting strong { color: var(--ink); }
+
+  section { padding: 0 0 2.2rem; }
+
+  .eyebrow {
+    color: var(--lime); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    font-size: 0.8rem; margin: 0 0 0.5em; display: block;
+  }
+
+  .pillar-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.6rem;
+  }
+
+  .score-scale { display: flex; gap: 0.4rem; margin: 1rem 0 0.4rem; }
+  .scale-seg {
+    flex: 1; text-align: center; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.03em; padding: 0.5rem 0.3rem; border-radius: 6px;
+    background: var(--bg); color: var(--muted); border: 1px solid var(--border);
+  }
+  .scale-seg.is-active { background: var(--lime-tint); border-color: var(--lime); color: var(--lime); }
+
+  .score-line { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.5rem 0.7rem; margin: 0.9rem 0; }
+  .score-line .band { font-family: Georgia, serif; font-weight: 700; font-size: 1.8rem; color: var(--lime); }
+  .score-line .band-note { font-size: 0.85rem; color: var(--muted); }
+
+  .score-meta { font-size: 0.82rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 0.9rem; margin-top: 0.9rem; }
+
+  .callout {
+    border-left: 4px solid var(--lime);
+    background: var(--lime-tint);
+    padding: 1.1rem 1.3rem;
+    border-radius: 6px;
+    margin: 1.4rem 0 0;
+  }
+  .callout p { color: var(--ink); opacity: 0.85; margin: 0; }
+  .callout.blue { border-color: var(--blue); background: var(--blue-tint); }
+
+  .action-list { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: 0.6rem; }
+  .action-list li {
+    display: flex; align-items: flex-start; gap: 0.7rem;
+    background: var(--bg); border: 1px solid var(--border); border-radius: 8px;
+    padding: 0.75rem 0.9rem; font-size: 0.92rem; cursor: pointer;
+  }
+  .action-list li .check {
+    width: 1.2rem; height: 1.2rem; border-radius: 5px; border: 2px solid var(--border);
+    flex-shrink: 0; margin-top: 0.1rem; display: flex; align-items: center; justify-content: center;
+    font-size: 0.75rem; color: var(--bg-deep); font-weight: 700;
+  }
+  .action-list li.done .check { background: var(--lime); border-color: var(--lime); }
+  .action-list li.done .check::after { content: "✓"; }
+  .action-list li.done span.label { color: var(--muted); text-decoration: line-through; }
+  .action-list li span.label { color: var(--ink); flex: 1; }
+
+  .progress-note { font-size: 0.82rem; color: var(--muted); margin-top: 0.8rem; }
+
+  .report-meta { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.2rem; }
+  .btn {
+    display: inline-block; padding: 0.65rem 1.1rem; border-radius: 8px; text-decoration: none;
+    font-weight: 700; font-size: 0.88rem; border: 2px solid transparent;
+  }
+  .btn-primary { background: var(--lime); color: var(--bg-deep); }
+  .btn-secondary { background: transparent; border-color: var(--lime); color: var(--lime); }
+
+  .note-preview { list-style: none; padding: 0; margin: 0.9rem 0 0; display: grid; gap: 0.6rem; }
+  .note-preview li { font-size: 0.92rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 0.6rem; }
+  .note-preview li:first-child { border-top: none; padding-top: 0; }
+  .note-preview .note-when { color: var(--lime); font-weight: 700; margin-right: 0.3rem; }
+
+  .next-checkin { font-size: 0.85rem; color: var(--muted); margin-top: 1rem; padding-top: 0.9rem; border-top: 1px solid var(--border); }
+  .next-checkin strong { color: var(--ink); }
+
+  .contact-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 1.4rem 1.6rem; text-align: center;
+  }
+  .contact-card p { margin-bottom: 0.6rem; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 1.6rem 0 3rem;
+    color: var(--muted);
+    font-size: 0.8rem;
+    text-align: center;
+  }
+</style>
+
+<div class="concept-flag">Concept preview — not a live product. <a href="../audits.html#awareness" style="color:inherit; text-decoration:underline;">Back to SMB Cyber Audits</a></div>
+
+<div class="topbar">
+  <div class="container">
+    <div class="brand-row">
+      <span class="brand">Sfinco</span>
+    </div>
+    <p class="greeting">Hi <strong>Sam</strong>, here's where things stand for <strong>Noosa Coffee Co.</strong></p>
+  </div>
+</div>
+
+<div class="container">
+
+  <section>
+    <span class="eyebrow">Your Cyber Confidence Score</span>
+    <div class="pillar-card">
+      <div class="score-scale" aria-hidden="true">
+        <span class="scale-seg">Building</span>
+        <span class="scale-seg is-active">Solid</span>
+        <span class="scale-seg">Strong</span>
+      </div>
+      <div class="score-line">
+        <span class="band">Solid</span>
+        <span class="band-note">the basics are covered, a few things to tighten</span>
+      </div>
+      <p style="margin:0;">Scored off the same checklist your audit used — securing your accounts, protecting your devices, and preparing your staff. No certificate, no jargon, just a plain read on where things stand.</p>
+      <div class="score-meta">Last checked 12 August 2026, during your audit. Re-checked at every retainer catch-up — there's nothing to do here, this updates on its own.</div>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">Your audit report</span>
+    <div class="pillar-card">
+      <p style="margin:0 0 0.8rem;">We looked at how Noosa Coffee Co. handles logins, devices, backups, and customer data. Overall, the basics are in good shape — a few gaps are worth closing, and none of them need fixing today.</p>
+
+      <h2 style="margin-bottom:0.6rem;">What to fix, in order</h2>
+      <ul class="action-list" id="actionList">
+        <li data-done="true"><span class="check"></span><span class="label">Turn on MFA on the business email account</span></li>
+        <li><span class="check"></span><span class="label">Set up automatic backups for the booking system</span></li>
+        <li><span class="check"></span><span class="label">Change the router's default admin password</span></li>
+      </ul>
+      <p class="progress-note" id="progressNote"></p>
+
+      <div class="report-meta">
+        <span style="font-size:0.85rem; color:var(--muted);">Delivered 12 August 2026</span>
+        <a class="btn btn-secondary" href="#" onclick="return false;">View full report</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">The Sfinco Check-in</span>
+    <div class="pillar-card">
+      <p style="margin:0 0 0.4rem;">One short, useful note a month, included with your retainer. Five minutes, one topic, nothing scary.</p>
+      <ul class="note-preview">
+        <li><span class="note-when">September:</span> Invoice scams doing the rounds in Noosa</li>
+        <li><span class="note-when">August:</span> The one setting that stops most password theft</li>
+        <li><span class="note-when">July:</span> What to do if a customer says "I got a weird email from you"</li>
+      </ul>
+      <div class="next-checkin">Next check-in: <strong>15 October 2026</strong></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">Get in touch</span>
+    <div class="contact-card">
+      <p>Questions about anything here? Leo replies personally.</p>
+      <a class="btn btn-primary" href="#" onclick="return false;">Email hello@sfinco.com.au</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="container">
+    Sfinco &middot; Noosa, Sunshine Coast, Queensland &middot; This page is a design concept for internal review, not a working client login.
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('#actionList li').forEach((li) => {
+    if (li.dataset.done === 'true') li.classList.add('done');
+    li.addEventListener('click', () => {
+      li.classList.toggle('done');
+      updateProgress();
+    });
+  });
+
+  function updateProgress() {
+    const items = document.querySelectorAll('#actionList li');
+    const done = document.querySelectorAll('#actionList li.done').length;
+    document.getElementById('progressNote').textContent = done + ' of ' + items.length + ' fixed so far — tap an item to mark it done. (Demo only, doesn\'t save.)';
+  }
+
+  updateProgress();
+</script>
+
