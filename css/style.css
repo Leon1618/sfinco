@@ -889,23 +889,6 @@ form.enquiry .btn-row {
   }
 }
 
-#curious .container > .eyebrow,
-#curious .container > h2,
-#curious .section-intro {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#curious .resource-grid {
-  grid-template-columns: minmax(0, 380px);
-  justify-content: center;
-}
-
-#curious .resource-card {
-  text-align: center;
-}
-
 .resource-card {
   background: var(--surface);
   border: 1px solid var(--border);
