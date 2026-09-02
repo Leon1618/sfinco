@@ -1,0 +1,316 @@
+<title>Guided Self-Check</title>
+<style>
+  :root {
+    --bg: #1E2426;
+    --bg-deep: #171B1D;
+    --surface: #2B2F31;
+    --surface-2: #23282A;
+    --border: #44494B;
+    --ink: #FFFFFF;
+    --muted: #9C9C9C;
+    --lime: #E7FF00;
+    --lime-tint: rgba(231, 255, 0, 0.12);
+    --blue: #4EA5FF;
+    --blue-tint: rgba(78, 165, 255, 0.12);
+    --purple: #A78BFA;
+    --purple-tint: rgba(167, 139, 250, 0.12);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .topbar {
+    background: var(--bg-deep);
+    border-bottom: 1px solid var(--border);
+    padding: 1.6rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .container { max-width: 700px; margin: 0 auto; padding: 0 1.25rem; }
+
+  .brand { font-family: Georgia, serif; font-weight: 700; font-size: 1.15rem; margin-bottom: 0.5rem; }
+
+  h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.5rem, 4vw, 1.9rem); margin: 0 0 0.4em; letter-spacing: -0.01em; }
+
+  .lede { color: var(--muted); margin: 0 0 1.6rem; font-size: 0.98rem; }
+
+  .section-eyebrow {
+    color: var(--lime); font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+    font-size: 0.78rem; margin: 2rem 0 0.9rem;
+  }
+  .section-eyebrow:first-child { margin-top: 0; }
+
+  .item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.2rem 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .item-top { display: flex; align-items: flex-start; gap: 0.7rem; }
+  .item-q { flex: 1; font-weight: 600; font-size: 0.98rem; margin: 0; }
+
+  .qmark {
+    flex-shrink: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    border: 1px solid var(--blue);
+    background: var(--blue-tint);
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .qmark:hover { background: var(--blue); color: var(--bg-deep); }
+
+  .explain {
+    display: none;
+    margin-top: 0.9rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+
+  .explain.open { display: block; }
+  .explain p { margin: 0 0 0.7rem; }
+  .explain p:last-child { margin-bottom: 0; }
+  .explain ul { margin: 0.5rem 0 0; padding-left: 1.1rem; }
+  .explain li { margin-bottom: 0.4rem; }
+  .explain strong { color: var(--ink); }
+
+  .answer-row { display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap; }
+
+  .ans-btn {
+    flex: 1;
+    min-width: 80px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.55rem 0.6rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .ans-btn.active[data-val="yes"] { background: var(--lime-tint); border-color: var(--lime); color: var(--lime); }
+  .ans-btn.active[data-val="no"] { background: var(--blue-tint); border-color: var(--blue); color: var(--blue); }
+  .ans-btn.active[data-val="unsure"] { background: var(--purple-tint); border-color: var(--purple); color: var(--purple); }
+
+  .item-note {
+    width: 100%;
+    margin-top: 0.6rem;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.55rem 0.75rem;
+    color: var(--ink);
+    font-size: 0.88rem;
+    font-family: inherit;
+  }
+
+  .result-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.4rem 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .actions-row { display: flex; gap: 0.7rem; flex-wrap: wrap; align-items: center; margin-bottom: 1rem; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.6rem 1.1rem; border-radius: 8px; font-weight: 700; font-size: 0.88rem;
+    border: 2px solid transparent; cursor: pointer; font-family: inherit;
+  }
+  .btn-primary { background: var(--lime); color: var(--bg-deep); }
+  .btn-primary:hover { background: #fff; }
+  .copy-status { font-size: 0.82rem; color: var(--lime); }
+
+  #output {
+    width: 100%; min-height: 260px;
+    background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px;
+    padding: 1rem 1.1rem; color: var(--ink);
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.8rem; line-height: 1.6; white-space: pre-wrap; resize: vertical;
+  }
+
+  footer { border-top: 1px solid var(--border); padding: 1.6rem 0 3rem; color: var(--muted); font-size: 0.8rem; text-align: center; }
+</style>
+
+<div class="topbar">
+  <div class="container">
+    <div class="brand">Sfinco</div>
+    <h1>Your guided self-check</h1>
+    <p class="lede" style="margin:0;">Ten quick questions, about 15–20 minutes, whenever suits you. Tap the <strong style="color:var(--blue);">?</strong> next to anything you're not sure about — it explains what it means and how to check, no tech background needed. "Not sure" is a completely fine answer.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div id="checklist"></div>
+
+  <div class="result-card">
+    <span class="section-eyebrow" style="margin-top:0;">When you're done</span>
+    <p style="color:var(--muted); font-size:0.92rem; margin-top:0;">Copy your answers below and reply to Leo's email with them — that's it, nothing to submit or upload.</p>
+    <div class="actions-row">
+      <button class="btn btn-primary" id="copyBtn" type="button">Copy my answers</button>
+      <span class="copy-status" id="copyStatus"></span>
+    </div>
+    <textarea id="output" readonly></textarea>
+  </div>
+</div>
+
+<footer>Sfinco &middot; Noosa, Sunshine Coast, Queensland &middot; Questions about any of this? Reply to Leo's email, or hello@sfinco.com.au</footer>
+
+<script>
+  const ITEMS = [
+    {
+      section: 'Secure your accounts',
+      q: 'Do you use different passwords for your important accounts, or a password manager?',
+      explain: '<p>A password manager creates and remembers a different, strong password for every account, so you never have to reuse one — reusing a password is one of the easiest ways an attacker gets from one compromised account into several.</p><ul><li>If you already use a password manager (1Password, Bitwarden, or the one built into your browser or phone), you\'re set — just confirm it covers your important accounts.</li><li>Not sure? Think about your email, banking, and work accounts. If more than one uses the exact same password, that\'s worth telling us.</li><li>Nothing to change right now — just describe what you\'re actually doing.</li></ul>'
+    },
+    {
+      section: 'Protect your devices and information',
+      q: 'Is spam and phishing filtering switched on for your business email?',
+      explain: '<p>Most business email already filters obvious scams before they reach the inbox — this just confirms it\'s actually on.</p><ul><li><strong>Google Workspace:</strong> admin console → Apps → Google Workspace → Gmail → Safety, check spam/phishing settings are enabled.</li><li><strong>Microsoft 365:</strong> admin.microsoft.com → Security → Threat policies, check Anti-phishing/Anti-spam are on.</li><li><strong>Personal Gmail/Outlook:</strong> on by default — safe to answer yes.</li></ul>'
+    },
+    {
+      section: 'Protect your devices and information',
+      q: 'Are your devices and software set to update automatically?',
+      explain: '<p>Updates often close security holes already being used against businesses — the longer they\'re off, the longer that door stays open.</p><ul><li><strong>Windows:</strong> Settings → Windows Update → Advanced options → confirm automatic updates are on.</li><li><strong>Mac:</strong> System Settings → General → Software Update → turn on automatic updates.</li><li><strong>Phone:</strong> Settings → General/System → Software Update → enable automatic updates.</li></ul>'
+    },
+    {
+      section: 'Protect your devices and information',
+      q: 'Do your business devices have security software installed and up to date?',
+      explain: '<p>This is the safety net that catches what slips past everything else.</p><ul><li><strong>Windows:</strong> built-in Windows Security is usually enough — Settings → Privacy & Security → Windows Security → Virus & threat protection, confirm "protected."</li><li><strong>Mac:</strong> built-in protection runs automatically. If you\'ve installed something else, check it isn\'t showing "expired."</li><li>Not sure if anything\'s installed? That\'s a useful answer too.</li></ul>'
+    },
+    {
+      section: 'Protect your devices and information',
+      q: 'Do your devices lock automatically after a short time, and are they encrypted?',
+      explain: '<p>An unlocked device left on a counter or in a car is an open door — no technical skill required to walk through it.</p><ul><li><strong>Windows:</strong> Settings → Accounts → Sign-in options → set a short away-time. Encryption: Settings → Privacy & Security → Device encryption.</li><li><strong>Mac:</strong> System Settings → Lock Screen → short "require password after" time. Encryption: System Settings → Privacy & Security → FileVault.</li><li><strong>Phones:</strong> usually locked/encrypted by default with a passcode set.</li></ul>'
+    },
+    {
+      section: 'Protect your devices and information',
+      q: 'If staff use their own phones or laptops for work, is there any expectation around that?',
+      explain: '<p>Just a description, not a technical check.</p><ul><li>"No policy, everyone uses their own devices" is a completely normal, honest answer.</li><li>If there\'s an informal understanding, describe that instead.</li></ul>'
+    },
+    {
+      section: 'Protect your devices and information',
+      q: 'What gets backed up in your business, where does it go, and how often?',
+      explain: '<p>If a device is lost, stolen, or hit by ransomware, anything not backed up is simply gone — this is just a description of what\'s in place now.</p><ul><li>e.g. "our booking system backs up to the cloud automatically," "we copy files to an external drive every Friday," or "we\'re not sure anything is backed up."</li><li>All answers are useful — "not sure" is actually the most common one.</li></ul>'
+    },
+    {
+      section: 'Protect your devices and information',
+      q: 'Has anyone ever actually tried restoring a file from your backup, to check it works?',
+      explain: '<p>A backup that\'s never been tested to restore is a guess, not a safety net.</p><ul><li>Simple yes or no. "Not sure" usually means no — fine to say plainly.</li></ul>'
+    },
+    {
+      section: 'Payment and customer data handling',
+      q: 'Do you ever clear out old customer records, or does everything just accumulate?',
+      explain: '<p>Data kept longer than it\'s needed is data that can be exposed longer than it needed to be.</p><ul><li>Describe your general practice — most small businesses don\'t have a formal process, and that\'s a normal starting point.</li></ul>'
+    },
+    {
+      section: 'Network',
+      q: 'Has your Wi-Fi been set up with a proper password, and is guest Wi-Fi kept separate from your business devices?',
+      explain: '<p>Default router passwords are publicly known — leaving one unchanged is like leaving a spare key under a mat everyone knows about.</p><ul><li>Check the password isn\'t the default one printed on the router — not sure? Say so, that\'s useful to flag.</li><li>If customers get their own Wi-Fi, check it\'s a genuinely separate network name.</li><li>No need to log into the router for this — a plain description is enough.</li></ul>'
+    }
+  ];
+
+  const state = {};
+  const listEl = document.getElementById('checklist');
+  let lastSection = '';
+
+  ITEMS.forEach((item, i) => {
+    if (item.section !== lastSection) {
+      const h = document.createElement('div');
+      h.className = 'section-eyebrow';
+      h.textContent = item.section;
+      listEl.appendChild(h);
+      lastSection = item.section;
+    }
+
+    const div = document.createElement('div');
+    div.className = 'item';
+    div.innerHTML =
+      '<div class="item-top">' +
+        '<p class="item-q">' + (i + 1) + '. ' + item.q + '</p>' +
+        '<button class="qmark" type="button" data-idx="' + i + '">?</button>' +
+      '</div>' +
+      '<div class="explain" id="explain-' + i + '">' + item.explain + '</div>' +
+      '<div class="answer-row" data-idx="' + i + '">' +
+        '<button class="ans-btn" data-val="yes">Yes</button>' +
+        '<button class="ans-btn" data-val="no">No</button>' +
+        '<button class="ans-btn" data-val="unsure">Not sure</button>' +
+      '</div>' +
+      '<input type="text" class="item-note" data-idx="' + i + '" placeholder="Anything to add? (optional)">';
+    listEl.appendChild(div);
+  });
+
+  listEl.querySelectorAll('.qmark').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.getElementById('explain-' + btn.dataset.idx).classList.toggle('open');
+    });
+  });
+
+  listEl.querySelectorAll('.answer-row').forEach((row) => {
+    const idx = row.dataset.idx;
+    row.querySelectorAll('.ans-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        row.querySelectorAll('.ans-btn').forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        state[idx] = state[idx] || {};
+        state[idx].val = btn.dataset.val;
+        render();
+      });
+    });
+  });
+
+  listEl.querySelectorAll('.item-note').forEach((input) => {
+    input.addEventListener('input', () => {
+      const idx = input.dataset.idx;
+      state[idx] = state[idx] || {};
+      state[idx].note = input.value.trim();
+      render();
+    });
+  });
+
+  function valLabel(v) { return v === 'yes' ? 'Yes' : v === 'no' ? 'No' : v === 'unsure' ? 'Not sure' : 'Not answered yet'; }
+
+  function render() {
+    const lines = ITEMS.map((item, i) => {
+      const s = state[i] || {};
+      const note = s.note ? ' — ' + s.note : '';
+      return (i + 1) + '. ' + item.q + '\n   ' + valLabel(s.val) + note;
+    });
+    document.getElementById('output').value = 'MY SELF-CHECK ANSWERS\n\n' + lines.join('\n\n');
+  }
+
+  document.getElementById('copyBtn').addEventListener('click', async () => {
+    const output = document.getElementById('output');
+    const status = document.getElementById('copyStatus');
+    output.select();
+    try { await navigator.clipboard.writeText(output.value); status.textContent = 'Copied — paste it into your reply.'; }
+    catch (e) { status.textContent = 'Selected — press Cmd/Ctrl+C to copy.'; }
+    setTimeout(() => { status.textContent = ''; }, 4000);
+  });
+
+  render();
+</script>
+
