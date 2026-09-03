@@ -839,18 +839,32 @@ form.enquiry .btn-row {
 
 /* Resource hub */
 
+.resource-jump-bar {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-deep);
+  padding: 1.1rem 0;
+}
+
 .resource-jump {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.6rem;
-  margin-top: 1.5rem;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
 
+@media (min-width: 640px) {
+  .resource-jump {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .resource-jump a {
-  display: inline-block;
-  padding: 0.4rem 0.9rem;
+  display: block;
+  text-align: center;
+  padding: 0.5rem 0.7rem;
   border: 1px solid var(--border);
   border-radius: 999px;
   font-size: 0.85rem;
@@ -1140,6 +1154,86 @@ form.enquiry .btn-row {
   color: var(--ink);
   font-weight: 700;
   font-style: normal;
+}
+
+/* Blog search and category filter */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.blog-search {
+  margin-bottom: 2rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.blog-search input[type="search"] {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--ink);
+  transition: border-color 0.15s ease;
+}
+
+.blog-search input[type="search"]:focus {
+  outline: none;
+  border-color: var(--lime);
+}
+
+.blog-search-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+}
+
+.blog-cat-btn {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--muted);
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.blog-cat-btn:hover {
+  border-color: var(--lime);
+  color: var(--lime);
+}
+
+.blog-cat-btn.is-active {
+  background: var(--lime-tint);
+  border-color: var(--lime);
+  color: var(--lime);
+}
+
+.blog-search-status {
+  margin: 0.7rem 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.blog-no-results {
+  color: var(--muted);
+  font-style: italic;
 }
 
 /* Post page */
