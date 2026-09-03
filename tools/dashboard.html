@@ -2,19 +2,19 @@
 <title>SMB Cyber Audit Dashboard</title>
 <style>
   :root {
-    --bg: #1E2426;
-    --bg-deep: #171B1D;
-    --surface: #2B2F31;
-    --surface-2: #23282A;
-    --border: #44494B;
-    --ink: #FFFFFF;
-    --muted: #9C9C9C;
-    --lime: #E7FF00;
-    --lime-tint: rgba(231, 255, 0, 0.12);
-    --blue: #4EA5FF;
-    --blue-tint: rgba(78, 165, 255, 0.12);
-    --purple: #A78BFA;
-    --purple-tint: rgba(167, 139, 250, 0.12);
+    --bg: #2B2019;
+    --bg-deep: #201811;
+    --surface: #3A2C22;
+    --surface-2: #31251C;
+    --border: #5C4A3B;
+    --ink: #F7EDE0;
+    --muted: #CBB79E;
+    --lime: #D9A441;
+    --lime-tint: rgba(217, 164, 65, 0.12);
+    --blue: #6FB1E8;
+    --blue-tint: rgba(111, 177, 232, 0.12);
+    --purple: #C48FDB;
+    --purple-tint: rgba(196, 143, 219, 0.12);
   }
 
   * { box-sizing: border-box; }
@@ -369,6 +369,52 @@
   .cv-note-preview li:first-child { border-top: none; padding-top: 0; }
   .cv-note-preview .cv-note-when { color: var(--lime); font-weight: 700; margin-right: 0.3rem; }
 
+  /* Playbook panel */
+  .prereq {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--purple);
+    border-radius: 10px;
+    padding: 1.3rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .prereq h2 { font-family: Georgia, serif; font-size: 1.05rem; margin: 0 0 0.7em; color: var(--purple); }
+  .prereq ul { margin: 0; padding-left: 1.1rem; color: var(--ink); opacity: 0.9; font-size: 0.9rem; }
+  .prereq li { margin-bottom: 0.5rem; }
+  .prereq li:last-child { margin-bottom: 0; }
+
+  .timeline { position: relative; }
+  .stage { position: relative; padding-left: 2.6rem; padding-bottom: 2.2rem; }
+  .stage:last-child { padding-bottom: 0; }
+  .stage::before {
+    content: ""; position: absolute; left: 0.95rem; top: 2.6rem; bottom: 0; width: 2px; background: var(--border);
+  }
+  .stage:last-child::before { display: none; }
+  .stage-num {
+    position: absolute; left: 0; top: 0; width: 2rem; height: 2rem; border-radius: 50%;
+    background: var(--lime); color: var(--bg-deep); font-family: Georgia, serif; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; font-size: 1rem;
+  }
+  .stage-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.3rem 1.4rem; }
+  .stage-card h2 { font-family: Georgia, serif; font-size: 1.1rem; margin: 0 0 0.2em; }
+  .stage-meta { color: var(--muted); font-size: 0.82rem; margin: 0 0 0.9rem; }
+  .stage-card p.desc { color: var(--ink); opacity: 0.9; font-size: 0.92rem; margin: 0 0 1rem; }
+  .stage-list { margin: 0 0 1rem; padding-left: 1.2rem; color: var(--muted); font-size: 0.87rem; }
+  .stage-list li { margin-bottom: 0.4rem; }
+  .stage-list li:last-child { margin-bottom: 0; }
+  .stage-list code { color: var(--ink); background: var(--surface-2); padding: 0.05rem 0.35rem; border-radius: 4px; font-size: 0.85em; }
+
+  .tool-link {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--lime-tint); border: 1px solid var(--lime); color: var(--lime);
+    text-decoration: none; font-weight: 700; font-size: 0.85rem;
+    padding: 0.5rem 0.9rem; border-radius: 8px; margin-top: 0.3rem; margin-right: 0.6rem;
+  }
+  .tool-link:hover { background: var(--lime); color: var(--bg-deep); }
+  .tool-link .arrow { font-size: 0.8em; }
+
+  .no-tool { display: inline-block; color: var(--muted); font-size: 0.83rem; font-style: italic; margin-top: 0.3rem; }
+
   @media (max-width: 860px) {
     .shell { flex-direction: column; }
     .sidebar { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 1px solid var(--border); }
@@ -384,6 +430,7 @@
     <div class="nav-group">
       <div class="nav-label">Start here</div>
       <button class="nav-btn active" data-panel="overview"><span class="ic">&#9776;</span>Overview</button>
+      <button class="nav-btn" data-panel="playbook"><span class="ic">&#128506;</span>Playbook</button>
     </div>
 
     <div class="nav-group">
@@ -450,6 +497,109 @@
       </div>
 
       <p class="hint">Source docs for everything here live in <code>smb-audits/</code> in the repo. This dashboard mirrors them but doesn't replace them — if the two ever disagree, the docs are the source of truth.</p>
+    </section>
+
+    <!-- PLAYBOOK -->
+    <section class="panel" id="panel-playbook">
+      <span class="eyebrow">SMB Cyber Audits &middot; internal</span>
+      <h1>The audit playbook</h1>
+      <p class="lede">Start to finish, in order. Written so anyone stepping into this part of Sfinco — including a future employee who's never run an audit — can follow it without asking what comes next.</p>
+
+      <div class="prereq">
+        <h2>Before taking a paying client</h2>
+        <ul>
+          <li>Sfinco's ABN and bank details filled into <code>smb-audits/invoicing.md</code> and <code>smb-audits/engagement-agreement-template.md</code> — currently placeholders.</li>
+          <li>GST registration status confirmed — decides how every invoice is worded.</li>
+          <li>The Limitation of liability clause in the engagement agreement reviewed by a solicitor — not ready to send as-is.</li>
+          <li>Professional indemnity insurance looked into.</li>
+        </ul>
+      </div>
+
+      <div class="timeline">
+
+        <div class="stage">
+          <div class="stage-num">1</div>
+          <div class="stage-card">
+            <h2>Intake conversation</h2>
+            <p class="stage-meta">Free &middot; 20&ndash;30 min, phone or video</p>
+            <p class="desc">A genuine "tell me about your business" conversation, not a sales call. Ends with a scope note and a fixed quote sent within 24 hours.</p>
+            <ul class="stage-list">
+              <li>Read first: <code>methodology.md</code> (Principles + Stage 1), <code>intake-questionnaire.md</code></li>
+              <li>Work through the ACSC-based 15-item checklist live on the call</li>
+              <li>Straight after: turn the business details into a fixed quote</li>
+            </ul>
+            <a class="tool-link" href="#" data-panel-link="intake">Intake Call Tool <span class="arrow">&rarr;</span></a>
+            <a class="tool-link" href="#" data-panel-link="pricing">Pricing &amp; Scoping Calculator <span class="arrow">&rarr;</span></a>
+            <div class="flag">Before the review is booked in: send the engagement agreement and the client data handling notice (Stage 1.5 below).</div>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-num">1.5</div>
+          <div class="stage-card">
+            <h2>Agreement &amp; privacy notice</h2>
+            <p class="stage-meta">Same day as the quote, before the review begins</p>
+            <p class="desc">Not one of the five methodology stages, but has to happen here — the review shouldn't start without a signed agreement in hand.</p>
+            <ul class="stage-list">
+              <li>Read first: <code>engagement-agreement-template.md</code>, <code>privacy-notice.md</code></li>
+              <li>Fill in the domains agreed, the quote, and the timeline</li>
+              <li>Send the privacy notice alongside — building trust starts here, not at delivery</li>
+            </ul>
+            <a class="tool-link" href="#" data-panel-link="agreement">Engagement Agreement Generator <span class="arrow">&rarr;</span></a>
+            <div class="flag purple">The liability clause always renders as a flagged placeholder — that's deliberate, see Before taking a paying client above.</div>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-num">2</div>
+          <div class="stage-card">
+            <h2>Remote risk review</h2>
+            <p class="stage-meta">~15&ndash;20 min self-check (client's time) + 30&ndash;45 min verify call</p>
+            <p class="desc">Two parts: a guided self-check the client does on their own for what they can honestly self-report, then a short focused call for what needs your eye directly (MFA, admin access, payment handling), plus anything that came back unclear. See <code>review-item-modes.md</code> for which of the 20 checks lands where.</p>
+            <ul class="stage-list">
+              <li>Read first: <code>methodology.md</code> (Assessment domains), <code>review-item-modes.md</code></li>
+              <li>Send the client: <code>self-check.html</code> on the live site links to the real self-check tool once they've booked</li>
+              <li>Rate the verify call live in this Dashboard's Review panel</li>
+            </ul>
+            <a class="tool-link" href="guided-self-check.html">Guided Self-Check <span class="arrow">&rarr;</span></a>
+            <a class="tool-link" href="#" data-panel-link="review">Remote Review checklist <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-num">3&ndash;4</div>
+          <div class="stage-card">
+            <h2>Findings, rating &amp; the report</h2>
+            <p class="stage-meta">Written up after the review, delivered on a final call</p>
+            <p class="desc">Every finding: what we found &rarr; why it matters &rarr; what to do, rated Fix now / Fix soon / Good to know. Bundled into a report an owner can read in 15&ndash;20 minutes.</p>
+            <ul class="stage-list">
+              <li>Read first: <code>report-template.md</code></li>
+              <li>Reference: <code>findings-library.md</code> for canned Yes/No language per item</li>
+              <li>Send the invoice alongside the report</li>
+            </ul>
+            <a class="tool-link" href="#" data-panel-link="report">Audit Report Generator <span class="arrow">&rarr;</span></a>
+            <div class="flag">Invoicing: <code>invoicing.md</code> — no dedicated tool, it's a fill-in template.</div>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-num">5</div>
+          <div class="stage-card">
+            <h2>Optional retainer</h2>
+            <p class="stage-meta">Offered once, plainly, on the final call &middot; flat $99 AUD/month</p>
+            <p class="desc">Never a condition of the audit, never chased afterward. If taken up, this is what Cyber Awareness actually delivers.</p>
+            <ul class="stage-list">
+              <li>Read first: <code>cyber-awareness.md</code></li>
+              <li>Delivers: the Cyber Confidence Score re-checked at each catch-up, the monthly Sfinco Check-in note, and a manual monthly Breach Check via haveibeenpwned.com</li>
+            </ul>
+            <a class="tool-link" href="#" data-panel-link="retainer">Retainer reference <span class="arrow">&rarr;</span></a>
+            <span class="no-tool">Delivery itself stays manual, by design, until there's real retainer volume to justify tooling.</span>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="hint">All source docs referenced live in <code>smb-audits/</code> in the repo. Every "Read first" link above jumps straight to that panel in this same Dashboard — nothing here opens a separate page except the Guided Self-Check, which genuinely is a different tool clients use themselves.</p>
     </section>
 
     <!-- INTAKE -->
@@ -902,6 +1052,10 @@
 
   document.querySelectorAll('.nav-btn').forEach((btn) => btn.addEventListener('click', () => showPanel(btn.dataset.panel)));
   document.querySelectorAll('.stage-row').forEach((row) => row.addEventListener('click', () => showPanel(row.dataset.jump)));
+  document.querySelectorAll('[data-panel-link]').forEach((link) => link.addEventListener('click', (e) => {
+    e.preventDefault();
+    showPanel(link.dataset.panelLink);
+  }));
   updateBottomNav('overview');
 
   /* ---------- Findings data (shared by Review reference + Report chips + auto-fill) ---------- */
