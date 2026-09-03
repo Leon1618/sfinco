@@ -1,0 +1,314 @@
+<meta charset="UTF-8">
+<title>Sfinco — Client Tracker</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+  :root {
+    --bg: #1E2426;
+    --bg-deep: #171B1D;
+    --surface: #2B2F31;
+    --surface-2: #23282A;
+    --border: #44494B;
+    --ink: #FFFFFF;
+    --muted: #9C9C9C;
+    --lime: #E7FF00;
+    --lime-tint: rgba(231, 255, 0, 0.12);
+    --blue: #4EA5FF;
+    --blue-tint: rgba(78, 165, 255, 0.12);
+    --purple: #A78BFA;
+    --purple-tint: rgba(167, 139, 250, 0.12);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+
+  .eyebrow { color: var(--lime); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.8rem; margin: 0 0 0.5em; display: block; }
+  h1 { font-family: Georgia, serif; font-size: clamp(1.6rem, 4vw, 2.1rem); margin: 0 0 0.4em; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); max-width: 680px; margin: 0 0 1rem; font-size: 0.98rem; }
+
+  .warning {
+    border-left: 3px solid var(--purple);
+    background: var(--purple-tint);
+    border-radius: 6px;
+    padding: 0.9rem 1.05rem;
+    font-size: 0.86rem;
+    margin-bottom: 1.8rem;
+    max-width: 680px;
+  }
+
+  .actions-row { display: flex; gap: 0.7rem; flex-wrap: wrap; align-items: center; margin-bottom: 1.4rem; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.55rem 1rem; border-radius: 8px; font-weight: 700; font-size: 0.86rem;
+    border: 2px solid transparent; cursor: pointer; font-family: inherit;
+  }
+  .btn-primary { background: var(--lime); color: var(--bg-deep); }
+  .btn-primary:hover { background: #fff; }
+  .btn-secondary { background: transparent; border-color: var(--border); color: var(--ink); }
+  .btn-secondary:hover { border-color: var(--lime); color: var(--lime); }
+  .btn-danger { background: transparent; border-color: var(--border); color: var(--muted); font-size: 0.78rem; padding: 0.35rem 0.6rem; }
+  .btn-danger:hover { border-color: var(--purple); color: var(--purple); }
+
+  .status { font-size: 0.82rem; color: var(--lime); }
+
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
+
+  table { width: 100%; border-collapse: collapse; background: var(--surface); min-width: 900px; }
+
+  th {
+    text-align: left; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--muted); background: var(--surface-2); padding: 0.7rem 0.8rem; border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+
+  td { padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+
+  td input[type="text"], td select {
+    width: 100%; background: var(--surface-2); border: 1px solid transparent; border-radius: 6px;
+    padding: 0.4rem 0.5rem; color: var(--ink); font-size: 0.86rem; font-family: inherit;
+  }
+  td input[type="text"]:focus, td select:focus { outline: none; border-color: var(--lime); background: var(--bg); }
+
+  .col-name { min-width: 140px; }
+  .col-pillar { min-width: 150px; }
+  .col-stage { min-width: 130px; }
+  .col-value { min-width: 90px; }
+  .col-notes { min-width: 220px; }
+  .col-updated { min-width: 100px; color: var(--muted); font-size: 0.8rem; white-space: nowrap; padding-top: 0.7rem; }
+  .col-del { width: 2.5rem; text-align: center; }
+
+  .stage-tag {
+    display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 999px;
+  }
+  .stage-lead, .stage-intake { background: var(--blue-tint); color: var(--blue); }
+  .stage-quoted, .stage-booked { background: var(--purple-tint); color: var(--purple); }
+  .stage-delivered, .stage-retainer { background: var(--lime-tint); color: var(--lime); }
+  .stage-closed { background: var(--surface-2); color: var(--muted); }
+
+  .empty-state { text-align: center; padding: 3rem 1rem; color: var(--muted); font-size: 0.9rem; }
+
+  .footnote { color: var(--muted); font-size: 0.82rem; margin-top: 1.6rem; max-width: 680px; }
+</style>
+
+<div class="wrap">
+  <span class="eyebrow">Business operations &middot; internal</span>
+  <h1>Client tracker</h1>
+  <p class="lede">A plain list of who's where, across both the SMB Cyber Audit and Personal Check-up pillars. Click any cell to edit.</p>
+
+  <div class="warning">Saved only in <strong>this browser, on this device</strong> — it won't sync to your phone or another computer, and clearing browser data wipes it. Export a backup regularly (button below) — a spreadsheet works fine for that if this ever needs to be shared or backed up somewhere safer.</div>
+
+  <div class="actions-row">
+    <button class="btn btn-primary" id="addBtn" type="button">+ Add client</button>
+    <button class="btn btn-secondary" id="exportBtn" type="button">Export backup (.json)</button>
+    <button class="btn btn-secondary" id="importBtn" type="button">Import backup</button>
+    <input type="file" id="importFile" accept="application/json" style="display:none;">
+    <span class="status" id="status"></span>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th class="col-name">Name</th>
+          <th class="col-pillar">Pillar</th>
+          <th class="col-stage">Stage</th>
+          <th class="col-value">Value</th>
+          <th class="col-notes">Notes</th>
+          <th class="col-updated">Updated</th>
+          <th class="col-del"></th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+  <div class="empty-state" id="emptyState" style="display:none;">No clients yet — click "+ Add client" to start.</div>
+
+  <p class="footnote">Not a CRM, deliberately — just enough structure to see the pipeline at a glance. If this ever needs to be shared with someone else, or accessed from more than one device, that's the point to move to a real spreadsheet or a proper tool, not a sign this page is broken.</p>
+</div>
+
+<script>
+  const STORAGE_KEY = 'sfinco-client-tracker-v1';
+  const STAGES = ['Lead', 'Intake', 'Quoted', 'Booked', 'Delivered', 'Retainer', 'Closed'];
+  const PILLARS = ['SMB Cyber Audit', 'Personal Check-up', 'Family Check-up'];
+
+  function load() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      return raw ? JSON.parse(raw) : [];
+    } catch (e) { return []; }
+  }
+
+  function save(rows) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(rows)); } catch (e) {}
+  }
+
+  let rows = load();
+
+  function fmtUpdated(iso) {
+    if (!iso) return '';
+    const d = new Date(iso);
+    return d.toLocaleDateString('en-AU', { day: 'numeric', month: 'short' });
+  }
+
+  function stageClass(stage) {
+    return 'stage-' + stage.toLowerCase().replace(/\s+/g, '-');
+  }
+
+  function render() {
+    const tbody = document.getElementById('rows');
+    const emptyState = document.getElementById('emptyState');
+    tbody.innerHTML = '';
+
+    if (!rows.length) {
+      emptyState.style.display = 'block';
+      return;
+    }
+    emptyState.style.display = 'none';
+
+    rows.forEach((row, i) => {
+      const tr = document.createElement('tr');
+
+      const nameTd = document.createElement('td');
+      nameTd.className = 'col-name';
+      const nameInput = document.createElement('input');
+      nameInput.type = 'text'; nameInput.value = row.name || ''; nameInput.placeholder = 'Name';
+      nameInput.addEventListener('input', () => update(i, 'name', nameInput.value));
+      nameTd.appendChild(nameInput);
+
+      const pillarTd = document.createElement('td');
+      pillarTd.className = 'col-pillar';
+      const pillarSel = document.createElement('select');
+      PILLARS.forEach((p) => {
+        const opt = document.createElement('option');
+        opt.value = p; opt.textContent = p;
+        if (row.pillar === p) opt.selected = true;
+        pillarSel.appendChild(opt);
+      });
+      pillarSel.addEventListener('change', () => update(i, 'pillar', pillarSel.value));
+      pillarTd.appendChild(pillarSel);
+
+      const stageTd = document.createElement('td');
+      stageTd.className = 'col-stage';
+      const stageSel = document.createElement('select');
+      STAGES.forEach((s) => {
+        const opt = document.createElement('option');
+        opt.value = s; opt.textContent = s;
+        if ((row.stage || 'Lead') === s) opt.selected = true;
+        stageSel.appendChild(opt);
+      });
+      stageSel.addEventListener('change', () => update(i, 'stage', stageSel.value));
+      stageTd.appendChild(stageSel);
+
+      const valueTd = document.createElement('td');
+      valueTd.className = 'col-value';
+      const valueInput = document.createElement('input');
+      valueInput.type = 'text'; valueInput.value = row.value || ''; valueInput.placeholder = '$';
+      valueInput.addEventListener('input', () => update(i, 'value', valueInput.value));
+      valueTd.appendChild(valueInput);
+
+      const notesTd = document.createElement('td');
+      notesTd.className = 'col-notes';
+      const notesInput = document.createElement('input');
+      notesInput.type = 'text'; notesInput.value = row.notes || ''; notesInput.placeholder = 'Next action / notes';
+      notesInput.addEventListener('input', () => update(i, 'notes', notesInput.value));
+      notesTd.appendChild(notesInput);
+
+      const updatedTd = document.createElement('td');
+      updatedTd.className = 'col-updated';
+      updatedTd.textContent = fmtUpdated(row.updated);
+
+      const delTd = document.createElement('td');
+      delTd.className = 'col-del';
+      const delBtn = document.createElement('button');
+      delBtn.className = 'btn-danger'; delBtn.type = 'button'; delBtn.textContent = '×';
+      delBtn.title = 'Remove';
+      delBtn.addEventListener('click', () => {
+        if (confirm('Remove ' + (row.name || 'this client') + '?')) {
+          rows.splice(i, 1);
+          save(rows);
+          render();
+        }
+      });
+      delTd.appendChild(delBtn);
+
+      tr.appendChild(nameTd);
+      tr.appendChild(pillarTd);
+      tr.appendChild(stageTd);
+      tr.appendChild(valueTd);
+      tr.appendChild(notesTd);
+      tr.appendChild(updatedTd);
+      tr.appendChild(delTd);
+      tbody.appendChild(tr);
+    });
+  }
+
+  function update(i, field, value) {
+    rows[i][field] = value;
+    rows[i].updated = new Date().toISOString();
+    save(rows);
+    // Only re-render the updated timestamp cell, not the whole table, so focus isn't lost mid-type
+    const cell = document.querySelectorAll('#rows tr')[i].querySelector('.col-updated');
+    if (cell) cell.textContent = fmtUpdated(rows[i].updated);
+  }
+
+  document.getElementById('addBtn').addEventListener('click', () => {
+    rows.push({ name: '', pillar: 'SMB Cyber Audit', stage: 'Lead', value: '', notes: '', updated: new Date().toISOString() });
+    save(rows);
+    render();
+    const inputs = document.querySelectorAll('#rows tr:last-child input');
+    if (inputs.length) inputs[0].focus();
+  });
+
+  document.getElementById('exportBtn').addEventListener('click', () => {
+    const blob = new Blob([JSON.stringify(rows, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'sfinco-client-tracker-' + new Date().toISOString().slice(0, 10) + '.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    const status = document.getElementById('status');
+    status.textContent = 'Exported.';
+    setTimeout(() => { status.textContent = ''; }, 3000);
+  });
+
+  document.getElementById('importBtn').addEventListener('click', () => {
+    document.getElementById('importFile').click();
+  });
+
+  document.getElementById('importFile').addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const imported = JSON.parse(reader.result);
+        if (!Array.isArray(imported)) throw new Error('not an array');
+        if (rows.length && !confirm('This replaces the ' + rows.length + ' client(s) currently here with ' + imported.length + ' from the file. Continue?')) return;
+        rows = imported;
+        save(rows);
+        render();
+        document.getElementById('status').textContent = 'Imported.';
+        setTimeout(() => { document.getElementById('status').textContent = ''; }, 3000);
+      } catch (err) {
+        alert('Could not read that file as a client tracker backup.');
+      }
+    };
+    reader.readAsText(file);
+    e.target.value = '';
+  });
+
+  render();
+</script>

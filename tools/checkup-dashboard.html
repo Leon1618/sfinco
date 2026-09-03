@@ -1,0 +1,494 @@
+<meta charset="UTF-8">
+<title>Personal Check-up Dashboard</title>
+<style>
+  :root {
+    --bg: #1E2426;
+    --bg-deep: #171B1D;
+    --surface: #2B2F31;
+    --surface-2: #23282A;
+    --border: #44494B;
+    --ink: #FFFFFF;
+    --muted: #9C9C9C;
+    --lime: #E7FF00;
+    --lime-tint: rgba(231, 255, 0, 0.12);
+    --blue: #4EA5FF;
+    --blue-tint: rgba(78, 165, 255, 0.12);
+    --purple: #A78BFA;
+    --purple-tint: rgba(167, 139, 250, 0.12);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+
+  .shell { display: flex; min-height: 100vh; }
+
+  .sidebar {
+    width: 220px; flex-shrink: 0;
+    background: var(--bg-deep); border-right: 1px solid var(--border);
+    padding: 1.4rem 0.9rem; position: sticky; top: 0; height: 100vh; overflow-y: auto;
+  }
+
+  .brand {
+    font-family: Georgia, serif; font-weight: 700; font-size: 1.1rem; color: var(--ink);
+    padding: 0 0.5rem 1.2rem; border-bottom: 1px solid var(--border); margin-bottom: 1rem;
+  }
+  .brand span { display: block; color: var(--lime); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 0.3rem; }
+
+  .nav-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding: 0 0.5rem; margin: 1rem 0 0.4rem; }
+  .nav-label:first-of-type { margin-top: 0; }
+
+  .nav-btn {
+    display: flex; align-items: center; gap: 0.6rem; width: 100%; text-align: left;
+    background: none; border: none; color: var(--muted); font-family: inherit; font-size: 0.86rem;
+    font-weight: 600; padding: 0.55rem 0.5rem; border-radius: 8px; cursor: pointer; margin-bottom: 0.15rem;
+  }
+  .nav-btn .ic { width: 1.3rem; text-align: center; flex-shrink: 0; }
+  .nav-btn:hover { background: var(--surface); color: var(--ink); }
+  .nav-btn.active { background: var(--lime-tint); color: var(--lime); }
+
+  .main { flex: 1; min-width: 0; padding: 2.4rem 2.6rem 6.5rem; max-width: 900px; }
+
+  .bottom-nav {
+    position: fixed; bottom: 0; left: 220px; right: 0;
+    background: var(--bg-deep); border-top: 1px solid var(--border);
+    padding: 0.9rem 2.6rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; z-index: 10;
+  }
+  .bn-btn {
+    display: inline-flex; align-items: center; gap: 0.5rem; background: var(--surface); border: 1px solid var(--border);
+    color: var(--ink); font-family: inherit; font-weight: 700; font-size: 0.84rem; padding: 0.6rem 1rem; border-radius: 8px;
+    cursor: pointer; max-width: 44%;
+  }
+  .bn-btn:hover { border-color: var(--lime); color: var(--lime); }
+  .bn-btn:disabled { opacity: 0.35; cursor: default; pointer-events: none; }
+  .bn-btn .bn-label { color: var(--muted); font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em; display: block; }
+  .bn-btn.next { margin-left: auto; text-align: right; }
+  .bn-progress { text-align: center; flex-shrink: 0; }
+  .bn-progress .bn-step { color: var(--muted); font-weight: 600; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.04em; display: block; }
+  .bn-progress .bn-current { color: var(--lime); font-weight: 700; font-size: 0.9rem; display: block; }
+
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  .eyebrow { color: var(--lime); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.78rem; margin: 0 0 0.5em; display: block; }
+  h1 { font-family: Georgia, serif; font-size: clamp(1.4rem, 3.5vw, 1.9rem); margin: 0 0 0.35em; }
+  h2.panel-h { font-family: Georgia, serif; font-size: 1.02rem; margin: 0 0 0.2em; }
+  .lede { color: var(--muted); max-width: 640px; margin: 0 0 1.6rem; font-size: 0.96rem; }
+
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.3rem 1.4rem; margin-bottom: 1.2rem; }
+  .card .hint { color: var(--muted); font-size: 0.82rem; margin: 0 0 0.9rem; }
+
+  label.field { display: block; margin-bottom: 0.85rem; }
+  label.field:last-child { margin-bottom: 0; }
+  .field-label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--muted); margin-bottom: 0.3rem; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+
+  input[type="text"], input[type="date"], textarea, select {
+    width: 100%; background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px;
+    padding: 0.6rem 0.8rem; color: var(--ink); font-size: 0.9rem; font-family: inherit;
+  }
+  textarea { min-height: 70px; resize: vertical; }
+  input:focus, textarea:focus, select:focus { outline: none; border-color: var(--lime); }
+
+  .opt { display: flex; align-items: center; gap: 0.6rem; background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px; padding: 0.55rem 0.8rem; cursor: pointer; font-size: 0.88rem; }
+  .opt input { accent-color: var(--lime); }
+  .opt.checked { border-color: var(--lime); background: var(--lime-tint); }
+
+  .item { border-top: 1px solid var(--border); padding: 0.9rem 0; }
+  .item:first-of-type { border-top: none; padding-top: 0; }
+  .item-q { margin: 0 0 0.55rem; font-size: 0.92rem; }
+  .item-note { width: 100%; background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem 0.7rem; color: var(--ink); font-size: 0.85rem; font-family: inherit; }
+
+  .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 0.5rem; }
+  .seg button { border: none; background: var(--surface-2); color: var(--muted); padding: 0.4rem 0.85rem; font-size: 0.82rem; font-weight: 700; cursor: pointer; font-family: inherit; border-right: 1px solid var(--border); }
+  .seg button:last-child { border-right: none; }
+  .seg button[data-val="yes"].active { background: var(--lime-tint); color: var(--lime); }
+  .seg button[data-val="no"].active { background: var(--blue-tint); color: var(--blue); }
+  .seg button[data-val="unsure"].active { background: var(--purple-tint); color: var(--purple); }
+
+  .chiprow { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.6rem; }
+  .chip { background: var(--surface-2); border: 1px solid var(--border); color: var(--muted); font-size: 0.76rem; font-weight: 600; padding: 0.32rem 0.6rem; border-radius: 999px; cursor: pointer; font-family: inherit; }
+  .chip:hover { border-color: var(--lime); color: var(--lime); }
+
+  .btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.55rem 1rem; border-radius: 8px; font-weight: 700; font-size: 0.86rem; border: 2px solid transparent; cursor: pointer; font-family: inherit; }
+  .btn-primary { background: var(--lime); color: var(--bg-deep); }
+  .btn-primary:hover { background: #fff; }
+  .btn-secondary { background: transparent; border-color: var(--border); color: var(--ink); }
+  .btn-secondary:hover { border-color: var(--lime); color: var(--lime); }
+  .btn-pull { background: var(--blue-tint); border-color: var(--blue); color: var(--blue); }
+  .btn-pull:hover { background: var(--blue); color: var(--bg-deep); }
+
+  .actions-row { display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center; margin-bottom: 1rem; }
+  .copy-status { font-size: 0.78rem; color: var(--lime); }
+
+  .output-box {
+    width: 100%; min-height: 340px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px;
+    padding: 1rem 1.1rem; color: var(--ink); font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.78rem; line-height: 1.6; white-space: pre-wrap; resize: vertical;
+  }
+
+  .ref-list { margin: 0; padding-left: 1.1rem; color: var(--ink); opacity: 0.9; font-size: 0.88rem; }
+  .ref-list li { margin-bottom: 0.5rem; }
+
+  @media (max-width: 860px) {
+    .shell { flex-direction: column; }
+    .sidebar { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 1px solid var(--border); }
+    .main { padding: 1.6rem 1.2rem 3rem; }
+    .field-row { grid-template-columns: 1fr; }
+    .bottom-nav { left: 0; padding: 0.8rem 1.2rem; }
+  }
+</style>
+
+<div class="shell">
+  <nav class="sidebar">
+    <div class="brand">Sfinco<span>Personal Check-up</span></div>
+    <div class="nav-label">Start here</div>
+    <button class="nav-btn active" data-panel="overview"><span class="ic">&#9776;</span>Overview</button>
+    <div class="nav-label">The process</div>
+    <button class="nav-btn" data-panel="conversation"><span class="ic">1</span>Conversation</button>
+    <button class="nav-btn" data-panel="review"><span class="ic">2</span>Review</button>
+    <button class="nav-btn" data-panel="report"><span class="ic">3</span>Report</button>
+  </nav>
+
+  <main class="main">
+
+    <section class="panel active" id="panel-overview">
+      <span class="eyebrow">Personal Digital Check-up &middot; internal</span>
+      <h1>Check-up dashboard</h1>
+      <p class="lede">The lighter counterpart to the SMB Cyber Audit Dashboard — same idea, three stages instead of six. Works for both framings: a Personal Digital Check-up booked directly, or a Family Digital Safety Check booked by an adult child. Delivery is identical either way; see <code>family-framing.md</code> for what actually changes (who's on the first call, never who's in the review).</p>
+
+      <div class="card">
+        <h2 class="panel-h">The three stages</h2>
+        <ul class="ref-list">
+          <li><strong>1. Conversation</strong> — free, ~20 min. What's prompted this, what device they use, price confirmed ($99 AUD flat, not yet public — see <code>pricing.md</code>).</li>
+          <li><strong>2. Review</strong> — 30&ndash;45 min, done together on a call. The six areas from Sfinco Guides Vol 1, walked through live.</li>
+          <li><strong>3. Report</strong> — a one-page summary, not a multi-page document. Two or three things worth doing, and what's already going well.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2 class="panel-h">Dignity first</h2>
+        <p style="color: var(--muted); font-size: 0.9rem; margin: 0;">Not "help for someone who can't keep up." Nobody is condescended to, on the call, in the report, or when the buyer is an adult child talking about a parent who isn't there. If a sentence could read as talking down to someone, rewrite it — same rule whether it's Leo writing or this tool prefilling something.</p>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-conversation">
+      <span class="eyebrow">Stage 1</span>
+      <h1>The conversation</h1>
+      <p class="lede">Free, ~20 min. A relaxed chat, not a form to read from — capture it here as you go.</p>
+
+      <div class="card">
+        <label class="field"><span class="field-label">Client name (whose phone this is)</span><input type="text" id="in-clientName" placeholder="e.g. Pat"></label>
+        <div class="field-row">
+          <label class="field"><span class="field-label">Booking type</span>
+            <select id="in-bookingType">
+              <option value="personal">Personal Digital Check-up</option>
+              <option value="family">Family Digital Safety Check</option>
+            </select>
+          </label>
+          <label class="field"><span class="field-label">Payer's name (if different)</span><input type="text" id="in-payerName" placeholder="e.g. their son/daughter"></label>
+        </div>
+        <label class="field"><span class="field-label">Device(s) used day to day</span><input type="text" id="in-devices" placeholder="e.g. iPhone, and a Windows laptop"></label>
+        <label class="field"><span class="field-label">What's prompted looking into this</span><textarea id="in-prompt" placeholder="A strange call, a text that felt off, an account locked out, or just wanting peace of mind."></textarea></label>
+        <label class="field"><span class="field-label">Anything else worth knowing before the review</span><textarea id="in-notes"></textarea></label>
+      </div>
+
+      <div class="card">
+        <div id="familyFlag" style="display:none;" class="chiprow"></div>
+        <p style="color: var(--muted); font-size: 0.88rem; margin: 0;" id="familyReminder"></p>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-review">
+      <span class="eyebrow">Stage 2</span>
+      <h1>The review</h1>
+      <p class="lede">30&ndash;45 min, done together on a call — not a form filled in alone. Rate each area as you go; "not sure" is a normal answer for you to note here, not something the client says.</p>
+
+      <div class="card">
+        <div id="review-checklist"></div>
+      </div>
+
+      <div class="card">
+        <span class="eyebrow">Review notes</span>
+        <div class="actions-row">
+          <button class="btn btn-primary" id="rv-copyBtn" type="button">Copy summary</button>
+          <span class="copy-status" id="rv-copyStatus"></span>
+        </div>
+        <textarea class="output-box" id="rv-output" readonly style="min-height: 220px;"></textarea>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-report">
+      <span class="eyebrow">Stage 3</span>
+      <h1>The report</h1>
+      <p class="lede">One page, plain English — not the SMB audit's multi-page version. Sent by email, talked through on the call itself.</p>
+
+      <div class="actions-row">
+        <button class="btn btn-pull" id="rp-pull" type="button">&#8595; Pull from Conversation</button>
+        <button class="btn btn-pull" id="rp-autofill" type="button">&#8595; Auto-fill from Review</button>
+      </div>
+
+      <div class="card" style="margin-top: 1rem;">
+        <div class="field-row">
+          <label class="field"><span class="field-label">Client name</span><input type="text" id="rp-clientName"></label>
+          <label class="field"><span class="field-label">Report date</span><input type="date" id="rp-date"></label>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="panel-h">The short version</h2>
+        <textarea id="rp-summary" placeholder="We went through your phone together and things are in better shape than you might think..."></textarea>
+      </div>
+
+      <div class="card">
+        <h2 class="panel-h">Worth doing, in order</h2>
+        <p class="hint">Up to three — one per line.</p>
+        <textarea id="rp-actions" placeholder="One thing per line"></textarea>
+      </div>
+
+      <div class="card">
+        <h2 class="panel-h">Already going well</h2>
+        <textarea id="rp-goingWell"></textarea>
+      </div>
+
+      <div class="card">
+        <div class="actions-row">
+          <button class="btn btn-primary" id="rp-copyBtn" type="button">Copy text</button>
+          <button class="btn btn-secondary" id="rp-printBtn" type="button">Print / save as PDF</button>
+          <span class="copy-status" id="rp-copyStatus"></span>
+        </div>
+        <textarea class="output-box" id="rp-output" readonly></textarea>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="bottom-nav">
+    <button class="bn-btn prev" id="bn-prev" type="button"><span><span class="bn-label">&larr; Back</span><span class="bn-title" id="bn-prev-title"></span></span></button>
+    <span class="bn-progress"><span class="bn-step" id="bn-step"></span><span class="bn-current" id="bn-current"></span></span>
+    <button class="bn-btn next" id="bn-next" type="button"><span><span class="bn-label">Next &rarr;</span><span class="bn-title" id="bn-next-title"></span></span></button>
+  </div>
+</div>
+
+<script>
+  const shared = { clientName: '', bookingType: 'personal', items: {} };
+
+  const REVIEW_ITEMS = [
+    { n: 1, q: 'Locking the front door', hint: 'Passcode or Face ID/Touch ID set up, auto-lock timing, Stolen Device Protection (or the Android/Windows equivalent) turned on.' },
+    { n: 2, q: 'Apple ID / Google account security', hint: 'The account everything else depends on: MFA on, recovery details current, nobody else has access who shouldn’t.' },
+    { n: 3, q: 'App permissions', hint: 'A quick look at what apps can see location, contacts, or photos, and whether that still makes sense.' },
+    { n: 4, q: 'Scams and phishing instincts', hint: 'Not a test, a conversation: what a suspicious call or text looks like, and the pause-and-check habit.' },
+    { n: 5, q: 'Wi-Fi and being out and about', hint: 'Safe habits on public Wi-Fi, without needing to understand what a VPN is.' },
+    { n: 6, q: 'Find My / theft response', hint: 'Turned on, and a shared understanding of what to do if the phone is ever lost.' }
+  ];
+
+  /* ---------- Navigation ---------- */
+  const PIPELINE = [
+    { key: 'conversation', label: '1. Conversation' },
+    { key: 'review', label: '2. Review' },
+    { key: 'report', label: '3. Report' }
+  ];
+
+  function showPanel(name) {
+    document.querySelectorAll('.panel').forEach((p) => p.classList.toggle('active', p.id === 'panel-' + name));
+    document.querySelectorAll('.nav-btn').forEach((b) => b.classList.toggle('active', b.dataset.panel === name));
+    window.scrollTo(0, 0);
+    updateBottomNav(name);
+  }
+
+  function updateBottomNav(name) {
+    const idx = PIPELINE.findIndex((s) => s.key === name);
+    const prev = idx > 0 ? PIPELINE[idx - 1] : null;
+    const next = (idx >= 0 && idx < PIPELINE.length - 1) ? PIPELINE[idx + 1] : null;
+    const prevBtn = document.getElementById('bn-prev');
+    const nextBtn = document.getElementById('bn-next');
+
+    if (prev) { prevBtn.disabled = false; document.getElementById('bn-prev-title').textContent = prev.label; prevBtn.onclick = () => showPanel(prev.key); }
+    else { prevBtn.disabled = true; document.getElementById('bn-prev-title').textContent = '—'; }
+
+    if (next) { nextBtn.disabled = false; document.getElementById('bn-next-title').textContent = next.label; nextBtn.onclick = () => showPanel(next.key); }
+    else { nextBtn.disabled = true; document.getElementById('bn-next-title').textContent = '—'; }
+
+    document.getElementById('bn-step').textContent = idx >= 0 ? ('Step ' + (idx + 1) + ' of ' + PIPELINE.length) : '';
+    document.getElementById('bn-current').textContent = idx >= 0 ? PIPELINE[idx].label : '';
+  }
+
+  document.querySelectorAll('.nav-btn').forEach((btn) => btn.addEventListener('click', () => showPanel(btn.dataset.panel)));
+  updateBottomNav('overview');
+
+  /* ---------- Conversation panel ---------- */
+  (function initConversation() {
+    function render() {
+      shared.clientName = document.getElementById('in-clientName').value.trim();
+      shared.bookingType = document.getElementById('in-bookingType').value;
+      const familyReminder = document.getElementById('familyReminder');
+      if (shared.bookingType === 'family') {
+        familyReminder.textContent = 'Family Digital Safety Check: this first call is with the payer. The parent must still agree to and be part of the review itself — never done about them without them there.';
+      } else {
+        familyReminder.textContent = '';
+      }
+    }
+    document.querySelectorAll('#panel-conversation input, #panel-conversation select, #panel-conversation textarea').forEach((el) => {
+      el.addEventListener('input', render);
+      el.addEventListener('change', render);
+    });
+    render();
+  })();
+
+  /* ---------- Review panel ---------- */
+  (function initReview() {
+    const listEl = document.getElementById('review-checklist');
+    REVIEW_ITEMS.forEach((item) => {
+      const div = document.createElement('div');
+      div.className = 'item';
+      div.innerHTML = '<p class="item-q">' + item.n + '. ' + item.q + '</p>' +
+        '<p style="color:var(--muted); font-size:0.82rem; margin:0 0 0.6rem;">' + item.hint + '</p>' +
+        '<div class="seg" data-item="' + item.n + '"><button data-val="yes">Yes</button><button data-val="no">No</button><button data-val="unsure">Not sure</button></div>' +
+        '<input type="text" class="item-note" placeholder="Notes">';
+      listEl.appendChild(div);
+    });
+
+    listEl.querySelectorAll('.seg').forEach((seg) => {
+      const itemNum = seg.dataset.item;
+      seg.querySelectorAll('button').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          seg.querySelectorAll('button').forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+          shared.items[itemNum] = shared.items[itemNum] || {};
+          shared.items[itemNum].val = btn.dataset.val;
+          render();
+        });
+      });
+    });
+
+    listEl.querySelectorAll('.item-note').forEach((input, i) => {
+      input.addEventListener('input', () => {
+        const n = REVIEW_ITEMS[i].n;
+        shared.items[n] = shared.items[n] || {};
+        shared.items[n].note = input.value.trim();
+        render();
+      });
+    });
+
+    function valLabel(v) { return v === 'yes' ? 'Yes' : v === 'no' ? 'No' : v === 'unsure' ? 'Not sure' : 'Not rated yet'; }
+
+    function render() {
+      const lines = REVIEW_ITEMS.map((item) => {
+        const s = shared.items[item.n] || {};
+        const note = s.note ? ' — ' + s.note : '';
+        return item.n + '. ' + item.q + ': ' + valLabel(s.val) + note;
+      });
+      document.getElementById('rv-output').value = 'REVIEW — ' + (shared.clientName || '[client name]') + '\n\n' + lines.join('\n');
+    }
+
+    document.getElementById('rv-copyBtn').addEventListener('click', async () => {
+      const output = document.getElementById('rv-output');
+      const status = document.getElementById('rv-copyStatus');
+      output.select();
+      try { await navigator.clipboard.writeText(output.value); status.textContent = 'Copied.'; }
+      catch (e) { status.textContent = 'Selected — Cmd/Ctrl+C to copy.'; }
+      setTimeout(() => { status.textContent = ''; }, 3000);
+    });
+
+    render();
+  })();
+
+  /* ---------- Report panel ---------- */
+  (function initReport() {
+    function fmtDate(iso) {
+      if (!iso) return '[date]';
+      const d = new Date(iso + 'T00:00:00');
+      return d.toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' });
+    }
+    function numberedList(raw) {
+      const lines = raw.split('\n').map((l) => l.trim()).filter(Boolean);
+      if (!lines.length) return '[Nothing added yet]';
+      return lines.map((l, i) => (i + 1) + '. ' + l).join('\n');
+    }
+
+    window.renderReport = function renderReport() {
+      const clientName = document.getElementById('rp-clientName').value.trim() || '[Name]';
+      const date = fmtDate(document.getElementById('rp-date').value);
+      const summary = document.getElementById('rp-summary').value.trim() || '[Short version]';
+      const actions = numberedList(document.getElementById('rp-actions').value);
+      const goingWell = document.getElementById('rp-goingWell').value.trim() || '[At least one genuine thing]';
+
+      const text = `Your digital check-up — ${clientName}
+
+${date}, with Leo, Sfinco
+
+THE SHORT VERSION
+
+${summary}
+
+WORTH DOING, IN ORDER
+
+${actions}
+
+ALREADY GOING WELL
+
+${goingWell}
+
+IF ANYTHING EVER FEELS OFF
+
+If you ever get a call, text, or email that asks you to act quickly, send money, or share a code — stop, and call someone you trust before doing anything. That's the one habit that matters more than any setting on your phone.
+
+Questions about anything here? Just reply to this email, or call — happy to talk it through again anytime.`;
+
+      document.getElementById('rp-output').value = text;
+    };
+
+    document.getElementById('rp-pull').addEventListener('click', () => {
+      document.getElementById('rp-clientName').value = shared.clientName;
+      renderReport();
+    });
+
+    document.getElementById('rp-autofill').addEventListener('click', () => {
+      const wellLines = [];
+      const actionLines = [];
+      REVIEW_ITEMS.forEach((item) => {
+        const s = shared.items[item.n];
+        if (!s || !s.val || s.val === 'unsure') return;
+        const detail = s.note ? item.q + ' — ' + s.note : item.q;
+        if (s.val === 'yes') wellLines.push(detail);
+        else actionLines.push(detail);
+      });
+      const wellEl = document.getElementById('rp-goingWell');
+      const actionsEl = document.getElementById('rp-actions');
+      if (wellLines.length) wellEl.value = wellLines.join('\n');
+      if (actionLines.length) actionsEl.value = actionLines.join('\n');
+      renderReport();
+    });
+
+    document.querySelectorAll('#panel-report input, #panel-report textarea').forEach((el) => {
+      el.addEventListener('input', renderReport);
+      el.addEventListener('change', renderReport);
+    });
+
+    document.getElementById('rp-copyBtn').addEventListener('click', async () => {
+      const output = document.getElementById('rp-output');
+      const status = document.getElementById('rp-copyStatus');
+      output.select();
+      try { await navigator.clipboard.writeText(output.value); status.textContent = 'Copied.'; }
+      catch (e) { status.textContent = 'Selected — Cmd/Ctrl+C to copy.'; }
+      setTimeout(() => { status.textContent = ''; }, 3000);
+    });
+    document.getElementById('rp-printBtn').addEventListener('click', () => window.print());
+
+    document.getElementById('rp-date').value = new Date().toISOString().slice(0, 10);
+    renderReport();
+  })();
+
+  /* ---------- Deep-link support ---------- */
+  (function initDeepLink() {
+    const target = location.hash.slice(1);
+    if (target && document.getElementById('panel-' + target)) showPanel(target);
+  })();
+</script>
