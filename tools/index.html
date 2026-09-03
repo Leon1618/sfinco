@@ -28,7 +28,7 @@
     line-height: 1.6;
   }
 
-  .wrap { max-width: 760px; margin: 0 auto; padding: 3rem 1.25rem 5rem; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 3rem 1.25rem 5rem; }
 
   .eyebrow {
     color: var(--lime); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
@@ -41,24 +41,57 @@
     margin: 0 0 0.4em; letter-spacing: -0.01em;
   }
 
-  .lede { color: var(--muted); max-width: 620px; margin: 0 0 2.4rem; font-size: 1.03rem; }
+  .lede { color: var(--muted); max-width: 760px; margin: 0 0 2.6rem; font-size: 1.03rem; }
 
-  .list { display: grid; gap: 0.9rem; }
+  .columns {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 2.4rem;
+    align-items: start;
+  }
+
+  .column-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.7rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .column-head h2 {
+    font-family: Georgia, serif;
+    font-size: 1.15rem;
+    margin: 0;
+    color: var(--ink);
+  }
+
+  .column-head .tally {
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  .side-not .column-head { border-bottom-color: var(--lime); }
+  .side-ops .column-head { border-bottom-color: var(--blue); }
+
+  .list { display: grid; gap: 0.85rem; }
 
   .group-label {
-    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
-    color: var(--muted); margin: 2.2rem 0 0.9rem;
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--muted); margin: 1.8rem 0 0.8rem;
   }
   .group-label:first-of-type { margin-top: 0; }
 
   .card {
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 0.9rem;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 1.3rem 1.4rem;
+    padding: 1.1rem 1.25rem;
     text-decoration: none;
     color: inherit;
   }
@@ -69,127 +102,179 @@
     font-family: Georgia, serif;
     font-weight: 700;
     color: var(--lime);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     flex-shrink: 0;
-    width: 1.8rem;
+    width: 1.6rem;
   }
 
   .card .body { flex: 1; }
 
-  .card h2 {
+  .card h3 {
     font-family: Georgia, serif;
-    font-size: 1.05rem;
-    margin: 0 0 0.3rem;
+    font-size: 1rem;
+    margin: 0 0 0.25rem;
     color: var(--ink);
+    font-weight: 700;
   }
 
-  .card p { color: var(--muted); font-size: 0.9rem; margin: 0; }
+  .card p { color: var(--muted); font-size: 0.87rem; margin: 0; }
 
   .card .arrow { color: var(--muted); font-size: 1.1rem; flex-shrink: 0; align-self: center; }
   .card:hover .arrow { color: var(--lime); }
 
   .card.dashboard { border-color: var(--lime); background: var(--lime-tint); }
+  .side-ops .card:hover { border-color: var(--blue); }
+  .side-ops .card:hover .arrow { color: var(--blue); }
 
   .note {
     border-left: 3px solid var(--blue);
     background: var(--blue-tint);
     border-radius: 6px;
-    padding: 0.85rem 1rem;
-    font-size: 0.85rem;
-    margin-top: 1.6rem;
+    padding: 0.8rem 0.95rem;
+    font-size: 0.82rem;
+    margin-top: 1.2rem;
   }
 
-  .footnote { color: var(--muted); font-size: 0.82rem; margin-top: 2rem; max-width: 620px; }
+  .footnote { color: var(--muted); font-size: 0.8rem; margin-top: 1.2rem; }
+
+  .empty-note {
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: var(--muted);
+    font-size: 0.86rem;
+    text-align: center;
+  }
+
+  @media (max-width: 860px) {
+    .columns { grid-template-columns: 1fr; gap: 3rem; }
+  }
 </style>
 
 <div class="wrap">
   <span class="eyebrow">Sfinco &middot; internal</span>
   <h1>Working tools</h1>
-  <p class="lede">Every working tool across both client-facing pillars, plus the one piece of business ops tooling that exists so far. Not linked from the live site — bookmark this page instead of the individual tools.</p>
+  <p class="lede">Everything, in two groups: what's product/client work, and what's running the business itself. Not linked from the live site — bookmark this page instead of the individual tools.</p>
 
-  <div class="group-label">SMB Cyber Audits &middot; in the order you'd use them for a real engagement</div>
-  <div class="list">
-    <a class="card" href="playbook.html">
-      <span class="num">1</span>
-      <span class="body">
-        <h2>SMB Cyber Audit Playbook</h2>
-        <p>Read this first. Start-to-finish runbook: every stage, what to read, which tool to use.</p>
-      </span>
-      <span class="arrow">&rarr;</span>
-    </a>
+  <div class="columns">
 
-    <a class="card" href="dashboard.html#intake">
-      <span class="num">2</span>
-      <span class="body">
-        <h2>Intake Call Tool</h2>
-        <p>Stage 1 &mdash; the live checklist for the intake call. Opens straight to the Intake panel in the Dashboard.</p>
-      </span>
-      <span class="arrow">&rarr;</span>
-    </a>
+    <div class="side-not">
+      <div class="column-head">
+        <h2>Not business operations</h2>
+        <span class="tally">Client &amp; product tools</span>
+      </div>
 
-    <a class="card" href="dashboard.html#pricing">
-      <span class="num">3</span>
-      <span class="body">
-        <h2>Pricing &amp; Scoping Calculator</h2>
-        <p>Turns the intake answers into a fixed quote and a domain scope list.</p>
-      </span>
-      <span class="arrow">&rarr;</span>
-    </a>
+      <div class="group-label">SMB Cyber Audits &middot; in the order you'd use them for a real engagement</div>
+      <div class="list">
+        <a class="card" href="playbook.html">
+          <span class="num">1</span>
+          <span class="body">
+            <h3>SMB Cyber Audit Playbook</h3>
+            <p>Read this first. Start-to-finish runbook: every stage, what to read, which tool to use.</p>
+          </span>
+          <span class="arrow">&rarr;</span>
+        </a>
 
-    <a class="card" href="dashboard.html#agreement">
-      <span class="num">4</span>
-      <span class="body">
-        <h2>Engagement Agreement Generator</h2>
-        <p>Fills in the client agreement. The liability clause always stays a flagged placeholder, on purpose.</p>
-      </span>
-      <span class="arrow">&rarr;</span>
-    </a>
+        <a class="card" href="dashboard.html#intake">
+          <span class="num">2</span>
+          <span class="body">
+            <h3>Intake Call Tool</h3>
+            <p>Stage 1 &mdash; the live checklist for the intake call. Opens straight to the Intake panel in the Dashboard.</p>
+          </span>
+          <span class="arrow">&rarr;</span>
+        </a>
 
-    <a class="card" href="dashboard.html#report">
-      <span class="num">5</span>
-      <span class="body">
-        <h2>Audit Report Generator</h2>
-        <p>Builds the client report from the findings library, after the remote review.</p>
-      </span>
-      <span class="arrow">&rarr;</span>
-    </a>
+        <a class="card" href="dashboard.html#pricing">
+          <span class="num">3</span>
+          <span class="body">
+            <h3>Pricing &amp; Scoping Calculator</h3>
+            <p>Turns the intake answers into a fixed quote and a domain scope list.</p>
+          </span>
+          <span class="arrow">&rarr;</span>
+        </a>
 
-    <a class="card dashboard" href="dashboard.html">
-      <span class="num">6</span>
-      <span class="body">
-        <h2>SMB Cyber Audit Dashboard</h2>
-        <p>Everything above, in one place, in order &mdash; sidebar navigation, a Back/Next bar, and data that carries across between stages. This is where the actual work happens; the four links above just jump straight to a panel inside it.</p>
-      </span>
-      <span class="arrow">&rarr;</span>
-    </a>
-  </div>
+        <a class="card" href="dashboard.html#agreement">
+          <span class="num">4</span>
+          <span class="body">
+            <h3>Engagement Agreement Generator</h3>
+            <p>Fills in the client agreement. The liability clause always stays a flagged placeholder, on purpose.</p>
+          </span>
+          <span class="arrow">&rarr;</span>
+        </a>
 
-  <div class="note">Entries 2&ndash;5 aren't separate tools &mdash; they're panels inside the Dashboard, linked directly by anchor so each has its own bookmarkable URL. Only the Playbook and the Dashboard itself are genuinely separate pages.</div>
+        <a class="card" href="guided-self-check.html">
+          <span class="num">5</span>
+          <span class="body">
+            <h3>Guided Self-Check</h3>
+            <p>Stage 2a &mdash; the real tool clients use, not the public gate page. Send this link privately once someone's booked, never linked from the live site.</p>
+          </span>
+          <span class="arrow">&rarr;</span>
+        </a>
 
-  <p class="footnote">Client-facing pieces live elsewhere: the actual Guided Self-Check clients use is at <a href="guided-self-check.html" style="color: var(--lime);">guided-self-check.html</a>, sent privately once someone's booked. The public gate pages (<code>self-check.html</code>, <code>quote.html</code>) are linked from the live <code>audits.html</code> instead.</p>
+        <a class="card" href="dashboard.html#review">
+          <span class="num">6</span>
+          <span class="body">
+            <h3>Remote Review Checklist</h3>
+            <p>Stage 2b &mdash; rate the verify call live, plus anything that came back unclear from the self-check.</p>
+          </span>
+          <span class="arrow">&rarr;</span>
+        </a>
 
-  <div class="group-label">Personal Digital Check-up &amp; Family Digital Safety Check</div>
-  <div class="list">
-    <a class="card dashboard" href="checkup-dashboard.html">
-      <span class="num">1</span>
-      <span class="body">
-        <h2>Check-up Dashboard</h2>
-        <p>The lighter counterpart to the audit Dashboard &mdash; conversation, review, report, in one place. Same tool for both framings; see <code>family-framing.md</code> for what actually differs.</p>
-      </span>
-      <span class="arrow">&rarr;</span>
-    </a>
-  </div>
-  <p class="footnote">Only three stages here, so it didn't need splitting into a hub-plus-panels the way the audit did &mdash; one tool covers the whole thing.</p>
+        <a class="card" href="dashboard.html#report">
+          <span class="num">7</span>
+          <span class="body">
+            <h3>Audit Report Generator</h3>
+            <p>Builds the client report from the findings library, after the remote review.</p>
+          </span>
+          <span class="arrow">&rarr;</span>
+        </a>
 
-  <div class="group-label">Business operations</div>
-  <div class="list">
-    <a class="card" href="client-tracker.html">
-      <span class="num">&bull;</span>
-      <span class="body">
-        <h2>Client Tracker</h2>
-        <p>A plain list of who's where in the pipeline, across both pillars. Saved in this browser only &mdash; see the note on the page itself before relying on it.</p>
-      </span>
-      <span class="arrow">&rarr;</span>
-    </a>
+        <a class="card dashboard" href="dashboard.html">
+          <span class="num">8</span>
+          <span class="body">
+            <h3>SMB Cyber Audit Dashboard</h3>
+            <p>Everything above except the Guided Self-Check, in one place, in order &mdash; sidebar navigation, a Back/Next bar, and data that carries across between stages. This is where the actual work happens; entries 2, 3, 4, 6 and 7 just jump straight to a panel inside it.</p>
+          </span>
+          <span class="arrow">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="note">Entries 2, 3, 4, 6 and 7 aren't separate tools &mdash; they're panels inside the Dashboard, linked directly by anchor so each still has its own bookmarkable URL. Only the Playbook, the Guided Self-Check, and the Dashboard itself are genuinely separate pages.</div>
+      <p class="footnote">The public gate pages (<code>self-check.html</code>, <code>quote.html</code>) aren't listed here &mdash; they're marketing pages meant to be found from the live <code>audits.html</code>, not tools to bookmark for doing the work.</p>
+
+      <div class="group-label">Personal Digital Check-up &amp; Family Digital Safety Check</div>
+      <div class="list">
+        <a class="card dashboard" href="checkup-dashboard.html">
+          <span class="num">1</span>
+          <span class="body">
+            <h3>Check-up Dashboard</h3>
+            <p>The lighter counterpart to the audit Dashboard &mdash; conversation, review, report, in one place. Same tool for both framings; see <code>family-framing.md</code> for what actually differs.</p>
+          </span>
+          <span class="arrow">&rarr;</span>
+        </a>
+      </div>
+      <p class="footnote">Only three stages here, so it didn't need splitting into a hub-plus-panels the way the audit did &mdash; one tool covers the whole thing. No separate self-check tool either: the review is a live call by design, not async.</p>
+    </div>
+
+    <div class="side-ops">
+      <div class="column-head">
+        <h2>Business operations</h2>
+        <span class="tally">Running Sfinco itself</span>
+      </div>
+
+      <div class="list">
+        <a class="card" href="client-tracker.html">
+          <span class="num">&bull;</span>
+          <span class="body">
+            <h3>Client Tracker</h3>
+            <p>A plain list of who's where in the pipeline, across both pillars. Saved in this browser only &mdash; see the note on the page itself before relying on it.</p>
+          </span>
+          <span class="arrow">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="empty-note">The only ops tool that exists so far. Everything else on this side of the business &mdash; invoicing, ABN/GST, the agreement's liability clause &mdash; is still a document in <code>smb-audits/</code>, not a tool. That's deliberate until there's real volume to justify building one.</div>
+    </div>
+
   </div>
 </div>
