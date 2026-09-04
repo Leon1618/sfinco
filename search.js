@@ -126,7 +126,10 @@
     });
 
     document.addEventListener("click", function (e) {
-      if (!root.contains(e.target)) close();
+      if (!root.contains(e.target)) {
+        close();
+        collapse();
+      }
     });
   }
 
