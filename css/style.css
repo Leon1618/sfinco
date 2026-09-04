@@ -95,6 +95,12 @@ a:hover {
   gap: 1rem;
 }
 
+@media (min-width: 700px) {
+  .site-header .container {
+    flex-wrap: nowrap;
+  }
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -163,6 +169,19 @@ nav.primary-nav {
   overflow: visible;
 }
 
+.site-header .site-search {
+  order: 4;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+
+.nav-toggle-input:checked ~ .site-search {
+  max-height: 200px;
+  overflow: visible;
+}
+
 nav.primary-nav ul {
   list-style: none;
   display: flex;
@@ -188,6 +207,13 @@ nav.primary-nav a {
 nav.primary-nav a:hover {
   color: var(--lime);
   border-color: var(--lime);
+}
+
+nav.primary-nav a.is-active {
+  color: var(--lime);
+  border-color: var(--lime);
+  background: var(--lime-tint);
+  font-weight: 700;
 }
 
 @media (min-width: 700px) {
@@ -217,10 +243,28 @@ nav.primary-nav a:hover {
     font-size: 0.98rem;
   }
 
+  nav.primary-nav a.is-active {
+    border: none;
+    background: none;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
   nav.primary-nav {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex: 1;
     gap: 1.4rem;
+    min-width: 0;
+  }
+
+  .site-header .site-search {
+    order: 0;
+    width: auto;
+    max-height: none;
+    overflow: visible;
+    flex-shrink: 0;
   }
 }
 
@@ -408,6 +452,10 @@ nav.primary-nav a:hover {
 }
 
 .btn-row:has(> :only-child) {
+  justify-content: center;
+}
+
+.hero .btn-row {
   justify-content: center;
 }
 
@@ -729,8 +777,8 @@ section > .container > h2 {
 
 .book-cover {
   position: relative;
-  flex: 0 0 168px;
-  width: 168px;
+  flex: 0 0 213px;
+  width: 213px;
   height: 320px;
   margin: 0 8px 8px 0;
   border-radius: 3px 8px 8px 3px;

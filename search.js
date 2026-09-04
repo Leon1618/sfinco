@@ -34,6 +34,33 @@
     var resultsEl = root.querySelector(".site-search-results");
     if (!input || !resultsEl) return;
 
+    var wideQuery = window.matchMedia("(min-width: 700px)");
+
+    function expand() {
+      if (!wideQuery.matches) return;
+      var firstLink = document.querySelector(".primary-nav ul a");
+      if (!firstLink) return;
+      var linkRect = firstLink.getBoundingClientRect();
+      var rootRect = root.getBoundingClientRect();
+      // Freeze the wrapper's width first, otherwise taking the input out of
+      // flow shrinks it, which reflows the flex row and moves everything.
+      root.style.width = rootRect.width + "px";
+      input.style.position = "absolute";
+      input.style.left = (linkRect.left - rootRect.left) + "px";
+      input.style.right = "0";
+      input.style.width = "auto";
+    }
+
+    function collapse() {
+      root.style.width = "";
+      input.style.position = "";
+      input.style.left = "";
+      input.style.right = "";
+      input.style.width = "";
+    }
+
+    input.addEventListener("focus", expand);
+
     function close() {
       resultsEl.hidden = true;
       resultsEl.innerHTML = "";
@@ -92,7 +119,10 @@
     });
 
     input.addEventListener("blur", function () {
-      window.setTimeout(close, 120);
+      window.setTimeout(function () {
+        close();
+        collapse();
+      }, 120);
     });
 
     document.addEventListener("click", function (e) {
@@ -100,8 +130,18 @@
     });
   }
 
+  function markActiveNavLink() {
+    var links = document.querySelectorAll(".primary-nav ul a");
+    for (var i = 0; i < links.length; i++) {
+      if (links[i].pathname === window.location.pathname) {
+        links[i].classList.add("is-active");
+      }
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     var roots = document.querySelectorAll(".site-search");
     for (var i = 0; i < roots.length; i++) init(roots[i]);
+    markActiveNavLink();
   });
 })();
