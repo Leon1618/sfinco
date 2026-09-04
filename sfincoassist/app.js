@@ -1,6 +1,7 @@
 const TEXT_SIZE_KEY = "sfincoassist-text-size";
 const THEME_KEY = "sfincoassist-theme";
 const CONTACT_KEY = "sfincoassist-trusted-contact";
+const PASSPHRASE_KEY = "sfincoassist-family-passphrase";
 
 /* ---------- Undo toast: lets a destructive action be reversed instead of confirmed upfront ---------- */
 
@@ -96,17 +97,22 @@ document.getElementById("clear-data-btn").addEventListener("click", () => {
   const snapshot = {
     username: localStorage.getItem(USERNAME_KEY),
     contact: localStorage.getItem(CONTACT_KEY),
+    passphrase: localStorage.getItem(PASSPHRASE_KEY),
   };
   localStorage.removeItem(USERNAME_KEY);
   localStorage.removeItem(CONTACT_KEY);
+  localStorage.removeItem(PASSPHRASE_KEY);
   applyGreeting();
   renderTrustedContact();
+  renderPassphrase();
   profileDialog.close();
   showUndo("Your data was cleared.", () => {
     if (snapshot.username) localStorage.setItem(USERNAME_KEY, snapshot.username);
     if (snapshot.contact) localStorage.setItem(CONTACT_KEY, snapshot.contact);
+    if (snapshot.passphrase) localStorage.setItem(PASSPHRASE_KEY, snapshot.passphrase);
     applyGreeting();
     renderTrustedContact();
+    renderPassphrase();
   });
 });
 
@@ -664,6 +670,54 @@ document.getElementById("trusted-contact-form").addEventListener("submit", (e) =
   localStorage.setItem(CONTACT_KEY, JSON.stringify({ name, phone }));
   e.target.reset();
   renderTrustedContact();
+});
+
+/* ---------- 2b. Family passphrase ---------- */
+
+function loadPassphrase() {
+  return localStorage.getItem(PASSPHRASE_KEY);
+}
+
+function renderPassphrase() {
+  const phrase = loadPassphrase();
+  const display = document.getElementById("passphrase-display");
+  display.innerHTML = "";
+  if (phrase) document.getElementById("passphrase-details").open = true;
+  if (!phrase) return;
+
+  const card = document.createElement("div");
+  card.className = "contact-card";
+
+  const info = document.createElement("div");
+  info.className = "contact-info";
+  const label = document.createElement("strong");
+  label.textContent = "Your passphrase";
+  const value = document.createElement("span");
+  value.className = "contact-detail passphrase-value";
+  value.textContent = "•".repeat(Math.max(phrase.length, 6));
+  let revealed = false;
+  info.append(label, value);
+
+  const toggleBtn = document.createElement("button");
+  toggleBtn.className = "read-aloud";
+  toggleBtn.textContent = "Show";
+  toggleBtn.addEventListener("click", () => {
+    revealed = !revealed;
+    value.textContent = revealed ? phrase : "•".repeat(Math.max(phrase.length, 6));
+    toggleBtn.textContent = revealed ? "Hide" : "Show";
+  });
+
+  card.append(info, toggleBtn);
+  display.appendChild(card);
+}
+
+document.getElementById("passphrase-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const phrase = document.getElementById("passphrase-input").value.trim();
+  if (!phrase) return;
+  localStorage.setItem(PASSPHRASE_KEY, phrase);
+  e.target.reset();
+  renderPassphrase();
 });
 
 document.querySelectorAll(".read-aloud[data-text]").forEach((btn) => {
@@ -1669,6 +1723,7 @@ if (SpeechRecognitionCtor) {
 
 renderScamAlerts();
 renderTrustedContact();
+renderPassphrase();
 startQuizRound();
 renderQuiz();
 startRedFlagRound();

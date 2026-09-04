@@ -111,6 +111,19 @@
     <p class="section-intro">Never call a number a text or email gives you, even if it looks official. Hang up or close it, then call the organisation back using a number you already trust, like the ones below.</p>
 
     <div class="safety-panel">
+      <h3>Paste a suspicious message here</h3>
+      <p>Free, no sign-up, and nothing you type here leaves your browser. We'll check it against known scam patterns.</p>
+      <form id="home-scam-check-form" class="enquiry">
+        <label for="home-scam-text">The message or text</label>
+        <textarea id="home-scam-text" rows="4" placeholder="e.g. Your parcel has a $3.20 customs fee that must be paid within 24 hours or it will be returned to sender."></textarea>
+        <div class="btn-row">
+          <button class="btn btn-primary" type="submit">Check this for me</button>
+        </div>
+      </form>
+      <div id="home-scam-result"></div>
+    </div>
+
+    <div class="safety-panel">
       <h3>Two numbers worth saving right now</h3>
       <dl class="safety-numbers">
         <div>
@@ -122,7 +135,7 @@
           <dd><a href="tel:1800595160">1800 595 160</a></dd>
         </div>
       </dl>
-      <p>These are free, government-backed services, not Sfinco numbers. The Sfinco Personal Cyber Awareness Assistant holds a fuller list, including your own bank's fraud line.</p>
+      <p>These are free, government-backed services, not Sfinco numbers. The Sfinco Personal Cyber Awareness Assistant holds a fuller list, including your own bank's fraud line, and can also check a screenshot or a QR code, not just pasted text.</p>
       <a class="card-link" href="sfincoassist.html">See the full list &rarr;</a>
     </div>
   </div>
@@ -174,6 +187,93 @@ document.querySelectorAll(".primary-nav a").forEach(function(a) {
     });
   }, { threshold: 0.15 });
   els.forEach(function (el) { observer.observe(el); });
+})();
+</script>
+
+<script>
+(function () {
+  var scamSignals = [
+    {
+      label: "Pressure to act fast",
+      regex: /\b(urgent|immediately|act now|act fast|right away|within\s+\d+\s*(hours|hrs|minutes|mins)|final notice|last chance)\b/i,
+      tip: "Real organisations rarely give you minutes to respond. A tight deadline is a classic way to stop you thinking it through.",
+    },
+    {
+      label: "Threatens your account",
+      regex: /\b(suspend|suspended|account.*(locked|closed|frozen)|will be closed|deactivat\w*)\b/i,
+      tip: "Threatening to lock or close an account is a pressure tactic. Contact the organisation directly using a number you already know to check.",
+    },
+    {
+      label: "Asks for sensitive details",
+      regex: /\b(BSB|PIN|one[- ]time code|verification code|security code|password|account number|CVV)\b/i,
+      tip: "Your bank, the ATO, or myGov will never ask you to hand over a PIN, password, or one-time code, by text, phone, or email.",
+    },
+    {
+      label: "Wants payment in an unusual way",
+      regex: /\b(gift card|itunes card|google play card|wire transfer|cryptocurrency|bitcoin|western union)\b/i,
+      tip: "No legitimate bill, fine, or debt is ever paid with gift cards or crypto. This is one of the strongest scam signs there is.",
+    },
+    {
+      label: "Suspicious link or generic greeting",
+      regex: /\b(click here|verify your account|confirm your details|dear customer|dear valued customer)\b/i,
+      tip: "A vague greeting instead of your name, plus a link asking you to \"verify\" something, is a very common scam pattern. Type the real website in yourself instead of clicking through.",
+    },
+    {
+      label: "Too good to be true",
+      regex: /\b(you'?ve won|lottery|prize|claim your reward|congratulations you)\b/i,
+      tip: "Unexpected prizes or winnings almost always come with a catch. If you didn't enter, you can't have won.",
+    },
+  ];
+
+  var shortenerDomains = ["bit.ly", "tinyurl.com", "t.co", "goo.gl", "ow.ly", "is.gd", "buff.ly"];
+  var bankKeywords = ["commbank", "netbank", "westpac", "anz", "nab.com", "mygov", "auspost"];
+
+  function checkLinks(text) {
+    var lower = text.toLowerCase();
+    var flags = [];
+    if (shortenerDomains.some(function (d) { return lower.indexOf(d) !== -1; })) {
+      flags.push({ label: "Shortened link", tip: "Shortened links (like bit.ly) hide where you're really going. Legitimate businesses rarely need to hide their web address." });
+    }
+    if (/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/.test(lower)) {
+      flags.push({ label: "Raw IP address link", tip: "A link pointing straight at a number instead of a proper website name is very unusual for a genuine business." });
+    }
+    if (bankKeywords.some(function (k) { return lower.indexOf(k) !== -1; }) && lower.indexOf(".com.au") === -1 && lower.indexOf(".gov.au") === -1) {
+      flags.push({ label: "Possible lookalike website", tip: "This mentions a bank or government name but doesn't go to a proper .com.au or .gov.au address. Type the real website in yourself instead." });
+    }
+    if (/http:\/\//.test(lower)) {
+      flags.push({ label: "Not a secure link", tip: "This link starts with http, not https. That's unusual for anything asking you to enter details." });
+    }
+    return flags;
+  }
+
+  function checkMessage(text) {
+    var textFlags = scamSignals.filter(function (s) { return s.regex.test(text); }).map(function (s) { return { label: s.label, tip: s.tip }; });
+    return textFlags.concat(checkLinks(text));
+  }
+
+  var form = document.getElementById("home-scam-check-form");
+  if (!form) return;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var text = document.getElementById("home-scam-text").value.trim();
+    var result = document.getElementById("home-scam-result");
+    if (!text) return;
+
+    var matches = checkMessage(text);
+    var html;
+    if (matches.length === 0) {
+      html = '<div class="callout blue"><h3>Nothing obvious jumped out</h3><p>That doesn\'t guarantee it\'s genuine. If it still feels off, trust that instinct, and use the numbers below to check directly with the organisation.</p></div>';
+    } else {
+      html = '<div class="callout"><h3>' + matches.length + (matches.length === 1 ? " thing" : " things") + " worth a second look</h3><ul>";
+      matches.forEach(function (m) {
+        html += "<li><strong>" + m.label + ":</strong> " + m.tip + "</li>";
+      });
+      html += "</ul></div>";
+    }
+    result.innerHTML = html;
+    result.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
 })();
 </script>
 

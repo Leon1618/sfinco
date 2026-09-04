@@ -115,6 +115,76 @@
   </div>
 </section>
 
+<section id="quick-check">
+  <div class="container">
+    <span class="eyebrow">Free, 2 minutes</span>
+    <h2>Not sure where you stand?</h2>
+    <p class="section-intro">Six quick questions covering the same ground a full audit does. It won't catch everything a proper audit would, but it's a fair read on where things stand right now, before you commit to anything.</p>
+
+    <form id="quick-check-form" class="quick-check">
+      <fieldset class="quick-check-q">
+        <legend>Does everyone on your team have their own login for email and business accounts, rather than one shared password?</legend>
+        <div class="quick-check-options">
+          <label><input type="radio" name="q1" value="good" required> Yes</label>
+          <label><input type="radio" name="q1" value="bad"> No</label>
+          <label><input type="radio" name="q1" value="unsure"> Not sure</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="quick-check-q">
+        <legend>Is there a second step, like a text code or app prompt, when someone logs into your email or cloud storage, not just a password?</legend>
+        <div class="quick-check-options">
+          <label><input type="radio" name="q2" value="good" required> Yes</label>
+          <label><input type="radio" name="q2" value="bad"> No</label>
+          <label><input type="radio" name="q2" value="unsure"> Not sure</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="quick-check-q">
+        <legend>Would your team know what to do with a suspicious invoice or payment request that arrives by email?</legend>
+        <div class="quick-check-options">
+          <label><input type="radio" name="q3" value="good" required> Yes</label>
+          <label><input type="radio" name="q3" value="bad"> No</label>
+          <label><input type="radio" name="q3" value="unsure"> Not sure</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="quick-check-q">
+        <legend>Are your business computers and phones set to install security updates automatically?</legend>
+        <div class="quick-check-options">
+          <label><input type="radio" name="q4" value="good" required> Yes</label>
+          <label><input type="radio" name="q4" value="bad"> No</label>
+          <label><input type="radio" name="q4" value="unsure"> Not sure</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="quick-check-q">
+        <legend>If a work computer or phone was lost, stolen, or wiped tomorrow, do you know your data would actually come back?</legend>
+        <div class="quick-check-options">
+          <label><input type="radio" name="q5" value="good" required> Yes</label>
+          <label><input type="radio" name="q5" value="bad"> No</label>
+          <label><input type="radio" name="q5" value="unsure"> Not sure</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="quick-check-q">
+        <legend>If you take card payments, does any card information ever get typed into a spreadsheet or written down anywhere?</legend>
+        <div class="quick-check-options">
+          <label><input type="radio" name="q6" value="bad" required> Yes</label>
+          <label><input type="radio" name="q6" value="good"> No</label>
+          <label><input type="radio" name="q6" value="unsure"> Not sure / doesn't apply</label>
+        </div>
+      </fieldset>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" type="submit">See where I stand</button>
+      </div>
+    </form>
+
+    <div id="quick-check-result" class="callout hidden"></div>
+  </div>
+</section>
+
 <section>
   <div class="container">
     <span class="eyebrow">Pricing</span>
@@ -124,6 +194,8 @@
       <h3>No obligation, no pressure</h3>
       <p>The intake conversation is free and doesn't commit you to anything. If an audit isn't the right fit for your business right now, we'll say so.</p>
     </div>
+
+    <p>Wondering why pay when there's free help out there? <strong>Cyber Wardens</strong> (government-backed) trains your team to spot red flags. <strong>IDCARE</strong> helps you recover once something's already gone wrong. Neither one actually looks at your specific business, your accounts, your devices, your payment setup, before anything happens. That's the gap an audit fills.</p>
   </div>
 </section>
 
@@ -249,6 +321,34 @@ if (new URLSearchParams(window.location.search).get("sent") === "true") {
   document.getElementById("enquiry-form").classList.add("hidden");
   document.getElementById("enquiry-sent").classList.remove("hidden");
 }
+
+document.getElementById("quick-check-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  var data = new FormData(e.target);
+  var bad = 0;
+  var unsure = 0;
+  for (var i = 1; i <= 6; i++) {
+    var answer = data.get("q" + i);
+    if (answer === "bad") bad++;
+    if (answer === "unsure") unsure++;
+  }
+  var concerning = bad + unsure * 0.5;
+  var result = document.getElementById("quick-check-result");
+  var heading, body;
+  if (concerning <= 1) {
+    heading = "Good to know";
+    body = "You're doing more right than most businesses your size. A full audit would still catch the details a self-check can't reach, but you're in solid shape.";
+  } else if (concerning <= 3) {
+    heading = "Fix soon";
+    body = "A few gaps worth sorting before they become a problem. This is exactly the kind of thing a full audit turns into a clear, ordered list of what to do first.";
+  } else {
+    heading = "Fix now";
+    body = "A few of these point to real, current exposure, the kind a scammer could actually use. Worth getting a proper look before something happens, not after.";
+  }
+  result.innerHTML = "<h3>" + heading + "</h3><p>" + body + "</p><p><a class=\"btn btn-primary\" href=\"#enquire\">Book the full audit</a></p>";
+  result.classList.remove("hidden");
+  result.scrollIntoView({ behavior: "smooth", block: "center" });
+});
 </script>
 
 </body>

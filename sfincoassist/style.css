@@ -779,6 +779,10 @@ body.light-theme form {
   margin: 0;
 }
 
+.passphrase-value {
+  letter-spacing: 0.15em;
+}
+
 @media (max-width: 480px) {
   .contact-card {
     flex-direction: column;

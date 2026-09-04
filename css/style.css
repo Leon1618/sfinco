@@ -454,6 +454,54 @@ section > .container > h2 {
   font-size: 1.08rem;
 }
 
+/* Quick self-check quiz */
+
+.quick-check {
+  max-width: 700px;
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.quick-check-q {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.1rem 1.3rem;
+  margin: 0;
+}
+
+.quick-check-q legend {
+  padding: 0 0.3rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.quick-check-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.4rem;
+  margin-top: 0.8rem;
+}
+
+.quick-check-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--muted);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.quick-check-options input {
+  width: auto;
+  min-height: 0;
+}
+
+#quick-check-result {
+  max-width: 700px;
+  margin-top: 1.6rem;
+}
+
 /* Pillar cards */
 
 .pillar-grid {
@@ -623,6 +671,19 @@ section > .container > h2 {
 }
 
 .callout p { color: var(--ink); opacity: 0.85; }
+
+.callout ul {
+  margin: 0.6rem 0 0;
+  padding-left: 1.2em;
+  color: var(--ink);
+  opacity: 0.85;
+}
+
+.callout li {
+  margin-bottom: 0.6rem;
+}
+
+.callout li:last-child { margin-bottom: 0; }
 
 .callout h3 {
   margin-bottom: 0.3rem;

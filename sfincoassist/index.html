@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sfinco Personal Cyber Awareness Assistant</title>
-<link rel="stylesheet" href="style.css?v=20260902b">
+<link rel="stylesheet" href="style.css?v=20260902c">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#2B2019">
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
@@ -85,6 +85,7 @@
 <dialog id="help-dialog" class="app-dialog">
   <h2>About Sfinco</h2>
   <p>Sfinco helps you spot scams before they catch you out: check a suspicious message, find who to call, and practise spotting the tricks scammers use. Nothing here is connected to a bank account, no live financial data is read, and nothing you type or say is uploaded anywhere else, it all stays on this device.</p>
+  <p>Sfinco helps you spot risk. It doesn't replace your bank's fraud team, the police, or your own judgement, if something still feels wrong after checking here, trust that and call someone.</p>
   <p>Tap the search bar to jump straight to a section or a contact number, or use the microphone to search by voice.</p>
   <button id="help-close-btn" type="button" class="dialog-close">Close</button>
 </dialog>
@@ -346,6 +347,19 @@
       </div>
     </details>
 
+    <details class="disclosure" id="passphrase-details">
+      <summary>Family passphrase</summary>
+      <div class="disclosure-body">
+        <p>Agree on a word or phrase with your family that only you'd know. If a call or message ever claims to be an emergency involving them, ask for it before doing anything else, before sending money, before anything.</p>
+        <form id="passphrase-form">
+          <label for="passphrase-input">Your passphrase</label>
+          <input type="text" id="passphrase-input" placeholder="e.g. blue kangaroo" autocomplete="off" required>
+          <button type="submit">Save passphrase</button>
+        </form>
+        <div id="passphrase-display" role="status" aria-live="polite"></div>
+      </div>
+    </details>
+
     <div class="next-cta">
       <p>Curious how AI is changing scams?</p>
       <button type="button" id="contacts-next-btn">See AI Safety</button>
@@ -361,7 +375,7 @@
       <div class="disclosure-body">
         <div class="sample-card notice">
           <span class="tag">The "it's me, I need help" call</span>
-          <p>Scammers can now clone a voice from just a few seconds of audio, sometimes taken from a video posted online. If you get a call that sounds exactly like a family member urgently asking for money, hang up and call them back on the number you already have for them.</p>
+          <p>Scammers can now clone a voice from just a few seconds of audio, sometimes taken from a video posted online. If you get a call that sounds exactly like a family member urgently asking for money, hang up and call them back on the number you already have for them. If you've set up a family passphrase in "Who to call," you can also just ask for it, a real family member will know it straight away.</p>
         </div>
 
         <div class="sample-card notice">
@@ -571,6 +585,6 @@
   <button id="undo-toast-btn" type="button">Undo</button>
 </div>
 
-<script src="app.js?v=20260902b"></script>
+<script src="app.js?v=20260902c"></script>
 </body>
 </html>
