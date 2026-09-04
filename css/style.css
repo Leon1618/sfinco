@@ -157,7 +157,8 @@ nav.primary-nav {
 }
 
 .nav-toggle-input:checked ~ nav.primary-nav {
-  max-height: 400px;
+  max-height: 2000px;
+  overflow: visible;
 }
 
 nav.primary-nav ul {
@@ -213,6 +214,122 @@ nav.primary-nav a:hover {
     background: none;
     font-size: 0.98rem;
   }
+
+  nav.primary-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+  }
+
+  .site-search {
+    margin: 0;
+  }
+
+  .site-search-input {
+    width: 190px;
+  }
+}
+
+/* Site search */
+
+.site-search {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.site-search-input {
+  width: 100%;
+  padding: 0.55rem 0.8rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: var(--ink);
+  transition: border-color 0.15s ease;
+}
+
+.site-search-input::placeholder {
+  color: var(--muted);
+}
+
+.site-search-input:focus {
+  outline: none;
+  border-color: var(--lime);
+}
+
+.site-search-results {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  right: 0;
+  z-index: 50;
+  max-height: 60vh;
+  overflow-y: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+@media (min-width: 700px) {
+  .site-search-results {
+    left: auto;
+    width: 320px;
+  }
+}
+
+.site-search-result {
+  display: block;
+  padding: 0.7rem 0.9rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s ease;
+}
+
+.site-search-result:last-child {
+  border-bottom: none;
+}
+
+.site-search-result:hover,
+.site-search-result:focus {
+  background: var(--bg-deep);
+}
+
+.site-search-result-type {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--lime);
+  margin-bottom: 0.2rem;
+}
+
+.site-search-result-title {
+  display: block;
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--ink);
+  margin-bottom: 0.15rem;
+}
+
+.site-search-result-desc {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.site-search-empty {
+  margin: 0;
+  padding: 0.9rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-style: italic;
 }
 
 /* Buttons */

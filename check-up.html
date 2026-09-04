@@ -26,6 +26,11 @@
         <li><a href="guides.html">Safety Guides</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
+    <div class="site-search">
+      <label for="site-search-input" class="visually-hidden">Search the site</label>
+      <input type="search" class="site-search-input" id="site-search-input" placeholder="Search the site&hellip;" autocomplete="off">
+      <div class="site-search-results" hidden></div>
+    </div>
     </nav>
   </div>
 </header>
@@ -146,6 +151,7 @@
   </div>
 </footer>
 
+<script src="search.js"></script>
 <script>
 document.querySelectorAll(".primary-nav a").forEach(function(a) {
   a.addEventListener("click", function() {
