@@ -600,7 +600,9 @@ textarea {
 }
 
 .btn-message-us:hover {
-  opacity: 0.9;
+  filter: brightness(1.2);
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
 }
 
 form {
@@ -636,7 +638,11 @@ button {
   min-height: 44px;
 }
 
-button:hover { opacity: 0.9; }
+button:not(:disabled):hover {
+  filter: brightness(1.2);
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
 
 .sample-alerts { margin-top: 2rem; }
 
