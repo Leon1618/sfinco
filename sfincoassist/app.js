@@ -988,15 +988,19 @@ function renderQuiz() {
   hint.textContent = "Swipe the card left for scam, right for genuine, or use the buttons below.";
 
   const choices = document.createElement("div");
-  choices.className = "quiz-choices";
+  choices.className = "quiz-choices swipe-choices";
 
   const scamBtn = document.createElement("button");
   scamBtn.type = "button";
-  scamBtn.textContent = "Looks like a scam";
+  scamBtn.className = "swipe-choice-btn swipe-choice-scam";
+  scamBtn.setAttribute("aria-label", "Looks like a scam");
+  scamBtn.innerHTML = '<span class="swipe-choice-circle"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></span><span class="swipe-choice-label">Scam</span>';
 
   const okBtn = document.createElement("button");
   okBtn.type = "button";
-  okBtn.textContent = "Looks okay";
+  okBtn.className = "swipe-choice-btn swipe-choice-ok";
+  okBtn.setAttribute("aria-label", "Looks okay");
+  okBtn.innerHTML = '<span class="swipe-choice-circle"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="swipe-choice-label">Genuine</span>';
 
   let answered = false;
 
