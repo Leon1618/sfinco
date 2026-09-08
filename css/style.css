@@ -486,6 +486,9 @@ nav.primary-nav a.is-active {
 
 .hero .container {
   max-width: 780px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero p.lede {
