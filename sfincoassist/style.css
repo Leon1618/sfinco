@@ -537,6 +537,11 @@ textarea {
   font-style: italic;
 }
 
+.tip-footer a {
+  color: var(--blue);
+  font-weight: 700;
+}
+
 .next-cta {
   margin-top: 2rem;
   padding-top: 1.5rem;
@@ -833,6 +838,76 @@ body.light-theme form {
 
 .quiz-progress { color: var(--muted); font-size: 0.85rem; }
 .quiz-message p { font-size: 1.05rem; }
+
+.swipe-card {
+  position: relative;
+  touch-action: pan-y;
+  user-select: none;
+  cursor: grab;
+  transition: transform 0.25s ease;
+}
+
+.swipe-card.dragging {
+  transition: none;
+  cursor: grabbing;
+}
+
+.swipe-card.flying-left {
+  transform: translateX(-160%) rotate(-16deg) !important;
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.swipe-card.flying-right {
+  transform: translateX(160%) rotate(16deg) !important;
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.swipe-card.swipe-locked {
+  pointer-events: none;
+}
+
+.swipe-stamp {
+  position: absolute;
+  top: 0.9rem;
+  padding: 0.3rem 0.7rem;
+  border: 3px solid currentColor;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.swipe-stamp-scam {
+  left: 0.9rem;
+  color: var(--red);
+  transform: rotate(-12deg);
+}
+
+.swipe-stamp-ok {
+  right: 0.9rem;
+  color: var(--lime);
+  transform: rotate(12deg);
+}
+
+.swipe-hint {
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+  margin: 0.6rem 0 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .swipe-card,
+  .swipe-card.flying-left,
+  .swipe-card.flying-right {
+    transition-duration: 0.001ms !important;
+  }
+}
 
 .quiz-choices {
   display: flex;

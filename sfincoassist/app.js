@@ -970,10 +970,22 @@ function renderQuiz() {
   progress.textContent = `Message ${quizIndex + 1} of ${quizRoundItems.length}`;
 
   const messageCard = document.createElement("div");
-  messageCard.className = "sample-card notice quiz-message";
+  messageCard.className = "sample-card notice quiz-message swipe-card";
   const messageText = document.createElement("p");
   messageText.textContent = item.text;
   messageCard.appendChild(messageText);
+
+  const stampScam = document.createElement("span");
+  stampScam.className = "swipe-stamp swipe-stamp-scam";
+  stampScam.textContent = "SCAM";
+  const stampOk = document.createElement("span");
+  stampOk.className = "swipe-stamp swipe-stamp-ok";
+  stampOk.textContent = "GENUINE";
+  messageCard.append(stampScam, stampOk);
+
+  const hint = document.createElement("p");
+  hint.className = "swipe-hint";
+  hint.textContent = "Swipe the card left for scam, right for genuine, or use the buttons below.";
 
   const choices = document.createElement("div");
   choices.className = "quiz-choices";
@@ -986,7 +998,11 @@ function renderQuiz() {
   okBtn.type = "button";
   okBtn.textContent = "Looks okay";
 
+  let answered = false;
+
   const answer = (guessedScam) => {
+    if (answered) return;
+    answered = true;
     const correct = guessedScam === item.isScam;
     recordAnswer(correct);
     if (correct) quizScore += 1;
@@ -1014,14 +1030,64 @@ function renderQuiz() {
 
     scamBtn.disabled = true;
     okBtn.disabled = true;
+    messageCard.classList.add("swipe-locked");
     container.append(feedback, nextRow);
   };
 
   scamBtn.addEventListener("click", () => answer(true));
   okBtn.addEventListener("click", () => answer(false));
 
+  const SWIPE_THRESHOLD = 80;
+  let dragStartX = 0;
+  let dragX = 0;
+  let dragging = false;
+
+  const setDrag = (dx) => {
+    dragX = dx;
+    messageCard.style.transform = `translateX(${dx}px) rotate(${dx / 18}deg)`;
+    stampScam.style.opacity = Math.min(Math.max(-dx / SWIPE_THRESHOLD, 0), 1);
+    stampOk.style.opacity = Math.min(Math.max(dx / SWIPE_THRESHOLD, 0), 1);
+  };
+
+  const resetDrag = () => {
+    messageCard.style.transform = "";
+    stampScam.style.opacity = 0;
+    stampOk.style.opacity = 0;
+  };
+
+  messageCard.addEventListener("pointerdown", (e) => {
+    if (answered || (e.button !== undefined && e.button !== 0)) return;
+    dragging = true;
+    dragStartX = e.clientX;
+    messageCard.setPointerCapture(e.pointerId);
+    messageCard.classList.add("dragging");
+  });
+
+  messageCard.addEventListener("pointermove", (e) => {
+    if (!dragging) return;
+    setDrag(e.clientX - dragStartX);
+  });
+
+  const endDrag = () => {
+    if (!dragging) return;
+    dragging = false;
+    messageCard.classList.remove("dragging");
+    if (dragX <= -SWIPE_THRESHOLD) {
+      messageCard.classList.add("flying-left");
+      answer(true);
+    } else if (dragX >= SWIPE_THRESHOLD) {
+      messageCard.classList.add("flying-right");
+      answer(false);
+    } else {
+      resetDrag();
+    }
+  };
+
+  messageCard.addEventListener("pointerup", endDrag);
+  messageCard.addEventListener("pointercancel", endDrag);
+
   choices.append(scamBtn, okBtn);
-  container.append(progress, messageCard, choices);
+  container.append(progress, messageCard, hint, choices);
 }
 
 let redFlagRoundItems = [];
