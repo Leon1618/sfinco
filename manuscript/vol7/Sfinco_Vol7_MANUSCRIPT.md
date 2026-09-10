@@ -294,7 +294,7 @@ Settings path (Microsoft 365):  Outlook  >  Settings  >  Mail  >  Forwarding.
 
 Settings path (Google Workspace):  Gmail  >  Settings  >  See all settings  >  Forwarding and POP/IMAP.
 
-![Email settings screen showing the forwarding rules section with no unexpected addresses](screenshots/ch3-forwarding-rules.png)
+![Email settings screen showing the forwarding rules section with no unexpected addresses](screenshots/vol7-ch3-forwarding-rules.png)
 
 *Mockup illustration, styled to match a typical organisational email admin panel — reshoot using your actual email provider before final layout.*
 
@@ -310,7 +310,7 @@ Settings path (Microsoft 365):  Outlook  >  My Account  >  Security info  >  Rec
 
 Settings path (Google Workspace):  Google Account  >  Security  >  Your devices.
 
-![Email account security page showing recent sign-in activity by location and device](screenshots/ch3-signin-activity.png)
+![Email account security page showing recent sign-in activity by location and device](screenshots/vol7-ch3-signin-activity.png)
 
 *Mockup illustration, styled to match a typical organisational email admin panel — reshoot using your actual email provider before final layout.*
 
@@ -378,7 +378,7 @@ Volunteer organisations face a particular challenge that most businesses do not:
 
 Least privilege simply means giving each person access to only what they need for their current role, no more. A volunteer helping with a single fundraising event does not need access to your donor database. A committee member handling social media does not need access to your banking.
 
-![Donor management software admin panel showing volunteers with different access levels](screenshots/ch4-access-levels.png)
+![Donor management software admin panel showing volunteers with different access levels](screenshots/vol7-ch4-access-levels.png)
 
 *Mockup illustration, styled to match a typical donor management platform — reshoot using your actual software before final layout.*
 
@@ -390,7 +390,7 @@ Least privilege simply means giving each person access to only what they need fo
 
 Settings path: this varies by platform, but is usually found under Settings > Users, Team, or Members within whatever donor management, email, or accounting software your organisation uses.
 
-![Volunteer access review screen listing committee members and their permission levels](screenshots/ch4-staff-review.png)
+![Volunteer access review screen listing committee members and their permission levels](screenshots/vol7-ch4-staff-review.png)
 
 *Mockup illustration, styled to match a typical donor management platform — reshoot using your actual software before final layout.*
 
@@ -574,7 +574,7 @@ If your organisation operates from a venue that offers public or community Wi-Fi
 
 Settings path: ask the venue whether a private or staff network is available, separate from any public or guest Wi-Fi.
 
-![Router settings screen showing a separate network for organisational devices](screenshots/ch6-guest-network.png)
+![Router settings screen showing a separate network for organisational devices](screenshots/vol7-ch6-guest-network.png)
 
 *Mockup illustration, styled to match a typical venue Wi-Fi admin panel — reshoot using your actual venue's network before final layout.*
 
@@ -586,7 +586,7 @@ Settings path: ask the venue whether a private or staff network is available, se
 
 Many small organisations rely on a single shared laptop or tablet, used by whoever is rostered on that day. This convenience comes with a real risk if the device is not set up carefully.
 
-![Shared device settings showing separate user accounts for different volunteers](screenshots/ch6-pos-network.png)
+![Shared device settings showing separate user accounts for different volunteers](screenshots/vol7-ch6-pos-network.png)
 
 *Mockup illustration, styled to match a typical device settings panel — reshoot using your actual equipment before final layout.*
 
@@ -600,7 +600,7 @@ Any router, shared device, or piece of equipment your organisation owns ships wi
 
 Settings path: usually found in your router or device's admin panel under Administration or System.
 
-![Router administration settings showing a custom admin password set](screenshots/ch6-admin-password.png)
+![Router administration settings showing a custom admin password set](screenshots/vol7-ch6-admin-password.png)
 
 *Mockup illustration, styled to match a typical router admin panel — reshoot using your actual equipment before final layout.*
 
@@ -617,7 +617,7 @@ If any volunteer or committee member accesses organisational systems from home o
 | ProtonVPN | Free tier available | Strong privacy focus, a genuinely usable free plan for small teams |
 | Tailscale | Free for small teams | Simple, secure connection between volunteer devices and organisational systems |
 
-![VPN app screen showing a secure connection active for a remote volunteer](screenshots/ch6-vpn-remote-access.png)
+![VPN app screen showing a secure connection active for a remote volunteer](screenshots/vol7-ch6-vpn-remote-access.png)
 
 *Mockup illustration, styled to match a typical VPN app — reshoot using your actual software before final layout.*
 
@@ -655,7 +655,7 @@ A ransomware attack or a serious data breach is stressful enough without also di
 
 A reliable backup strategy follows a simple rule: keep three copies of your data, on two different types of storage, with one copy kept somewhere separate from your main location.
 
-![Diagram showing the 3-2-1 backup rule for a community organisation](screenshots/ch7-321-backup-diagram.png)
+![Diagram showing the 3-2-1 backup rule for a community organisation](screenshots/vol7-ch7-321-backup-diagram.png)
 
 In practice, for most small organisations, this means your working files, an automatic cloud backup (through Google Workspace, Microsoft 365, or your donor management platform), and a separate external drive or secondary cloud backup kept genuinely independent of your main systems.
 
@@ -667,7 +667,7 @@ In practice, for most small organisations, this means your working files, an aut
 
 Settings path: this varies by platform, but most cloud email, file storage, and donor management services show a "last backed up" or "last synced" date somewhere in their settings.
 
-![Cloud backup settings screen showing a recent, successful backup date](screenshots/ch7-backup-status.png)
+![Cloud backup settings screen showing a recent, successful backup date](screenshots/vol7-ch7-backup-status.png)
 
 *Mockup illustration, styled to match a typical cloud backup admin panel — reshoot using your actual software before final layout.*
 

@@ -15,7 +15,7 @@ Every staff member with access to an account, a shared drive, or a piece of soft
 
 Least privilege simply means giving each person access to only what they need to do their job, no more. A casual staff member taking phone bookings does not need access to your accounting software's bank feed. A bookkeeper does not need admin access to your website.
 
-![Business software admin panel showing staff members with different access levels](screenshots/ch4-access-levels.png)
+![Business software admin panel showing staff members with different access levels](screenshots/vol6-ch4-access-levels.png)
 
 *Mockup illustration, styled to match a typical business admin panel — reshoot using your actual software before final layout.*
 
@@ -27,7 +27,7 @@ Least privilege simply means giving each person access to only what they need to
 
 Settings path: this varies by platform, but is usually found under Settings > Users, Team, or Staff within whatever accounting, email, or point-of-sale software your business uses.
 
-![Staff access review screen listing team members and their permission levels](screenshots/ch4-staff-review.png)
+![Staff access review screen listing team members and their permission levels](screenshots/vol6-ch4-staff-review.png)
 
 *Mockup illustration, styled to match a typical business admin panel — reshoot using your actual software before final layout.*
 

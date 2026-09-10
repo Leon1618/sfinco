@@ -15,7 +15,7 @@ A ransomware attack or a serious data breach is stressful enough without also di
 
 A reliable backup strategy for a small business follows a simple rule: keep three copies of your data, on two different types of storage, with one copy kept somewhere separate from your main location.
 
-![Diagram showing the 3-2-1 backup rule for a small business](screenshots/ch7-321-backup-diagram.png)
+![Diagram showing the 3-2-1 backup rule for a small business](screenshots/vol6-ch7-321-backup-diagram.png)
 
 In practice, for most small businesses, this means your working files, an automatic cloud backup (through your accounting software, Microsoft 365, or Google Workspace), and a separate external drive or secondary cloud backup kept genuinely independent of your main systems.
 
@@ -27,7 +27,7 @@ In practice, for most small businesses, this means your working files, an automa
 
 Settings path: this varies by platform, but most cloud accounting, email, and file storage services show a "last backed up" or "last synced" date somewhere in their settings.
 
-![Cloud backup settings screen showing a recent, successful backup date](screenshots/ch7-backup-status.png)
+![Cloud backup settings screen showing a recent, successful backup date](screenshots/vol6-ch7-backup-status.png)
 
 *Mockup illustration, styled to match a typical cloud backup admin panel — reshoot using your actual software before final layout.*
 

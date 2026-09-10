@@ -17,7 +17,7 @@ If your organisation operates from a venue that offers public or community Wi-Fi
 
 Settings path: ask the venue whether a private or staff network is available, separate from any public or guest Wi-Fi.
 
-![Router settings screen showing a separate network for organisational devices](screenshots/ch6-guest-network.png)
+![Router settings screen showing a separate network for organisational devices](screenshots/vol7-ch6-guest-network.png)
 
 *Mockup illustration, styled to match a typical venue Wi-Fi admin panel — reshoot using your actual venue's network before final layout.*
 
@@ -29,7 +29,7 @@ Settings path: ask the venue whether a private or staff network is available, se
 
 Many small organisations rely on a single shared laptop or tablet, used by whoever is rostered on that day. This convenience comes with a real risk if the device is not set up carefully.
 
-![Shared device settings showing separate user accounts for different volunteers](screenshots/ch6-pos-network.png)
+![Shared device settings showing separate user accounts for different volunteers](screenshots/vol7-ch6-pos-network.png)
 
 *Mockup illustration, styled to match a typical device settings panel — reshoot using your actual equipment before final layout.*
 
@@ -43,7 +43,7 @@ Any router, shared device, or piece of equipment your organisation owns ships wi
 
 Settings path: usually found in your router or device's admin panel under Administration or System.
 
-![Router administration settings showing a custom admin password set](screenshots/ch6-admin-password.png)
+![Router administration settings showing a custom admin password set](screenshots/vol7-ch6-admin-password.png)
 
 *Mockup illustration, styled to match a typical router admin panel — reshoot using your actual equipment before final layout.*
 
@@ -60,7 +60,7 @@ If any volunteer or committee member accesses organisational systems from home o
 | ProtonVPN | Free tier available | Strong privacy focus, a genuinely usable free plan for small teams |
 | Tailscale | Free for small teams | Simple, secure connection between volunteer devices and organisational systems |
 
-![VPN app screen showing a secure connection active for a remote volunteer](screenshots/ch6-vpn-remote-access.png)
+![VPN app screen showing a secure connection active for a remote volunteer](screenshots/vol7-ch6-vpn-remote-access.png)
 
 *Mockup illustration, styled to match a typical VPN app — reshoot using your actual software before final layout.*
 

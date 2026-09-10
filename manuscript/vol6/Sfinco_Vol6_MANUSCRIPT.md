@@ -283,7 +283,7 @@ Settings path (Microsoft 365):  Outlook  >  Settings  >  Mail  >  Forwarding.
 
 Settings path (Google Workspace):  Gmail  >  Settings  >  See all settings  >  Forwarding and POP/IMAP.
 
-![Email settings screen showing the forwarding rules section with no unexpected addresses](screenshots/ch3-forwarding-rules.png)
+![Email settings screen showing the forwarding rules section with no unexpected addresses](screenshots/vol6-ch3-forwarding-rules.png)
 
 *Mockup illustration, styled to match a typical business email admin panel — reshoot using your actual email provider before final layout.*
 
@@ -299,7 +299,7 @@ Settings path (Microsoft 365):  Outlook  >  My Account  >  Security info  >  Rec
 
 Settings path (Google Workspace):  Google Account  >  Security  >  Your devices.
 
-![Email account security page showing recent sign-in activity by location and device](screenshots/ch3-signin-activity.png)
+![Email account security page showing recent sign-in activity by location and device](screenshots/vol6-ch3-signin-activity.png)
 
 *Mockup illustration, styled to match a typical business email admin panel — reshoot using your actual email provider before final layout.*
 
@@ -367,7 +367,7 @@ Every staff member with access to an account, a shared drive, or a piece of soft
 
 Least privilege simply means giving each person access to only what they need to do their job, no more. A casual staff member taking phone bookings does not need access to your accounting software's bank feed. A bookkeeper does not need admin access to your website.
 
-![Business software admin panel showing staff members with different access levels](screenshots/ch4-access-levels.png)
+![Business software admin panel showing staff members with different access levels](screenshots/vol6-ch4-access-levels.png)
 
 *Mockup illustration, styled to match a typical business admin panel — reshoot using your actual software before final layout.*
 
@@ -379,7 +379,7 @@ Least privilege simply means giving each person access to only what they need to
 
 Settings path: this varies by platform, but is usually found under Settings > Users, Team, or Staff within whatever accounting, email, or point-of-sale software your business uses.
 
-![Staff access review screen listing team members and their permission levels](screenshots/ch4-staff-review.png)
+![Staff access review screen listing team members and their permission levels](screenshots/vol6-ch4-staff-review.png)
 
 *Mockup illustration, styled to match a typical business admin panel — reshoot using your actual software before final layout.*
 
@@ -563,7 +563,7 @@ If you offer Wi-Fi to customers, it should run on a completely separate network 
 
 Settings path: usually found in your router or modem's admin panel under Guest Network or a similar name.
 
-![Router settings screen showing a separate guest Wi-Fi network enabled](screenshots/ch6-guest-network.png)
+![Router settings screen showing a separate guest Wi-Fi network enabled](screenshots/vol6-ch6-guest-network.png)
 
 *Mockup illustration, styled to match a typical router admin panel — reshoot using your actual equipment before final layout.*
 
@@ -575,7 +575,7 @@ Settings path: usually found in your router or modem's admin panel under Guest N
 
 Beyond separating customer Wi-Fi, your point-of-sale or EFTPOS system should ideally sit on its own dedicated network, separate even from the computers your staff use for email and general business tasks.
 
-![Network settings showing point-of-sale devices on a separate, dedicated network](screenshots/ch6-pos-network.png)
+![Network settings showing point-of-sale devices on a separate, dedicated network](screenshots/vol6-ch6-pos-network.png)
 
 *Mockup illustration, styled to match a typical router admin panel — reshoot using your actual equipment before final layout.*
 
@@ -589,7 +589,7 @@ Every router and point-of-sale system ships with a default administrator passwor
 
 Settings path: usually found in your router or point-of-sale system's admin panel under Administration or System.
 
-![Router administration settings showing a custom admin password set](screenshots/ch6-admin-password.png)
+![Router administration settings showing a custom admin password set](screenshots/vol6-ch6-admin-password.png)
 
 *Mockup illustration, styled to match a typical router admin panel — reshoot using your actual equipment before final layout.*
 
@@ -607,7 +607,7 @@ If any staff member accesses business systems from home or on the road, a VPN ad
 | NordLayer | ~AU$12/mo per user | Built specifically for small business teams |
 | Tailscale | Free for small teams | Simple, secure connection between staff devices and business systems |
 
-![VPN app screen showing a secure connection active for remote staff access](screenshots/ch6-vpn-remote-access.png)
+![VPN app screen showing a secure connection active for remote staff access](screenshots/vol6-ch6-vpn-remote-access.png)
 
 *Mockup illustration, styled to match a typical VPN app — reshoot using your actual software before final layout.*
 
@@ -645,7 +645,7 @@ A ransomware attack or a serious data breach is stressful enough without also di
 
 A reliable backup strategy for a small business follows a simple rule: keep three copies of your data, on two different types of storage, with one copy kept somewhere separate from your main location.
 
-![Diagram showing the 3-2-1 backup rule for a small business](screenshots/ch7-321-backup-diagram.png)
+![Diagram showing the 3-2-1 backup rule for a small business](screenshots/vol6-ch7-321-backup-diagram.png)
 
 In practice, for most small businesses, this means your working files, an automatic cloud backup (through your accounting software, Microsoft 365, or Google Workspace), and a separate external drive or secondary cloud backup kept genuinely independent of your main systems.
 
@@ -657,7 +657,7 @@ In practice, for most small businesses, this means your working files, an automa
 
 Settings path: this varies by platform, but most cloud accounting, email, and file storage services show a "last backed up" or "last synced" date somewhere in their settings.
 
-![Cloud backup settings screen showing a recent, successful backup date](screenshots/ch7-backup-status.png)
+![Cloud backup settings screen showing a recent, successful backup date](screenshots/vol6-ch7-backup-status.png)
 
 *Mockup illustration, styled to match a typical cloud backup admin panel — reshoot using your actual software before final layout.*
 

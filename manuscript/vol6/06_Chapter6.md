@@ -17,7 +17,7 @@ If you offer Wi-Fi to customers, it should run on a completely separate network 
 
 Settings path: usually found in your router or modem's admin panel under Guest Network or a similar name.
 
-![Router settings screen showing a separate guest Wi-Fi network enabled](screenshots/ch6-guest-network.png)
+![Router settings screen showing a separate guest Wi-Fi network enabled](screenshots/vol6-ch6-guest-network.png)
 
 *Mockup illustration, styled to match a typical router admin panel — reshoot using your actual equipment before final layout.*
 
@@ -29,7 +29,7 @@ Settings path: usually found in your router or modem's admin panel under Guest N
 
 Beyond separating customer Wi-Fi, your point-of-sale or EFTPOS system should ideally sit on its own dedicated network, separate even from the computers your staff use for email and general business tasks.
 
-![Network settings showing point-of-sale devices on a separate, dedicated network](screenshots/ch6-pos-network.png)
+![Network settings showing point-of-sale devices on a separate, dedicated network](screenshots/vol6-ch6-pos-network.png)
 
 *Mockup illustration, styled to match a typical router admin panel — reshoot using your actual equipment before final layout.*
 
@@ -43,7 +43,7 @@ Every router and point-of-sale system ships with a default administrator passwor
 
 Settings path: usually found in your router or point-of-sale system's admin panel under Administration or System.
 
-![Router administration settings showing a custom admin password set](screenshots/ch6-admin-password.png)
+![Router administration settings showing a custom admin password set](screenshots/vol6-ch6-admin-password.png)
 
 *Mockup illustration, styled to match a typical router admin panel — reshoot using your actual equipment before final layout.*
 
@@ -61,7 +61,7 @@ If any staff member accesses business systems from home or on the road, a VPN ad
 | NordLayer | ~AU$12/mo per user | Built specifically for small business teams |
 | Tailscale | Free for small teams | Simple, secure connection between staff devices and business systems |
 
-![VPN app screen showing a secure connection active for remote staff access](screenshots/ch6-vpn-remote-access.png)
+![VPN app screen showing a secure connection active for remote staff access](screenshots/vol6-ch6-vpn-remote-access.png)
 
 *Mockup illustration, styled to match a typical VPN app — reshoot using your actual software before final layout.*
 

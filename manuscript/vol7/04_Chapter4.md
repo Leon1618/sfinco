@@ -15,7 +15,7 @@ Volunteer organisations face a particular challenge that most businesses do not:
 
 Least privilege simply means giving each person access to only what they need for their current role, no more. A volunteer helping with a single fundraising event does not need access to your donor database. A committee member handling social media does not need access to your banking.
 
-![Donor management software admin panel showing volunteers with different access levels](screenshots/ch4-access-levels.png)
+![Donor management software admin panel showing volunteers with different access levels](screenshots/vol7-ch4-access-levels.png)
 
 *Mockup illustration, styled to match a typical donor management platform — reshoot using your actual software before final layout.*
 
@@ -27,7 +27,7 @@ Least privilege simply means giving each person access to only what they need fo
 
 Settings path: this varies by platform, but is usually found under Settings > Users, Team, or Members within whatever donor management, email, or accounting software your organisation uses.
 
-![Volunteer access review screen listing committee members and their permission levels](screenshots/ch4-staff-review.png)
+![Volunteer access review screen listing committee members and their permission levels](screenshots/vol7-ch4-staff-review.png)
 
 *Mockup illustration, styled to match a typical donor management platform — reshoot using your actual software before final layout.*
 

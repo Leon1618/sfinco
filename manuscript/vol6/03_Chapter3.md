@@ -19,7 +19,7 @@ Settings path (Microsoft 365):  Outlook  >  Settings  >  Mail  >  Forwarding.
 
 Settings path (Google Workspace):  Gmail  >  Settings  >  See all settings  >  Forwarding and POP/IMAP.
 
-![Email settings screen showing the forwarding rules section with no unexpected addresses](screenshots/ch3-forwarding-rules.png)
+![Email settings screen showing the forwarding rules section with no unexpected addresses](screenshots/vol6-ch3-forwarding-rules.png)
 
 *Mockup illustration, styled to match a typical business email admin panel — reshoot using your actual email provider before final layout.*
 
@@ -35,7 +35,7 @@ Settings path (Microsoft 365):  Outlook  >  My Account  >  Security info  >  Rec
 
 Settings path (Google Workspace):  Google Account  >  Security  >  Your devices.
 
-![Email account security page showing recent sign-in activity by location and device](screenshots/ch3-signin-activity.png)
+![Email account security page showing recent sign-in activity by location and device](screenshots/vol6-ch3-signin-activity.png)
 
 *Mockup illustration, styled to match a typical business email admin panel — reshoot using your actual email provider before final layout.*
 
