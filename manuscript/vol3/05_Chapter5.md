@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 3 — Family and Home Network Protection  ·  Chapter 5
+Sfinco Guides  ·  Volume 3: Family and Home Network Protection  ·  Chapter 5
 
 
 # Scams that target your household
@@ -7,9 +7,9 @@ Sfinco Guides  ·  Volume 3 — Family and Home Network Protection  ·  Chapter 
 How to spot them, what to do, and how to recover if you clicked
 
 
-## Why scams work — the psychology behind them
+## Why scams work, the psychology behind them
 
-Every scam in this chapter relies on the same handful of psychological triggers: urgency, fear, authority, and trust. A message that makes you feel your internet is about to be cut off, that a family member is in trouble, or that it comes from your provider, is designed to make you skip the one step that would protect you — stopping to check.
+Every scam in this chapter relies on the same handful of psychological triggers: urgency, fear, authority, and trust. A message that makes you feel your internet is about to be cut off, that a family member is in trouble, or that it comes from your provider, is designed to make you skip the one step that would protect you, stopping to check.
 
 
 ## The scams most likely to reach your household
@@ -24,7 +24,7 @@ An email or text claims to be from Telstra, Optus, or your NBN provider, warning
 
 | Your service will be suspended within 24 hours due to a failed payment. Update your details now: telstra-billing-au.com/pay |
 
-*Illustrative mockup, not real Telstra correspondence — built to show the pattern, not to reproduce their branding.*
+*Illustrative mockup, not real Telstra correspondence, built to show the pattern, not to reproduce their branding.*
 
 Your real provider's domain always matches their official website. Log in directly through the provider's app or by typing their address yourself, never through a link in an unexpected message.
 
@@ -42,7 +42,7 @@ An email claims your smart camera or doorbell's cloud storage subscription has e
 
 | Your Ring Protect subscription payment failed. Update your payment details within 24 hours to avoid losing access to your video history: ring-account-billing.com/update |
 
-*Illustrative mockup, not real Ring correspondence — built to show the pattern, not to reproduce their branding.*
+*Illustrative mockup, not real Ring correspondence, built to show the pattern, not to reproduce their branding.*
 
 Check subscription and billing status only inside the device's own official app, never through an emailed link.
 
@@ -50,7 +50,7 @@ Check subscription and billing status only inside the device's own official app,
 
 A caller claims to be from your internet provider, saying they have detected a problem with your connection or router, and asks for remote access to "fix" it.
 
-| ✶  CRITICAL — READ THIS CAREFULLY No legitimate internet provider will call you unprompted offering to remotely access your router or computer to fix a connection issue. If you are experiencing a genuine problem, you contact them — using the number on your bill or their official website, never a number provided by an unsolicited caller. |
+| ✶  CRITICAL, READ THIS CAREFULLY No legitimate internet provider will call you unprompted offering to remotely access your router or computer to fix a connection issue. If you are experiencing a genuine problem, you contact them, using the number on your bill or their official website, never a number provided by an unsolicited caller. |
 
 5. Scams targeting children and grandchildren online
 
@@ -79,7 +79,7 @@ The greeting is generic.  "Dear Customer" suggests a mass-sent scam. Your provid
 Disconnect the affected device from Wi-Fi immediately. Do not enter any passwords or payment details if a page is still open asking for them. Change the password for any account you may have entered details for, from a different, trusted device. Contact your bank directly if you entered any financial details, and monitor your accounts closely for the following weeks. If a smart device account may be compromised, change that device's password too and review its connected sharing list.
 
 
-## Quick review — your chapter 5 checklist
+## Quick review, your chapter 5 checklist
 
 | Done | Item |
 | --- | --- |

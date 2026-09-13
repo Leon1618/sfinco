@@ -1,4 +1,4 @@
-# MacBook Protection — Back Cover Copy
+# MacBook Protection, Back Cover Copy
 
 **Blurb:**
 

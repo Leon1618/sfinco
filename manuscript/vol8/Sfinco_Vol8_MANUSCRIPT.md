@@ -122,11 +122,11 @@ Ready? Chapter 1 starts with why your money is a target in the first place.
 
 sfinco.com.au
 
-Part of the Sfinco Guides series — protecting Australians online
+Part of the Sfinco Guides series, protecting Australians online
 
 ---
 
-Sfinco Guides  ·  Volume 8 — Personal Finance Protection  ·  Chapter 1
+Sfinco Guides  ·  Volume 8: Personal Finance Protection  ·  Chapter 1
 
 
 # Why your money is a target
@@ -145,13 +145,13 @@ Stories like Peter's, often called "pig butchering" scams by investigators becau
 
 Scammers targeting individuals generally look for a specific combination of factors, and understanding them helps explain why the schemes in this book exist at all.
 
-Genuine savings — decades of work, often including a lump sum of superannuation, represent a large, appealing target compared to a smaller, everyday amount
+Genuine savings, decades of work, often including a lump sum of superannuation, represent a large, appealing target compared to a smaller, everyday amount
 
-Trust in institutions — a scam impersonating your bank, the ATO, or a government service borrows the trust you already have in the real organisation
+Trust in institutions, a scam impersonating your bank, the ATO, or a government service borrows the trust you already have in the real organisation
 
-Time and attention — many scams, particularly investment and romance scams, rely on patience and a genuine emotional connection built over weeks or months
+Time and attention, many scams, particularly investment and romance scams, rely on patience and a genuine emotional connection built over weeks or months
 
-Unfamiliarity with new technology — cryptocurrency, instant transfers, and new payment platforms are all genuinely useful, but their newness also means fewer people instinctively recognise what "normal" looks like
+Unfamiliarity with new technology, cryptocurrency, instant transfers, and new payment platforms are all genuinely useful, but their newness also means fewer people instinctively recognise what "normal" looks like
 
 | ℹ  DID YOU KNOW? The National Anti-Scam Centre reported that Australians lost over $2 billion to scams in a recent year, with investment scams consistently representing the single largest category of loss by dollar value, disproportionately affecting people over 55. |
 
@@ -189,7 +189,7 @@ The rest of this book walks through exactly what to check, one chapter at a time
 
 ---
 
-Sfinco Guides  ·  Volume 8 — Personal Finance Protection  ·  Chapter 2
+Sfinco Guides  ·  Volume 8: Personal Finance Protection  ·  Chapter 2
 
 
 # Locking down your everyday banking
@@ -210,7 +210,7 @@ Settings path: usually found in your banking app under Settings, Notifications, 
 
 ![Banking app notification settings showing transaction alerts turned on for all transaction types](screenshots/ch2-transaction-alerts.png)
 
-*Mockup illustration, styled to match a typical Australian banking app — reshoot using your actual bank's app before final layout.*
+*Mockup illustration, styled to match a typical Australian banking app, reshoot using your actual bank's app before final layout.*
 
 ★  TIP:  Turn on alerts for every transaction type, not just large ones. Many scams start with a small test transaction to check whether a card or account is "live" before a larger amount is taken.
 
@@ -224,7 +224,7 @@ Settings path: usually found in your banking app under Settings, Security, or Lo
 
 ![Banking app security settings showing fingerprint or face login enabled](screenshots/ch2-app-login-security.png)
 
-*Mockup illustration, styled to match a typical Australian banking app — reshoot using your actual bank's app before final layout.*
+*Mockup illustration, styled to match a typical Australian banking app, reshoot using your actual bank's app before final layout.*
 
 Enable fingerprint or face login if your bank offers it, in addition to a PIN or password. This is both more convenient and generally more secure than a PIN alone, since it cannot be observed or guessed by someone nearby.
 
@@ -248,7 +248,7 @@ Settings path: usually found in your banking app under Settings, Limits, or Tran
 
 ![Banking app settings showing a custom daily transfer limit](screenshots/ch2-transfer-limit.png)
 
-*Mockup illustration, styled to match a typical Australian banking app — reshoot using your actual bank's app before final layout.*
+*Mockup illustration, styled to match a typical Australian banking app, reshoot using your actual bank's app before final layout.*
 
 | ⚠  WARNING A lower daily transfer limit, set to slightly above what you would genuinely need in a normal day, acts as a built-in circuit breaker. Even if you are ever convinced to make a fraudulent transfer, a sensible limit can prevent the entire balance of an account from being moved in one transaction. |
 
@@ -260,12 +260,12 @@ Most banking apps let you temporarily freeze a card, turn off overseas transacti
 
 ![Banking app showing card controls including freeze card and disable overseas transactions](screenshots/ch2-card-controls.png)
 
-*Mockup illustration, styled to match a typical Australian banking app — reshoot using your actual bank's app before final layout.*
+*Mockup illustration, styled to match a typical Australian banking app, reshoot using your actual bank's app before final layout.*
 
 | ✓  WELL DONE IF YOU HAVE THIS If you know how to freeze your own card instantly from your banking app, you can respond to a lost card or suspected fraud in seconds, rather than waiting on hold with your bank. |
 
 
-## Quick review — your chapter 2 checklist
+## Quick review, your chapter 2 checklist
 
 
 | Done | Item |
@@ -280,7 +280,7 @@ With your everyday banking locked down, the next chapter looks at your myGov acc
 
 ---
 
-Sfinco Guides  ·  Volume 8 — Personal Finance Protection  ·  Chapter 3
+Sfinco Guides  ·  Volume 8: Personal Finance Protection  ·  Chapter 3
 
 
 # Your myGov account and superannuation
@@ -301,7 +301,7 @@ Settings path:  my.gov.au  >  Account settings  >  Sign in options.
 
 ![myGov account settings showing sign-in options and linked services](screenshots/ch3-mygov-security.png)
 
-*Mockup illustration, styled to match myGov — reshoot using your actual account before final layout.*
+*Mockup illustration, styled to match myGov, reshoot using your actual account before final layout.*
 
 ★  TIP:  Use the myGovID app for signing in wherever possible, rather than a code sent by text. It is generally considered more secure and is not vulnerable to a text message being intercepted.
 
@@ -315,7 +315,7 @@ Settings path:  my.gov.au  >  Linked services  >  Australian Taxation Office  > 
 
 ![ATO online services screen showing linked superannuation accounts and balances](screenshots/ch3-super-accounts.png)
 
-*Mockup illustration, styled to match ATO online services — reshoot using your actual account before final layout.*
+*Mockup illustration, styled to match ATO online services, reshoot using your actual account before final layout.*
 
 | ℹ  DID YOU KNOW? Many Australians have multiple, forgotten superannuation accounts from previous jobs, each charging separate fees. Checking this screen occasionally can reveal genuine, unclaimed money, though any decision to consolidate accounts should consider factors like insurance attached to an older account, best discussed with your fund or a licensed adviser. |
 
@@ -331,7 +331,7 @@ Unsolicited consolidation calls.  A caller claims to represent your super fund o
 
 Fake fund switching pressure.  A caller pressures you to switch your super into a fund offering unusually high, guaranteed-sounding returns, a claim that should itself be treated as a warning sign.
 
-| ✶  CRITICAL — READ THIS CAREFULLY Genuine early release of superannuation is only available in specific, narrow circumstances defined by the ATO, such as severe financial hardship or terminal illness, and is never arranged through an unsolicited caller offering to "help" for a fee. Never provide your myGov or super fund login details to anyone who contacts you unprompted. |
+| ✶  CRITICAL, READ THIS CAREFULLY Genuine early release of superannuation is only available in specific, narrow circumstances defined by the ATO, such as severe financial hardship or terminal illness, and is never arranged through an unsolicited caller offering to "help" for a fee. Never provide your myGov or super fund login details to anyone who contacts you unprompted. |
 
 
 ## When a super decision needs a licensed adviser
@@ -342,7 +342,7 @@ Whether to consolidate accounts, change your investment option within super, or 
 ! IMPORTANT: This book does not recommend specific super funds, contribution strategies, or investment options, since this constitutes personal financial advice, which in Australia can only be provided by a person or business holding an Australian Financial Services Licence (AFSL) or acting as an authorised representative of one. Your existing super fund, a licensed financial adviser, or ASIC's free MoneySmart service (moneysmart.gov.au) are appropriate places to seek this kind of guidance.
 
 
-## Quick review — your chapter 3 checklist
+## Quick review, your chapter 3 checklist
 
 
 | Done | Item |
@@ -356,7 +356,7 @@ With your myGov and super accounts checked, the next chapter looks at password m
 
 ---
 
-Sfinco Guides  ·  Volume 8 — Personal Finance Protection  ·  Chapter 4
+Sfinco Guides  ·  Volume 8: Personal Finance Protection  ·  Chapter 4
 
 
 # Password managers and safer financial habits
@@ -389,7 +389,7 @@ A password manager generates and stores a strong, unique password for every acco
 
 ![Password manager app showing saved logins for banking and superannuation accounts](screenshots/ch4-password-manager.png)
 
-*Mockup illustration, styled to match a typical password manager app — reshoot using your actual app before final layout.*
+*Mockup illustration, styled to match a typical password manager app, reshoot using your actual app before final layout.*
 
 ★  TIP:  Start with just your three or four most important accounts, your email, your bank, myGov, and your super fund. You do not need to move everything across in one sitting.
 
@@ -401,7 +401,7 @@ Most password managers, and some banks, can tell you if a password you use has a
 
 ![Password manager security dashboard showing a compromised password alert](screenshots/ch4-breach-alert.png)
 
-*Mockup illustration, styled to match a typical password manager app — reshoot using your actual app before final layout.*
+*Mockup illustration, styled to match a typical password manager app, reshoot using your actual app before final layout.*
 
 | ℹ  DID YOU KNOW? The free website haveibeenpwned.com lets you check whether your email address has appeared in a known data breach, without needing to install anything, and is run by an independent, well-regarded security researcher. |
 
@@ -419,7 +419,7 @@ Multi-factor authentication (MFA) requires a second step beyond your password, u
 If a password manager feels like too big a step right now, a physical notebook kept in a locked drawer, well away from your computer, is genuinely safer than reusing the same password everywhere. It is not the ideal solution, but it is a reasonable, honest middle step while you get comfortable with a password manager.
 
 
-## Quick review — your chapter 4 checklist
+## Quick review, your chapter 4 checklist
 
 
 | Done | Item |
@@ -433,7 +433,7 @@ With your passwords and habits in order, the next chapter looks at the investmen
 
 ---
 
-Sfinco Guides  ·  Volume 8 — Personal Finance Protection  ·  Chapter 5
+Sfinco Guides  ·  Volume 8: Personal Finance Protection  ·  Chapter 5
 
 
 # Investment and romance scams
@@ -442,7 +442,7 @@ Sfinco Guides  ·  Volume 8 — Personal Finance Protection  ·  Chapter 5
 How to spot them, what to do, and how to recover if you have already sent money
 
 
-## Why these scams work — the psychology behind them
+## Why these scams work, the psychology behind them
 
 
 Every scam in this chapter relies on patience, trust, and the genuine appeal of an opportunity that seems too good to question closely. Unlike a rushed phishing text, these scams often unfold over weeks or months, which makes them feel more credible, not less.
@@ -461,9 +461,9 @@ A new online contact, often met through social media or a dating app, eventually
 
 | I've been using this platform for a few months now and it's honestly changed things for me. I could show you how it works if you're interested, no pressure at all. |
 
-*Illustrative mockup, not a real message — built to show the pattern.*
+*Illustrative mockup, not a real message, built to show the pattern.*
 
-| ✶  CRITICAL — READ THIS CAREFULLY A genuine investment platform never needs to be introduced by a new personal contact, and a legitimate opportunity will still be there next week after you have checked it independently. If a platform shows your balance "growing" but charges a fee before letting you withdraw, this is one of the clearest signs of a scam. |
+| ✶  CRITICAL, READ THIS CAREFULLY A genuine investment platform never needs to be introduced by a new personal contact, and a legitimate opportunity will still be there next week after you have checked it independently. If a platform shows your balance "growing" but charges a fee before letting you withdraw, this is one of the clearest signs of a scam. |
 
 2. Fake broker cold calls
 
@@ -473,7 +473,7 @@ A caller claims to be from a licensed investment firm, often referencing real ma
 
 | We're offering select clients early access to this opportunity before it goes public. Given your profile, I think you'd be a great fit, but I do need you to move quickly as spots are limited. |
 
-*Illustrative mockup, not a real advisor call — built to show the pattern.*
+*Illustrative mockup, not a real advisor call, built to show the pattern.*
 
 Check whether a firm and individual are genuinely licensed using ASIC's free registers at moneysmart.gov.au or asic.gov.au before engaging further, and never let "spots are limited" pressure you into skipping this step.
 
@@ -485,7 +485,7 @@ A social media ad or fake news article shows a well-known Australian figure appa
 
 | Local businessman reveals the investment secret banks don't want you to know. Click to see how much you could be earning. |
 
-*Illustrative mockup, not a real advertisement — built to show the pattern.*
+*Illustrative mockup, not a real advertisement, built to show the pattern.*
 
 | ⚠  WARNING Genuine public figures do not endorse specific trading platforms or cryptocurrency schemes through social media ads. These images and quotes are frequently fabricated using widely available editing and AI tools. |
 
@@ -497,7 +497,7 @@ A caller claims to be from your bank's fraud department, warning that your accou
 
 | We've detected suspicious activity and need to move your funds to a secure holding account immediately while we investigate. Can you confirm your online banking details so I can assist? |
 
-*Illustrative mockup, not a real bank call — built to show the pattern.*
+*Illustrative mockup, not a real bank call, built to show the pattern.*
 
 Your bank will never ask you to transfer money to a "safe account," and will never ask for your online banking password or a one-time code over the phone. Hang up and call your bank directly using the number on the back of your card.
 
@@ -509,7 +509,7 @@ After weeks or months of relationship building, a new online partner introduces 
 
 | I hate to even ask this, but I'm in a difficult situation and could really use your help. I'll pay you back as soon as I can, I promise. |
 
-*Illustrative mockup, not a real message — built to show the pattern.*
+*Illustrative mockup, not a real message, built to show the pattern.*
 
 Never send money to someone you have only met online, regardless of how genuine the relationship feels, or how long it has been going on. This applies just as strongly after months of contact as it does after days.
 
@@ -536,7 +536,7 @@ You have never met the person in real life, but they are asking you for money
 Contact your bank immediately. Some payments can be recalled if reported within hours, though this becomes far less likely after a day or two. Report the incident to Scamwatch at scamwatch.gov.au and to the National Anti-Scam Centre. If the scam involved a relationship, consider speaking to IDCARE (idcare.org) for support, since these scams can be genuinely distressing beyond the financial loss. Do not send further money in an attempt to recover funds already lost, a common follow-up scam known as recovery fraud.
 
 
-## Quick review — your chapter 5 checklist
+## Quick review, your chapter 5 checklist
 
 
 | Done | Item |
@@ -550,7 +550,7 @@ With scams covered, the next chapter looks at safer everyday shopping and paymen
 
 ---
 
-Sfinco Guides  ·  Volume 8 — Personal Finance Protection  ·  Chapter 6
+Sfinco Guides  ·  Volume 8: Personal Finance Protection  ·  Chapter 6
 
 
 # Safer online shopping and payments
@@ -562,7 +562,7 @@ The everyday habits that protect your card and your bank account
 Most of us shop online regularly, and most of the time, nothing goes wrong. This chapter covers the handful of habits that keep it that way, and the newer payment methods worth understanding.
 
 
-## Digital wallets — safer than they might seem
+## Digital wallets, safer than they might seem
 
 
 Adding your card to Apple Pay, Google Pay, or a similar digital wallet is generally safer than using the physical card itself for online or tap-and-go purchases, since your actual card number is never shared with the shop or website.
@@ -571,12 +571,12 @@ Settings path:  your phone's Wallet app  >  Add card, following the prompts from
 
 ![Digital wallet app showing a bank card added and ready to use](screenshots/ch6-digital-wallet.png)
 
-*Mockup illustration, styled to match a typical digital wallet app — reshoot using your actual phone before final layout.*
+*Mockup illustration, styled to match a typical digital wallet app, reshoot using your actual phone before final layout.*
 
 | ℹ  DID YOU KNOW? When you pay with a digital wallet, the shop receives a unique, encrypted code for that transaction rather than your actual card number, which is why a digital wallet is generally considered more secure than swiping or inserting a physical card. |
 
 
-## Buy now, pay later services — what to know
+## Buy now, pay later services, what to know
 
 Services like Afterpay, Zip, and Klarna let you split a purchase into instalments, generally without a formal credit check. They are a genuine payment option, not inherently a scam, but they carry specific risks worth understanding.
 
@@ -603,10 +603,10 @@ Some banks let you create a virtual card, or you may choose to keep a separate c
 
 ![Banking app showing a virtual card created for online purchases](screenshots/ch6-virtual-card.png)
 
-*Mockup illustration, styled to match a typical Australian banking app — reshoot using your actual bank's app before final layout.*
+*Mockup illustration, styled to match a typical Australian banking app, reshoot using your actual bank's app before final layout.*
 
 
-## Quick review — your chapter 6 checklist
+## Quick review, your chapter 6 checklist
 
 
 | Done | Item |
@@ -620,7 +620,7 @@ With your shopping and payment habits covered, the next chapter looks at wills, 
 
 ---
 
-Sfinco Guides  ·  Volume 8 — Personal Finance Protection  ·  Chapter 7
+Sfinco Guides  ·  Volume 8: Personal Finance Protection  ·  Chapter 7
 
 
 # Wills, powers of attorney, and your digital estate
@@ -640,7 +640,7 @@ A will remains a legal document that only a solicitor can properly draft, but mo
 ! IMPORTANT: This book cannot and does not provide legal advice, and a valid, up-to-date will requires a qualified solicitor. What this chapter can help with is making sure you have gathered the right information beforehand, so your solicitor's time, and your family's time later, is used efficiently.
 
 
-## Superannuation death benefit nominations — often forgotten
+## Superannuation death benefit nominations, often forgotten
 
 Unlike most other assets, your superannuation is not automatically covered by your will unless you have made a specific death benefit nomination with your super fund. Many people are surprised to learn this.
 
@@ -648,12 +648,12 @@ Settings path:  contact your super fund directly, or check through my.gov.au  > 
 
 ![ATO online services screen showing a superannuation death benefit nomination status](screenshots/ch7-death-benefit-nomination.png)
 
-*Mockup illustration, styled to match ATO online services — reshoot using your actual account before final layout.*
+*Mockup illustration, styled to match ATO online services, reshoot using your actual account before final layout.*
 
 ★  TIP:  Check whether your nomination is "binding" or "non-binding" with your fund. A binding nomination is generally legally required to be followed, while a non-binding nomination is only a guide for the fund's trustee. Ask your fund directly if you are unsure which applies to yours.
 
 
-## Enduring power of attorney — a different kind of protection
+## Enduring power of attorney, a different kind of protection
 
 A will only takes effect after death. An enduring power of attorney allows someone you trust to manage your financial affairs if you are ever unable to yourself, due to illness, injury, or cognitive decline, while you are still alive.
 
@@ -681,7 +681,7 @@ Whether or not you use a formal password manager, it is worth preparing a simple
 Sfinco is developing a dedicated Digital Estate Vault, a secure way to organise exactly this kind of information for your family, alongside your password manager. It is not yet available. Once it launches, details will be shared at sfinco.com.au. Until then, the approach in this chapter, a physical or password-protected list, kept somewhere your family knows to look, remains a sound and completely free starting point.
 
 
-## Quick review — your chapter 7 checklist
+## Quick review, your chapter 7 checklist
 
 
 | Done | Item |
@@ -695,7 +695,7 @@ With your accounts, your money, and your estate all covered, the final chapter b
 
 ---
 
-Sfinco Guides  ·  Volume 8 — Personal Finance Protection  ·  Chapter 8
+Sfinco Guides  ·  Volume 8: Personal Finance Protection  ·  Chapter 8
 
 
 # Your 15-minute financial security checkup
@@ -705,7 +705,7 @@ A simple monthly routine to keep your money protected for years to come
 
 You have now worked through every major layer of personal finance protection: your everyday banking, your myGov and superannuation accounts, password managers, investment and romance scam awareness, safer shopping habits, and your digital estate. This final chapter brings all of it together into one simple monthly habit.
 
-| ℹ  DID YOU KNOW? Set a recurring reminder right now — the first Sunday of every month works well for most people. Open the Reminders or Calendar app, create a new reminder called 'Financial security checkup', and set it to repeat monthly. This is the single most important step in this chapter: the checklist only works if you actually come back to it. |
+| ℹ  DID YOU KNOW? Set a recurring reminder right now, the first Sunday of every month works well for most people. Open the Reminders or Calendar app, create a new reminder called 'Financial security checkup', and set it to repeat monthly. This is the single most important step in this chapter: the checklist only works if you actually come back to it. |
 
 
 ## The complete monthly checklist
@@ -763,7 +763,7 @@ This is the eighth and final volume in the Sfinco Guides series. Across these ei
 
 The thread running through all eight has been the same: protecting people who don't know they need protecting, through technology, money, and trust. Not because you are careless, or behind, or unable to keep up, but because nobody had ever laid it out for you in plain English before.
 
-| ✓  WELL DONE You have completed Sfinco Guides Volume 8 — Personal Finance Protection, and with it, the full Sfinco Guides series. Genuinely, well done. |
+| ✓  WELL DONE You have completed Sfinco Guides Volume 8: Personal Finance Protection, and with it, the full Sfinco Guides series. Genuinely, well done. |
 
 If this series has been useful to you, please consider sharing it with someone you care about, particularly anyone who could use a plain-English starting point rather than a technical manual. That is exactly what these books were written for.
 
@@ -775,7 +775,7 @@ Sfinco Guides  ·  Volume 8
 
 ## Glossary
 
-These are the key terms used throughout this book, explained in plain English. You do not need to memorise them — this section is here to help if you encounter a word and want a clear definition.
+These are the key terms used throughout this book, explained in plain English. You do not need to memorise them, this section is here to help if you encounter a word and want a clear definition.
 
 | Term | Definition |
 | --- | --- |
@@ -798,7 +798,7 @@ Sfinco Guides  ·  Volume 8
 
 ## Quick reference card
 
-Cut out or photograph this page and keep it somewhere handy — on the fridge, or saved as a photo on your phone. These are the numbers and steps you are most likely to need in a hurry.
+Cut out or photograph this page and keep it somewhere handy, on the fridge, or saved as a photo on your phone. These are the numbers and steps you are most likely to need in a hurry.
 
 ### Emergency contacts
 
@@ -817,7 +817,7 @@ Cut out or photograph this page and keep it somewhere handy — on the fridge, o
 | My super fund(s) | _________________________________ |
 | My solicitor | _________________________________ |
 | My financial adviser (if any) | _________________________________ |
-| Password manager — location noted | _________________________________ |
+| Password manager, location noted | _________________________________ |
 
 ### If you think you have sent money to a scam
 
@@ -887,13 +887,13 @@ Month / Year: _________________     Completed by: _________________
 
 sfinco.com.au · Vol 8 Personal Finance Protection
 
-## Sfinco Guides — the complete series
+## Sfinco Guides, the complete series
 
 The full series, all eight volumes
 
-The Sfinco Guides series is designed to cover every device, situation, and stage of life you are likely to encounter. Each book follows the same plain-English, step-by-step format — with real Australian examples, screenshots, and no technical jargon.
+The Sfinco Guides series is designed to cover every device, situation, and stage of life you are likely to encounter. Each book follows the same plain-English, step-by-step format, with real Australian examples, screenshots, and no technical jargon.
 
-### Series 1 — Personal protection
+### Series 1, Personal protection
 
 | Volume | What it covers |
 | --- | --- |
@@ -903,7 +903,7 @@ The Sfinco Guides series is designed to cover every device, situation, and stage
 | Vol 4 Available now | Windows Protection. A plain-English guide for Windows users. Sign-in & BitLocker · Microsoft account · Defender · Scams · Firewall & VPN · Backups |
 | Vol 5 Available now | Android Protection. Staying safe on your Android phone. Play Protect · app permissions · Google account · 2FA · scam texts and calls |
 
-### Series 2 — Organisational protection
+### Series 2, Organisational protection
 
 | Volume | What it covers |
 | --- | --- |
@@ -911,7 +911,7 @@ The Sfinco Guides series is designed to cover every device, situation, and stage
 | Vol 7 Available now | NGO and Not-for-Profit Protection. Protecting organisations that protect others. Volunteer access · donor data · email compromise · free tools for small teams |
 | Vol 8 Available now | Personal Finance Protection. Protecting your money in a digital world. Banking security · investment scams · superannuation · password managers · wills |
 
-| ★  TIP All Sfinco Guides are available on Amazon (search 'Sfinco Guides' or scan the QR code on the next page). Paperback and e-book editions are available. Bulk copies for community groups, RSL clubs, libraries, and medical practices are available directly through sfinco.com.au — contact us for pricing. |
+| ★  TIP All Sfinco Guides are available on Amazon (search 'Sfinco Guides' or scan the QR code on the next page). Paperback and e-book editions are available. Bulk copies for community groups, RSL clubs, libraries, and medical practices are available directly through sfinco.com.au, contact us for pricing. |
 
 ## Connect with us
 
@@ -921,13 +921,13 @@ Each QR code below links to a different part of the Sfinco ecosystem. Scan any o
 
 | Where it takes you | What you'll find |
 | --- | --- |
-| [ QR CODE ] WEBSITE | Visit the Sfinco website — free resources, guides, blog, and updates on new books in the series sfinco.com.au |
-| [ QR CODE ] TECH HELP | Book a Senior Tech Concierge session — in-person help with your devices on the Sunshine Coast sfinco.com.au/concierge |
-| [ QR CODE ] ALL BOOKS | Browse all Sfinco Guides — the complete series on Amazon and direct from our website sfinco.com.au/guides |
-| [ QR CODE ] BUSINESS | Sfinco for business — cyber security audits and assessments for Sunshine Coast small businesses sfinco.com.au/business |
-| [ QR CODE ] FREE DOWNLOAD | Free printable resources — scam reference card, monthly checklist, and more (no sign-up required) sfinco.com.au/resources |
+| [ QR CODE ] WEBSITE | Visit the Sfinco website, free resources, guides, blog, and updates on new books in the series sfinco.com.au |
+| [ QR CODE ] TECH HELP | Book a Senior Tech Concierge session, in-person help with your devices on the Sunshine Coast sfinco.com.au/concierge |
+| [ QR CODE ] ALL BOOKS | Browse all Sfinco Guides, the complete series on Amazon and direct from our website sfinco.com.au/guides |
+| [ QR CODE ] BUSINESS | Sfinco for business, cyber security audits and assessments for Sunshine Coast small businesses sfinco.com.au/business |
+| [ QR CODE ] FREE DOWNLOAD | Free printable resources, scam reference card, monthly checklist, and more (no sign-up required) sfinco.com.au/resources |
 
-| ℹ  NOTE QR codes are scanned using your phone's camera app — no separate app needed. All Sfinco links are safe and will never ask for payment details. |
+| ℹ  NOTE QR codes are scanned using your phone's camera app, no separate app needed. All Sfinco links are safe and will never ask for payment details. |
 
 Sfinco Guides  ·  Volume 8
 
@@ -937,11 +937,11 @@ Leonardo Pinheiro, the author of the Sfinco Guides series, works in banking and 
 
 Holding qualifications in cybersecurity (CompTIA Security+), financial advising (RG146), and information technology, and completing further studies at CQUniversity, Leonardo brings together a rare combination of technical knowledge and the ability to explain it clearly to people who have no interest in becoming technical experts.
 
-The inspiration for this series came from years of seeing the same pattern: intelligent, capable, careful people being harmed by scams and digital threats — not because they were careless, but because nobody had ever given them a clear, practical guide to protecting themselves. That gap is what these books, and Sfinco itself, exist to close.
+The inspiration for this series came from years of seeing the same pattern: intelligent, capable, careful people being harmed by scams and digital threats, not because they were careless, but because nobody had ever given them a clear, practical guide to protecting themselves. That gap is what these books, and Sfinco itself, exist to close.
 
 Leonardo also volunteers with CoderDojo, teaching digital skills to young people on the Sunshine Coast, and has a background in community technology education across Australia and internationally.
 
-Sfinco was founded on the belief that every Australian deserves to feel safe and confident in their digital life — regardless of their age, their technical background, or how much money they have.
+Sfinco was founded on the belief that every Australian deserves to feel safe and confident in their digital life, regardless of their age, their technical background, or how much money they have.
 
 | Sfinco Protecting Australians through technology, money, and trust. sfinco.com.au Noosa · Sunshine Coast · Queensland · Australia |
 

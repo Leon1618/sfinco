@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 8 — Personal Finance Protection  ·  Chapter 6
+Sfinco Guides  ·  Volume 8: Personal Finance Protection  ·  Chapter 6
 
 
 # Safer online shopping and payments
@@ -10,7 +10,7 @@ The everyday habits that protect your card and your bank account
 Most of us shop online regularly, and most of the time, nothing goes wrong. This chapter covers the handful of habits that keep it that way, and the newer payment methods worth understanding.
 
 
-## Digital wallets — safer than they might seem
+## Digital wallets, safer than they might seem
 
 
 Adding your card to Apple Pay, Google Pay, or a similar digital wallet is generally safer than using the physical card itself for online or tap-and-go purchases, since your actual card number is never shared with the shop or website.
@@ -19,12 +19,12 @@ Settings path:  your phone's Wallet app  >  Add card, following the prompts from
 
 ![Digital wallet app showing a bank card added and ready to use](screenshots/ch6-digital-wallet.png)
 
-*Mockup illustration, styled to match a typical digital wallet app — reshoot using your actual phone before final layout.*
+*Mockup illustration, styled to match a typical digital wallet app, reshoot using your actual phone before final layout.*
 
 | ℹ  DID YOU KNOW? When you pay with a digital wallet, the shop receives a unique, encrypted code for that transaction rather than your actual card number, which is why a digital wallet is generally considered more secure than swiping or inserting a physical card. |
 
 
-## Buy now, pay later services — what to know
+## Buy now, pay later services, what to know
 
 Services like Afterpay, Zip, and Klarna let you split a purchase into instalments, generally without a formal credit check. They are a genuine payment option, not inherently a scam, but they carry specific risks worth understanding.
 
@@ -51,10 +51,10 @@ Some banks let you create a virtual card, or you may choose to keep a separate c
 
 ![Banking app showing a virtual card created for online purchases](screenshots/ch6-virtual-card.png)
 
-*Mockup illustration, styled to match a typical Australian banking app — reshoot using your actual bank's app before final layout.*
+*Mockup illustration, styled to match a typical Australian banking app, reshoot using your actual bank's app before final layout.*
 
 
-## Quick review — your chapter 6 checklist
+## Quick review, your chapter 6 checklist
 
 
 | Done | Item |

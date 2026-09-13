@@ -96,4 +96,4 @@ Ready? Chapter 1 starts with why your money is a target in the first place.
 
 sfinco.com.au
 
-Part of the Sfinco Guides series — protecting Australians online
+Part of the Sfinco Guides series, protecting Australians online

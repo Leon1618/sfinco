@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 2 — MacBook Protection  ·  Chapter 8
+Sfinco Guides  ·  Volume 2: MacBook Protection  ·  Chapter 8
 
 
 # Your 15-minute Mac security checkup
@@ -8,7 +8,7 @@ A simple monthly routine to keep your Mac protected for years to come
 
 You have now worked through every major layer of Mac security: your login and FileVault encryption, your Apple ID, your app permissions, scam awareness, your network settings, and your backups. This final chapter brings all of it together into one simple monthly habit.
 
-| ℹ  DID YOU KNOW? Set a recurring reminder right now — the first Sunday of every month works well for most people. Open the Reminders app, create a new reminder called 'Mac security checkup', and set it to repeat monthly. This is the single most important step in this chapter: the checklist only works if you actually come back to it. |
+| ℹ  DID YOU KNOW? Set a recurring reminder right now, the first Sunday of every month works well for most people. Open the Reminders app, create a new reminder called 'Mac security checkup', and set it to repeat monthly. This is the single most important step in this chapter: the checklist only works if you actually come back to it. |
 
 
 ## The complete monthly checklist
@@ -43,7 +43,7 @@ Work through this list with your Mac open. Each item references the chapter wher
 | Done | Item | Chapter |
 | --- | --- | --- |
 | ☐ | I have not called a number from a pop-up warning this month | Ch. 5 |
-| ☐ | I have not clicked any suspicious links — and if I have, I followed the recovery steps | Ch. 5 |
+| ☐ | I have not clicked any suspicious links, and if I have, I followed the recovery steps | Ch. 5 |
 
 ### Network
 
@@ -80,6 +80,6 @@ Review your Time Machine backup drive occasionally.  An external drive that has 
 
 Security is not a single project you finish and forget. It is a small, repeated habit, the same way you would check your car's tyre pressure or test your smoke alarms. Fifteen minutes a month, done consistently, will protect you far better than an intense afternoon of settings changes done once and never revisited.
 
-| ✓  WELL DONE You have completed Sfinco Guides Volume 2 — MacBook Protection. Your Mac is now meaningfully more secure than it was when you started this book. Well done. Genuinely. |
+| ✓  WELL DONE You have completed Sfinco Guides Volume 2: MacBook Protection. Your Mac is now meaningfully more secure than it was when you started this book. Well done. Genuinely. |
 
 Continuing your Sfinco journey:  The Sfinco Guides series continues with Volume 3 (Family and Home Network Protection), Volume 4 (Windows Protection), and Volume 5 (Android Protection), each written in the same plain-English, step-by-step style. See the final pages of this book for details.

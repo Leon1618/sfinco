@@ -1,4 +1,4 @@
-# NGO and Not-for-Profit Protection — Back Cover Copy
+# NGO and Not-for-Profit Protection, Back Cover Copy
 
 **Blurb:**
 

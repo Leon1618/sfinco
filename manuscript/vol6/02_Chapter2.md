@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 6 — Small Business Protection  ·  Chapter 2
+Sfinco Guides  ·  Volume 6: Small Business Protection  ·  Chapter 2
 
 
 # Locking the front door
@@ -10,7 +10,7 @@ Passwords, multi-factor authentication, and the single change that stops most ac
 Every protection in this book sits behind one gate: the login screen of your business accounts, email, banking, accounting software, and anything else your business relies on. This chapter covers the layers that make that gate a genuine barrier.
 
 
-## Layer 1 — Strong, unique passwords
+## Layer 1, Strong, unique passwords
 
 
 A strong password is long, not reused anywhere else, and not something easily guessed from public information about you or your business, such as your business name or ABN.
@@ -20,7 +20,7 @@ A strong password is long, not reused anywhere else, and not something easily gu
 | ⚠  WARNING If any staff member reuses their personal email password for a business account, a breach of an unrelated website they use personally can hand an attacker direct access to your business systems. This is one of the most common ways small business accounts are compromised. |
 
 
-## Layer 2 — A password manager for the whole business
+## Layer 2, A password manager for the whole business
 
 
 Remembering a unique, strong password for every business account is unrealistic without help. A password manager generates and stores strong passwords, and can share specific logins with staff without them ever seeing the actual password in plain text.
@@ -34,7 +34,7 @@ Remembering a unique, strong password for every business account is unrealistic 
 | ℹ  DID YOU KNOW? A password manager also protects your business if a staff member leaves. Instead of trying to remember every account they had access to, you can revoke their access to shared logins from one place, without needing to change every password individually. |
 
 
-## Layer 3 — Multi-factor authentication (MFA)
+## Layer 3, Multi-factor authentication (MFA)
 
 
 Multi-factor authentication (also called two-factor authentication) requires a second step beyond your password, usually a code from an app or a prompt on your phone, to sign in. This single change is the most effective step in this entire book.
@@ -58,7 +58,7 @@ Turn on MFA on any account that offers it
 Report anything that looks suspicious immediately, rather than trying to handle it alone
 
 
-## Quick review — your chapter 2 checklist
+## Quick review, your chapter 2 checklist
 
 
 | Done | Item |

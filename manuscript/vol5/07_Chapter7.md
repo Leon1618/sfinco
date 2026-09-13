@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 5 — Android Protection  ·  Chapter 7
+Sfinco Guides  ·  Volume 5: Android Protection  ·  Chapter 7
 
 
 # Backups, Find My Device, and what to do if things go wrong
@@ -10,7 +10,7 @@ Setting up your safety net before you ever need it
 A lost or stolen phone is stressful enough without also losing every photo, contact, and message you had on it. This chapter covers the two things that turn a disaster into an inconvenience: a good backup, and Find My Device set up in advance.
 
 
-## Google Photos and Google One — your backup options
+## Google Photos and Google One, your backup options
 
 
 Most Android phones back up photos automatically through Google Photos, and can back up app data, contacts, and settings more broadly through Google One.
@@ -19,14 +19,14 @@ Settings path:  Settings  >  Google  >  Backup, to confirm what is currently bei
 
 ![Android Google Backup settings showing backup turned on with a recent backup date](screenshots/ch7-google-backup.png)
 
-*Mockup illustration, styled to match a typical Android settings layout — reshoot on a real device before final layout.*
+*Mockup illustration, styled to match a typical Android settings layout, reshoot on a real device before final layout.*
 
 ★  TIP:  Check the "last backup" date shown on this screen. If it is weeks or months old, tap "Back up now" and make sure your phone has both Wi-Fi and enough battery to complete it.
 
 | ℹ  DID YOU KNOW? If your phone is ever lost, stolen, damaged beyond repair, or reset, a proper backup lets you restore your photos, contacts, and most app data onto a replacement phone within minutes of signing back into your Google Account. Without a backup, that photo of your grandchild's first birthday may be gone for good. |
 
 
-## Setting up Find My Device — before you need it
+## Setting up Find My Device, before you need it
 
 
 Find My Device lets you locate your phone on a map, make it ring at full volume even if it is on silent, lock it remotely, or erase it entirely if you are certain it will not be recovered.
@@ -35,7 +35,7 @@ Settings path:  Settings  >  Security & privacy  >  Find My Device  >  ensure it
 
 ![Android Settings showing Find My Device turned on](screenshots/ch7-find-my-device.png)
 
-*Mockup illustration, styled to match a typical Android settings layout — reshoot on a real device before final layout.*
+*Mockup illustration, styled to match a typical Android settings layout, reshoot on a real device before final layout.*
 
 | ⚠  WARNING Find My Device only works if it was already turned on before your phone went missing. It cannot be enabled remotely after the fact, which is exactly why this is worth checking today rather than after something happens. |
 
@@ -48,7 +48,7 @@ Occasionally, a malicious app slips past Google Play Protect and causes your pho
 | ⚠  WARNING If your phone is showing signs of a malicious app, such as unexplained pop-ups or messages you did not send, run a Play Protect scan immediately from the Play Store app, and uninstall any recently added app you do not recognise or no longer trust. If problems persist, a factory reset after backing up your genuine data is the most reliable fix. |
 
 
-## The first thirty minutes — what to do if your phone goes missing
+## The first thirty minutes, what to do if your phone goes missing
 
 
 If your phone is ever lost or stolen, the steps below are designed to be followed calmly, in order, using another device.
@@ -62,7 +62,7 @@ If your phone is ever lost or stolen, the steps below are designed to be followe
 | 20–25 min | Notify your bank. If you had any banking apps logged in, call your bank to flag this as a precaution |
 | 25–30 min | Report to police if stolen. Provide the IMEI number, found on the original box or under Settings > About phone |
 
-★  TIP:  Find your phone's IMEI number now, before you ever need it, and save it somewhere safe — a note in a password manager, a photo of the original box, or written down in a locked drawer. You can also find it by dialling *#06# on the phone itself.
+★  TIP:  Find your phone's IMEI number now, before you ever need it, and save it somewhere safe, a note in a password manager, a photo of the original box, or written down in a locked drawer. You can also find it by dialling *#06# on the phone itself.
 
 
 ## A note on insurance
@@ -71,7 +71,7 @@ If your phone is ever lost or stolen, the steps below are designed to be followe
 Check whether your home and contents insurance policy covers a mobile phone used outside the home, since many standard policies only cover items while inside your house. If you regularly carry your phone with you, and it is a recent, higher-value model, a specific mobile phone add-on may be worth the extra cost.
 
 
-## Quick review — your chapter 7 checklist
+## Quick review, your chapter 7 checklist
 
 
 | Done | Item |

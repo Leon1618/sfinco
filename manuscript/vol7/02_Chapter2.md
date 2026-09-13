@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 7 — NGO and Not-for-Profit Protection  ·  Chapter 2
+Sfinco Guides  ·  Volume 7: NGO and Not-for-Profit Protection  ·  Chapter 2
 
 
 # Locking the front door
@@ -10,7 +10,7 @@ Passwords, multi-factor authentication, and free tools most organisations don't 
 Every protection in this book sits behind one gate: the login screen of your organisation's email, banking, and any software you rely on. This chapter covers the layers that make that gate a genuine barrier, at no cost to your organisation.
 
 
-## Layer 1 — Strong, unique passwords for every account
+## Layer 1, Strong, unique passwords for every account
 
 
 A strong password is long, not reused anywhere else, and not something easily guessed from public information about your organisation, such as its name or founding year.
@@ -20,7 +20,7 @@ A strong password is long, not reused anywhere else, and not something easily gu
 | ⚠  WARNING If your organisation's social media, banking, or email password is shared verbally or written on a whiteboard in a shared office, treat this as an immediate risk. Anyone with access to that space, now or in the future, effectively has access to your accounts. |
 
 
-## Layer 2 — A free password manager for the committee
+## Layer 2, A free password manager for the committee
 
 
 Remembering a unique, strong password for every organisational account, across a committee that changes over time, is unrealistic without help. A password manager generates and stores strong passwords, and can share specific logins with committee members without them ever seeing the actual password in plain text.
@@ -33,7 +33,7 @@ Remembering a unique, strong password for every organisational account, across a
 | ℹ  DID YOU KNOW? A password manager solves one of the most common problems for volunteer-run organisations: what happens to shared logins when a committee member moves on. Instead of trying to remember every account a departing volunteer had access to, you can revoke their access to shared logins from one place. |
 
 
-## Layer 3 — Multi-factor authentication (MFA)
+## Layer 3, Multi-factor authentication (MFA)
 
 
 Multi-factor authentication (also called two-factor authentication) requires a second step beyond your password, usually a code from an app or a prompt on a phone, to sign in. This single change is the most effective step in this entire book, and it is free.
@@ -71,7 +71,7 @@ Turn on MFA on any account that offers it
 Report anything that looks suspicious immediately, rather than trying to handle it alone
 
 
-## Quick review — your chapter 2 checklist
+## Quick review, your chapter 2 checklist
 
 
 | Done | Item |

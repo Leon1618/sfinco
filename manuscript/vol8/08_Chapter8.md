@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 8 — Personal Finance Protection  ·  Chapter 8
+Sfinco Guides  ·  Volume 8: Personal Finance Protection  ·  Chapter 8
 
 
 # Your 15-minute financial security checkup
@@ -8,7 +8,7 @@ A simple monthly routine to keep your money protected for years to come
 
 You have now worked through every major layer of personal finance protection: your everyday banking, your myGov and superannuation accounts, password managers, investment and romance scam awareness, safer shopping habits, and your digital estate. This final chapter brings all of it together into one simple monthly habit.
 
-| ℹ  DID YOU KNOW? Set a recurring reminder right now — the first Sunday of every month works well for most people. Open the Reminders or Calendar app, create a new reminder called 'Financial security checkup', and set it to repeat monthly. This is the single most important step in this chapter: the checklist only works if you actually come back to it. |
+| ℹ  DID YOU KNOW? Set a recurring reminder right now, the first Sunday of every month works well for most people. Open the Reminders or Calendar app, create a new reminder called 'Financial security checkup', and set it to repeat monthly. This is the single most important step in this chapter: the checklist only works if you actually come back to it. |
 
 
 ## The complete monthly checklist
@@ -66,7 +66,7 @@ This is the eighth and final volume in the Sfinco Guides series. Across these ei
 
 The thread running through all eight has been the same: protecting people who don't know they need protecting, through technology, money, and trust. Not because you are careless, or behind, or unable to keep up, but because nobody had ever laid it out for you in plain English before.
 
-| ✓  WELL DONE You have completed Sfinco Guides Volume 8 — Personal Finance Protection, and with it, the full Sfinco Guides series. Genuinely, well done. |
+| ✓  WELL DONE You have completed Sfinco Guides Volume 8: Personal Finance Protection, and with it, the full Sfinco Guides series. Genuinely, well done. |
 
 If this series has been useful to you, please consider sharing it with someone you care about, particularly anyone who could use a plain-English starting point rather than a technical manual. That is exactly what these books were written for.
 

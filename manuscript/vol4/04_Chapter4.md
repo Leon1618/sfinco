@@ -1,10 +1,10 @@
-Sfinco Guides  ·  Volume 4 — Windows Protection  ·  Chapter 4
+Sfinco Guides  ·  Volume 4: Windows Protection  ·  Chapter 4
 
 
 # Windows Defender and app permissions
 
 
-What your PC can see — and how to take back control
+What your PC can see, and how to take back control
 
 
 Windows includes a built-in security system, Microsoft Defender, that runs quietly in the background on every modern PC. This chapter covers making sure it is actually doing its job, plus the handful of app permissions worth checking.
@@ -12,18 +12,18 @@ Windows includes a built-in security system, Microsoft Defender, that runs quiet
 
 ## Confirming Windows Defender is turned on
 
-Many people assume they need to buy separate antivirus software, but Microsoft Defender, built into Windows, provides strong protection on its own and is turned on by default — unless something has switched it off.
+Many people assume they need to buy separate antivirus software, but Microsoft Defender, built into Windows, provides strong protection on its own and is turned on by default, unless something has switched it off.
 
 Settings path:  Settings  >  Privacy & Security  >  Windows Security  >  Virus & threat protection.
 
 ![Windows Security app showing Virus and threat protection with real-time protection turned on](screenshots/ch4-windows-defender.png)
 
-*Mockup illustration, styled to match Windows 11 — reshoot on a real PC before final layout.*
+*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
 
 | ⚠  WARNING If you have installed a third-party antivirus program, Windows Defender may automatically switch to a supporting role. Make sure whichever program is "active" shows a green tick with no warnings, and that you are not paying for a subscription that has quietly expired while believing you are still protected. |
 
 
-## SmartScreen — checking where your downloads came from
+## SmartScreen, checking where your downloads came from
 
 Microsoft Defender SmartScreen checks files and websites against a list of known malicious content before allowing them to run, similar in spirit to a security guard checking IDs at the door.
 
@@ -31,9 +31,9 @@ Settings path:  Settings  >  Privacy & Security  >  Windows Security  >  App & b
 
 ![Windows Security app showing SmartScreen settings for apps, files, and websites](screenshots/ch4-smartscreen.png)
 
-*Mockup illustration, styled to match Windows 11 — reshoot on a real PC before final layout.*
+*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
 
-★  TIP:  If Windows ever blocks a file you deliberately downloaded from a source you trust, you can choose to run it anyway — but treat any unexpected SmartScreen warning on a file you did not deliberately seek out as a serious red flag.
+★  TIP:  If Windows ever blocks a file you deliberately downloaded from a source you trust, you can choose to run it anyway, but treat any unexpected SmartScreen warning on a file you did not deliberately seek out as a serious red flag.
 
 
 ## The permission reference guide
@@ -49,7 +49,7 @@ Beyond built-in security, individual apps can request access to specific parts o
 
 ![Windows Privacy settings showing app permissions for camera and microphone](screenshots/ch4-app-permissions.png)
 
-*Mockup illustration, styled to match Windows 11 — reshoot on a real PC before final layout.*
+*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
 
 | ℹ  DID YOU KNOW? These permissions can be changed at any time, even long after you granted them. You are never permanently locked in to a choice you made when an app was first installed. Revoking a permission is just as easy as granting one. |
 
@@ -61,7 +61,7 @@ Not all apps carry equal risk. Give particular attention to: apps downloaded fro
 | ✓  WELL DONE IF YOU HAVE THIS If Windows Defender shows active protection with no warnings, and your apps list under each permission category is short and familiar, your PC's security footing is already in good shape. |
 
 
-## Quick review — your chapter 4 checklist
+## Quick review, your chapter 4 checklist
 
 | Done | Item |
 | --- | --- |

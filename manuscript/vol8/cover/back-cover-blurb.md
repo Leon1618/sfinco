@@ -1,4 +1,4 @@
-# Personal Finance Protection — Back Cover Copy
+# Personal Finance Protection, Back Cover Copy
 
 **Blurb:**
 

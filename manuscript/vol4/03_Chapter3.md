@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 4 — Windows Protection  ·  Chapter 3
+Sfinco Guides  ·  Volume 4: Windows Protection  ·  Chapter 3
 
 
 # Your Microsoft account and OneDrive
@@ -18,17 +18,17 @@ Settings path:  Settings  >  Accounts  >  Your info shows your Microsoft account
 
 ![Windows Accounts settings showing the Microsoft account panel](screenshots/ch3-microsoft-account.png)
 
-*Mockup illustration, styled to match Windows 11 — reshoot on a real PC before final layout.*
+*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
 
 
-## The password — and why it matters more than any other
+## The password, and why it matters more than any other
 
-Your Microsoft account password should be unique — not reused from any other website or account. If you have ever used it anywhere else, change it today.
+Your Microsoft account password should be unique, not reused from any other website or account. If you have ever used it anywhere else, change it today.
 
 ★  TIP:  The strongest passwords are passphrases: three or four unrelated words, like "GumtreeFerryOctober19", combined with a number. They are dramatically harder to crack than a short password with symbols swapped in for letters, and far easier for a person to actually remember.
 
 
-## Two-factor authentication — your single most important security step
+## Two-factor authentication, your single most important security step
 
 Two-factor authentication, often shortened to 2FA, means that signing in to your Microsoft account from a new device requires both your password and a code sent to your phone or authenticator app. Even if a criminal has your password, they cannot get in without also having access to your phone.
 
@@ -36,12 +36,12 @@ Settings path:  account.microsoft.com  >  Security  >  Advanced security options
 
 ![Microsoft account security settings showing two-step verification turned on](screenshots/ch3-two-step-verification.png)
 
-*Mockup illustration, styled to match Windows 11 — reshoot on a real PC before final layout.*
+*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
 
-| ⚠  WARNING Never share a verification code with anyone, including someone claiming to be from Microsoft. Microsoft will never call you and ask for this code. If you receive a code you did not request, someone else may have your password — change it immediately. |
+| ⚠  WARNING Never share a verification code with anyone, including someone claiming to be from Microsoft. Microsoft will never call you and ask for this code. If you receive a code you did not request, someone else may have your password, change it immediately. |
 
 
-## OneDrive — what it is and why it matters
+## OneDrive, what it is and why it matters
 
 OneDrive is Microsoft's cloud storage and backup service. It can back up your Desktop, Documents, and Pictures folders automatically, and sync them across every device signed in to your Microsoft account.
 
@@ -56,9 +56,9 @@ Settings path:  OneDrive icon in the taskbar  >  Help & Settings  >  Settings  >
 
 ![OneDrive settings showing folder backup turned on for Desktop, Documents, and Pictures](screenshots/ch3-onedrive-backup.png)
 
-*Mockup illustration, styled to match Windows 11 — reshoot on a real PC before final layout.*
+*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
 
-| ℹ  DID YOU KNOW? OneDrive's ransomware detection feature can notify you if it detects a sudden, unusual pattern of file changes across your account — often the first sign of a ransomware infection — and can help you restore your files to before the attack occurred, within a limited time window. |
+| ℹ  DID YOU KNOW? OneDrive's ransomware detection feature can notify you if it detects a sudden, unusual pattern of file changes across your account, often the first sign of a ransomware infection, and can help you restore your files to before the attack occurred, within a limited time window. |
 
 
 ## Reviewing devices signed in to your account
@@ -67,7 +67,7 @@ Settings path:  account.microsoft.com  >  Devices, shows every device currently 
 
 ![Microsoft account devices page showing a list of signed-in devices](screenshots/ch3-account-devices.png)
 
-*Mockup illustration, styled to match Windows 11 — reshoot on a real PC before final layout.*
+*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
 
 | ⚠  WARNING If you see a device on this list you do not recognise, or an old device you sold or gave away without removing it first, remove it and change your Microsoft account password as a precaution. |
 
@@ -77,7 +77,7 @@ Settings path:  account.microsoft.com  >  Devices, shows every device currently 
 Go to account.live.com/password/reset on any web browser and follow the prompts. Having a recovery phone number or email set up in advance, and two-step verification turned on, makes this process significantly faster.
 
 
-## Quick review — your chapter 3 checklist
+## Quick review, your chapter 3 checklist
 
 | Done | Item |
 | --- | --- |

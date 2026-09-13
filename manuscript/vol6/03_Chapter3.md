@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 6 — Small Business Protection  ·  Chapter 3
+Sfinco Guides  ·  Volume 6: Small Business Protection  ·  Chapter 3
 
 
 # Email security and protecting your domain
@@ -21,7 +21,7 @@ Settings path (Google Workspace):  Gmail  >  Settings  >  See all settings  >  F
 
 ![Email settings screen showing the forwarding rules section with no unexpected addresses](screenshots/vol6-ch3-forwarding-rules.png)
 
-*Mockup illustration, styled to match a typical business email admin panel — reshoot using your actual email provider before final layout.*
+*Mockup illustration, styled to match a typical business email admin panel, reshoot using your actual email provider before final layout.*
 
 | ⚠  WARNING If you find a forwarding rule you did not set up, treat this as a serious sign your account has been compromised. Remove the rule, change your password immediately, and turn on MFA if it is not already active. |
 
@@ -37,12 +37,12 @@ Settings path (Google Workspace):  Google Account  >  Security  >  Your devices.
 
 ![Email account security page showing recent sign-in activity by location and device](screenshots/vol6-ch3-signin-activity.png)
 
-*Mockup illustration, styled to match a typical business email admin panel — reshoot using your actual email provider before final layout.*
+*Mockup illustration, styled to match a typical business email admin panel, reshoot using your actual email provider before final layout.*
 
 ★  TIP:  If you see a sign-in from a country your business has no connection to, change your password immediately and review your forwarding rules and connected apps.
 
 
-## Domain protections — SPF, DKIM, and DMARC in plain English
+## Domain protections, SPF, DKIM, and DMARC in plain English
 
 
 These three settings, configured once by whoever manages your website or email hosting, make it significantly harder for a scammer to send an email that appears to come from your business's own domain.
@@ -72,7 +72,7 @@ Check the actual sender address, not just the display name, since these can diff
 Avoid opening unexpected attachments, particularly invoices or "remittance advice" from senders you were not expecting
 
 
-## Quick review — your chapter 3 checklist
+## Quick review, your chapter 3 checklist
 
 
 | Done | Item |

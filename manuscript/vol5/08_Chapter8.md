@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 5 — Android Protection  ·  Chapter 8
+Sfinco Guides  ·  Volume 5: Android Protection  ·  Chapter 8
 
 
 # Your 15-minute Android security checkup
@@ -8,7 +8,7 @@ A simple monthly routine to keep your phone protected for years to come
 
 You have now worked through every major layer of Android security: your lock screen and encryption, your Google Account, app permissions, scam awareness, your Wi-Fi and browsing settings, and your backups. This final chapter brings all of it together into one simple monthly habit.
 
-| ℹ  DID YOU KNOW? Set a recurring reminder right now — the first Sunday of every month works well for most people. Open the Calendar or Clock app, create a new reminder called 'Android security checkup', and set it to repeat monthly. This is the single most important step in this chapter: the checklist only works if you actually come back to it. |
+| ℹ  DID YOU KNOW? Set a recurring reminder right now, the first Sunday of every month works well for most people. Open the Calendar or Clock app, create a new reminder called 'Android security checkup', and set it to repeat monthly. This is the single most important step in this chapter: the checklist only works if you actually come back to it. |
 
 
 ## The complete monthly checklist
@@ -82,6 +82,6 @@ Update your apps regularly.  Settings path: Open the Play Store app > tap your p
 
 Security is not a single project you finish and forget. It is a small, repeated habit, the same way you would check your car's tyre pressure or test your smoke alarms. Fifteen minutes a month, done consistently, will protect you far better than an intense afternoon of settings changes done once and never revisited.
 
-| ✓  WELL DONE You have completed Sfinco Guides Volume 5 — Android Protection. Your phone is now meaningfully more secure than it was when you started this book. Well done. Genuinely. |
+| ✓  WELL DONE You have completed Sfinco Guides Volume 5: Android Protection. Your phone is now meaningfully more secure than it was when you started this book. Well done. Genuinely. |
 
 Continuing your Sfinco journey:  The Sfinco Guides series continues into Series 2, starting with Small Business Protection, each written in the same plain-English, step-by-step style. See the final pages of this book for details.

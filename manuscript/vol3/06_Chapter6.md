@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 3 — Family and Home Network Protection  ·  Chapter 6
+Sfinco Guides  ·  Volume 3: Family and Home Network Protection  ·  Chapter 6
 
 
 # Parental controls and keeping kids safe online
@@ -18,9 +18,9 @@ Settings path:  Router app or admin page  >  Parental Controls or Content Filter
 
 ![Router parental controls screen showing content filtering categories](screenshots/ch6-router-parental-controls.png)
 
-*Mockup illustration, styled to resemble a typical router app — reshoot on your own hardware before final layout.*
+*Mockup illustration, styled to resemble a typical router app, reshoot on your own hardware before final layout.*
 
-★  TIP:  Router-level filtering is a useful baseline, but it is not foolproof — a determined teenager with technical knowledge may find ways around it. Combine it with the device-level and conversation-based approaches below for the most effective protection.
+★  TIP:  Router-level filtering is a useful baseline, but it is not foolproof, a determined teenager with technical knowledge may find ways around it. Combine it with the device-level and conversation-based approaches below for the most effective protection.
 
 
 ## Setting up device-level screen time and content limits
@@ -36,7 +36,7 @@ Apple, Google, and Microsoft all offer free, built-in tools to manage what a chi
 
 ![iPhone Screen Time settings showing Content and Privacy Restrictions with age-appropriate limits set](screenshots/ch6-screen-time.png)
 
-*Mockup illustration, styled to resemble iOS Screen Time — reshoot on a real device before final layout.*
+*Mockup illustration, styled to resemble iOS Screen Time, reshoot on a real device before final layout.*
 
 | ℹ  DID YOU KNOW? Setting up a proper Family Sharing or Family Link group lets you manage several children's devices from your own phone or computer, including approving app downloads, setting daily time limits, and seeing a summary of what they have been using their device for. |
 
@@ -49,7 +49,7 @@ Settings path:  Computer or tablet's account settings  >  Add a family member or
 
 ![Family account setup screen showing a child account being added with age-appropriate settings](screenshots/ch6-child-account.png)
 
-*Mockup illustration, styled to resemble a typical device account setup screen — reshoot on your own hardware before final layout.*
+*Mockup illustration, styled to resemble a typical device account setup screen, reshoot on your own hardware before final layout.*
 
 | ⚠  WARNING Avoid letting a child use an account that is also signed in to your email, online banking, or saved payment details. A separate child account, even a simple one, prevents accidental purchases and keeps your own accounts fully separate. |
 
@@ -60,10 +60,10 @@ No filter or setting fully replaces an open conversation. Children who understan
 
 Useful topics to cover, in age-appropriate language: never sharing personal details or photos with people they only know online, telling a trusted adult if a game or app asks for payment details, understanding that people online are not always who they claim to be, and knowing it is always okay to come to you if something online feels wrong, without fear of getting in trouble.
 
-| ✓  WELL DONE IF YOU HAVE THIS If you have both router-level filtering turned on and an ongoing, open conversation with the children in your household about online safety, you are covering this from both the technical and human side — which is exactly how it works best. |
+| ✓  WELL DONE IF YOU HAVE THIS If you have both router-level filtering turned on and an ongoing, open conversation with the children in your household about online safety, you are covering this from both the technical and human side, which is exactly how it works best. |
 
 
-## Quick review — your chapter 6 checklist
+## Quick review, your chapter 6 checklist
 
 | Done | Item |
 | --- | --- |

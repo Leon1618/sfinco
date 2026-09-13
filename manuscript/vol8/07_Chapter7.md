@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 8 — Personal Finance Protection  ·  Chapter 7
+Sfinco Guides  ·  Volume 8: Personal Finance Protection  ·  Chapter 7
 
 
 # Wills, powers of attorney, and your digital estate
@@ -18,7 +18,7 @@ A will remains a legal document that only a solicitor can properly draft, but mo
 ! IMPORTANT: This book cannot and does not provide legal advice, and a valid, up-to-date will requires a qualified solicitor. What this chapter can help with is making sure you have gathered the right information beforehand, so your solicitor's time, and your family's time later, is used efficiently.
 
 
-## Superannuation death benefit nominations — often forgotten
+## Superannuation death benefit nominations, often forgotten
 
 Unlike most other assets, your superannuation is not automatically covered by your will unless you have made a specific death benefit nomination with your super fund. Many people are surprised to learn this.
 
@@ -26,12 +26,12 @@ Settings path:  contact your super fund directly, or check through my.gov.au  > 
 
 ![ATO online services screen showing a superannuation death benefit nomination status](screenshots/ch7-death-benefit-nomination.png)
 
-*Mockup illustration, styled to match ATO online services — reshoot using your actual account before final layout.*
+*Mockup illustration, styled to match ATO online services, reshoot using your actual account before final layout.*
 
 ★  TIP:  Check whether your nomination is "binding" or "non-binding" with your fund. A binding nomination is generally legally required to be followed, while a non-binding nomination is only a guide for the fund's trustee. Ask your fund directly if you are unsure which applies to yours.
 
 
-## Enduring power of attorney — a different kind of protection
+## Enduring power of attorney, a different kind of protection
 
 A will only takes effect after death. An enduring power of attorney allows someone you trust to manage your financial affairs if you are ever unable to yourself, due to illness, injury, or cognitive decline, while you are still alive.
 
@@ -59,7 +59,7 @@ Whether or not you use a formal password manager, it is worth preparing a simple
 Sfinco is developing a dedicated Digital Estate Vault, a secure way to organise exactly this kind of information for your family, alongside your password manager. It is not yet available. Once it launches, details will be shared at sfinco.com.au. Until then, the approach in this chapter, a physical or password-protected list, kept somewhere your family knows to look, remains a sound and completely free starting point.
 
 
-## Quick review — your chapter 7 checklist
+## Quick review, your chapter 7 checklist
 
 
 | Done | Item |

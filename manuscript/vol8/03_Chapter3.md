@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 8 — Personal Finance Protection  ·  Chapter 3
+Sfinco Guides  ·  Volume 8: Personal Finance Protection  ·  Chapter 3
 
 
 # Your myGov account and superannuation
@@ -19,7 +19,7 @@ Settings path:  my.gov.au  >  Account settings  >  Sign in options.
 
 ![myGov account settings showing sign-in options and linked services](screenshots/ch3-mygov-security.png)
 
-*Mockup illustration, styled to match myGov — reshoot using your actual account before final layout.*
+*Mockup illustration, styled to match myGov, reshoot using your actual account before final layout.*
 
 ★  TIP:  Use the myGovID app for signing in wherever possible, rather than a code sent by text. It is generally considered more secure and is not vulnerable to a text message being intercepted.
 
@@ -33,7 +33,7 @@ Settings path:  my.gov.au  >  Linked services  >  Australian Taxation Office  > 
 
 ![ATO online services screen showing linked superannuation accounts and balances](screenshots/ch3-super-accounts.png)
 
-*Mockup illustration, styled to match ATO online services — reshoot using your actual account before final layout.*
+*Mockup illustration, styled to match ATO online services, reshoot using your actual account before final layout.*
 
 | ℹ  DID YOU KNOW? Many Australians have multiple, forgotten superannuation accounts from previous jobs, each charging separate fees. Checking this screen occasionally can reveal genuine, unclaimed money, though any decision to consolidate accounts should consider factors like insurance attached to an older account, best discussed with your fund or a licensed adviser. |
 
@@ -49,7 +49,7 @@ Unsolicited consolidation calls.  A caller claims to represent your super fund o
 
 Fake fund switching pressure.  A caller pressures you to switch your super into a fund offering unusually high, guaranteed-sounding returns, a claim that should itself be treated as a warning sign.
 
-| ✶  CRITICAL — READ THIS CAREFULLY Genuine early release of superannuation is only available in specific, narrow circumstances defined by the ATO, such as severe financial hardship or terminal illness, and is never arranged through an unsolicited caller offering to "help" for a fee. Never provide your myGov or super fund login details to anyone who contacts you unprompted. |
+| ✶  CRITICAL, READ THIS CAREFULLY Genuine early release of superannuation is only available in specific, narrow circumstances defined by the ATO, such as severe financial hardship or terminal illness, and is never arranged through an unsolicited caller offering to "help" for a fee. Never provide your myGov or super fund login details to anyone who contacts you unprompted. |
 
 
 ## When a super decision needs a licensed adviser
@@ -60,7 +60,7 @@ Whether to consolidate accounts, change your investment option within super, or 
 ! IMPORTANT: This book does not recommend specific super funds, contribution strategies, or investment options, since this constitutes personal financial advice, which in Australia can only be provided by a person or business holding an Australian Financial Services Licence (AFSL) or acting as an authorised representative of one. Your existing super fund, a licensed financial adviser, or ASIC's free MoneySmart service (moneysmart.gov.au) are appropriate places to seek this kind of guidance.
 
 
-## Quick review — your chapter 3 checklist
+## Quick review, your chapter 3 checklist
 
 
 | Done | Item |

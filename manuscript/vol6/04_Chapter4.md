@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 6 — Small Business Protection  ·  Chapter 4
+Sfinco Guides  ·  Volume 6: Small Business Protection  ·  Chapter 4
 
 
 # Staff access worth trimming
@@ -17,7 +17,7 @@ Least privilege simply means giving each person access to only what they need to
 
 ![Business software admin panel showing staff members with different access levels](screenshots/vol6-ch4-access-levels.png)
 
-*Mockup illustration, styled to match a typical business admin panel — reshoot using your actual software before final layout.*
+*Mockup illustration, styled to match a typical business admin panel, reshoot using your actual software before final layout.*
 
 | ℹ  DID YOU KNOW? Most accounting, email, and point-of-sale platforms let you assign different permission levels to different staff, such as "view only," "can invoice," or "full admin," rather than giving everyone the same access. |
 
@@ -29,7 +29,7 @@ Settings path: this varies by platform, but is usually found under Settings > Us
 
 ![Staff access review screen listing team members and their permission levels](screenshots/vol6-ch4-staff-review.png)
 
-*Mockup illustration, styled to match a typical business admin panel — reshoot using your actual software before final layout.*
+*Mockup illustration, styled to match a typical business admin panel, reshoot using your actual software before final layout.*
 
 ★  TIP:  Set a reminder to review staff access every six months. Roles change, responsibilities shift, and access that made sense a year ago may no longer be appropriate.
 
@@ -52,7 +52,7 @@ A simple offboarding checklist, kept somewhere handy, makes this consistent rath
 | ☐ | Collect any business devices, keys, or access cards |
 
 
-## Shared logins — a habit worth breaking
+## Shared logins, a habit worth breaking
 
 
 It is common in small businesses for everyone to share a single login to a piece of software, for convenience. This makes it impossible to know who did what, and means removing one person's access requires changing the password for everyone.
@@ -60,7 +60,7 @@ It is common in small businesses for everyone to share a single login to a piece
 | ✓  WELL DONE IF YOU HAVE THIS If every staff member has their own individual login for your business's key systems, rather than sharing one account between several people, you already have far better visibility and control than most small businesses. |
 
 
-## Quick review — your chapter 4 checklist
+## Quick review, your chapter 4 checklist
 
 
 | Done | Item |

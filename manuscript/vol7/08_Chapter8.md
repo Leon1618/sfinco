@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 7 — NGO and Not-for-Profit Protection  ·  Chapter 8
+Sfinco Guides  ·  Volume 7: NGO and Not-for-Profit Protection  ·  Chapter 8
 
 
 # Your 15-minute organisation security checkup
@@ -74,6 +74,6 @@ Talk to volunteers about scams at inductions.  A five-minute mention during volu
 
 Security is not a single project you finish and forget. It is a small, repeated habit, the same way you would reconcile your accounts or check your event bookings. Fifteen minutes a month, done consistently regardless of who is on the committee, will protect your organisation and the people it serves far better than an intense effort done once and never revisited.
 
-| ✓  WELL DONE You have completed Sfinco Guides Volume 7 — NGO and Not-for-Profit Protection. Your organisation is now meaningfully more secure than it was when you started this book. Well done. Genuinely. |
+| ✓  WELL DONE You have completed Sfinco Guides Volume 7: NGO and Not-for-Profit Protection. Your organisation is now meaningfully more secure than it was when you started this book. Well done. Genuinely. |
 
 Continuing your Sfinco journey:  The Sfinco Guides series concludes with Volume 8 (Personal Finance Protection), written in the same plain-English, step-by-step style. See the final pages of this book for details.

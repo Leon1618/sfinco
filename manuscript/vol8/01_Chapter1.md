@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 8 — Personal Finance Protection  ·  Chapter 1
+Sfinco Guides  ·  Volume 8: Personal Finance Protection  ·  Chapter 1
 
 
 # Why your money is a target
@@ -17,13 +17,13 @@ Stories like Peter's, often called "pig butchering" scams by investigators becau
 
 Scammers targeting individuals generally look for a specific combination of factors, and understanding them helps explain why the schemes in this book exist at all.
 
-Genuine savings — decades of work, often including a lump sum of superannuation, represent a large, appealing target compared to a smaller, everyday amount
+Genuine savings, decades of work, often including a lump sum of superannuation, represent a large, appealing target compared to a smaller, everyday amount
 
-Trust in institutions — a scam impersonating your bank, the ATO, or a government service borrows the trust you already have in the real organisation
+Trust in institutions, a scam impersonating your bank, the ATO, or a government service borrows the trust you already have in the real organisation
 
-Time and attention — many scams, particularly investment and romance scams, rely on patience and a genuine emotional connection built over weeks or months
+Time and attention, many scams, particularly investment and romance scams, rely on patience and a genuine emotional connection built over weeks or months
 
-Unfamiliarity with new technology — cryptocurrency, instant transfers, and new payment platforms are all genuinely useful, but their newness also means fewer people instinctively recognise what "normal" looks like
+Unfamiliarity with new technology, cryptocurrency, instant transfers, and new payment platforms are all genuinely useful, but their newness also means fewer people instinctively recognise what "normal" looks like
 
 | ℹ  DID YOU KNOW? The National Anti-Scam Centre reported that Australians lost over $2 billion to scams in a recent year, with investment scams consistently representing the single largest category of loss by dollar value, disproportionately affecting people over 55. |
 

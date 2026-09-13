@@ -2,7 +2,7 @@ Sfinco Guides  ·  Volume 7
 
 ## Glossary
 
-These are the key terms used throughout this book, explained in plain English. You do not need to memorise them — this section is here to help if you encounter a word and want a clear definition.
+These are the key terms used throughout this book, explained in plain English. You do not need to memorise them, this section is here to help if you encounter a word and want a clear definition.
 
 | Term | Definition |
 | --- | --- |
@@ -16,7 +16,7 @@ These are the key terms used throughout this book, explained in plain English. Y
 | NDB scheme | The Notifiable Data Breaches scheme, which may require organisations to report certain data breaches to the OAIC and affected individuals |
 | OAIC | The Office of the Australian Information Commissioner, which administers the Privacy Act 1988 and the NDB scheme |
 | Password manager | Software that generates and securely stores strong, unique passwords for every account |
-| Phishing | A scam that impersonates a trusted organisation — via email — to trick you into handing over personal or financial information |
+| Phishing | A scam that impersonates a trusted organisation, via email, to trick you into handing over personal or financial information |
 | Ransomware | Malware that encrypts your files and demands payment to unlock them |
 | Scamwatch | The Australian government's national scam reporting service, run by the ACCC |
 | SPF | A setting that lists which mail servers are allowed to send email on behalf of your domain |
@@ -46,7 +46,7 @@ Cut out or photograph this page and keep it somewhere handy, ideally in your org
 | Our genuine supplier bank details (verified) | _________________________________ |
 | Email provider support | _________________________________ |
 | IT-literate volunteer or provider contact | _________________________________ |
-| Backup — last checked | _________________________________ |
+| Backup, last checked | _________________________________ |
 
 ### If you suspect a fraudulent payment
 
@@ -117,13 +117,13 @@ Month / Year: _________________     Completed by: _________________
 
 sfinco.com.au · Vol 7 NGO and Not-for-Profit Protection
 
-## Sfinco Guides — the complete series
+## Sfinco Guides, the complete series
 
 More books in the series
 
-The Sfinco Guides series is designed to cover every device and situation you are likely to encounter. Each book follows the same plain-English, step-by-step format — with real Australian examples, screenshots, and no technical jargon.
+The Sfinco Guides series is designed to cover every device and situation you are likely to encounter. Each book follows the same plain-English, step-by-step format, with real Australian examples, screenshots, and no technical jargon.
 
-### Series 1 — Personal protection
+### Series 1, Personal protection
 
 | Volume | What it covers |
 | --- | --- |
@@ -133,7 +133,7 @@ The Sfinco Guides series is designed to cover every device and situation you are
 | Vol 4 Available now | Windows Protection. A plain-English guide for Windows users. Sign-in & BitLocker · Microsoft account · Defender · Scams · Firewall & VPN · Backups |
 | Vol 5 Available now | Android Protection. Staying safe on your Android phone. Play Protect · app permissions · Google account · 2FA · scam texts and calls |
 
-### Series 2 — Organisational protection
+### Series 2, Organisational protection
 
 | Volume | What it covers |
 | --- | --- |
@@ -141,7 +141,7 @@ The Sfinco Guides series is designed to cover every device and situation you are
 | Vol 7 Available now | NGO and Not-for-Profit Protection. Protecting organisations that protect others. Volunteer access · donor data · email compromise · free tools for small teams |
 | Vol 8 Coming soon | Personal Finance Protection. Protecting your money in a digital world. Banking security · investment scams · superannuation · password managers · wills |
 
-| ★  TIP All Sfinco Guides are available on Amazon (search 'Sfinco Guides' or scan the QR code on the next page). Paperback and e-book editions are available. Bulk copies for charities, community networks, and volunteer organisations are available directly through sfinco.com.au — contact us for pricing, including not-for-profit discounts. |
+| ★  TIP All Sfinco Guides are available on Amazon (search 'Sfinco Guides' or scan the QR code on the next page). Paperback and e-book editions are available. Bulk copies for charities, community networks, and volunteer organisations are available directly through sfinco.com.au, contact us for pricing, including not-for-profit discounts. |
 
 ## Connect with us
 
@@ -151,13 +151,13 @@ Each QR code below links to a different part of the Sfinco ecosystem. Scan any o
 
 | Where it takes you | What you'll find |
 | --- | --- |
-| [ QR CODE ] WEBSITE | Visit the Sfinco website — free resources, guides, blog, and updates on new books in the series sfinco.com.au |
-| [ QR CODE ] CYBER AUDIT | Book a Sfinco SMB Cyber Audit — also available to eligible charities and not-for-profits on the Sunshine Coast sfinco.com.au/business |
-| [ QR CODE ] ALL BOOKS | Browse all Sfinco Guides — the complete series on Amazon and direct from our website sfinco.com.au/guides |
-| [ QR CODE ] TECH HELP | Book a Senior Tech Concierge session — in-person help with your devices on the Sunshine Coast sfinco.com.au/concierge |
-| [ QR CODE ] FREE DOWNLOAD | Free printable resources — scam reference card, monthly checklist, and more (no sign-up required) sfinco.com.au/resources |
+| [ QR CODE ] WEBSITE | Visit the Sfinco website, free resources, guides, blog, and updates on new books in the series sfinco.com.au |
+| [ QR CODE ] CYBER AUDIT | Book a Sfinco SMB Cyber Audit, also available to eligible charities and not-for-profits on the Sunshine Coast sfinco.com.au/business |
+| [ QR CODE ] ALL BOOKS | Browse all Sfinco Guides, the complete series on Amazon and direct from our website sfinco.com.au/guides |
+| [ QR CODE ] TECH HELP | Book a Senior Tech Concierge session, in-person help with your devices on the Sunshine Coast sfinco.com.au/concierge |
+| [ QR CODE ] FREE DOWNLOAD | Free printable resources, scam reference card, monthly checklist, and more (no sign-up required) sfinco.com.au/resources |
 
-| ℹ  NOTE QR codes are scanned using your phone's camera app — no separate app needed. All Sfinco links are safe and will never ask for payment details. |
+| ℹ  NOTE QR codes are scanned using your phone's camera app, no separate app needed. All Sfinco links are safe and will never ask for payment details. |
 
 Sfinco Guides  ·  Volume 7
 
@@ -167,11 +167,11 @@ Leonardo Pinheiro, the author of the Sfinco Guides series, works in banking and 
 
 Holding qualifications in cybersecurity (CompTIA Security+), financial advising (RG146), and information technology, and completing further studies at CQUniversity, Leonardo brings together a rare combination of technical knowledge and the ability to explain it clearly to people who have no interest in becoming technical experts.
 
-The inspiration for this series came from years of seeing the same pattern: intelligent, capable, careful people and organisations being harmed by scams and digital threats — not because they were careless, but because nobody had ever given them a clear, practical guide to protecting themselves. That gap is what these books exist to close.
+The inspiration for this series came from years of seeing the same pattern: intelligent, capable, careful people and organisations being harmed by scams and digital threats, not because they were careless, but because nobody had ever given them a clear, practical guide to protecting themselves. That gap is what these books exist to close.
 
 Leonardo also volunteers with CoderDojo, teaching digital skills to young people on the Sunshine Coast, and has a background in community technology education across Australia and internationally, giving genuine, first-hand understanding of how volunteer organisations actually operate.
 
-Sfinco was founded on the belief that every Australian, and every organisation working to help Australians, deserves to feel safe and confident in their digital life — regardless of size, technical background, or budget.
+Sfinco was founded on the belief that every Australian, and every organisation working to help Australians, deserves to feel safe and confident in their digital life, regardless of size, technical background, or budget.
 
 | Sfinco Protecting Australians through technology, money, and trust. sfinco.com.au Noosa · Sunshine Coast · Queensland · Australia |
 

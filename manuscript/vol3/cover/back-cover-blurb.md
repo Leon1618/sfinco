@@ -1,4 +1,4 @@
-# Family and Home Network Protection — Back Cover Copy
+# Family and Home Network Protection, Back Cover Copy
 
 **Blurb:**
 

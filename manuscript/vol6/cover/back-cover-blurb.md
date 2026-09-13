@@ -1,4 +1,4 @@
-# Small Business Protection — Back Cover Copy
+# Small Business Protection, Back Cover Copy
 
 **Blurb:**
 

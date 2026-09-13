@@ -36,13 +36,13 @@ Staying safe on your Android phone
 # Introduction
 
 
-Android runs on a huge share of the phones in Australia, made by dozens of different manufacturers, each with its own version of the software and its own way of naming the same settings. That variety is part of what makes Android great — and part of why so many people never quite get around to checking whether their phone is actually locked down properly.
+Android runs on a huge share of the phones in Australia, made by dozens of different manufacturers, each with its own version of the software and its own way of naming the same settings. That variety is part of what makes Android great, and part of why so many people never quite get around to checking whether their phone is actually locked down properly.
 
 Your Android phone holds your banking apps, your photos, your messages to family, and most people have never been shown how to lock it down properly, or which settings actually matter versus which are just noise.
 
-This is not a technical manual. There are no complicated diagrams, no long lists of jargon, and no assumption that you already know what "Play Protect" is or why sideloading an app is worth thinking twice about. (It isn't complicated — and by the end of this book, checking it will take you thirty seconds.)
+This is not a technical manual. There are no complicated diagrams, no long lists of jargon, and no assumption that you already know what "Play Protect" is or why sideloading an app is worth thinking twice about. (It isn't complicated, and by the end of this book, checking it will take you thirty seconds.)
 
-What this guide is, is a plain-English, step-by-step walkthrough of the most important things you can do right now to protect yourself on your Android phone. Each chapter tackles one area of your digital life, explains why it matters in everyday terms, and then shows you — with real screenshots — exactly what to do and where to find it.
+What this guide is, is a plain-English, step-by-step walkthrough of the most important things you can do right now to protect yourself on your Android phone. Each chapter tackles one area of your digital life, explains why it matters in everyday terms, and then shows you, with real screenshots, exactly what to do and where to find it.
 
 Whether you have had an Android phone for years and never thought much about security, or you just switched from an iPhone and want to start off on the right foot, this book is written for you.
 
@@ -68,7 +68,7 @@ simply want peace of mind knowing your phone is locked down and your information
 ## A quick word from the author
 
 
-I work in banking and technology on the Sunshine Coast in Queensland, and I spend a lot of time helping people — particularly older Australians — navigate the digital world safely. What I have seen over and over again is not stupidity or carelessness. It is a gap.
+I work in banking and technology on the Sunshine Coast in Queensland, and I spend a lot of time helping people, particularly older Australians, navigate the digital world safely. What I have seen over and over again is not stupidity or carelessness. It is a gap.
 
 Android's openness and variety are real strengths, but they also mean the "one correct way" to check a setting is not always obvious, and scammers know that gap well. This book closes it, the same way the earlier volumes closed it for the iPhone, the Mac, the home network, and Windows.
 
@@ -86,7 +86,7 @@ This book is designed to be used, not just read. Here is how to get the most out
 
 Each chapter builds gently on the one before it, starting with the most fundamental protections (your screen lock and encryption) and working through to more advanced topics (Wi-Fi safety and what to do if your phone is ever lost or stolen). If you are new to Android security, the best approach is to start at Chapter 1 and work your way through.
 
-That said, every chapter also stands on its own. If there is a specific topic that is urgent for you right now — scam texts, for example, or backing up your phone — feel free to jump straight there.
+That said, every chapter also stands on its own. If there is a specific topic that is urgent for you right now, scam texts, for example, or backing up your phone, feel free to jump straight there.
 
 
 ## Do the steps as you go
@@ -94,7 +94,7 @@ That said, every chapter also stands on its own. If there is a specific topic th
 
 This is not a book to read in bed and then forget about. It is a book to read with your phone in your hand. Each chapter includes step-by-step instructions with screenshots showing roughly what you will see on your screen. Work through each step as you read it, and by the time you finish a chapter, that protection is already in place.
 
-*  TIP:  If a setting looks different on your phone from the screenshots in this book, don't panic. Every phone manufacturer — Samsung, Google, Oppo, and others — arranges Android's settings slightly differently, and the exact wording can vary. A quick search for your phone's brand plus the setting name will usually point you in the right direction.
+*  TIP:  If a setting looks different on your phone from the screenshots in this book, don't panic. Every phone manufacturer, Samsung, Google, Oppo, and others, arranges Android's settings slightly differently, and the exact wording can vary. A quick search for your phone's brand plus the setting name will usually point you in the right direction.
 
 
 ## Use the tools at the back of the book
@@ -102,19 +102,19 @@ This is not a book to read in bed and then forget about. It is a book to read wi
 
 Chapter 8 ends with a one-page security checklist you can use every month to make sure your phone stays protected over time. Print it out. Stick it on the fridge. Set a reminder on your calendar for the first Sunday of every month. Five minutes a month is all it takes to stay on top of things.
 
-The very back of the book also has a Quick Reference Card, a condensed version of that same checklist plus the emergency contacts and steps from Chapter 7, and a Glossary of every term used in this guide. You don't need to read either before you start — just know they're there, so you can flip back whenever you need a number, a step, or a plain-English definition in a hurry.
+The very back of the book also has a Quick Reference Card, a condensed version of that same checklist plus the emergency contacts and steps from Chapter 7, and a Glossary of every term used in this guide. You don't need to read either before you start, just know they're there, so you can flip back whenever you need a number, a step, or a plain-English definition in a hurry.
 
 
 ## Share it with someone you care about
 
 
-If you know someone — a parent, a neighbour, a friend — who could benefit from this guide, please share it with them. Scammers target people who are isolated and uninformed. The more people in your circle who know these basics, the safer everyone is.
+If you know someone, a parent, a neighbour, a friend, who could benefit from this guide, please share it with them. Scammers target people who are isolated and uninformed. The more people in your circle who know these basics, the safer everyone is.
 
 
 ## A note on screenshots and Android versions
 
 
-The screenshots in this book show a typical recent version of Android, similar in layout to most current Samsung and Google Pixel phones. If your phone looks different, the same settings almost always exist — they are just named or arranged slightly differently depending on your phone's manufacturer.
+The screenshots in this book show a typical recent version of Android, similar in layout to most current Samsung and Google Pixel phones. If your phone looks different, the same settings almost always exist, they are just named or arranged slightly differently depending on your phone's manufacturer.
 
 To check which version of Android you are running: open Settings, scroll to About Phone, and look for "Android version."
 
@@ -124,17 +124,17 @@ To check which version of Android you are running: open Settings, scroll to Abou
 ## What this book does not cover
 
 
-This guide focuses specifically on your Android phone. It does not cover iPhones, Macs, or Windows PCs in detail — those are covered in other volumes in the Sfinco Guides series. It also does not go deep into corporate or business-level device management. If you run a small business, take a look at the Sfinco Guide for Small Business — coming soon in Series 2.
+This guide focuses specifically on your Android phone. It does not cover iPhones, Macs, or Windows PCs in detail, those are covered in other volumes in the Sfinco Guides series. It also does not go deep into corporate or business-level device management. If you run a small business, take a look at the Sfinco Guide for Small Business, coming soon in Series 2.
 
 Ready? Pick up your phone. Chapter 1 starts with a story you might recognise.
 
 sfinco.com.au
 
-Part of the Sfinco Guides series — protecting Australians online
+Part of the Sfinco Guides series, protecting Australians online
 
 ---
 
-Sfinco Guides  ·  Volume 5 — Android Protection  ·  Chapter 1
+Sfinco Guides  ·  Volume 5: Android Protection  ·  Chapter 1
 
 
 # Why your Android phone is a target
@@ -145,7 +145,7 @@ The most widely used mobile operating system in the world is also the most attac
 
 | ▶  REAL STORY Barbara, 71, from Cooroy, received a text message that looked exactly like a parcel delivery notice from Australia Post, asking her to click a link to reschedule a delivery she was actually expecting. The link opened a page that looked like the real Australia Post site and asked her to "verify her identity" with her driver's licence number and a one-time code that had just been sent to her phone. She entered both. Within twenty minutes, that code had been used to add a new device to her banking app. Barbara is careful with money and had never clicked a suspicious link before in her life. The text simply arrived at the right moment, about a parcel she genuinely expected. That is exactly the gap this chapter closes. |
 
-Stories like Barbara's play out across Australia every day. Android phones outnumber every other type of mobile device on the planet, made by manufacturers including Samsung, Google, Oppo, Motorola, and many others. That scale is exactly why Android is such an attractive target — criminals build scams and malicious apps for the platform with the largest possible number of potential victims, and a phone is something almost all of us carry, unlock, and trust dozens of times a day.
+Stories like Barbara's play out across Australia every day. Android phones outnumber every other type of mobile device on the planet, made by manufacturers including Samsung, Google, Oppo, Motorola, and many others. That scale is exactly why Android is such an attractive target, criminals build scams and malicious apps for the platform with the largest possible number of potential victims, and a phone is something almost all of us carry, unlock, and trust dozens of times a day.
 
 This chapter is not here to frighten you. It is here to show you clearly what is actually at stake, why your phone is valuable to the people who want to misuse it, and what the most common methods of attack look like. Because once you know what to look for, most of these threats become remarkably easy to avoid.
 
@@ -155,17 +155,17 @@ This chapter is not here to frighten you. It is here to show you clearly what is
 
 To understand why your phone is worth targeting, it helps to think about what is stored on it. Probably far more than you realise.
 
-Your banking apps — often already logged in, ready to move money the moment someone else is holding your phone
+Your banking apps, often already logged in, ready to move money the moment someone else is holding your phone
 
-Your text messages — including the one-time codes banks and other services send to confirm your identity
+Your text messages, including the one-time codes banks and other services send to confirm your identity
 
-Your Google Account — the master key to your email, your photos, your contacts, and often your saved payment cards
+Your Google Account, the master key to your email, your photos, your contacts, and often your saved payment cards
 
-Your photos — family memories, and sometimes photos of documents like your licence or Medicare card
+Your photos, family memories, and sometimes photos of documents like your licence or Medicare card
 
-Your contacts — everyone a scammer could impersonate you to, or pretend to be, once they have your phone
+Your contacts, everyone a scammer could impersonate you to, or pretend to be, once they have your phone
 
-Your apps — many already signed in to email, social media, and shopping accounts with no further password needed
+Your apps, many already signed in to email, social media, and shopping accounts with no further password needed
 
 | ℹ  DID YOU KNOW? A scammer who gains access to your phone, even briefly, can often open your banking app, read a one-time code as it arrives, and approve a transaction, all without ever knowing your actual banking password. This is why keeping your phone itself locked down matters just as much as keeping your passwords safe. |
 
@@ -205,7 +205,7 @@ The rest of this book walks through exactly what to check, one chapter at a time
 
 ---
 
-Sfinco Guides  ·  Volume 5 — Android Protection  ·  Chapter 2
+Sfinco Guides  ·  Volume 5: Android Protection  ·  Chapter 2
 
 
 # Locking the front door
@@ -217,23 +217,23 @@ Your PIN, fingerprint or face unlock, and the encryption setting that runs quiet
 Every protection in this book sits behind one gate: your lock screen. If someone can pick up your phone and get straight to your home screen with no PIN, pattern, or password, nothing else in this book matters very much. This chapter covers the layers that make that gate a genuine barrier, plus one setting that protects your data even if your phone is physically stolen.
 
 
-## Layer 1 — Your screen lock
+## Layer 1, Your screen lock
 
 
 Settings path:  Settings  >  Security & privacy  >  Screen lock (on some phones this is under Settings > Lock screen).
 
-Android offers a PIN, a pattern, or a password. A PIN of six digits or more is a good, simple choice for most people — long enough to resist guessing, short enough to type quickly and reliably.
+Android offers a PIN, a pattern, or a password. A PIN of six digits or more is a good, simple choice for most people, long enough to resist guessing, short enough to type quickly and reliably.
 
 ![Android Screen lock settings showing PIN, pattern, and password options](screenshots/ch2-screen-lock.png)
 
-*Mockup illustration, styled to match a typical Android settings layout — reshoot on a real device before final layout.*
+*Mockup illustration, styled to match a typical Android settings layout, reshoot on a real device before final layout.*
 
 ★  TIP:  Choose a PIN that is not your birth year, your address number, or a simple sequence like 123456. Avoid patterns that trace an obvious shape like a letter of your name, since these are often the first patterns a stranger will try.
 
 | ⚠  WARNING If your screen lock is set to "None" or "Swipe," anyone who picks up your phone has immediate, complete access to everything on it, including your banking apps and your email. Set a PIN, pattern, or password now if this applies to you. |
 
 
-## Layer 2 — Fingerprint or face unlock
+## Layer 2, Fingerprint or face unlock
 
 
 Most Android phones from the last several years include a fingerprint sensor, a face unlock camera, or both. These let you unlock quickly without typing your PIN every time, while your PIN still works as the backup method.
@@ -242,14 +242,14 @@ Settings path:  Settings  >  Security & privacy  >  Fingerprint unlock or Face u
 
 ![Android biometric setup screen showing fingerprint enrolment](screenshots/ch2-fingerprint-setup.png)
 
-*Mockup illustration, styled to match a typical Android settings layout — reshoot on a real device before final layout.*
+*Mockup illustration, styled to match a typical Android settings layout, reshoot on a real device before final layout.*
 
 If your phone does not support fingerprint or face unlock, a strong PIN used consistently is just as effective. Biometric unlock is a convenience layer on top of your PIN, not a replacement for it.
 
 | ℹ  DID YOU KNOW? Face unlock on many budget and mid-range Android phones relies only on the front camera, which can sometimes be less secure than a fingerprint sensor or the more advanced face-scanning hardware on premium phones. If security matters more to you than speed, a fingerprint or a strong PIN is the safer primary choice. |
 
 
-## Layer 3 — Screen lock timing
+## Layer 3, Screen lock timing
 
 
 A PIN only protects you if your phone actually asks for it soon after the screen goes dark. This setting controls when that happens.
@@ -263,12 +263,12 @@ Settings path:  Settings  >  Display  >  Screen timeout, and separately Settings
 
 ![Android Settings showing screen timeout and lock timing options](screenshots/ch2-lock-timing.png)
 
-*Mockup illustration, styled to match a typical Android settings layout — reshoot on a real device before final layout.*
+*Mockup illustration, styled to match a typical Android settings layout, reshoot on a real device before final layout.*
 
 | ⚠  WARNING If your phone is set to lock only after a long delay after the screen turns off, anyone who picks it up while you are distracted, even for a minute at a cafe or on public transport, has a direct path to everything you are logged in to. |
 
 
-## The feature that runs quietly in the background — device encryption
+## The feature that runs quietly in the background, device encryption
 
 
 Modern Android phones encrypt your storage by default, meaning everything saved on your phone is scrambled and can only be read using your PIN, pattern, or password as the key. Without it, the data on the phone is unreadable, even if someone removes the storage chip entirely.
@@ -277,17 +277,17 @@ Settings path:  Settings  >  Security & privacy  >  Encryption & credentials, to
 
 ![Android Encryption and credentials screen confirming the phone is encrypted](screenshots/ch2-encryption.png)
 
-*Mockup illustration, styled to match a typical Android settings layout — reshoot on a real device before final layout.*
+*Mockup illustration, styled to match a typical Android settings layout, reshoot on a real device before final layout.*
 
 On virtually every Android phone sold in the last decade, encryption is switched on automatically as soon as you set a screen lock, which is one more reason a PIN, pattern, or password matters more than it might seem.
 
 
-## Quick review — your chapter 2 checklist
+## Quick review, your chapter 2 checklist
 
 
 | Done | Item |
 | --- | --- |
-| ☐ | My screen lock is a PIN, pattern, or password — not "None" or "Swipe" |
+| ☐ | My screen lock is a PIN, pattern, or password, not "None" or "Swipe" |
 | ☐ | My PIN or pattern is not a simple sequence or personal detail |
 | ☐ | Fingerprint or face unlock is set up, if my phone supports it |
 | ☐ | Screen timeout and lock timing are both set to a minute or less |
@@ -297,7 +297,7 @@ With the front door locked, the next chapter covers the master key to everything
 
 ---
 
-Sfinco Guides  ·  Volume 5 — Android Protection  ·  Chapter 3
+Sfinco Guides  ·  Volume 5: Android Protection  ·  Chapter 3
 
 
 # Your Google Account and Play Protect
@@ -318,7 +318,7 @@ This is your account's control centre. Google shows a "Security checkup" here th
 
 ![Google Account Security page showing the Security checkup summary](screenshots/ch3-security-checkup.png)
 
-*Mockup illustration, styled to match the Google Account app — reshoot on a real device before final layout.*
+*Mockup illustration, styled to match the Google Account app, reshoot on a real device before final layout.*
 
 ★  TIP:  Run the Security checkup once now, and again every few months. It only takes a couple of minutes and often surfaces an old, forgotten device or app connection worth removing.
 
@@ -332,14 +332,14 @@ Settings path:  Settings  >  Google  >  Manage your Google Account  >  Security 
 
 ![Google Account 2-Step Verification setup screen](screenshots/ch3-two-step-verification.png)
 
-*Mockup illustration, styled to match the Google Account app — reshoot on a real device before final layout.*
+*Mockup illustration, styled to match the Google Account app, reshoot on a real device before final layout.*
 
 | ⚠  WARNING If two-step verification is not turned on, your entire Google Account, and everything connected to it, is protected by your password alone. A password that has ever been reused on another site is far more vulnerable than most people realise. |
 
 | ℹ  DID YOU KNOW? Google can send a simple "Yes, it's me" prompt to your phone instead of a text code for many sign-ins, which is both faster and slightly more secure, since a prompt cannot be intercepted the way a text message sometimes can. |
 
 
-## Google Play Protect — your phone's built-in scanner
+## Google Play Protect, your phone's built-in scanner
 
 
 Play Protect is a built-in feature that continually checks the apps on your phone, and any app you are about to install, for signs of malicious behaviour, whether the app came from the Play Store or elsewhere.
@@ -348,14 +348,14 @@ Settings path:  Open the Play Store app  >  tap your profile picture  >  Play Pr
 
 ![Google Play Protect screen showing scanning is turned on with no issues found](screenshots/ch3-play-protect.png)
 
-*Mockup illustration, styled to match the Google Play Store app — reshoot on a real device before final layout.*
+*Mockup illustration, styled to match the Google Play Store app, reshoot on a real device before final layout.*
 
 Make sure both "Scan apps with Play Protect" and "Improve harmful app detection" are turned on. These settings work quietly in the background and rarely need attention once they are switched on.
 
 | ✓  WELL DONE IF YOU HAVE THIS If Play Protect shows "No issues found" and scanning is turned on, your phone is actively checking every app you install against Google's constantly updated list of known threats. |
 
 
-## Recovery details — your safety net
+## Recovery details, your safety net
 
 
 If you are ever locked out of your account, or someone else tries to get into it, Google uses your recovery phone number and recovery email to verify it is really you.
@@ -364,12 +364,12 @@ Settings path:  Settings  >  Google  >  Manage your Google Account  >  Personal 
 
 ![Google Account recovery phone and email settings](screenshots/ch3-recovery-info.png)
 
-*Mockup illustration, styled to match the Google Account app — reshoot on a real device before final layout.*
+*Mockup illustration, styled to match the Google Account app, reshoot on a real device before final layout.*
 
 Make sure both are current. A recovery phone number that was disconnected years ago, or a recovery email you no longer check, can turn a simple password reset into a genuinely stressful ordeal.
 
 
-## Quick review — your chapter 3 checklist
+## Quick review, your chapter 3 checklist
 
 
 | Done | Item |
@@ -383,7 +383,7 @@ With your Google Account locked down, the next chapter looks at the apps on your
 
 ---
 
-Sfinco Guides  ·  Volume 5 — Android Protection  ·  Chapter 4
+Sfinco Guides  ·  Volume 5: Android Protection  ·  Chapter 4
 
 
 # App permissions worth trimming
@@ -404,21 +404,21 @@ This screen groups permissions by type, camera, location, microphone, contacts, 
 
 ![Android Permission manager screen showing permission categories](screenshots/ch4-permission-manager.png)
 
-*Mockup illustration, styled to match a typical Android settings layout — reshoot on a real device before final layout.*
+*Mockup illustration, styled to match a typical Android settings layout, reshoot on a real device before final layout.*
 
 Work through location, camera, and microphone first, since these are the three permissions most worth a second look.
 
 | ℹ  DID YOU KNOW? Android lets you grant location access "Only while using the app" instead of "Allow all the time," which stops an app from tracking your movements in the background when you are not actively using it. |
 
 
-## Location — the permission worth the most attention
+## Location, the permission worth the most attention
 
 
 Ask yourself, for each app with location access: does this app genuinely need to know where I am to do its job? A maps or weather app clearly does. A calculator, a flashlight, or a simple game almost certainly does not.
 
 ![Android app location permission screen showing the "Only while using the app" option](screenshots/ch4-location-permission.png)
 
-*Mockup illustration, styled to match a typical Android settings layout — reshoot on a real device before final layout.*
+*Mockup illustration, styled to match a typical Android settings layout, reshoot on a real device before final layout.*
 
 ★  TIP:  Set location to "Only while using the app" wherever possible, and "Don't allow" for anything that has no real reason to know your whereabouts at all.
 
@@ -432,14 +432,14 @@ Every app installed on your phone is a potential target, whether you use it or n
 
 ![Android Apps list screen showing installed applications](screenshots/ch4-app-list.png)
 
-*Mockup illustration, styled to match a typical Android settings layout — reshoot on a real device before final layout.*
+*Mockup illustration, styled to match a typical Android settings layout, reshoot on a real device before final layout.*
 
 | ⚠  WARNING An old, unused app is a common way for scammers to gain a foothold, particularly if the app has not been updated in years and a security flaw in it was later discovered. If you have not opened an app in the past six months, consider removing it. |
 
 Uninstalling an app you do not use removes both the app itself and every permission it was ever granted, with nothing further to configure.
 
 
-## Sideloading — installing apps from outside the Play Store
+## Sideloading, installing apps from outside the Play Store
 
 
 Android's flexibility allows apps to be installed from sources other than the Google Play Store, a feature sometimes called sideloading. This is occasionally useful, but every app on the Play Store has been checked by Google, while a sideloaded app has not.
@@ -448,12 +448,12 @@ Settings path:  Settings  >  Apps  >  Special app access  >  Install unknown app
 
 ![Android Install unknown apps settings screen](screenshots/ch4-install-unknown-apps.png)
 
-*Mockup illustration, styled to match a typical Android settings layout — reshoot on a real device before final layout.*
+*Mockup illustration, styled to match a typical Android settings layout, reshoot on a real device before final layout.*
 
 Unless you have a specific, deliberate reason to sideload an app, leave this permission turned off for every app listed. If you are ever asked to enable it to install something you did not deliberately seek out yourself, treat that as a strong warning sign.
 
 
-## Quick review — your chapter 4 checklist
+## Quick review, your chapter 4 checklist
 
 
 | Done | Item |
@@ -467,7 +467,7 @@ With your apps and their permissions under control, the next chapter turns to th
 
 ---
 
-Sfinco Guides  ·  Volume 5 — Android Protection  ·  Chapter 5
+Sfinco Guides  ·  Volume 5: Android Protection  ·  Chapter 5
 
 
 # Scams, phishing texts and calls
@@ -476,10 +476,10 @@ Sfinco Guides  ·  Volume 5 — Android Protection  ·  Chapter 5
 How to spot them, what to do, and how to recover if you clicked
 
 
-## Why scams work — the psychology behind them
+## Why scams work, the psychology behind them
 
 
-Every scam in this chapter relies on the same handful of psychological triggers: urgency, fear, authority, and trust. A text that makes you feel a parcel will be returned, a call that makes you feel your bank account is already at risk, or a message that claims to come from a government agency, is designed to make you skip the one step that would protect you — stopping to check.
+Every scam in this chapter relies on the same handful of psychological triggers: urgency, fear, authority, and trust. A text that makes you feel a parcel will be returned, a call that makes you feel your bank account is already at risk, or a message that claims to come from a government agency, is designed to make you skip the one step that would protect you, stopping to check.
 
 
 ## The scams most likely to reach you
@@ -495,7 +495,7 @@ A text message claims a parcel could not be delivered and asks you to click a li
 
 | Your parcel could not be delivered. A redelivery fee of $2.99 is required. Reschedule now: auspost-redeliver.net/track |
 
-*Illustrative mockup, not a real Australia Post message — built to show the pattern.*
+*Illustrative mockup, not a real Australia Post message, built to show the pattern.*
 
 Genuine delivery notifications never ask for a card payment by text link. If you are expecting a parcel, go directly to the courier's official app or website and track it there, rather than clicking the link in the message.
 
@@ -507,7 +507,7 @@ A text claims suspicious activity has been detected on your account and asks you
 
 | Unusual activity detected on your account. Verify your identity now to prevent suspension: commbank-secure-alert.com |
 
-*Illustrative mockup, not real CommBank correspondence — built to show the pattern, not to reproduce their branding.*
+*Illustrative mockup, not real CommBank correspondence, built to show the pattern, not to reproduce their branding.*
 
 | ⚠  WARNING Your bank's real domain always ends in .com.au, and your bank will never text you a link asking you to enter your online banking password. If you are ever concerned about your account, open your bank's official app directly, or call the number on the back of your card. |
 
@@ -519,9 +519,9 @@ A text arrives from an unknown number claiming to be a family member with a new 
 
 | Hi Mum it's me, I lost my old phone so this is my new number. I'm in a bit of trouble and need to borrow $500 urgently, can you send it to this account? |
 
-*Illustrative mockup, not a real family message — built to show the pattern.*
+*Illustrative mockup, not a real family message, built to show the pattern.*
 
-| ✶  CRITICAL — READ THIS CAREFULLY Before sending any money in response to a message like this, call the family member directly using the number you already have saved for them, not the new number in the text. Scammers rely on the panic of thinking a loved one is in trouble to stop you from taking this one simple, verifying step. |
+| ✶  CRITICAL, READ THIS CAREFULLY Before sending any money in response to a message like this, call the family member directly using the number you already have saved for them, not the new number in the text. Scammers rely on the panic of thinking a loved one is in trouble to stop you from taking this one simple, verifying step. |
 
 4. Fake government agency texts
 
@@ -531,7 +531,7 @@ A message claims to come from the ATO, Medicare, or Services Australia, warning 
 
 | You have an outstanding tax debt of $847.50. Pay now to avoid legal action: mygov-payments.info |
 
-*Illustrative mockup, not a real government message — built to show the pattern.*
+*Illustrative mockup, not a real government message, built to show the pattern.*
 
 Australian government agencies do not send text messages with payment links demanding immediate action. If you are concerned about anything tax or Centrelink related, log in directly to myGov through the app or by typing the address yourself.
 
@@ -539,7 +539,7 @@ Australian government agencies do not send text messages with payment links dema
 
 A caller claims to be from Google, Telstra, or "your phone provider," saying your phone has been hacked or is sending out data, and offers to fix it remotely using a screen-sharing app.
 
-| ✶  CRITICAL — READ THIS CAREFULLY Never install a remote access or screen-sharing app because an unsolicited caller asked you to, and never read a one-time code out loud to anyone who calls you, no matter who they claim to be. No legitimate technology company or bank will ever call you out of the blue to tell you your phone has a problem, and no legitimate organisation will ever ask you to read them a code that was just texted to you. |
+| ✶  CRITICAL, READ THIS CAREFULLY Never install a remote access or screen-sharing app because an unsolicited caller asked you to, and never read a one-time code out loud to anyone who calls you, no matter who they claim to be. No legitimate technology company or bank will ever call you out of the blue to tell you your phone has a problem, and no legitimate organisation will ever ask you to read them a code that was just texted to you. |
 
 
 ## The universal red flag checklist
@@ -561,7 +561,7 @@ The greeting is generic, or the request is unusually urgent for someone you know
 ## How to verify any suspicious message
 
 
-If in doubt, do not click anything in the message. Open your bank's or the organisation's official app directly, or type their known website address yourself into a browser. Or call the organisation using the number on the back of your card or from their official website — never a number provided in the suspicious message.
+If in doubt, do not click anything in the message. Open your bank's or the organisation's official app directly, or type their known website address yourself into a browser. Or call the organisation using the number on the back of your card or from their official website, never a number provided in the suspicious message.
 
 
 ## What to do if you think you clicked something you should not have
@@ -570,7 +570,7 @@ If in doubt, do not click anything in the message. Open your bank's or the organ
 Do not enter any passwords or personal details if a page is still open asking for them. Change the password for any account you may have entered details for, from a different, trusted device, and turn on two-step verification if it is not already on. Contact your bank directly if you entered any financial details or a one-time code, and monitor your accounts closely for the following weeks. Report the message using the "Report spam" or "Block" option in your Messages app, and consider reporting it to Scamwatch at scamwatch.gov.au.
 
 
-## Quick review — your chapter 5 checklist
+## Quick review, your chapter 5 checklist
 
 
 | Done | Item |
@@ -585,26 +585,26 @@ With scams covered, the next chapter looks at keeping your phone safe on Wi-Fi a
 
 ---
 
-Sfinco Guides  ·  Volume 5 — Android Protection  ·  Chapter 6
+Sfinco Guides  ·  Volume 5: Android Protection  ·  Chapter 6
 
 
 # Wi-Fi safety and safer browsing
 
 
-Staying safe on public networks — and the browser setting most people never check
+Staying safe on public networks, and the browser setting most people never check
 
 
-Most of us connect a phone to Wi-Fi without thinking much about it. At a cafe, a library, a shopping centre — you see the network name, tap it, and you are online. This chapter covers what is actually happening when you do that, and the handful of settings that make it safe.
+Most of us connect a phone to Wi-Fi without thinking much about it. At a cafe, a library, a shopping centre, you see the network name, tap it, and you are online. This chapter covers what is actually happening when you do that, and the handful of settings that make it safe.
 
 
-## How public Wi-Fi works — and where the risk actually is
+## How public Wi-Fi works, and where the risk actually is
 
 
 Public Wi-Fi networks are, by their nature, shared with everyone else in the room. On an unencrypted or poorly secured network, someone with the right knowledge and software nearby can potentially see some of the data travelling between your phone and the internet.
 
 The good news is that most websites and apps you use today, including all banking apps, use HTTPS encryption, shown as a padlock in your browser's address bar, which protects the content of your connection even on an open network. The remaining risk sits mostly with older or poorly built apps and websites that do not use HTTPS properly, and with a specific trick called an Evil Twin network.
 
-| ℹ  DID YOU KNOW? An Evil Twin is a fake Wi-Fi network set up by an attacker to mimic a legitimate one — for example, "Cafe_Free_WiFi" instead of the cafe's real "CafeWiFi" network. If your phone connects to the fake network, the attacker can see much more of your traffic than they could on the genuine one. |
+| ℹ  DID YOU KNOW? An Evil Twin is a fake Wi-Fi network set up by an attacker to mimic a legitimate one, for example, "Cafe_Free_WiFi" instead of the cafe's real "CafeWiFi" network. If your phone connects to the fake network, the attacker can see much more of your traffic than they could on the genuine one. |
 
 
 ## Checking your Wi-Fi settings before you connect
@@ -616,7 +616,7 @@ Android generally warns you when a network has no password at all, but it is wor
 
 ![Android Wi-Fi settings screen showing available networks](screenshots/ch6-wifi-settings.png)
 
-*Mockup illustration, styled to match a typical Android settings layout — reshoot on a real device before final layout.*
+*Mockup illustration, styled to match a typical Android settings layout, reshoot on a real device before final layout.*
 
 ★  TIP:  If in doubt about which network is genuinely the venue's, ask a staff member for the exact name rather than guessing between two similarly named options.
 
@@ -630,7 +630,7 @@ Settings path:  Settings  >  Network & internet  >  Wi-Fi  >  Wi-Fi preferences 
 
 ![Android Wi-Fi preferences screen showing automatic connection to open networks turned off](screenshots/ch6-auto-connect.png)
 
-*Mockup illustration, styled to match a typical Android settings layout — reshoot on a real device before final layout.*
+*Mockup illustration, styled to match a typical Android settings layout, reshoot on a real device before final layout.*
 
 | ⚠  WARNING With automatic connection to open networks turned on, your phone can join an unfamiliar, unsecured network without you ever noticing, sending some of your traffic across a network you never chose to trust. |
 
@@ -644,12 +644,12 @@ Settings path:  Open Chrome  >  tap the three dots  >  Settings  >  Privacy and 
 
 ![Chrome Safe Browsing settings screen showing Enhanced protection selected](screenshots/ch6-safe-browsing.png)
 
-*Mockup illustration, styled to match the Google Chrome app — reshoot on a real device before final layout.*
+*Mockup illustration, styled to match the Google Chrome app, reshoot on a real device before final layout.*
 
 | ✓  WELL DONE IF YOU HAVE THIS With Safe Browsing set to Enhanced protection, Chrome checks websites and downloads against Google's constantly updated list of dangerous sites before you ever reach them, giving you a warning screen instead of a silent risk. |
 
 
-## What is a VPN — in plain English
+## What is a VPN, in plain English
 
 
 A VPN, or Virtual Private Network, is a service that encrypts all of your phone's internet traffic and routes it through a secure server before it reaches the internet. This means the website or app you are visiting sees the VPN server's location, not your actual location, and anyone else on the same Wi-Fi network cannot see your browsing activity at all.
@@ -657,7 +657,7 @@ A VPN, or Virtual Private Network, is a service that encrypts all of your phone'
 ![Diagram comparing a phone's connection on public Wi-Fi with and without a VPN](screenshots/ch6-vpn-diagram.png)
 
 
-## Which VPN to choose — a plain-English comparison
+## Which VPN to choose, a plain-English comparison
 
 
 There are hundreds of VPN providers. Here are four reputable options with native Android apps, compared simply.
@@ -673,12 +673,12 @@ There are hundreds of VPN providers. Here are four reputable options with native
 ## How to install and use a VPN on your phone
 
 
-Choose a VPN provider from the table above and subscribe through their official website. Download their Android app directly from the Google Play Store. Open the app and sign in with the account you created. Tap Connect to start the VPN — a small key-shaped icon will appear at the top of your screen when it is active. Use the VPN whenever you are on public Wi-Fi, and consider enabling any "auto-connect on unsecured networks" option the app offers.
+Choose a VPN provider from the table above and subscribe through their official website. Download their Android app directly from the Google Play Store. Open the app and sign in with the account you created. Tap Connect to start the VPN, a small key-shaped icon will appear at the top of your screen when it is active. Use the VPN whenever you are on public Wi-Fi, and consider enabling any "auto-connect on unsecured networks" option the app offers.
 
 | ✓  WELL DONE IF YOU HAVE THIS A VPN running on public Wi-Fi, combined with Safe Browsing turned on and automatic connection to open networks turned off, covers the vast majority of real-world network and browsing risks for an Android phone. |
 
 
-## Quick review — your chapter 6 checklist
+## Quick review, your chapter 6 checklist
 
 
 | Done | Item |
@@ -692,7 +692,7 @@ With your network and browsing settings squared away, the next chapter covers ba
 
 ---
 
-Sfinco Guides  ·  Volume 5 — Android Protection  ·  Chapter 7
+Sfinco Guides  ·  Volume 5: Android Protection  ·  Chapter 7
 
 
 # Backups, Find My Device, and what to do if things go wrong
@@ -704,7 +704,7 @@ Setting up your safety net before you ever need it
 A lost or stolen phone is stressful enough without also losing every photo, contact, and message you had on it. This chapter covers the two things that turn a disaster into an inconvenience: a good backup, and Find My Device set up in advance.
 
 
-## Google Photos and Google One — your backup options
+## Google Photos and Google One, your backup options
 
 
 Most Android phones back up photos automatically through Google Photos, and can back up app data, contacts, and settings more broadly through Google One.
@@ -713,14 +713,14 @@ Settings path:  Settings  >  Google  >  Backup, to confirm what is currently bei
 
 ![Android Google Backup settings showing backup turned on with a recent backup date](screenshots/ch7-google-backup.png)
 
-*Mockup illustration, styled to match a typical Android settings layout — reshoot on a real device before final layout.*
+*Mockup illustration, styled to match a typical Android settings layout, reshoot on a real device before final layout.*
 
 ★  TIP:  Check the "last backup" date shown on this screen. If it is weeks or months old, tap "Back up now" and make sure your phone has both Wi-Fi and enough battery to complete it.
 
 | ℹ  DID YOU KNOW? If your phone is ever lost, stolen, damaged beyond repair, or reset, a proper backup lets you restore your photos, contacts, and most app data onto a replacement phone within minutes of signing back into your Google Account. Without a backup, that photo of your grandchild's first birthday may be gone for good. |
 
 
-## Setting up Find My Device — before you need it
+## Setting up Find My Device, before you need it
 
 
 Find My Device lets you locate your phone on a map, make it ring at full volume even if it is on silent, lock it remotely, or erase it entirely if you are certain it will not be recovered.
@@ -729,7 +729,7 @@ Settings path:  Settings  >  Security & privacy  >  Find My Device  >  ensure it
 
 ![Android Settings showing Find My Device turned on](screenshots/ch7-find-my-device.png)
 
-*Mockup illustration, styled to match a typical Android settings layout — reshoot on a real device before final layout.*
+*Mockup illustration, styled to match a typical Android settings layout, reshoot on a real device before final layout.*
 
 | ⚠  WARNING Find My Device only works if it was already turned on before your phone went missing. It cannot be enabled remotely after the fact, which is exactly why this is worth checking today rather than after something happens. |
 
@@ -742,7 +742,7 @@ Occasionally, a malicious app slips past Google Play Protect and causes your pho
 | ⚠  WARNING If your phone is showing signs of a malicious app, such as unexplained pop-ups or messages you did not send, run a Play Protect scan immediately from the Play Store app, and uninstall any recently added app you do not recognise or no longer trust. If problems persist, a factory reset after backing up your genuine data is the most reliable fix. |
 
 
-## The first thirty minutes — what to do if your phone goes missing
+## The first thirty minutes, what to do if your phone goes missing
 
 
 If your phone is ever lost or stolen, the steps below are designed to be followed calmly, in order, using another device.
@@ -756,7 +756,7 @@ If your phone is ever lost or stolen, the steps below are designed to be followe
 | 20–25 min | Notify your bank. If you had any banking apps logged in, call your bank to flag this as a precaution |
 | 25–30 min | Report to police if stolen. Provide the IMEI number, found on the original box or under Settings > About phone |
 
-★  TIP:  Find your phone's IMEI number now, before you ever need it, and save it somewhere safe — a note in a password manager, a photo of the original box, or written down in a locked drawer. You can also find it by dialling *#06# on the phone itself.
+★  TIP:  Find your phone's IMEI number now, before you ever need it, and save it somewhere safe, a note in a password manager, a photo of the original box, or written down in a locked drawer. You can also find it by dialling *#06# on the phone itself.
 
 
 ## A note on insurance
@@ -765,7 +765,7 @@ If your phone is ever lost or stolen, the steps below are designed to be followe
 Check whether your home and contents insurance policy covers a mobile phone used outside the home, since many standard policies only cover items while inside your house. If you regularly carry your phone with you, and it is a recent, higher-value model, a specific mobile phone add-on may be worth the extra cost.
 
 
-## Quick review — your chapter 7 checklist
+## Quick review, your chapter 7 checklist
 
 
 | Done | Item |
@@ -779,7 +779,7 @@ With a proper backup and Find My Device ready to go, the final chapter brings ev
 
 ---
 
-Sfinco Guides  ·  Volume 5 — Android Protection  ·  Chapter 8
+Sfinco Guides  ·  Volume 5: Android Protection  ·  Chapter 8
 
 
 # Your 15-minute Android security checkup
@@ -789,7 +789,7 @@ A simple monthly routine to keep your phone protected for years to come
 
 You have now worked through every major layer of Android security: your lock screen and encryption, your Google Account, app permissions, scam awareness, your Wi-Fi and browsing settings, and your backups. This final chapter brings all of it together into one simple monthly habit.
 
-| ℹ  DID YOU KNOW? Set a recurring reminder right now — the first Sunday of every month works well for most people. Open the Calendar or Clock app, create a new reminder called 'Android security checkup', and set it to repeat monthly. This is the single most important step in this chapter: the checklist only works if you actually come back to it. |
+| ℹ  DID YOU KNOW? Set a recurring reminder right now, the first Sunday of every month works well for most people. Open the Calendar or Clock app, create a new reminder called 'Android security checkup', and set it to repeat monthly. This is the single most important step in this chapter: the checklist only works if you actually come back to it. |
 
 
 ## The complete monthly checklist
@@ -863,7 +863,7 @@ Update your apps regularly.  Settings path: Open the Play Store app > tap your p
 
 Security is not a single project you finish and forget. It is a small, repeated habit, the same way you would check your car's tyre pressure or test your smoke alarms. Fifteen minutes a month, done consistently, will protect you far better than an intense afternoon of settings changes done once and never revisited.
 
-| ✓  WELL DONE You have completed Sfinco Guides Volume 5 — Android Protection. Your phone is now meaningfully more secure than it was when you started this book. Well done. Genuinely. |
+| ✓  WELL DONE You have completed Sfinco Guides Volume 5: Android Protection. Your phone is now meaningfully more secure than it was when you started this book. Well done. Genuinely. |
 
 Continuing your Sfinco journey:  The Sfinco Guides series continues into Series 2, starting with Small Business Protection, each written in the same plain-English, step-by-step style. See the final pages of this book for details.
 
@@ -873,7 +873,7 @@ Sfinco Guides  ·  Volume 5
 
 ## Glossary
 
-These are the key terms used throughout this book, explained in plain English. You do not need to memorise them — this section is here to help if you encounter a word and want a clear definition.
+These are the key terms used throughout this book, explained in plain English. You do not need to memorise them, this section is here to help if you encounter a word and want a clear definition.
 
 | Term | Definition |
 | --- | --- |
@@ -883,7 +883,7 @@ These are the key terms used throughout this book, explained in plain English. Y
 | HTTPS | The secure version of the web protocol. When a website address starts with https://, your connection to it is encrypted |
 | IMEI | A unique 15-digit number that identifies your specific phone, useful when reporting it lost or stolen |
 | Permission manager | The Android settings screen that lists which apps have access to your camera, location, microphone, and more |
-| Phishing | A scam that impersonates a trusted organisation — via text, email, or call — to trick you into handing over personal or financial information |
+| Phishing | A scam that impersonates a trusted organisation, via text, email, or call, to trick you into handing over personal or financial information |
 | Play Protect | Google's built-in scanner that checks apps on your phone, and any app you install, for malicious behaviour |
 | Safe Browsing | A Chrome feature that warns you before you open a website known to host scams, phishing pages, or malware |
 | Scamwatch | The Australian government's national scam reporting service, run by the ACCC |
@@ -895,7 +895,7 @@ Sfinco Guides  ·  Volume 5
 
 ## Quick reference card
 
-Cut out or photograph this page and keep it somewhere handy — on the fridge, or saved as a photo on your phone. These are the numbers and steps you are most likely to need in a hurry.
+Cut out or photograph this page and keep it somewhere handy, on the fridge, or saved as a photo on your phone. These are the numbers and steps you are most likely to need in a hurry.
 
 ### Emergency contacts
 
@@ -914,9 +914,9 @@ Cut out or photograph this page and keep it somewhere handy — on the fridge, o
 | Android version | _________________________________ |
 | IMEI number | _________________________________ |
 | My Google Account email | _________________________________ |
-| Backup — last checked | _________________________________ |
+| Backup, last checked | _________________________________ |
 
-### If your phone goes missing — first 30 minutes
+### If your phone goes missing, first 30 minutes
 
 | Step | What to do |
 | --- | --- |
@@ -931,7 +931,7 @@ Cut out or photograph this page and keep it somewhere handy — on the fridge, o
 | --- | --- |
 | 1. Do not call any number shown | And do not click any links |
 | 2. Do not read out any one-time code | Not to anyone, for any reason |
-| 3. Find real contact details | Official app or card — not from the message |
+| 3. Find real contact details | Official app or card, not from the message |
 | 4. Report it | scamwatch.gov.au and the impersonated organisation |
 
 Sfinco Guides  ·  Volume 5
@@ -993,13 +993,13 @@ Month / Year: _________________     Completed by: _________________
 
 sfinco.com.au · Vol 5 Android Protection
 
-## Sfinco Guides — the complete series
+## Sfinco Guides, the complete series
 
 More books in the series
 
-The Sfinco Guides series is designed to cover every device and situation you are likely to encounter. Each book follows the same plain-English, step-by-step format — with real Australian examples, screenshots, and no technical jargon.
+The Sfinco Guides series is designed to cover every device and situation you are likely to encounter. Each book follows the same plain-English, step-by-step format, with real Australian examples, screenshots, and no technical jargon.
 
-### Series 1 — Personal protection
+### Series 1, Personal protection
 
 | Volume | What it covers |
 | --- | --- |
@@ -1009,7 +1009,7 @@ The Sfinco Guides series is designed to cover every device and situation you are
 | Vol 4 Available now | Windows Protection. A plain-English guide for Windows users. Sign-in & BitLocker · Microsoft account · Defender · Scams · Firewall & VPN · Backups |
 | Vol 5 Available now | Android Protection. Staying safe on your Android phone. Play Protect · app permissions · Google account · 2FA · scam texts and calls |
 
-### Series 2 — Organisational protection
+### Series 2, Organisational protection
 
 | Volume | What it covers |
 | --- | --- |
@@ -1017,7 +1017,7 @@ The Sfinco Guides series is designed to cover every device and situation you are
 | Vol 7 Coming soon | NGO and Not-for-Profit Protection. Protecting organisations that protect others. Volunteer access · donor data · email compromise · free tools for small teams |
 | Vol 8 Coming soon | Personal Finance Protection. Protecting your money in a digital world. Banking security · investment scams · superannuation · password managers · wills |
 
-| ★  TIP All Sfinco Guides are available on Amazon (search 'Sfinco Guides' or scan the QR code on the next page). Paperback and e-book editions are available. Bulk copies for community groups, RSL clubs, libraries, and medical practices are available directly through sfinco.com.au — contact us for pricing. |
+| ★  TIP All Sfinco Guides are available on Amazon (search 'Sfinco Guides' or scan the QR code on the next page). Paperback and e-book editions are available. Bulk copies for community groups, RSL clubs, libraries, and medical practices are available directly through sfinco.com.au, contact us for pricing. |
 
 ## Connect with us
 
@@ -1027,13 +1027,13 @@ Each QR code below links to a different part of the Sfinco ecosystem. Scan any o
 
 | Where it takes you | What you'll find |
 | --- | --- |
-| [ QR CODE ] WEBSITE | Visit the Sfinco website — free resources, guides, blog, and updates on new books in the series sfinco.com.au |
-| [ QR CODE ] TECH HELP | Book a Senior Tech Concierge session — in-person help with your PC, Mac, or phone on the Sunshine Coast sfinco.com.au/concierge |
-| [ QR CODE ] ALL BOOKS | Browse all Sfinco Guides — the complete series on Amazon and direct from our website sfinco.com.au/guides |
-| [ QR CODE ] BUSINESS | Sfinco for business — cyber security audits and assessments for Sunshine Coast small businesses sfinco.com.au/business |
-| [ QR CODE ] FREE DOWNLOAD | Free printable resources — scam reference card, monthly checklist, and more (no sign-up required) sfinco.com.au/resources |
+| [ QR CODE ] WEBSITE | Visit the Sfinco website, free resources, guides, blog, and updates on new books in the series sfinco.com.au |
+| [ QR CODE ] TECH HELP | Book a Senior Tech Concierge session, in-person help with your PC, Mac, or phone on the Sunshine Coast sfinco.com.au/concierge |
+| [ QR CODE ] ALL BOOKS | Browse all Sfinco Guides, the complete series on Amazon and direct from our website sfinco.com.au/guides |
+| [ QR CODE ] BUSINESS | Sfinco for business, cyber security audits and assessments for Sunshine Coast small businesses sfinco.com.au/business |
+| [ QR CODE ] FREE DOWNLOAD | Free printable resources, scam reference card, monthly checklist, and more (no sign-up required) sfinco.com.au/resources |
 
-| ℹ  NOTE QR codes are scanned using your phone's camera app — no separate app needed. All Sfinco links are safe and will never ask for payment details. |
+| ℹ  NOTE QR codes are scanned using your phone's camera app, no separate app needed. All Sfinco links are safe and will never ask for payment details. |
 
 Sfinco Guides  ·  Volume 5
 
@@ -1043,11 +1043,11 @@ Leonardo Pinheiro, the author of the Sfinco Guides series, works in banking and 
 
 Holding qualifications in cybersecurity (CompTIA Security+), financial advising (RG146), and information technology, and completing further studies at CQUniversity, Leonardo brings together a rare combination of technical knowledge and the ability to explain it clearly to people who have no interest in becoming technical experts.
 
-The inspiration for this series came from years of seeing the same pattern: intelligent, capable, careful people being harmed by scams and digital threats — not because they were careless, but because nobody had ever given them a clear, practical guide to protecting themselves. That gap is what these books exist to close.
+The inspiration for this series came from years of seeing the same pattern: intelligent, capable, careful people being harmed by scams and digital threats, not because they were careless, but because nobody had ever given them a clear, practical guide to protecting themselves. That gap is what these books exist to close.
 
 Leonardo also volunteers with CoderDojo, teaching digital skills to young people on the Sunshine Coast, and has a background in community technology education across Australia and internationally.
 
-Sfinco was founded on the belief that every Australian deserves to feel safe and confident in their digital life — regardless of their age, their technical background, or how much money they have.
+Sfinco was founded on the belief that every Australian deserves to feel safe and confident in their digital life, regardless of their age, their technical background, or how much money they have.
 
 | Sfinco Protecting Australians through technology, money, and trust. sfinco.com.au Noosa · Sunshine Coast · Queensland · Australia |
 

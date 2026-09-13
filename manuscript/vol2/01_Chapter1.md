@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 2 — MacBook Protection  ·  Chapter 1
+Sfinco Guides  ·  Volume 2: MacBook Protection  ·  Chapter 1
 
 
 # Why your Mac is a target
@@ -21,23 +21,23 @@ This chapter is not here to frighten you. It is here to show you clearly what is
 
 To understand why your Mac is worth targeting, it helps to think about what is stored on it. Probably far more than you realise.
 
-Your bank accounts — through Safari's saved logins or banking websites you stay signed in to
+Your bank accounts, through Safari's saved logins or banking websites you stay signed in to
 
-Your email — which can be used to reset passwords for almost everything else
+Your email, which can be used to reset passwords for almost everything else
 
-Your Apple ID — the master key to your Apple account, iCloud, purchases, and Find My
+Your Apple ID, the master key to your Apple account, iCloud, purchases, and Find My
 
-Your photos — including images of documents, Medicare cards, passports, and bank statements
+Your photos, including images of documents, Medicare cards, passports, and bank statements
 
-Your documents — tax returns, wills, insurance papers, and other files stored in your Documents folder or iCloud Drive
+Your documents, tax returns, wills, insurance papers, and other files stored in your Documents folder or iCloud Drive
 
-Your saved passwords — stored in Safari's password manager or iCloud Keychain
+Your saved passwords, stored in Safari's password manager or iCloud Keychain
 
-Your Time Machine backup — a complete copy of everything above, sitting on an external drive or network share
+Your Time Machine backup, a complete copy of everything above, sitting on an external drive or network share
 
-Your contacts and calendar — names, phone numbers, and the pattern of your daily life
+Your contacts and calendar, names, phone numbers, and the pattern of your daily life
 
-| ℹ  DID YOU KNOW? A scammer who gains remote access to your Mac — even for a few minutes through a fake "support" session — can often open Safari, find your saved passwords, and access your online banking directly, all while you watch the screen and believe they are "fixing" something. This is why remote access requests from unsolicited callers are so dangerous. |
+| ℹ  DID YOU KNOW? A scammer who gains remote access to your Mac, even for a few minutes through a fake "support" session, can often open Safari, find your saved passwords, and access your online banking directly, all while you watch the screen and believe they are "fixing" something. This is why remote access requests from unsolicited callers are so dangerous. |
 
 Most people think of their Mac as a tool for email and photos. Scammers think of it as a filing cabinet with the lock already picked.
 
@@ -47,11 +47,11 @@ Most people think of their Mac as a tool for email and photos. Scammers think of
 
 Attacks on Mac users generally fall into a small number of well-worn patterns. Understanding them is most of the battle.
 
-Fake virus warnings.  A website or pop-up claims your Mac is infected and urges you to call a number or download "cleaning" software immediately. Real macOS security warnings never work this way — they never ask you to call a phone number.
+Fake virus warnings.  A website or pop-up claims your Mac is infected and urges you to call a number or download "cleaning" software immediately. Real macOS security warnings never work this way, they never ask you to call a phone number.
 
 Phishing emails and messages.  A message appears to come from Apple, your bank, or a delivery company, asking you to click a link and log in. The link leads to a fake site designed to steal your username and password.
 
-Malicious downloads.  Software downloaded from outside the App Store — a "free" video converter, a pirated application, or a fake update — quietly installs adware or spyware alongside whatever you thought you were installing.
+Malicious downloads.  Software downloaded from outside the App Store, a "free" video converter, a pirated application, or a fake update, quietly installs adware or spyware alongside whatever you thought you were installing.
 
 Remote access scams.  Someone convinces you, usually by phone, to install a legitimate remote access tool like AnyDesk or TeamViewer, then uses that access to look through your files, install malware, or ask for payment for problems that never existed.
 
@@ -69,7 +69,7 @@ Scammers also specifically target people who have used the same computer for a l
 ## The good news
 
 
-Every single scam type in this chapter has a straightforward defence, and none of them require you to become a technical expert. A genuine Apple security alert never asks you to call a phone number. Genuine tech support never phones you unprompted. And a Mac with the settings covered in the rest of this book turned on is a genuinely difficult target — difficult enough that most scammers will simply move on to someone else.
+Every single scam type in this chapter has a straightforward defence, and none of them require you to become a technical expert. A genuine Apple security alert never asks you to call a phone number. Genuine tech support never phones you unprompted. And a Mac with the settings covered in the rest of this book turned on is a genuinely difficult target, difficult enough that most scammers will simply move on to someone else.
 
 | ✓  WELL DONE IF YOU HAVE THIS If you have never called a number from a pop-up warning, and you only download software from the App Store or directly from a company's official website, you are already doing two of the most protective things a Mac owner can do. |
 

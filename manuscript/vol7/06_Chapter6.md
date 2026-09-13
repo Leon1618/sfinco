@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 7 — NGO and Not-for-Profit Protection  ·  Chapter 6
+Sfinco Guides  ·  Volume 7: NGO and Not-for-Profit Protection  ·  Chapter 6
 
 
 # Wi-Fi, shared devices, and remote access
@@ -19,7 +19,7 @@ Settings path: ask the venue whether a private or staff network is available, se
 
 ![Router settings screen showing a separate network for organisational devices](screenshots/vol7-ch6-guest-network.png)
 
-*Mockup illustration, styled to match a typical venue Wi-Fi admin panel — reshoot using your actual venue's network before final layout.*
+*Mockup illustration, styled to match a typical venue Wi-Fi admin panel, reshoot using your actual venue's network before final layout.*
 
 | ⚠  WARNING If your organisation's laptop or tablet connects to the same open Wi-Fi network as members of the public, treat this as a real, if modest, risk, particularly if that device is ever used for banking or donor data entry. A VPN, covered later in this chapter, is a simple way to reduce this risk. |
 
@@ -31,7 +31,7 @@ Many small organisations rely on a single shared laptop or tablet, used by whoev
 
 ![Shared device settings showing separate user accounts for different volunteers](screenshots/vol7-ch6-pos-network.png)
 
-*Mockup illustration, styled to match a typical device settings panel — reshoot using your actual equipment before final layout.*
+*Mockup illustration, styled to match a typical device settings panel, reshoot using your actual equipment before final layout.*
 
 ★  TIP:  If your shared device supports separate user accounts, set one up for each regular volunteer rather than one shared login. This makes it far easier to see who did what, and to remove access for a single person without affecting everyone else.
 
@@ -45,7 +45,7 @@ Settings path: usually found in your router or device's admin panel under Admini
 
 ![Router administration settings showing a custom admin password set](screenshots/vol7-ch6-admin-password.png)
 
-*Mockup illustration, styled to match a typical router admin panel — reshoot using your actual equipment before final layout.*
+*Mockup illustration, styled to match a typical router admin panel, reshoot using your actual equipment before final layout.*
 
 | ℹ  DID YOU KNOW? Default passwords for most makes and models of router and shared equipment are freely available online with a simple search, meaning an unchanged default password offers essentially no protection at all. |
 
@@ -62,12 +62,12 @@ If any volunteer or committee member accesses organisational systems from home o
 
 ![VPN app screen showing a secure connection active for a remote volunteer](screenshots/vol7-ch6-vpn-remote-access.png)
 
-*Mockup illustration, styled to match a typical VPN app — reshoot using your actual software before final layout.*
+*Mockup illustration, styled to match a typical VPN app, reshoot using your actual software before final layout.*
 
 | ✓  WELL DONE IF YOU HAVE THIS If remote volunteers already connect through a VPN before accessing organisational email, donor records, or banking, you have closed off one of the more common ways community organisations are compromised through home or public Wi-Fi. |
 
 
-## Quick review — your chapter 6 checklist
+## Quick review, your chapter 6 checklist
 
 
 | Done | Item |

@@ -36,13 +36,13 @@ Keeping everyone safe under one roof
 # Introduction
 
 
-Most homes today have one Wi-Fi network and a dozen or more devices quietly connected to it — phones, laptops, smart TVs, doorbells, speakers, sometimes even the fridge. Almost nobody who set that network up thinks about it again after the installer leaves or the box gets plugged in.
+Most homes today have one Wi-Fi network and a dozen or more devices quietly connected to it, phones, laptops, smart TVs, doorbells, speakers, sometimes even the fridge. Almost nobody who set that network up thinks about it again after the installer leaves or the box gets plugged in.
 
 That single network is now the front door to everything your household does online. If it is left with a default password, an out-of-date router, or no separation between your laptop and your daughter's smart speaker, one weak link can expose everyone who shares your roof.
 
-This is not a technical manual. There are no complicated diagrams, no long lists of jargon, and no assumption that you already know what a "guest network" is or why it matters that your smart doorbell has its own password. (It does — and by the end of this book, setting one up will take you two minutes.)
+This is not a technical manual. There are no complicated diagrams, no long lists of jargon, and no assumption that you already know what a "guest network" is or why it matters that your smart doorbell has its own password. (It does, and by the end of this book, setting one up will take you two minutes.)
 
-What this guide is, is a plain-English, step-by-step walkthrough of the most important things you can do right now to protect your home network and everyone who uses it. Each chapter tackles one area, explains why it matters in everyday terms, and then shows you — with real screenshots — exactly what to do and where to find it.
+What this guide is, is a plain-English, step-by-step walkthrough of the most important things you can do right now to protect your home network and everyone who uses it. Each chapter tackles one area, explains why it matters in everyday terms, and then shows you, with real screenshots, exactly what to do and where to find it.
 
 Whether you are the person in the house everyone calls when the internet stops working, or you have never once opened your router's settings, this book is written for you.
 
@@ -50,7 +50,7 @@ Whether you are the person in the house everyone calls when the internet stops w
 ## Who is this book for?
 
 
-This guide is for anyone responsible for a home network — a household, a granny flat, a small rental property — who wants everyone under that roof to be safer online. You do not need to be "tech-savvy." You just need to be willing to spend a few hours going through these steps, most of which take less than five minutes each.
+This guide is for anyone responsible for a home network, a household, a granny flat, a small rental property, who wants everyone under that roof to be safer online. You do not need to be "tech-savvy." You just need to be willing to spend a few hours going through these steps, most of which take less than five minutes each.
 
 In particular, this guide will be helpful if you:
 
@@ -58,7 +58,7 @@ have never changed your router's default admin password
 
 share your home with grandchildren, tenants, or visitors who need Wi-Fi access
 
-own any smart device — a camera, doorbell, speaker, or TV — connected to your home network
+own any smart device, a camera, doorbell, speaker, or TV, connected to your home network
 
 worry about what your children or grandchildren might come across online
 
@@ -68,9 +68,9 @@ simply want peace of mind knowing your home network is properly protected
 ## A quick word from the author
 
 
-I work in banking and technology on the Sunshine Coast in Queensland, and I spend a lot of time helping people — particularly older Australians — navigate the digital world safely. What I have seen over and over again is not stupidity or carelessness. It is a gap.
+I work in banking and technology on the Sunshine Coast in Queensland, and I spend a lot of time helping people, particularly older Australians, navigate the digital world safely. What I have seen over and over again is not stupidity or carelessness. It is a gap.
 
-Home networks are a particular blind spot, because the router usually gets set up once, works quietly for years, and is never thought about again — until something goes wrong. This book closes that gap, the same way Volumes 1 and 2 closed it for the iPhone and the Mac.
+Home networks are a particular blind spot, because the router usually gets set up once, works quietly for years, and is never thought about again, until something goes wrong. This book closes that gap, the same way Volumes 1 and 2 closed it for the iPhone and the Mac.
 
 Everything in here is written the way I would explain it to my own mum, sitting at her kitchen table with her router unplugged and turned upside down so we can read the sticker on the back.
 
@@ -86,7 +86,7 @@ This book is designed to be used, not just read. Here is how to get the most out
 
 Each chapter builds gently on the one before it, starting with the most fundamental protection (your router's own password) and working through to more advanced topics (smart devices and what to do if something goes wrong). If you are new to home network security, the best approach is to start at Chapter 1 and work your way through.
 
-That said, every chapter also stands on its own. If there is a specific topic that is urgent for you right now — a new smart camera, for example, or setting up parental controls before school holidays — feel free to jump straight there.
+That said, every chapter also stands on its own. If there is a specific topic that is urgent for you right now, a new smart camera, for example, or setting up parental controls before school holidays, feel free to jump straight there.
 
 
 ## Do the steps as you go
@@ -102,19 +102,19 @@ This is not a book to read on the couch and then forget about. It is a book to r
 
 Chapter 8 ends with a one-page security checklist you can use every month to make sure your home network stays protected over time. Print it out. Stick it on the fridge next to the router. Set a reminder on your calendar for the first Sunday of every month. Five minutes a month is all it takes to stay on top of things.
 
-The very back of the book also has a Quick Reference Card, a condensed version of that same checklist plus the emergency contacts and steps from Chapter 7, and a Glossary of every term used in this guide. You don't need to read either before you start — just know they're there, so you can flip back whenever you need a number, a step, or a plain-English definition in a hurry.
+The very back of the book also has a Quick Reference Card, a condensed version of that same checklist plus the emergency contacts and steps from Chapter 7, and a Glossary of every term used in this guide. You don't need to read either before you start, just know they're there, so you can flip back whenever you need a number, a step, or a plain-English definition in a hurry.
 
 
 ## Share it with someone you care about
 
 
-If you know someone — a parent, a neighbour, a friend — who could benefit from this guide, please share it with them. Scammers and intruders target networks that are left unprotected. The more people in your circle who know these basics, the safer everyone is.
+If you know someone, a parent, a neighbour, a friend, who could benefit from this guide, please share it with them. Scammers and intruders target networks that are left unprotected. The more people in your circle who know these basics, the safer everyone is.
 
 
 ## A note on screenshots and router differences
 
 
-The screenshots in this book show a typical modern router's settings app, similar in layout to most current models from major Australian internet providers. If your router looks different, the same settings almost always exist — they are just named or arranged slightly differently.
+The screenshots in this book show a typical modern router's settings app, similar in layout to most current models from major Australian internet providers. If your router looks different, the same settings almost always exist, they are just named or arranged slightly differently.
 
 To check your router's brand and model: look for a sticker on the underside or back of the device, which usually also lists the default Wi-Fi network name and password.
 
@@ -124,17 +124,17 @@ To check your router's brand and model: look for a sticker on the underside or b
 ## What this book does not cover
 
 
-This guide focuses specifically on your home network and the devices connected to it. It does not cover the individual security settings of your iPhone, Mac, or Android device in detail — those are covered in other volumes in the Sfinco Guides series. It also does not go deep into business or enterprise networking. If you run a small business, take a look at the Sfinco Guide for Small Business — coming soon in Series 2.
+This guide focuses specifically on your home network and the devices connected to it. It does not cover the individual security settings of your iPhone, Mac, or Android device in detail, those are covered in other volumes in the Sfinco Guides series. It also does not go deep into business or enterprise networking. If you run a small business, take a look at the Sfinco Guide for Small Business, coming soon in Series 2.
 
 Ready? Find your router. Chapter 1 starts with a story you might recognise.
 
 sfinco.com.au
 
-Part of the Sfinco Guides series — protecting Australians online
+Part of the Sfinco Guides series, protecting Australians online
 
 ---
 
-Sfinco Guides  ·  Volume 3 — Family and Home Network Protection  ·  Chapter 1
+Sfinco Guides  ·  Volume 3: Family and Home Network Protection  ·  Chapter 1
 
 
 # Why your home network is a target
@@ -143,11 +143,11 @@ Sfinco Guides  ·  Volume 3 — Family and Home Network Protection  ·  Chapter 
 One router, a dozen devices, and why nobody ever looks at either
 
 
-| ▶  REAL STORY Graham, 71, from Cooroy, noticed his internet had been running slowly for weeks. When his grandson visited and checked the router, he found eleven devices connected that nobody in the house recognised. Someone nearby had guessed the Wi-Fi password — still the default password printed on the box, eight years after it was installed — and had been quietly using Graham's internet connection, and possibly watching his network traffic, for months. Graham is not careless. He simply never thought about the router again after the technician left. That is exactly the gap this chapter closes. |
+| ▶  REAL STORY Graham, 71, from Cooroy, noticed his internet had been running slowly for weeks. When his grandson visited and checked the router, he found eleven devices connected that nobody in the house recognised. Someone nearby had guessed the Wi-Fi password, still the default password printed on the box, eight years after it was installed, and had been quietly using Graham's internet connection, and possibly watching his network traffic, for months. Graham is not careless. He simply never thought about the router again after the technician left. That is exactly the gap this chapter closes. |
 
-Stories like Graham's are common, and they are becoming more common as the average home fills with connected devices. The Australian Cyber Security Centre has repeatedly flagged home routers and smart devices as one of the most under-protected parts of a typical household's digital life — precisely because, unlike a phone or a laptop, nobody feels responsible for maintaining them.
+Stories like Graham's are common, and they are becoming more common as the average home fills with connected devices. The Australian Cyber Security Centre has repeatedly flagged home routers and smart devices as one of the most under-protected parts of a typical household's digital life, precisely because, unlike a phone or a laptop, nobody feels responsible for maintaining them.
 
-Your home network is not just a way to get online. It is the shared front door for every device in your house, and every person who uses it — including visitors, tenants, grandchildren, and increasingly, devices that are not really "computers" at all.
+Your home network is not just a way to get online. It is the shared front door for every device in your house, and every person who uses it, including visitors, tenants, grandchildren, and increasingly, devices that are not really "computers" at all.
 
 
 ## What is actually connected to your home network?
@@ -181,14 +181,14 @@ Outdated router firmware.  Like any computer, a router runs software that occasi
 
 Insecure smart devices.  A single poorly secured smart camera or plug can sometimes be used as a stepping stone into the rest of your network, particularly if every device shares the same network with no separation between them.
 
-Guessed or shared admin passwords.  The password to log in to your router's own settings is different from your Wi-Fi password, and is often left as the factory default — "admin/admin" being the most common example in the world.
+Guessed or shared admin passwords.  The password to log in to your router's own settings is different from your Wi-Fi password, and is often left as the factory default: "admin/admin" being the most common example in the world.
 
 Sharing your Wi-Fi password too freely.  Every person and device you have ever given your password to retains access until you change it, including a tradesperson from three years ago or a visitor's phone that may since have been compromised elsewhere.
 
 
 ## Why this matters more for a shared household
 
-A home network protects everyone who uses it equally poorly if it is left unsecured — including people who never made a single decision about it. Children, grandchildren, and older relatives visiting or living in the home are all exposed by the same weak router password, whether or not they know anything about how it works.
+A home network protects everyone who uses it equally poorly if it is left unsecured, including people who never made a single decision about it. Children, grandchildren, and older relatives visiting or living in the home are all exposed by the same weak router password, whether or not they know anything about how it works.
 
 This is also why home networks are attractive to criminals specifically targeting older Australians: a single successful compromise can expose banking sessions, personal photos, and even live camera feeds from inside the home, without ever needing to trick a person directly.
 
@@ -203,7 +203,7 @@ The rest of this book walks through exactly what to check, one chapter at a time
 
 ---
 
-Sfinco Guides  ·  Volume 3 — Family and Home Network Protection  ·  Chapter 2
+Sfinco Guides  ·  Volume 3: Family and Home Network Protection  ·  Chapter 2
 
 
 # Locking the router
@@ -217,14 +217,14 @@ Every protection in this book sits behind one device: your router. If someone ca
 
 ## Finding your router's settings
 
-Most routers are managed either through a phone app provided by your internet provider or router manufacturer, or through a web address typed into a browser while connected to your home Wi-Fi — commonly 192.168.0.1 or 192.168.1.1, though this varies. Both the app and the address are usually printed on a sticker on the underside of the router, along with the default login details.
+Most routers are managed either through a phone app provided by your internet provider or router manufacturer, or through a web address typed into a browser while connected to your home Wi-Fi, commonly 192.168.0.1 or 192.168.1.1, though this varies. Both the app and the address are usually printed on a sticker on the underside of the router, along with the default login details.
 
 ![Router admin app home screen showing connected devices and settings menu](screenshots/ch2-router-app-home.png)
 
-*Mockup illustration, styled to resemble a typical router app — reshoot on your own hardware before final layout.*
+*Mockup illustration, styled to resemble a typical router app, reshoot on your own hardware before final layout.*
 
 
-## Layer 1 — Your Wi-Fi password
+## Layer 1, Your Wi-Fi password
 
 This is the password anyone needs to join your home Wi-Fi network. If it is still the default password printed on the router, or something short and easy to guess, it is worth changing today.
 
@@ -234,27 +234,27 @@ Choose a passphrase rather than a short password.  Three or four random words st
 
 ![Wi-Fi settings screen showing network name and password fields](screenshots/ch2-wifi-password.png)
 
-*Mockup illustration, styled to resemble a typical router app — reshoot on your own hardware before final layout.*
+*Mockup illustration, styled to resemble a typical router app, reshoot on your own hardware before final layout.*
 
-| ⚠  WARNING Do not use: your street address, your surname, "password", or any word or number a stranger walking past your house could reasonably guess. Also make sure your network is using WPA3 or WPA2 encryption, shown in the security type setting — never "Open" or "WEP", both of which are effectively unlocked. |
+| ⚠  WARNING Do not use: your street address, your surname, "password", or any word or number a stranger walking past your house could reasonably guess. Also make sure your network is using WPA3 or WPA2 encryption, shown in the security type setting, never "Open" or "WEP", both of which are effectively unlocked. |
 
 
-## Layer 2 — Your router's admin password
+## Layer 2, Your router's admin password
 
-This is a separate password from your Wi-Fi password. It controls who can log in to the router's own settings and change anything — including your Wi-Fi password, or worse, redirect your entire household's internet traffic somewhere else.
+This is a separate password from your Wi-Fi password. It controls who can log in to the router's own settings and change anything, including your Wi-Fi password, or worse, redirect your entire household's internet traffic somewhere else.
 
 Settings path:  Router app or admin page  >  Administration  >  Change admin password.
 
-★  TIP:  If you have never changed this password, it is very likely still set to the factory default — often literally the word "admin" for both the username and password. This is one of the most well-known weaknesses in home networking, and it takes two minutes to fix.
+★  TIP:  If you have never changed this password, it is very likely still set to the factory default, often literally the word "admin" for both the username and password. This is one of the most well-known weaknesses in home networking, and it takes two minutes to fix.
 
 ![Router administration settings showing the admin password change screen](screenshots/ch2-admin-password.png)
 
-*Mockup illustration, styled to resemble a typical router app — reshoot on your own hardware before final layout.*
+*Mockup illustration, styled to resemble a typical router app, reshoot on your own hardware before final layout.*
 
-| ✶  CRITICAL — READ THIS CAREFULLY If your router's admin password has never been changed, treat this as the single highest-priority item in this entire book. Anyone on your Wi-Fi network, or in some cases anyone within Wi-Fi range at all, can potentially log in to your router and take control of your entire home network using a password that is publicly listed online for your exact router model. |
+| ✶  CRITICAL, READ THIS CAREFULLY If your router's admin password has never been changed, treat this as the single highest-priority item in this entire book. Anyone on your Wi-Fi network, or in some cases anyone within Wi-Fi range at all, can potentially log in to your router and take control of your entire home network using a password that is publicly listed online for your exact router model. |
 
 
-## Layer 3 — Firmware updates
+## Layer 3, Firmware updates
 
 Firmware is the software that runs your router itself. Like your phone or computer, it occasionally needs updates that fix newly discovered security weaknesses. Unlike your phone, most routers do not update themselves automatically unless a specific setting is turned on.
 
@@ -268,12 +268,12 @@ Settings path:  Router app or admin page  >  Administration or System  >  Firmwa
 
 ![Router settings showing the firmware update screen with automatic updates turned on](screenshots/ch2-firmware-update.png)
 
-*Mockup illustration, styled to resemble a typical router app — reshoot on your own hardware before final layout.*
+*Mockup illustration, styled to resemble a typical router app, reshoot on your own hardware before final layout.*
 
 | ℹ  DID YOU KNOW? Some older routers, particularly ones provided free with an internet plan several years ago, stop receiving security updates entirely once the manufacturer moves on to newer models. If your router is more than five to seven years old and you cannot find a recent update, it may be worth asking your internet provider about a replacement. |
 
 
-## Quick review — your chapter 2 checklist
+## Quick review, your chapter 2 checklist
 
 | Done | Item |
 | --- | --- |
@@ -286,7 +286,7 @@ With the router itself locked down, the next chapter covers keeping visitors and
 
 ---
 
-Sfinco Guides  ·  Volume 3 — Family and Home Network Protection  ·  Chapter 3
+Sfinco Guides  ·  Volume 3: Family and Home Network Protection  ·  Chapter 3
 
 
 # Guest Wi-Fi and keeping devices apart
@@ -295,7 +295,7 @@ Sfinco Guides  ·  Volume 3 — Family and Home Network Protection  ·  Chapter 
 Why your smart plug should never be on the same network as your banking
 
 
-Most home networks treat every connected device as equally trusted — your laptop, your smart speaker, and your visitor's phone all sit on exactly the same network, able to see and sometimes reach each other. This chapter covers the single setting that changes that: a guest network.
+Most home networks treat every connected device as equally trusted, your laptop, your smart speaker, and your visitor's phone all sit on exactly the same network, able to see and sometimes reach each other. This chapter covers the single setting that changes that: a guest network.
 
 
 ## What is a guest network, exactly?
@@ -306,7 +306,7 @@ Settings path:  Router app or admin page  >  Guest Network or Guest Wi-Fi.
 
 ![Router settings showing Guest Network turned on with a separate network name](screenshots/ch3-guest-network.png)
 
-*Mockup illustration, styled to resemble a typical router app — reshoot on your own hardware before final layout.*
+*Mockup illustration, styled to resemble a typical router app, reshoot on your own hardware before final layout.*
 
 | ℹ  DID YOU KNOW? On a properly configured guest network, a device connected to it generally cannot see or connect to other devices on your main network at all. This means a visitor's phone, or an unfamiliar device, has no direct path to your laptop or your smart camera, even while using the same internet connection. |
 
@@ -323,18 +323,18 @@ Smart TVs, streaming devices, and games consoles
 
 Smart speakers, doorbells, cameras, plugs, and lights
 
-★  TIP:  Give your guest network an obviously different name from your main one — for example, "Smith Family Guest" rather than something identical-looking to your main network. This avoids confusion and makes it easy to tell visitors and family members which one to join.
+★  TIP:  Give your guest network an obviously different name from your main one, for example, "Smith Family Guest" rather than something identical-looking to your main network. This avoids confusion and makes it easy to tell visitors and family members which one to join.
 
 Keep your own phone, laptop, and any device you use for online banking on the main network, since these are the devices most worth protecting, and the ones you have the most control over.
 
 
 ## Setting up a separate network for smart devices
 
-Many smart home devices — particularly cheaper ones — receive infrequent security updates and are a common target for automated scanning attacks that search the internet for known weaknesses. Placing them on your guest network, separate from your personal devices, limits the damage if one of them is ever compromised.
+Many smart home devices, particularly cheaper ones, receive infrequent security updates and are a common target for automated scanning attacks that search the internet for known weaknesses. Placing them on your guest network, separate from your personal devices, limits the damage if one of them is ever compromised.
 
 ![Guest network device list showing several smart home devices connected](screenshots/ch3-guest-devices.png)
 
-*Mockup illustration, styled to resemble a typical router app — reshoot on your own hardware before final layout.*
+*Mockup illustration, styled to resemble a typical router app, reshoot on your own hardware before final layout.*
 
 | ⚠  WARNING If a smart device on your main network is ever compromised, an attacker may be able to use it as a stepping stone to reach your laptop, your files, or your saved passwords on the same network. Moving smart devices to a guest network removes this stepping stone entirely, even if the device itself is never fully secured. |
 
@@ -347,12 +347,12 @@ Settings path:  Router app or admin page  >  Connected Devices or Device List.
 
 ![Router app showing a list of connected devices with names and connection times](screenshots/ch3-connected-devices.png)
 
-*Mockup illustration, styled to resemble a typical router app — reshoot on your own hardware before final layout.*
+*Mockup illustration, styled to resemble a typical router app, reshoot on your own hardware before final layout.*
 
 | ✓  WELL DONE IF YOU HAVE THIS If every device on your main network's list is something you personally recognise, and every smart device and visitor is on a separate guest network, your home network is already meaningfully more secure than most Australian households. |
 
 
-## Quick review — your chapter 3 checklist
+## Quick review, your chapter 3 checklist
 
 | Done | Item |
 | --- | --- |
@@ -365,7 +365,7 @@ With your devices properly separated, the next chapter looks specifically at the
 
 ---
 
-Sfinco Guides  ·  Volume 3 — Family and Home Network Protection  ·  Chapter 4
+Sfinco Guides  ·  Volume 3: Family and Home Network Protection  ·  Chapter 4
 
 
 # Smart devices and what they can see
@@ -401,9 +401,9 @@ Settings path:  The camera's app  >  Privacy or Security Settings.
 
 ![Smart camera app settings screen showing two-factor authentication turned on](screenshots/ch4-camera-settings.png)
 
-*Mockup illustration, styled to resemble a typical router app — reshoot on your own hardware before final layout.*
+*Mockup illustration, styled to resemble a typical router app, reshoot on your own hardware before final layout.*
 
-| ℹ  DID YOU KNOW? Some smart camera brands have had well-publicised cases of footage being accessed by unauthorised parties, usually traced back to reused passwords or accounts without two-factor authentication turned on — not a flaw in the camera hardware itself. The account security matters as much as the device. |
+| ℹ  DID YOU KNOW? Some smart camera brands have had well-publicised cases of footage being accessed by unauthorised parties, usually traced back to reused passwords or accounts without two-factor authentication turned on, not a flaw in the camera hardware itself. The account security matters as much as the device. |
 
 
 ## Smart speakers and voice assistants
@@ -414,7 +414,7 @@ Settings path:  The assistant's app  >  Privacy Settings  >  Voice History or Re
 
 ★  TIP:  Review and delete your voice recording history periodically, and turn off "help improve this service" style settings if you would prefer recordings are not reviewed by anyone for quality purposes.
 
-Consider a physical mute switch, present on most smart speakers, for times when you would prefer the device is not listening at all — such as when discussing anything sensitive.
+Consider a physical mute switch, present on most smart speakers, for times when you would prefer the device is not listening at all, such as when discussing anything sensitive.
 
 
 ## Smart TVs and streaming devices
@@ -425,7 +425,7 @@ Settings path:  TV Settings  >  Privacy  >  Viewing Data or Ad Tracking.
 
 ![Smart TV settings showing viewing data collection toggled off](screenshots/ch4-smart-tv-privacy.png)
 
-*Mockup illustration, styled to resemble a typical router app — reshoot on your own hardware before final layout.*
+*Mockup illustration, styled to resemble a typical router app, reshoot on your own hardware before final layout.*
 
 Turn off automatic content recognition or viewing data collection if you would prefer your viewing habits are not tracked, and cover or disable any built-in camera when not in active use for video calling.
 
@@ -437,7 +437,7 @@ Not all smart devices carry equal risk. Give particular attention to: any device
 | ✓  WELL DONE IF YOU HAVE THIS If every smart device in your home has its own unique password, sits on your guest network from Chapter 3, and you have reviewed the privacy settings on anything with a camera or microphone, your smart home is already in very good shape. |
 
 
-## Quick review — your chapter 4 checklist
+## Quick review, your chapter 4 checklist
 
 | Done | Item |
 | --- | --- |
@@ -450,7 +450,7 @@ With your smart devices under control, the next chapter turns to the scams and p
 
 ---
 
-Sfinco Guides  ·  Volume 3 — Family and Home Network Protection  ·  Chapter 5
+Sfinco Guides  ·  Volume 3: Family and Home Network Protection  ·  Chapter 5
 
 
 # Scams that target your household
@@ -459,9 +459,9 @@ Sfinco Guides  ·  Volume 3 — Family and Home Network Protection  ·  Chapter 
 How to spot them, what to do, and how to recover if you clicked
 
 
-## Why scams work — the psychology behind them
+## Why scams work, the psychology behind them
 
-Every scam in this chapter relies on the same handful of psychological triggers: urgency, fear, authority, and trust. A message that makes you feel your internet is about to be cut off, that a family member is in trouble, or that it comes from your provider, is designed to make you skip the one step that would protect you — stopping to check.
+Every scam in this chapter relies on the same handful of psychological triggers: urgency, fear, authority, and trust. A message that makes you feel your internet is about to be cut off, that a family member is in trouble, or that it comes from your provider, is designed to make you skip the one step that would protect you, stopping to check.
 
 
 ## The scams most likely to reach your household
@@ -476,7 +476,7 @@ An email or text claims to be from Telstra, Optus, or your NBN provider, warning
 
 | Your service will be suspended within 24 hours due to a failed payment. Update your details now: telstra-billing-au.com/pay |
 
-*Illustrative mockup, not real Telstra correspondence — built to show the pattern, not to reproduce their branding.*
+*Illustrative mockup, not real Telstra correspondence, built to show the pattern, not to reproduce their branding.*
 
 Your real provider's domain always matches their official website. Log in directly through the provider's app or by typing their address yourself, never through a link in an unexpected message.
 
@@ -494,7 +494,7 @@ An email claims your smart camera or doorbell's cloud storage subscription has e
 
 | Your Ring Protect subscription payment failed. Update your payment details within 24 hours to avoid losing access to your video history: ring-account-billing.com/update |
 
-*Illustrative mockup, not real Ring correspondence — built to show the pattern, not to reproduce their branding.*
+*Illustrative mockup, not real Ring correspondence, built to show the pattern, not to reproduce their branding.*
 
 Check subscription and billing status only inside the device's own official app, never through an emailed link.
 
@@ -502,7 +502,7 @@ Check subscription and billing status only inside the device's own official app,
 
 A caller claims to be from your internet provider, saying they have detected a problem with your connection or router, and asks for remote access to "fix" it.
 
-| ✶  CRITICAL — READ THIS CAREFULLY No legitimate internet provider will call you unprompted offering to remotely access your router or computer to fix a connection issue. If you are experiencing a genuine problem, you contact them — using the number on your bill or their official website, never a number provided by an unsolicited caller. |
+| ✶  CRITICAL, READ THIS CAREFULLY No legitimate internet provider will call you unprompted offering to remotely access your router or computer to fix a connection issue. If you are experiencing a genuine problem, you contact them, using the number on your bill or their official website, never a number provided by an unsolicited caller. |
 
 5. Scams targeting children and grandchildren online
 
@@ -531,7 +531,7 @@ The greeting is generic.  "Dear Customer" suggests a mass-sent scam. Your provid
 Disconnect the affected device from Wi-Fi immediately. Do not enter any passwords or payment details if a page is still open asking for them. Change the password for any account you may have entered details for, from a different, trusted device. Contact your bank directly if you entered any financial details, and monitor your accounts closely for the following weeks. If a smart device account may be compromised, change that device's password too and review its connected sharing list.
 
 
-## Quick review — your chapter 5 checklist
+## Quick review, your chapter 5 checklist
 
 | Done | Item |
 | --- | --- |
@@ -544,7 +544,7 @@ With scams covered, the next chapter looks at parental controls and keeping chil
 
 ---
 
-Sfinco Guides  ·  Volume 3 — Family and Home Network Protection  ·  Chapter 6
+Sfinco Guides  ·  Volume 3: Family and Home Network Protection  ·  Chapter 6
 
 
 # Parental controls and keeping kids safe online
@@ -564,9 +564,9 @@ Settings path:  Router app or admin page  >  Parental Controls or Content Filter
 
 ![Router parental controls screen showing content filtering categories](screenshots/ch6-router-parental-controls.png)
 
-*Mockup illustration, styled to resemble a typical router app — reshoot on your own hardware before final layout.*
+*Mockup illustration, styled to resemble a typical router app, reshoot on your own hardware before final layout.*
 
-★  TIP:  Router-level filtering is a useful baseline, but it is not foolproof — a determined teenager with technical knowledge may find ways around it. Combine it with the device-level and conversation-based approaches below for the most effective protection.
+★  TIP:  Router-level filtering is a useful baseline, but it is not foolproof, a determined teenager with technical knowledge may find ways around it. Combine it with the device-level and conversation-based approaches below for the most effective protection.
 
 
 ## Setting up device-level screen time and content limits
@@ -582,7 +582,7 @@ Apple, Google, and Microsoft all offer free, built-in tools to manage what a chi
 
 ![iPhone Screen Time settings showing Content and Privacy Restrictions with age-appropriate limits set](screenshots/ch6-screen-time.png)
 
-*Mockup illustration, styled to resemble iOS Screen Time — reshoot on a real device before final layout.*
+*Mockup illustration, styled to resemble iOS Screen Time, reshoot on a real device before final layout.*
 
 | ℹ  DID YOU KNOW? Setting up a proper Family Sharing or Family Link group lets you manage several children's devices from your own phone or computer, including approving app downloads, setting daily time limits, and seeing a summary of what they have been using their device for. |
 
@@ -595,7 +595,7 @@ Settings path:  Computer or tablet's account settings  >  Add a family member or
 
 ![Family account setup screen showing a child account being added with age-appropriate settings](screenshots/ch6-child-account.png)
 
-*Mockup illustration, styled to resemble a typical device account setup screen — reshoot on your own hardware before final layout.*
+*Mockup illustration, styled to resemble a typical device account setup screen, reshoot on your own hardware before final layout.*
 
 | ⚠  WARNING Avoid letting a child use an account that is also signed in to your email, online banking, or saved payment details. A separate child account, even a simple one, prevents accidental purchases and keeps your own accounts fully separate. |
 
@@ -606,10 +606,10 @@ No filter or setting fully replaces an open conversation. Children who understan
 
 Useful topics to cover, in age-appropriate language: never sharing personal details or photos with people they only know online, telling a trusted adult if a game or app asks for payment details, understanding that people online are not always who they claim to be, and knowing it is always okay to come to you if something online feels wrong, without fear of getting in trouble.
 
-| ✓  WELL DONE IF YOU HAVE THIS If you have both router-level filtering turned on and an ongoing, open conversation with the children in your household about online safety, you are covering this from both the technical and human side — which is exactly how it works best. |
+| ✓  WELL DONE IF YOU HAVE THIS If you have both router-level filtering turned on and an ongoing, open conversation with the children in your household about online safety, you are covering this from both the technical and human side, which is exactly how it works best. |
 
 
-## Quick review — your chapter 6 checklist
+## Quick review, your chapter 6 checklist
 
 | Done | Item |
 | --- | --- |
@@ -622,7 +622,7 @@ With the household's youngest members covered, the next chapter looks at what to
 
 ---
 
-Sfinco Guides  ·  Volume 3 — Family and Home Network Protection  ·  Chapter 7
+Sfinco Guides  ·  Volume 3: Family and Home Network Protection  ·  Chapter 7
 
 
 # What to do if your network is compromised
@@ -631,17 +631,17 @@ Sfinco Guides  ·  Volume 3 — Family and Home Network Protection  ·  Chapter 
 Recognising the signs, and your household's recovery plan
 
 
-Even a well-protected home network can occasionally be compromised — through a newly discovered router vulnerability, a forgotten device, or simple bad luck. This chapter covers how to recognise that something is wrong, and exactly what to do about it.
+Even a well-protected home network can occasionally be compromised, through a newly discovered router vulnerability, a forgotten device, or simple bad luck. This chapter covers how to recognise that something is wrong, and exactly what to do about it.
 
 
 ## Signs your network may be compromised
 
-Your internet becomes noticeably and consistently slower, with no obvious cause. Devices you do not recognise appear in your router's connected devices list. Your router's settings have changed without you making the change — a new admin password, a different Wi-Fi name, or unfamiliar port forwarding rules. Smart devices behave unexpectedly, such as a camera repositioning itself or a speaker responding to commands nobody in the house gave. You receive login alerts or two-factor codes for accounts you were not trying to access.
+Your internet becomes noticeably and consistently slower, with no obvious cause. Devices you do not recognise appear in your router's connected devices list. Your router's settings have changed without you making the change, a new admin password, a different Wi-Fi name, or unfamiliar port forwarding rules. Smart devices behave unexpectedly, such as a camera repositioning itself or a speaker responding to commands nobody in the house gave. You receive login alerts or two-factor codes for accounts you were not trying to access.
 
-| ℹ  DID YOU KNOW? Checking your router's connected devices list occasionally, covered in Chapter 3, is one of the simplest ways to notice a compromise early — often well before anything else seems wrong. |
+| ℹ  DID YOU KNOW? Checking your router's connected devices list occasionally, covered in Chapter 3, is one of the simplest ways to notice a compromise early, often well before anything else seems wrong. |
 
 
-## The first thirty minutes — what to do if you suspect a compromise
+## The first thirty minutes, what to do if you suspect a compromise
 
 If you notice any of the signs above, the steps below are designed to be followed calmly, in order.
 
@@ -656,7 +656,7 @@ If you notice any of the signs above, the steps below are designed to be followe
 
 ![Router settings showing the factory reset option under Administration](screenshots/ch7-factory-reset.png)
 
-*Mockup illustration, styled to resemble a typical router app — reshoot on your own hardware before final layout.*
+*Mockup illustration, styled to resemble a typical router app, reshoot on your own hardware before final layout.*
 
 | ⚠  WARNING A factory reset erases all of your router's settings, including your Wi-Fi password and any custom configuration. Be prepared to set everything up again from Chapter 2 onward, and make sure you know your internet provider's connection details before you begin, in case they are needed to reconnect. |
 
@@ -673,7 +673,7 @@ Once you have secured your network again, take five minutes to write down your n
 Contact your internet provider if you cannot resolve unusual activity yourself, if you suspect the compromise may involve your provider-supplied equipment specifically, or if your service itself appears to have been affected, such as unexpected data usage far beyond your normal pattern.
 
 
-## Quick review — your chapter 7 checklist
+## Quick review, your chapter 7 checklist
 
 | Done | Item |
 | --- | --- |
@@ -686,7 +686,7 @@ With a recovery plan in place, the final chapter brings everything together into
 
 ---
 
-Sfinco Guides  ·  Volume 3 — Family and Home Network Protection  ·  Chapter 8
+Sfinco Guides  ·  Volume 3: Family and Home Network Protection  ·  Chapter 8
 
 
 # Your 15-minute home network checkup
@@ -696,7 +696,7 @@ A simple monthly routine to keep your household protected for years to come
 
 You have now worked through every major layer of home network security: your router's own passwords, guest network separation, your smart devices, scam awareness, parental controls, and your recovery plan. This final chapter brings all of it together into one simple monthly habit.
 
-| ℹ  DID YOU KNOW? Set a recurring reminder right now — the first Sunday of every month works well for most people. Open the Reminders or Calendar app on your phone, create a new reminder called 'Home network checkup', and set it to repeat monthly. This is the single most important step in this chapter: the checklist only works if you actually come back to it. |
+| ℹ  DID YOU KNOW? Set a recurring reminder right now, the first Sunday of every month works well for most people. Open the Reminders or Calendar app on your phone, create a new reminder called 'Home network checkup', and set it to repeat monthly. This is the single most important step in this chapter: the checklist only works if you actually come back to it. |
 
 
 ## The complete monthly checklist
@@ -757,7 +757,7 @@ Review who still has your Wi-Fi password.  A tradesperson, a former housemate, o
 
 Security is not a single project you finish and forget. It is a small, repeated habit, the same way you would check your car's tyre pressure or test your smoke alarms. Fifteen minutes a month, done consistently, will protect your household far better than an intense afternoon of settings changes done once and never revisited.
 
-| ✓  WELL DONE You have completed Sfinco Guides Volume 3 — Family and Home Network Protection. Your household's network is now meaningfully more secure than it was when you started this book. Well done. Genuinely. |
+| ✓  WELL DONE You have completed Sfinco Guides Volume 3: Family and Home Network Protection. Your household's network is now meaningfully more secure than it was when you started this book. Well done. Genuinely. |
 
 Continuing your Sfinco journey:  The Sfinco Guides series continues with Volume 4 (Windows Protection) and Volume 5 (Android Protection), each written in the same plain-English, step-by-step style. See the final pages of this book for details.
 
@@ -767,7 +767,7 @@ Sfinco Guides  ·  Volume 3
 
 ## Glossary
 
-These are the key terms used throughout this book, explained in plain English. You do not need to memorise them — this section is here to help if you encounter a word and want a clear definition.
+These are the key terms used throughout this book, explained in plain English. You do not need to memorise them, this section is here to help if you encounter a word and want a clear definition.
 
 | Term | Definition |
 | --- | --- |
@@ -775,10 +775,10 @@ These are the key terms used throughout this book, explained in plain English. Y
 | Firmware | The built-in software that runs your router, which occasionally needs security updates |
 | Guest network | A second Wi-Fi network, with its own name and password, that keeps visitors and devices separate from your main network |
 | HTTPS | The secure version of the web protocol. When a website address starts with https://, your connection to it is encrypted |
-| IoT (Internet of Things) | A general term for everyday devices — cameras, plugs, speakers — that connect to the internet |
+| IoT (Internet of Things) | A general term for everyday devices, cameras, plugs, speakers, that connect to the internet |
 | Network segmentation | Splitting your devices across separate networks (main and guest) to limit what a compromised device can reach |
 | Parental controls | Settings that limit or filter what a child can access online, either at the router or on individual devices |
-| Phishing | A scam that impersonates a trusted organisation — via email or text — to trick you into handing over personal or financial information |
+| Phishing | A scam that impersonates a trusted organisation, via email or text, to trick you into handing over personal or financial information |
 | Router | The device that connects your home to the internet and broadcasts your Wi-Fi network |
 | Scamwatch | The Australian government's national scam reporting service, run by the ACCC |
 | Two-Factor Authentication (2FA) | A security method requiring both your password and a code sent to a trusted device to sign in to an account |
@@ -788,7 +788,7 @@ Sfinco Guides  ·  Volume 3
 
 ## Quick reference card
 
-Cut out or photograph this page and keep it somewhere handy — on the fridge next to the router, or saved as a photo on your phone. These are the numbers and steps you are most likely to need in a hurry.
+Cut out or photograph this page and keep it somewhere handy, on the fridge next to the router, or saved as a photo on your phone. These are the numbers and steps you are most likely to need in a hurry.
 
 ### Emergency contacts
 
@@ -805,8 +805,8 @@ Cut out or photograph this page and keep it somewhere handy — on the fridge ne
 | --- | --- |
 | Router brand and model | _________________________________ |
 | Wi-Fi network name | _________________________________ |
-| Wi-Fi password — last changed | _________________________________ |
-| Admin password — last changed | _________________________________ |
+| Wi-Fi password, last changed | _________________________________ |
+| Admin password, last changed | _________________________________ |
 
 ### If you suspect your network is compromised
 
@@ -876,13 +876,13 @@ Month / Year: _________________     Completed by: _________________
 
 sfinco.com.au · Vol 3 Family and Home Network Protection
 
-## Sfinco Guides — the complete series
+## Sfinco Guides, the complete series
 
 More books in the series
 
-The Sfinco Guides series is designed to cover every device and situation you are likely to encounter. Each book follows the same plain-English, step-by-step format — with real Australian examples, screenshots, and no technical jargon.
+The Sfinco Guides series is designed to cover every device and situation you are likely to encounter. Each book follows the same plain-English, step-by-step format, with real Australian examples, screenshots, and no technical jargon.
 
-### Series 1 — Personal protection
+### Series 1, Personal protection
 
 | Volume | What it covers |
 | --- | --- |
@@ -892,7 +892,7 @@ The Sfinco Guides series is designed to cover every device and situation you are
 | Vol 4 Coming soon | Windows Protection. A plain-English guide for Windows users. Windows Defender · BitLocker · updates · browser security · ransomware defence |
 | Vol 5 Coming soon | Android Protection. Staying safe on your Android phone. Play Protect · app sideloading · Google account · 2FA · scam SMS |
 
-### Series 2 — Organisational protection
+### Series 2, Organisational protection
 
 | Volume | What it covers |
 | --- | --- |
@@ -900,7 +900,7 @@ The Sfinco Guides series is designed to cover every device and situation you are
 | Vol 7 Coming soon | NGO and Not-for-Profit Protection. Protecting organisations that protect others. Volunteer access · donor data · email compromise · free tools for small teams |
 | Vol 8 Coming soon | Personal Finance Protection. Protecting your money in a digital world. Banking security · investment scams · superannuation · password managers · wills |
 
-| ★  TIP All Sfinco Guides are available on Amazon (search 'Sfinco Guides' or scan the QR code on the next page). Paperback and e-book editions are available. Bulk copies for community groups, RSL clubs, libraries, and medical practices are available directly through sfinco.com.au — contact us for pricing. |
+| ★  TIP All Sfinco Guides are available on Amazon (search 'Sfinco Guides' or scan the QR code on the next page). Paperback and e-book editions are available. Bulk copies for community groups, RSL clubs, libraries, and medical practices are available directly through sfinco.com.au, contact us for pricing. |
 
 ## Connect with us
 
@@ -910,13 +910,13 @@ Each QR code below links to a different part of the Sfinco ecosystem. Scan any o
 
 | Where it takes you | What you'll find |
 | --- | --- |
-| [ QR CODE ] WEBSITE | Visit the Sfinco website — free resources, guides, blog, and updates on new books in the series sfinco.com.au |
-| [ QR CODE ] TECH HELP | Book a Senior Tech Concierge session — in-person help with your home network, Mac, or iPhone on the Sunshine Coast sfinco.com.au/concierge |
-| [ QR CODE ] ALL BOOKS | Browse all Sfinco Guides — the complete series on Amazon and direct from our website sfinco.com.au/guides |
-| [ QR CODE ] BUSINESS | Sfinco for business — cyber security audits and assessments for Sunshine Coast small businesses sfinco.com.au/business |
-| [ QR CODE ] FREE DOWNLOAD | Free printable resources — scam reference card, monthly checklist, and more (no sign-up required) sfinco.com.au/resources |
+| [ QR CODE ] WEBSITE | Visit the Sfinco website, free resources, guides, blog, and updates on new books in the series sfinco.com.au |
+| [ QR CODE ] TECH HELP | Book a Senior Tech Concierge session, in-person help with your home network, Mac, or iPhone on the Sunshine Coast sfinco.com.au/concierge |
+| [ QR CODE ] ALL BOOKS | Browse all Sfinco Guides, the complete series on Amazon and direct from our website sfinco.com.au/guides |
+| [ QR CODE ] BUSINESS | Sfinco for business, cyber security audits and assessments for Sunshine Coast small businesses sfinco.com.au/business |
+| [ QR CODE ] FREE DOWNLOAD | Free printable resources, scam reference card, monthly checklist, and more (no sign-up required) sfinco.com.au/resources |
 
-| ℹ  NOTE QR codes are scanned using your phone's camera app — no separate app needed. All Sfinco links are safe and will never ask for payment details. |
+| ℹ  NOTE QR codes are scanned using your phone's camera app, no separate app needed. All Sfinco links are safe and will never ask for payment details. |
 
 Sfinco Guides  ·  Volume 3
 
@@ -926,11 +926,11 @@ Leonardo Pinheiro, the author of the Sfinco Guides series, works in banking and 
 
 Holding qualifications in cybersecurity (CompTIA Security+), financial advising (RG146), and information technology, and completing further studies at CQUniversity, Leonardo brings together a rare combination of technical knowledge and the ability to explain it clearly to people who have no interest in becoming technical experts.
 
-The inspiration for this series came from years of seeing the same pattern: intelligent, capable, careful people being harmed by scams and digital threats — not because they were careless, but because nobody had ever given them a clear, practical guide to protecting themselves. That gap is what these books exist to close.
+The inspiration for this series came from years of seeing the same pattern: intelligent, capable, careful people being harmed by scams and digital threats, not because they were careless, but because nobody had ever given them a clear, practical guide to protecting themselves. That gap is what these books exist to close.
 
 Leonardo also volunteers with CoderDojo, teaching digital skills to young people on the Sunshine Coast, and has a background in community technology education across Australia and internationally.
 
-Sfinco was founded on the belief that every Australian deserves to feel safe and confident in their digital life — regardless of their age, their technical background, or how much money they have.
+Sfinco was founded on the belief that every Australian deserves to feel safe and confident in their digital life, regardless of their age, their technical background, or how much money they have.
 
 | Sfinco Protecting Australians through technology, money, and trust. sfinco.com.au Noosa · Sunshine Coast · Queensland · Australia |
 

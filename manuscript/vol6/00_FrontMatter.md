@@ -88,10 +88,10 @@ This book does not constitute legal or financial advice, and does not replace a 
 
 This guide focuses on the practical, everyday security decisions available to any small business, regardless of size or industry. It does not cover compliance frameworks required of larger or regulated organisations, such as the Australian Privacy Principles in full detail, PCI DSS for businesses processing large volumes of card payments, or industry-specific regulatory obligations. If your business fits any of these categories, this book is a useful starting point, but you should also seek specialist advice.
 
-If you would like a more thorough, tailored assessment of your specific business, Sfinco offers remote SMB Cyber Audits for Sunshine Coast small businesses — see the back of this book for details.
+If you would like a more thorough, tailored assessment of your specific business, Sfinco offers remote SMB Cyber Audits for Sunshine Coast small businesses, see the back of this book for details.
 
 Ready? Chapter 1 starts with why small businesses are targeted at all.
 
 sfinco.com.au
 
-Part of the Sfinco Guides series — protecting Australians online
+Part of the Sfinco Guides series, protecting Australians online

@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 6 — Small Business Protection  ·  Chapter 1
+Sfinco Guides  ·  Volume 6: Small Business Protection  ·  Chapter 1
 
 
 # Why small businesses are targeted
@@ -17,15 +17,15 @@ Stories like Dave's are extremely common across small businesses in Australia, a
 
 To understand why your business is worth targeting, it helps to think about what a successful attack could cost you. It is usually more than the money involved in a single incident.
 
-Your cash flow — a single successful invoice scam can be a genuinely serious loss for a small business
+Your cash flow, a single successful invoice scam can be a genuinely serious loss for a small business
 
-Your customer data — names, addresses, and sometimes payment details, all of which carry legal obligations if exposed
+Your customer data, names, addresses, and sometimes payment details, all of which carry legal obligations if exposed
 
-Your email account — often the single most valuable target, since it can be used to impersonate you to staff, suppliers, and customers
+Your email account, often the single most valuable target, since it can be used to impersonate you to staff, suppliers, and customers
 
-Your reputation — customers who hear that your business was compromised may lose confidence, even if no fault lies with you
+Your reputation, customers who hear that your business was compromised may lose confidence, even if no fault lies with you
 
-Your time — recovering from an incident, even a minor one, can consume days you do not have to spare
+Your time, recovering from an incident, even a minor one, can consume days you do not have to spare
 
 | ℹ  DID YOU KNOW? The Australian Cyber Security Centre (ACSC) receives a report of a cybercrime roughly every six minutes, and small and medium businesses report a significantly higher average financial loss per incident than individuals. Small businesses are a genuine, ongoing target, not an unlikely edge case. |
 

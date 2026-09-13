@@ -92,4 +92,4 @@ Ready? Chapter 1 starts with why community organisations are targeted at all.
 
 sfinco.com.au
 
-Part of the Sfinco Guides series — protecting Australians online
+Part of the Sfinco Guides series, protecting Australians online

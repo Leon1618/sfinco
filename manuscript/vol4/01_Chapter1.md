@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 4 — Windows Protection  ·  Chapter 1
+Sfinco Guides  ·  Volume 4: Windows Protection  ·  Chapter 1
 
 
 # Why your Windows PC is a target
@@ -9,7 +9,7 @@ The most popular operating system in the world is also the most attacked
 
 | ▶  REAL STORY Margaret, 69, from Tewantin, received a call from someone claiming to be from "Microsoft Technical Support," saying her PC had been sending out error reports indicating a serious virus. The caller guided her to a website that displayed a real-looking (but entirely fake) Windows warning screen, then talked her through installing a remote access program. Over the next hour, they convinced her to pay $299 for a "lifetime protection licence" using a gift card. Margaret is not careless. She had used Windows for over a decade and had no reason to doubt a caller who sounded professional and knew technical-sounding terms. That is exactly the gap this chapter closes. |
 
-Stories like Margaret's happen every day across Australia. Windows runs on the vast majority of the world's desktop and laptop computers, and that popularity is precisely why it remains the single most targeted platform for scams, viruses, and fraud — criminals build their tools for the operating system with the largest possible number of potential victims.
+Stories like Margaret's happen every day across Australia. Windows runs on the vast majority of the world's desktop and laptop computers, and that popularity is precisely why it remains the single most targeted platform for scams, viruses, and fraud, criminals build their tools for the operating system with the largest possible number of potential victims.
 
 This chapter is not here to frighten you. It is here to show you clearly what is actually happening, why your PC is valuable to the people who want to misuse it, and what the most common methods of attack look like. Because once you know what to look for, most of these threats become remarkably easy to avoid.
 
@@ -18,19 +18,19 @@ This chapter is not here to frighten you. It is here to show you clearly what is
 
 To understand why your PC is worth targeting, it helps to think about what is stored on it. Probably far more than you realise.
 
-Your bank accounts — through saved logins or browser sessions kept signed in
+Your bank accounts, through saved logins or browser sessions kept signed in
 
-Your email — which can be used to reset passwords for almost everything else
+Your email, which can be used to reset passwords for almost everything else
 
-Your Microsoft account — the master key to OneDrive, the Microsoft Store, and Windows itself
+Your Microsoft account, the master key to OneDrive, the Microsoft Store, and Windows itself
 
-Your documents and photos — tax returns, wills, insurance papers, and family photos
+Your documents and photos, tax returns, wills, insurance papers, and family photos
 
-Your saved passwords — stored in your browser or a password manager
+Your saved passwords, stored in your browser or a password manager
 
-Your backup — a complete copy of everything above, whether on OneDrive or an external drive
+Your backup, a complete copy of everything above, whether on OneDrive or an external drive
 
-| ℹ  DID YOU KNOW? A scammer who gains remote access to your PC — even for a short "support" session — can often open your browser, find saved passwords, and access your online banking directly, all while you watch the screen and believe they are "fixing" something. This is why remote access requests from unsolicited callers are so dangerous. |
+| ℹ  DID YOU KNOW? A scammer who gains remote access to your PC, even for a short "support" session, can often open your browser, find saved passwords, and access your online banking directly, all while you watch the screen and believe they are "fixing" something. This is why remote access requests from unsolicited callers are so dangerous. |
 
 Most people think of their PC as a tool for email and browsing. Scammers think of it as a filing cabinet with the lock already picked.
 
@@ -43,7 +43,7 @@ Fake virus warning pop-ups.  A website suddenly displays a warning claiming your
 
 Phishing emails.  A message appears to come from Microsoft, your bank, or a delivery company, asking you to click a link and log in. The link leads to a fake site designed to steal your username and password.
 
-Malicious downloads.  Software downloaded from outside the Microsoft Store — a "free" program, a pirated application, or a fake update — quietly installs malware alongside whatever you thought you were installing.
+Malicious downloads.  Software downloaded from outside the Microsoft Store, a "free" program, a pirated application, or a fake update, quietly installs malware alongside whatever you thought you were installing.
 
 Remote access scams.  Someone convinces you, usually by phone, to install a legitimate remote access tool, then uses that access to look through your files, install malware, or ask for payment for problems that never existed.
 

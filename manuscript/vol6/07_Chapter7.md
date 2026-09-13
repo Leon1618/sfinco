@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 6 — Small Business Protection  ·  Chapter 7
+Sfinco Guides  ·  Volume 6: Small Business Protection  ·  Chapter 7
 
 
 # Backups and incident response
@@ -29,12 +29,12 @@ Settings path: this varies by platform, but most cloud accounting, email, and fi
 
 ![Cloud backup settings screen showing a recent, successful backup date](screenshots/vol6-ch7-backup-status.png)
 
-*Mockup illustration, styled to match a typical cloud backup admin panel — reshoot using your actual software before final layout.*
+*Mockup illustration, styled to match a typical cloud backup admin panel, reshoot using your actual software before final layout.*
 
 ★  TIP:  Do not assume a backup is working simply because you set it up once. Check the actual "last backup" date every few months, and periodically confirm you can genuinely restore a file from it.
 
 
-## Ransomware — what it is and how to reduce the damage
+## Ransomware, what it is and how to reduce the damage
 
 
 Ransomware is malware that encrypts your business's files and demands payment to unlock them. The single best defence is a backup that ransomware cannot also reach and encrypt, combined with staff who know not to open unexpected attachments.
@@ -50,7 +50,7 @@ If your business experiences a breach that exposes customer personal information
 ! IMPORTANT: The NDB scheme generally requires businesses to notify affected individuals and the OAIC if a data breach is likely to result in serious harm. Whether your specific business is covered, and whether a particular incident meets this threshold, depends on your circumstances. If you are ever unsure, contact the OAIC directly at oaic.gov.au, or seek advice from a solicitor. This book provides general guidance only and is not a substitute for professional legal advice.
 
 
-## The first sixty minutes — what to do if something goes wrong
+## The first sixty minutes, what to do if something goes wrong
 
 
 If your business is ever affected by a breach, ransomware, or a serious scam, the steps below are designed to be followed calmly, in order.
@@ -72,7 +72,7 @@ If your business is ever affected by a breach, ransomware, or a serious scam, th
 Cyber insurance policies for small businesses have become significantly more accessible in recent years, and can cover costs including data recovery, legal advice, and business interruption following an incident. If your business handles customer data or processes payments, it is worth asking your existing insurance broker whether a cyber insurance policy is available and appropriate for your size of business.
 
 
-## Quick review — your chapter 7 checklist
+## Quick review, your chapter 7 checklist
 
 
 | Done | Item |

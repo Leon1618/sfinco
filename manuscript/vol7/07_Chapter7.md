@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 7 — NGO and Not-for-Profit Protection  ·  Chapter 7
+Sfinco Guides  ·  Volume 7: NGO and Not-for-Profit Protection  ·  Chapter 7
 
 
 # Donor data, backups, and incident response
@@ -29,12 +29,12 @@ Settings path: this varies by platform, but most cloud email, file storage, and 
 
 ![Cloud backup settings screen showing a recent, successful backup date](screenshots/vol7-ch7-backup-status.png)
 
-*Mockup illustration, styled to match a typical cloud backup admin panel — reshoot using your actual software before final layout.*
+*Mockup illustration, styled to match a typical cloud backup admin panel, reshoot using your actual software before final layout.*
 
 ★  TIP:  Do not assume a backup is working simply because someone set it up once, possibly years ago under a different committee. Check the actual "last backup" date every few months, and make this a standing item at committee meetings.
 
 
-## Ransomware — what it is and how to reduce the damage
+## Ransomware, what it is and how to reduce the damage
 
 
 Ransomware is malware that encrypts your organisation's files and demands payment to unlock them. The single best defence is a backup that ransomware cannot also reach and encrypt, combined with volunteers who know not to open unexpected attachments.
@@ -42,7 +42,7 @@ Ransomware is malware that encrypts your organisation's files and demands paymen
 | ⚠  WARNING If your organisation is ever affected by ransomware, do not pay the ransom. Payment does not guarantee your files will be restored, and it funds further criminal activity. Disconnect affected devices from the network immediately, and seek help from a trusted IT-literate volunteer, a local IT provider, or the Australian Cyber Security Centre. |
 
 
-## Donor and client data — your obligations under the Privacy Act
+## Donor and client data, your obligations under the Privacy Act
 
 
 If your organisation experiences a breach that exposes donor, member, or client personal information, such as names, addresses, or payment details, you may have obligations under the Privacy Act 1988 and the Notifiable Data Breaches (NDB) scheme, administered by the Office of the Australian Information Commissioner (OAIC).
@@ -50,7 +50,7 @@ If your organisation experiences a breach that exposes donor, member, or client 
 ! IMPORTANT: The NDB scheme generally requires organisations to notify affected individuals and the OAIC if a data breach is likely to result in serious harm. Whether your specific organisation is covered, and whether a particular incident meets this threshold, depends on your circumstances, including your annual turnover. If you are ever unsure, contact the OAIC directly at oaic.gov.au, or seek advice from a solicitor. This is separate from any reporting obligations your organisation has to the ACNC as a registered charity, which relate to annual financial and governance reporting rather than data breaches. This book provides general guidance only and is not a substitute for professional legal advice.
 
 
-## The first sixty minutes — what to do if something goes wrong
+## The first sixty minutes, what to do if something goes wrong
 
 
 If your organisation is ever affected by a breach, ransomware, or a serious scam, the steps below are designed to be followed calmly, in order, by whichever committee member is available.
@@ -72,7 +72,7 @@ If your organisation is ever affected by a breach, ransomware, or a serious scam
 Many community organisations already hold public liability or volunteer insurance. It is worth asking your existing insurer or broker whether a cyber incident, including a data breach or ransomware attack, is covered under your current policy, or whether a separate, often low-cost cyber insurance add-on is available for small not-for-profits.
 
 
-## Quick review — your chapter 7 checklist
+## Quick review, your chapter 7 checklist
 
 
 | Done | Item |

@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 1 — iPhone Protection  ·  Chapter 8
+Sfinco Guides  ·  Volume 1: iPhone Protection  ·  Chapter 8
 
 
 # Your 15-minute security checkup
@@ -6,7 +6,7 @@ Sfinco Guides  ·  Volume 1 — iPhone Protection  ·  Chapter 8
 
 A simple monthly routine to keep your iPhone protected for years to come
 
-Congratulations — if you have worked through every chapter in this book, your iPhone is now significantly more secure than it was when you started. You have a strong passcode, Face ID, Stolen Device Protection, a secured Apple ID, audited app permissions, scam awareness, safe Wi-Fi habits, and a complete plan if your phone is ever lost or stolen.
+Congratulations, if you have worked through every chapter in this book, your iPhone is now significantly more secure than it was when you started. You have a strong passcode, Face ID, Stolen Device Protection, a secured Apple ID, audited app permissions, scam awareness, safe Wi-Fi habits, and a complete plan if your phone is ever lost or stolen.
 
 But security is not a one-time task. Apps update. New scams emerge. Settings occasionally reset after a software update. The single most effective thing you can do to maintain everything you have just built is a short, regular checkup.
 
@@ -14,7 +14,7 @@ This final chapter brings every chapter together into one simple page you can re
 
 > **ℹ DID YOU KNOW?**
 >
-> Set a recurring reminder right now — the first Sunday of every month works well for most people. Open the Reminders app, create a new reminder called 'iPhone security checkup', and set it to repeat monthly. This is the single most important step in this chapter: the checklist only works if you actually come back to it.
+> Set a recurring reminder right now, the first Sunday of every month works well for most people. Open the Reminders app, create a new reminder called 'iPhone security checkup', and set it to repeat monthly. This is the single most important step in this chapter: the checklist only works if you actually come back to it.
 
 
 
@@ -24,7 +24,7 @@ This final chapter brings every chapter together into one simple page you can re
 
 Work through this list with your iPhone in hand. Each item references the chapter where you can find full instructions if you need a refresher.
 
-**The front door — passcode & Face ID**
+**The front door, passcode & Face ID**
 
 | ✓ | Task | Reference |
 | --- | --- | --- |
@@ -53,8 +53,8 @@ Work through this list with your iPhone in hand. Each item references the chapte
 
 | ✓ | Task | Reference |
 | --- | --- | --- |
-| ☐ | Filter Unknown Senders and Silence Unknown Callers are still turned on | Ch. 5 |
-| ☐ | I have not clicked any suspicious links this month — and if I have, I followed the recovery steps | Ch. 5 |
+| ☐ | Screen Unknown Senders and Screen Unknown Callers are still turned on | Ch. 5 |
+| ☐ | I have not clicked any suspicious links this month, and if I have, I followed the recovery steps | Ch. 5 |
 
 **Wi-Fi & VPN**
 
@@ -90,7 +90,7 @@ Check this screen during your monthly review. If an update is available, connect
 
 > **★ TIP**
 >
-> Settings > General > Software Update > Automatic Updates. Turn on both 'Install iOS Updates' and 'Security Responses & System Files'. Your phone will then install critical security updates automatically, usually overnight while charging — no action needed from you.
+> Settings > General > Software Update > Automatic Updates. Turn on both 'Install iOS Updates' and 'Security Responses & System Files'. Your phone will then install critical security updates automatically, usually overnight while charging, no action needed from you.
 
 
 
@@ -106,21 +106,21 @@ To check for and install any pending updates manually, open the App Store, tap y
 ## A final word
 
 
-You have now worked through a complete, practical guide to protecting your iPhone — written specifically with everyday Australians in mind, not technology experts. That matters, because the vast majority of harm done by scammers and cybercriminals is not the result of sophisticated hacking. It is the result of ordinary people never being given a clear, simple explanation of what to watch for and what to do.
+You have now worked through a complete, practical guide to protecting your iPhone, written specifically with everyday Australians in mind, not technology experts. That matters, because the vast majority of harm done by scammers and cybercriminals is not the result of sophisticated hacking. It is the result of ordinary people never being given a clear, simple explanation of what to watch for and what to do.
 
 You no longer fall into that category. You understand what is actually on your phone and why it matters. You know the warning signs of a scam before it reaches you. You have a plan if your phone is ever lost. And you have a simple monthly routine to keep all of it current.
 
-If this book has helped you, the most valuable thing you can do next is share what you have learned with someone else — a parent, a neighbour, a friend. Scammers succeed by targeting people in isolation. The more people around you who understand these basics, the safer your whole community becomes.
+If this book has helped you, the most valuable thing you can do next is share what you have learned with someone else, a parent, a neighbour, a friend. Scammers succeed by targeting people in isolation. The more people around you who understand these basics, the safer your whole community becomes.
 
-That is exactly the spirit this book was written in — and exactly the spirit behind Sfinco.
+That is exactly the spirit this book was written in, and exactly the spirit behind Sfinco.
 
 > **✓ WELL DONE**
 >
-> You have completed Sfinco Guides Volume 1 — iPhone Protection. Your iPhone is now meaningfully more secure than it was when you started this book. Well done. Genuinely.
+> You have completed Sfinco Guides Volume 1: iPhone Protection. Your iPhone is now meaningfully more secure than it was when you started this book. Well done. Genuinely.
 
 
 
-Continuing your Sfinco journey:  The Sfinco Guides series continues with Volume 2 (MacBook Protection), Volume 3 (Family and Home Network Protection), Volume 4 (Windows Protection), and Volume 5 (Android Protection) — each written in the same plain-English, step-by-step style. See the final pages of this book for details.
+Continuing your Sfinco journey:  The Sfinco Guides series continues with Volume 2 (MacBook Protection), Volume 3 (Family and Home Network Protection), Volume 4 (Windows Protection), and Volume 5 (Android Protection), each written in the same plain-English, step-by-step style. See the final pages of this book for details.
 
 sfinco.com.au
 

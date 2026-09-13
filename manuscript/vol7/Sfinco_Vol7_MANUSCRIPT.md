@@ -117,11 +117,11 @@ Ready? Chapter 1 starts with why community organisations are targeted at all.
 
 sfinco.com.au
 
-Part of the Sfinco Guides series — protecting Australians online
+Part of the Sfinco Guides series, protecting Australians online
 
 ---
 
-Sfinco Guides  ·  Volume 7 — NGO and Not-for-Profit Protection  ·  Chapter 1
+Sfinco Guides  ·  Volume 7: NGO and Not-for-Profit Protection  ·  Chapter 1
 
 
 # Why community organisations are targeted
@@ -140,15 +140,15 @@ Stories like Margaret's are common across small charities and community organisa
 
 To understand why your organisation is worth targeting, it helps to think about what a successful attack could cost, beyond the immediate financial loss.
 
-Your funds — often donated by people who trust your organisation to use their money carefully, making any loss feel especially painful
+Your funds, often donated by people who trust your organisation to use their money carefully, making any loss feel especially painful
 
-Your donor and member data — names, addresses, and sometimes payment details, all of which carry legal obligations if exposed
+Your donor and member data, names, addresses, and sometimes payment details, all of which carry legal obligations if exposed
 
-Your email account — often the single most valuable target, since it can be used to impersonate your organisation to donors, members, and volunteers
+Your email account, often the single most valuable target, since it can be used to impersonate your organisation to donors, members, and volunteers
 
-Your reputation — donors and the community you serve may lose confidence if your organisation is publicly linked to a scam or breach
+Your reputation, donors and the community you serve may lose confidence if your organisation is publicly linked to a scam or breach
 
-Your volunteers' time — recovering from an incident consumes hours that volunteers do not have to spare from their actual mission
+Your volunteers' time, recovering from an incident consumes hours that volunteers do not have to spare from their actual mission
 
 | ℹ  DID YOU KNOW? The Australian Cyber Security Centre and Scamwatch have both specifically flagged charities and not-for-profits as an increasingly targeted sector, partly because published committee lists, public financial reports, and social media appeals give scammers unusually detailed information to work with. |
 
@@ -186,7 +186,7 @@ The rest of this book walks through exactly what to check, one chapter at a time
 
 ---
 
-Sfinco Guides  ·  Volume 7 — NGO and Not-for-Profit Protection  ·  Chapter 2
+Sfinco Guides  ·  Volume 7: NGO and Not-for-Profit Protection  ·  Chapter 2
 
 
 # Locking the front door
@@ -198,7 +198,7 @@ Passwords, multi-factor authentication, and free tools most organisations don't 
 Every protection in this book sits behind one gate: the login screen of your organisation's email, banking, and any software you rely on. This chapter covers the layers that make that gate a genuine barrier, at no cost to your organisation.
 
 
-## Layer 1 — Strong, unique passwords for every account
+## Layer 1, Strong, unique passwords for every account
 
 
 A strong password is long, not reused anywhere else, and not something easily guessed from public information about your organisation, such as its name or founding year.
@@ -208,7 +208,7 @@ A strong password is long, not reused anywhere else, and not something easily gu
 | ⚠  WARNING If your organisation's social media, banking, or email password is shared verbally or written on a whiteboard in a shared office, treat this as an immediate risk. Anyone with access to that space, now or in the future, effectively has access to your accounts. |
 
 
-## Layer 2 — A free password manager for the committee
+## Layer 2, A free password manager for the committee
 
 
 Remembering a unique, strong password for every organisational account, across a committee that changes over time, is unrealistic without help. A password manager generates and stores strong passwords, and can share specific logins with committee members without them ever seeing the actual password in plain text.
@@ -221,7 +221,7 @@ Remembering a unique, strong password for every organisational account, across a
 | ℹ  DID YOU KNOW? A password manager solves one of the most common problems for volunteer-run organisations: what happens to shared logins when a committee member moves on. Instead of trying to remember every account a departing volunteer had access to, you can revoke their access to shared logins from one place. |
 
 
-## Layer 3 — Multi-factor authentication (MFA)
+## Layer 3, Multi-factor authentication (MFA)
 
 
 Multi-factor authentication (also called two-factor authentication) requires a second step beyond your password, usually a code from an app or a prompt on a phone, to sign in. This single change is the most effective step in this entire book, and it is free.
@@ -259,7 +259,7 @@ Turn on MFA on any account that offers it
 Report anything that looks suspicious immediately, rather than trying to handle it alone
 
 
-## Quick review — your chapter 2 checklist
+## Quick review, your chapter 2 checklist
 
 
 | Done | Item |
@@ -273,7 +273,7 @@ With your accounts locked down, the next chapter looks specifically at email sec
 
 ---
 
-Sfinco Guides  ·  Volume 7 — NGO and Not-for-Profit Protection  ·  Chapter 3
+Sfinco Guides  ·  Volume 7: NGO and Not-for-Profit Protection  ·  Chapter 3
 
 
 # Email security and protecting your domain
@@ -296,7 +296,7 @@ Settings path (Google Workspace):  Gmail  >  Settings  >  See all settings  >  F
 
 ![Email settings screen showing the forwarding rules section with no unexpected addresses](screenshots/vol7-ch3-forwarding-rules.png)
 
-*Mockup illustration, styled to match a typical organisational email admin panel — reshoot using your actual email provider before final layout.*
+*Mockup illustration, styled to match a typical organisational email admin panel, reshoot using your actual email provider before final layout.*
 
 | ⚠  WARNING If you find a forwarding rule nobody on the committee set up, treat this as a serious sign the account has been compromised. Remove the rule, change the password immediately, and turn on MFA if it is not already active. |
 
@@ -312,12 +312,12 @@ Settings path (Google Workspace):  Google Account  >  Security  >  Your devices.
 
 ![Email account security page showing recent sign-in activity by location and device](screenshots/vol7-ch3-signin-activity.png)
 
-*Mockup illustration, styled to match a typical organisational email admin panel — reshoot using your actual email provider before final layout.*
+*Mockup illustration, styled to match a typical organisational email admin panel, reshoot using your actual email provider before final layout.*
 
 ★  TIP:  If you see a sign-in from a location no committee member has any connection to, change the password immediately and review forwarding rules and connected apps.
 
 
-## Domain protections — SPF, DKIM, and DMARC in plain English
+## Domain protections, SPF, DKIM, and DMARC in plain English
 
 
 These three settings, configured once by whoever manages your organisation's website or email hosting, make it significantly harder for a scammer to send an email that appears to come from your organisation's own domain, protecting your donors from impersonation scams.
@@ -347,7 +347,7 @@ Check the actual sender address, not just the display name, since these can diff
 Avoid opening unexpected attachments, particularly invoices from senders you were not expecting
 
 
-## Quick review — your chapter 3 checklist
+## Quick review, your chapter 3 checklist
 
 
 | Done | Item |
@@ -361,7 +361,7 @@ With your email locked down, the next chapter looks at volunteer and committee a
 
 ---
 
-Sfinco Guides  ·  Volume 7 — NGO and Not-for-Profit Protection  ·  Chapter 4
+Sfinco Guides  ·  Volume 7: NGO and Not-for-Profit Protection  ·  Chapter 4
 
 
 # Volunteer and committee access worth trimming
@@ -380,7 +380,7 @@ Least privilege simply means giving each person access to only what they need fo
 
 ![Donor management software admin panel showing volunteers with different access levels](screenshots/vol7-ch4-access-levels.png)
 
-*Mockup illustration, styled to match a typical donor management platform — reshoot using your actual software before final layout.*
+*Mockup illustration, styled to match a typical donor management platform, reshoot using your actual software before final layout.*
 
 | ℹ  DID YOU KNOW? Most donor management, email, and accounting platforms let you assign different permission levels to different users, such as "view only," "can edit donor records," or "full admin," rather than giving everyone the same access. |
 
@@ -392,7 +392,7 @@ Settings path: this varies by platform, but is usually found under Settings > Us
 
 ![Volunteer access review screen listing committee members and their permission levels](screenshots/vol7-ch4-staff-review.png)
 
-*Mockup illustration, styled to match a typical donor management platform — reshoot using your actual software before final layout.*
+*Mockup illustration, styled to match a typical donor management platform, reshoot using your actual software before final layout.*
 
 ★  TIP:  Review access at every committee handover, typically at your organisation's AGM, as a standing agenda item rather than something that only happens if someone remembers.
 
@@ -415,7 +415,7 @@ A simple offboarding checklist, kept somewhere handy such as your committee hand
 | ☐ | Collect any organisational devices or access cards |
 
 
-## Shared logins — a habit worth breaking, even for volunteers
+## Shared logins, a habit worth breaking, even for volunteers
 
 
 It is common in small organisations for the entire committee to share a single login to a piece of software, for convenience. This makes it impossible to know who did what, and means removing one person's access requires changing the password for everyone else too.
@@ -423,7 +423,7 @@ It is common in small organisations for the entire committee to share a single l
 | ✓  WELL DONE IF YOU HAVE THIS If every committee member and long-term volunteer has their own individual login for your organisation's key systems, rather than sharing one account between several people, you already have far better visibility and control than most small organisations. |
 
 
-## Quick review — your chapter 4 checklist
+## Quick review, your chapter 4 checklist
 
 
 | Done | Item |
@@ -437,7 +437,7 @@ With access under control, the next chapter looks at the scams most likely to ta
 
 ---
 
-Sfinco Guides  ·  Volume 7 — NGO and Not-for-Profit Protection  ·  Chapter 5
+Sfinco Guides  ·  Volume 7: NGO and Not-for-Profit Protection  ·  Chapter 5
 
 
 # Scams targeting community organisations
@@ -446,10 +446,10 @@ Sfinco Guides  ·  Volume 7 — NGO and Not-for-Profit Protection  ·  Chapter 5
 How to spot them, what to do, and how to recover if you paid
 
 
-## Why scams work — the psychology behind them
+## Why scams work, the psychology behind them
 
 
-Every scam in this chapter relies on the same handful of psychological triggers: urgency, authority, and the genuine goodwill that runs through community organisations. A message that appears to come from someone you trust, references a real appeal or event, and asks for something that sounds routine, is designed to make you skip the one step that would protect you — stopping to verify.
+Every scam in this chapter relies on the same handful of psychological triggers: urgency, authority, and the genuine goodwill that runs through community organisations. A message that appears to come from someone you trust, references a real appeal or event, and asks for something that sounds routine, is designed to make you skip the one step that would protect you, stopping to verify.
 
 
 ## The scams most likely to reach your organisation
@@ -465,9 +465,9 @@ An email appears to come from the president or treasurer, often while they are k
 
 | Hi, I'm at a conference all day and hard to reach by phone. Need you to transfer this hamper supplier payment urgently, new account details attached. Keep it between us for now, will explain later. Thanks |
 
-*Illustrative mockup, not a real message — built to show the pattern.*
+*Illustrative mockup, not a real message, built to show the pattern.*
 
-| ✶  CRITICAL — READ THIS CAREFULLY Any request to keep a payment "between us," bypass your normal committee approval process, or act with unusual urgency should be treated as a serious warning sign, regardless of who it appears to be from. Always verify by phone, using a number you already have, before transferring funds. |
+| ✶  CRITICAL, READ THIS CAREFULLY Any request to keep a payment "between us," bypass your normal committee approval process, or act with unusual urgency should be treated as a serious warning sign, regardless of who it appears to be from. Always verify by phone, using a number you already have, before transferring funds. |
 
 2. Cloned donation pages and fake fundraising appeals
 
@@ -477,7 +477,7 @@ A scammer copies your organisation's name, logo, and appeal details onto a fake 
 
 | Support our Winter Appeal! Every dollar helps families doing it tough this winter. Donate now via this secure link. |
 
-*Illustrative mockup, not a real fundraising page — built to show the pattern.*
+*Illustrative mockup, not a real fundraising page, built to show the pattern.*
 
 Always direct donors to your organisation's official website address, and consider periodically searching your organisation's name to check for impersonating pages or posts.
 
@@ -489,7 +489,7 @@ An email claims to come from the ACNC or a government grant body, warning of a c
 
 | Your charity's registration requires urgent action to avoid removal from the register. Verify your details within 24 hours: acnc-charity-portal.info |
 
-*Illustrative mockup, not a real ACNC message — built to show the pattern.*
+*Illustrative mockup, not a real ACNC message, built to show the pattern.*
 
 The ACNC does not send emails threatening immediate deregistration with a link to click. If you are ever concerned about a genuine compliance matter, log in directly to the ACNC Charity Portal at acnc.gov.au, or call them using their official published number.
 
@@ -501,7 +501,7 @@ An email claims your organisation has been awarded a grant or funding, asking fo
 
 | Congratulations, your organisation has been selected for a $10,000 community grant. To release funds, please provide your bank details and a $150 processing fee. |
 
-*Illustrative mockup, not a real grant notification — built to show the pattern.*
+*Illustrative mockup, not a real grant notification, built to show the pattern.*
 
 | ⚠  WARNING Genuine grant bodies never ask for an upfront fee to release funding you have supposedly already been awarded. If you did not apply for the grant in question, treat the message as highly suspicious regardless of how official it looks. |
 
@@ -513,7 +513,7 @@ A message, often sent broadly, invites your organisation to a "volunteer matchin
 
 | Your organisation has been matched with 3 potential board members. Log in with your Google or Microsoft account to view their profiles. |
 
-*Illustrative mockup, not a real recruitment platform — built to show the pattern.*
+*Illustrative mockup, not a real recruitment platform, built to show the pattern.*
 
 Logging in to an unfamiliar third-party site using your organisation's Google or Microsoft credentials can expose those credentials to a fake login page. Verify any unfamiliar platform independently before entering organisational login details anywhere.
 
@@ -540,7 +540,7 @@ You are asked to log in to an unfamiliar site using your organisation's existing
 Contact your bank immediately. Banks can sometimes recall a payment if it is reported within hours, though this becomes far less likely after a day or two. Contact the genuine party directly, using a number you already have, to confirm what happened. Report the incident to Scamwatch at scamwatch.gov.au and to ReportCyber at cyber.gov.au. If any donor or client personal information may have been exposed, review your obligations under the Notifiable Data Breaches scheme, covered in more detail in Chapter 7.
 
 
-## Quick review — your chapter 5 checklist
+## Quick review, your chapter 5 checklist
 
 
 | Done | Item |
@@ -555,7 +555,7 @@ With scams covered, the next chapter looks at keeping your network and remote ac
 
 ---
 
-Sfinco Guides  ·  Volume 7 — NGO and Not-for-Profit Protection  ·  Chapter 6
+Sfinco Guides  ·  Volume 7: NGO and Not-for-Profit Protection  ·  Chapter 6
 
 
 # Wi-Fi, shared devices, and remote access
@@ -576,7 +576,7 @@ Settings path: ask the venue whether a private or staff network is available, se
 
 ![Router settings screen showing a separate network for organisational devices](screenshots/vol7-ch6-guest-network.png)
 
-*Mockup illustration, styled to match a typical venue Wi-Fi admin panel — reshoot using your actual venue's network before final layout.*
+*Mockup illustration, styled to match a typical venue Wi-Fi admin panel, reshoot using your actual venue's network before final layout.*
 
 | ⚠  WARNING If your organisation's laptop or tablet connects to the same open Wi-Fi network as members of the public, treat this as a real, if modest, risk, particularly if that device is ever used for banking or donor data entry. A VPN, covered later in this chapter, is a simple way to reduce this risk. |
 
@@ -588,7 +588,7 @@ Many small organisations rely on a single shared laptop or tablet, used by whoev
 
 ![Shared device settings showing separate user accounts for different volunteers](screenshots/vol7-ch6-pos-network.png)
 
-*Mockup illustration, styled to match a typical device settings panel — reshoot using your actual equipment before final layout.*
+*Mockup illustration, styled to match a typical device settings panel, reshoot using your actual equipment before final layout.*
 
 ★  TIP:  If your shared device supports separate user accounts, set one up for each regular volunteer rather than one shared login. This makes it far easier to see who did what, and to remove access for a single person without affecting everyone else.
 
@@ -602,7 +602,7 @@ Settings path: usually found in your router or device's admin panel under Admini
 
 ![Router administration settings showing a custom admin password set](screenshots/vol7-ch6-admin-password.png)
 
-*Mockup illustration, styled to match a typical router admin panel — reshoot using your actual equipment before final layout.*
+*Mockup illustration, styled to match a typical router admin panel, reshoot using your actual equipment before final layout.*
 
 | ℹ  DID YOU KNOW? Default passwords for most makes and models of router and shared equipment are freely available online with a simple search, meaning an unchanged default password offers essentially no protection at all. |
 
@@ -619,12 +619,12 @@ If any volunteer or committee member accesses organisational systems from home o
 
 ![VPN app screen showing a secure connection active for a remote volunteer](screenshots/vol7-ch6-vpn-remote-access.png)
 
-*Mockup illustration, styled to match a typical VPN app — reshoot using your actual software before final layout.*
+*Mockup illustration, styled to match a typical VPN app, reshoot using your actual software before final layout.*
 
 | ✓  WELL DONE IF YOU HAVE THIS If remote volunteers already connect through a VPN before accessing organisational email, donor records, or banking, you have closed off one of the more common ways community organisations are compromised through home or public Wi-Fi. |
 
 
-## Quick review — your chapter 6 checklist
+## Quick review, your chapter 6 checklist
 
 
 | Done | Item |
@@ -638,7 +638,7 @@ With your network settings squared away, the next chapter covers donor data prot
 
 ---
 
-Sfinco Guides  ·  Volume 7 — NGO and Not-for-Profit Protection  ·  Chapter 7
+Sfinco Guides  ·  Volume 7: NGO and Not-for-Profit Protection  ·  Chapter 7
 
 
 # Donor data, backups, and incident response
@@ -669,12 +669,12 @@ Settings path: this varies by platform, but most cloud email, file storage, and 
 
 ![Cloud backup settings screen showing a recent, successful backup date](screenshots/vol7-ch7-backup-status.png)
 
-*Mockup illustration, styled to match a typical cloud backup admin panel — reshoot using your actual software before final layout.*
+*Mockup illustration, styled to match a typical cloud backup admin panel, reshoot using your actual software before final layout.*
 
 ★  TIP:  Do not assume a backup is working simply because someone set it up once, possibly years ago under a different committee. Check the actual "last backup" date every few months, and make this a standing item at committee meetings.
 
 
-## Ransomware — what it is and how to reduce the damage
+## Ransomware, what it is and how to reduce the damage
 
 
 Ransomware is malware that encrypts your organisation's files and demands payment to unlock them. The single best defence is a backup that ransomware cannot also reach and encrypt, combined with volunteers who know not to open unexpected attachments.
@@ -682,7 +682,7 @@ Ransomware is malware that encrypts your organisation's files and demands paymen
 | ⚠  WARNING If your organisation is ever affected by ransomware, do not pay the ransom. Payment does not guarantee your files will be restored, and it funds further criminal activity. Disconnect affected devices from the network immediately, and seek help from a trusted IT-literate volunteer, a local IT provider, or the Australian Cyber Security Centre. |
 
 
-## Donor and client data — your obligations under the Privacy Act
+## Donor and client data, your obligations under the Privacy Act
 
 
 If your organisation experiences a breach that exposes donor, member, or client personal information, such as names, addresses, or payment details, you may have obligations under the Privacy Act 1988 and the Notifiable Data Breaches (NDB) scheme, administered by the Office of the Australian Information Commissioner (OAIC).
@@ -690,7 +690,7 @@ If your organisation experiences a breach that exposes donor, member, or client 
 ! IMPORTANT: The NDB scheme generally requires organisations to notify affected individuals and the OAIC if a data breach is likely to result in serious harm. Whether your specific organisation is covered, and whether a particular incident meets this threshold, depends on your circumstances, including your annual turnover. If you are ever unsure, contact the OAIC directly at oaic.gov.au, or seek advice from a solicitor. This is separate from any reporting obligations your organisation has to the ACNC as a registered charity, which relate to annual financial and governance reporting rather than data breaches. This book provides general guidance only and is not a substitute for professional legal advice.
 
 
-## The first sixty minutes — what to do if something goes wrong
+## The first sixty minutes, what to do if something goes wrong
 
 
 If your organisation is ever affected by a breach, ransomware, or a serious scam, the steps below are designed to be followed calmly, in order, by whichever committee member is available.
@@ -712,7 +712,7 @@ If your organisation is ever affected by a breach, ransomware, or a serious scam
 Many community organisations already hold public liability or volunteer insurance. It is worth asking your existing insurer or broker whether a cyber incident, including a data breach or ransomware attack, is covered under your current policy, or whether a separate, often low-cost cyber insurance add-on is available for small not-for-profits.
 
 
-## Quick review — your chapter 7 checklist
+## Quick review, your chapter 7 checklist
 
 
 | Done | Item |
@@ -727,7 +727,7 @@ With a proper backup and response plan ready to go, the final chapter brings eve
 
 ---
 
-Sfinco Guides  ·  Volume 7 — NGO and Not-for-Profit Protection  ·  Chapter 8
+Sfinco Guides  ·  Volume 7: NGO and Not-for-Profit Protection  ·  Chapter 8
 
 
 # Your 15-minute organisation security checkup
@@ -803,7 +803,7 @@ Talk to volunteers about scams at inductions.  A five-minute mention during volu
 
 Security is not a single project you finish and forget. It is a small, repeated habit, the same way you would reconcile your accounts or check your event bookings. Fifteen minutes a month, done consistently regardless of who is on the committee, will protect your organisation and the people it serves far better than an intense effort done once and never revisited.
 
-| ✓  WELL DONE You have completed Sfinco Guides Volume 7 — NGO and Not-for-Profit Protection. Your organisation is now meaningfully more secure than it was when you started this book. Well done. Genuinely. |
+| ✓  WELL DONE You have completed Sfinco Guides Volume 7: NGO and Not-for-Profit Protection. Your organisation is now meaningfully more secure than it was when you started this book. Well done. Genuinely. |
 
 Continuing your Sfinco journey:  The Sfinco Guides series concludes with Volume 8 (Personal Finance Protection), written in the same plain-English, step-by-step style. See the final pages of this book for details.
 
@@ -813,7 +813,7 @@ Sfinco Guides  ·  Volume 7
 
 ## Glossary
 
-These are the key terms used throughout this book, explained in plain English. You do not need to memorise them — this section is here to help if you encounter a word and want a clear definition.
+These are the key terms used throughout this book, explained in plain English. You do not need to memorise them, this section is here to help if you encounter a word and want a clear definition.
 
 | Term | Definition |
 | --- | --- |
@@ -827,7 +827,7 @@ These are the key terms used throughout this book, explained in plain English. Y
 | NDB scheme | The Notifiable Data Breaches scheme, which may require organisations to report certain data breaches to the OAIC and affected individuals |
 | OAIC | The Office of the Australian Information Commissioner, which administers the Privacy Act 1988 and the NDB scheme |
 | Password manager | Software that generates and securely stores strong, unique passwords for every account |
-| Phishing | A scam that impersonates a trusted organisation — via email — to trick you into handing over personal or financial information |
+| Phishing | A scam that impersonates a trusted organisation, via email, to trick you into handing over personal or financial information |
 | Ransomware | Malware that encrypts your files and demands payment to unlock them |
 | Scamwatch | The Australian government's national scam reporting service, run by the ACCC |
 | SPF | A setting that lists which mail servers are allowed to send email on behalf of your domain |
@@ -857,7 +857,7 @@ Cut out or photograph this page and keep it somewhere handy, ideally in your org
 | Our genuine supplier bank details (verified) | _________________________________ |
 | Email provider support | _________________________________ |
 | IT-literate volunteer or provider contact | _________________________________ |
-| Backup — last checked | _________________________________ |
+| Backup, last checked | _________________________________ |
 
 ### If you suspect a fraudulent payment
 
@@ -928,13 +928,13 @@ Month / Year: _________________     Completed by: _________________
 
 sfinco.com.au · Vol 7 NGO and Not-for-Profit Protection
 
-## Sfinco Guides — the complete series
+## Sfinco Guides, the complete series
 
 More books in the series
 
-The Sfinco Guides series is designed to cover every device and situation you are likely to encounter. Each book follows the same plain-English, step-by-step format — with real Australian examples, screenshots, and no technical jargon.
+The Sfinco Guides series is designed to cover every device and situation you are likely to encounter. Each book follows the same plain-English, step-by-step format, with real Australian examples, screenshots, and no technical jargon.
 
-### Series 1 — Personal protection
+### Series 1, Personal protection
 
 | Volume | What it covers |
 | --- | --- |
@@ -944,7 +944,7 @@ The Sfinco Guides series is designed to cover every device and situation you are
 | Vol 4 Available now | Windows Protection. A plain-English guide for Windows users. Sign-in & BitLocker · Microsoft account · Defender · Scams · Firewall & VPN · Backups |
 | Vol 5 Available now | Android Protection. Staying safe on your Android phone. Play Protect · app permissions · Google account · 2FA · scam texts and calls |
 
-### Series 2 — Organisational protection
+### Series 2, Organisational protection
 
 | Volume | What it covers |
 | --- | --- |
@@ -952,7 +952,7 @@ The Sfinco Guides series is designed to cover every device and situation you are
 | Vol 7 Available now | NGO and Not-for-Profit Protection. Protecting organisations that protect others. Volunteer access · donor data · email compromise · free tools for small teams |
 | Vol 8 Coming soon | Personal Finance Protection. Protecting your money in a digital world. Banking security · investment scams · superannuation · password managers · wills |
 
-| ★  TIP All Sfinco Guides are available on Amazon (search 'Sfinco Guides' or scan the QR code on the next page). Paperback and e-book editions are available. Bulk copies for charities, community networks, and volunteer organisations are available directly through sfinco.com.au — contact us for pricing, including not-for-profit discounts. |
+| ★  TIP All Sfinco Guides are available on Amazon (search 'Sfinco Guides' or scan the QR code on the next page). Paperback and e-book editions are available. Bulk copies for charities, community networks, and volunteer organisations are available directly through sfinco.com.au, contact us for pricing, including not-for-profit discounts. |
 
 ## Connect with us
 
@@ -962,13 +962,13 @@ Each QR code below links to a different part of the Sfinco ecosystem. Scan any o
 
 | Where it takes you | What you'll find |
 | --- | --- |
-| [ QR CODE ] WEBSITE | Visit the Sfinco website — free resources, guides, blog, and updates on new books in the series sfinco.com.au |
-| [ QR CODE ] CYBER AUDIT | Book a Sfinco SMB Cyber Audit — also available to eligible charities and not-for-profits on the Sunshine Coast sfinco.com.au/business |
-| [ QR CODE ] ALL BOOKS | Browse all Sfinco Guides — the complete series on Amazon and direct from our website sfinco.com.au/guides |
-| [ QR CODE ] TECH HELP | Book a Senior Tech Concierge session — in-person help with your devices on the Sunshine Coast sfinco.com.au/concierge |
-| [ QR CODE ] FREE DOWNLOAD | Free printable resources — scam reference card, monthly checklist, and more (no sign-up required) sfinco.com.au/resources |
+| [ QR CODE ] WEBSITE | Visit the Sfinco website, free resources, guides, blog, and updates on new books in the series sfinco.com.au |
+| [ QR CODE ] CYBER AUDIT | Book a Sfinco SMB Cyber Audit, also available to eligible charities and not-for-profits on the Sunshine Coast sfinco.com.au/business |
+| [ QR CODE ] ALL BOOKS | Browse all Sfinco Guides, the complete series on Amazon and direct from our website sfinco.com.au/guides |
+| [ QR CODE ] TECH HELP | Book a Senior Tech Concierge session, in-person help with your devices on the Sunshine Coast sfinco.com.au/concierge |
+| [ QR CODE ] FREE DOWNLOAD | Free printable resources, scam reference card, monthly checklist, and more (no sign-up required) sfinco.com.au/resources |
 
-| ℹ  NOTE QR codes are scanned using your phone's camera app — no separate app needed. All Sfinco links are safe and will never ask for payment details. |
+| ℹ  NOTE QR codes are scanned using your phone's camera app, no separate app needed. All Sfinco links are safe and will never ask for payment details. |
 
 Sfinco Guides  ·  Volume 7
 
@@ -978,11 +978,11 @@ The author of the Sfinco Guides series works in banking and technology on the Su
 
 Holding qualifications in cybersecurity (CompTIA Security+), financial advising (RG146), and information technology, and completing further studies at CQUniversity, the author brings together a rare combination of technical knowledge and the ability to explain it clearly to people who have no interest in becoming technical experts.
 
-The inspiration for this series came from years of seeing the same pattern: intelligent, capable, careful people and organisations being harmed by scams and digital threats — not because they were careless, but because nobody had ever given them a clear, practical guide to protecting themselves. That gap is what these books exist to close.
+The inspiration for this series came from years of seeing the same pattern: intelligent, capable, careful people and organisations being harmed by scams and digital threats, not because they were careless, but because nobody had ever given them a clear, practical guide to protecting themselves. That gap is what these books exist to close.
 
 The author also volunteers with CoderDojo, teaching digital skills to young people on the Sunshine Coast, and has a background in community technology education across Australia and internationally, giving genuine, first-hand understanding of how volunteer organisations actually operate.
 
-Sfinco was founded on the belief that every Australian, and every organisation working to help Australians, deserves to feel safe and confident in their digital life — regardless of size, technical background, or budget.
+Sfinco was founded on the belief that every Australian, and every organisation working to help Australians, deserves to feel safe and confident in their digital life, regardless of size, technical background, or budget.
 
 | Sfinco Protecting Australians through technology, money, and trust. sfinco.com.au Noosa · Sunshine Coast · Queensland · Australia |
 

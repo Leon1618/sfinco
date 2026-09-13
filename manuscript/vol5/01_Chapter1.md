@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 5 — Android Protection  ·  Chapter 1
+Sfinco Guides  ·  Volume 5: Android Protection  ·  Chapter 1
 
 
 # Why your Android phone is a target
@@ -9,7 +9,7 @@ The most widely used mobile operating system in the world is also the most attac
 
 | ▶  REAL STORY Barbara, 71, from Cooroy, received a text message that looked exactly like a parcel delivery notice from Australia Post, asking her to click a link to reschedule a delivery she was actually expecting. The link opened a page that looked like the real Australia Post site and asked her to "verify her identity" with her driver's licence number and a one-time code that had just been sent to her phone. She entered both. Within twenty minutes, that code had been used to add a new device to her banking app. Barbara is careful with money and had never clicked a suspicious link before in her life. The text simply arrived at the right moment, about a parcel she genuinely expected. That is exactly the gap this chapter closes. |
 
-Stories like Barbara's play out across Australia every day. Android phones outnumber every other type of mobile device on the planet, made by manufacturers including Samsung, Google, Oppo, Motorola, and many others. That scale is exactly why Android is such an attractive target — criminals build scams and malicious apps for the platform with the largest possible number of potential victims, and a phone is something almost all of us carry, unlock, and trust dozens of times a day.
+Stories like Barbara's play out across Australia every day. Android phones outnumber every other type of mobile device on the planet, made by manufacturers including Samsung, Google, Oppo, Motorola, and many others. That scale is exactly why Android is such an attractive target, criminals build scams and malicious apps for the platform with the largest possible number of potential victims, and a phone is something almost all of us carry, unlock, and trust dozens of times a day.
 
 This chapter is not here to frighten you. It is here to show you clearly what is actually at stake, why your phone is valuable to the people who want to misuse it, and what the most common methods of attack look like. Because once you know what to look for, most of these threats become remarkably easy to avoid.
 
@@ -19,17 +19,17 @@ This chapter is not here to frighten you. It is here to show you clearly what is
 
 To understand why your phone is worth targeting, it helps to think about what is stored on it. Probably far more than you realise.
 
-Your banking apps — often already logged in, ready to move money the moment someone else is holding your phone
+Your banking apps, often already logged in, ready to move money the moment someone else is holding your phone
 
-Your text messages — including the one-time codes banks and other services send to confirm your identity
+Your text messages, including the one-time codes banks and other services send to confirm your identity
 
-Your Google Account — the master key to your email, your photos, your contacts, and often your saved payment cards
+Your Google Account, the master key to your email, your photos, your contacts, and often your saved payment cards
 
-Your photos — family memories, and sometimes photos of documents like your licence or Medicare card
+Your photos, family memories, and sometimes photos of documents like your licence or Medicare card
 
-Your contacts — everyone a scammer could impersonate you to, or pretend to be, once they have your phone
+Your contacts, everyone a scammer could impersonate you to, or pretend to be, once they have your phone
 
-Your apps — many already signed in to email, social media, and shopping accounts with no further password needed
+Your apps, many already signed in to email, social media, and shopping accounts with no further password needed
 
 | ℹ  DID YOU KNOW? A scammer who gains access to your phone, even briefly, can often open your banking app, read a one-time code as it arrives, and approve a transaction, all without ever knowing your actual banking password. This is why keeping your phone itself locked down matters just as much as keeping your passwords safe. |
 

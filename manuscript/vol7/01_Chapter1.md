@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 7 — NGO and Not-for-Profit Protection  ·  Chapter 1
+Sfinco Guides  ·  Volume 7: NGO and Not-for-Profit Protection  ·  Chapter 1
 
 
 # Why community organisations are targeted
@@ -17,15 +17,15 @@ Stories like Margaret's are common across small charities and community organisa
 
 To understand why your organisation is worth targeting, it helps to think about what a successful attack could cost, beyond the immediate financial loss.
 
-Your funds — often donated by people who trust your organisation to use their money carefully, making any loss feel especially painful
+Your funds, often donated by people who trust your organisation to use their money carefully, making any loss feel especially painful
 
-Your donor and member data — names, addresses, and sometimes payment details, all of which carry legal obligations if exposed
+Your donor and member data, names, addresses, and sometimes payment details, all of which carry legal obligations if exposed
 
-Your email account — often the single most valuable target, since it can be used to impersonate your organisation to donors, members, and volunteers
+Your email account, often the single most valuable target, since it can be used to impersonate your organisation to donors, members, and volunteers
 
-Your reputation — donors and the community you serve may lose confidence if your organisation is publicly linked to a scam or breach
+Your reputation, donors and the community you serve may lose confidence if your organisation is publicly linked to a scam or breach
 
-Your volunteers' time — recovering from an incident consumes hours that volunteers do not have to spare from their actual mission
+Your volunteers' time, recovering from an incident consumes hours that volunteers do not have to spare from their actual mission
 
 | ℹ  DID YOU KNOW? The Australian Cyber Security Centre and Scamwatch have both specifically flagged charities and not-for-profits as an increasingly targeted sector, partly because published committee lists, public financial reports, and social media appeals give scammers unusually detailed information to work with. |
 

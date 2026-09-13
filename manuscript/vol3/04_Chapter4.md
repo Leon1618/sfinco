@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 3 — Family and Home Network Protection  ·  Chapter 4
+Sfinco Guides  ·  Volume 3: Family and Home Network Protection  ·  Chapter 4
 
 
 # Smart devices and what they can see
@@ -34,9 +34,9 @@ Settings path:  The camera's app  >  Privacy or Security Settings.
 
 ![Smart camera app settings screen showing two-factor authentication turned on](screenshots/ch4-camera-settings.png)
 
-*Mockup illustration, styled to resemble a typical router app — reshoot on your own hardware before final layout.*
+*Mockup illustration, styled to resemble a typical router app, reshoot on your own hardware before final layout.*
 
-| ℹ  DID YOU KNOW? Some smart camera brands have had well-publicised cases of footage being accessed by unauthorised parties, usually traced back to reused passwords or accounts without two-factor authentication turned on — not a flaw in the camera hardware itself. The account security matters as much as the device. |
+| ℹ  DID YOU KNOW? Some smart camera brands have had well-publicised cases of footage being accessed by unauthorised parties, usually traced back to reused passwords or accounts without two-factor authentication turned on, not a flaw in the camera hardware itself. The account security matters as much as the device. |
 
 
 ## Smart speakers and voice assistants
@@ -47,7 +47,7 @@ Settings path:  The assistant's app  >  Privacy Settings  >  Voice History or Re
 
 ★  TIP:  Review and delete your voice recording history periodically, and turn off "help improve this service" style settings if you would prefer recordings are not reviewed by anyone for quality purposes.
 
-Consider a physical mute switch, present on most smart speakers, for times when you would prefer the device is not listening at all — such as when discussing anything sensitive.
+Consider a physical mute switch, present on most smart speakers, for times when you would prefer the device is not listening at all, such as when discussing anything sensitive.
 
 
 ## Smart TVs and streaming devices
@@ -58,7 +58,7 @@ Settings path:  TV Settings  >  Privacy  >  Viewing Data or Ad Tracking.
 
 ![Smart TV settings showing viewing data collection toggled off](screenshots/ch4-smart-tv-privacy.png)
 
-*Mockup illustration, styled to resemble a typical router app — reshoot on your own hardware before final layout.*
+*Mockup illustration, styled to resemble a typical router app, reshoot on your own hardware before final layout.*
 
 Turn off automatic content recognition or viewing data collection if you would prefer your viewing habits are not tracked, and cover or disable any built-in camera when not in active use for video calling.
 
@@ -70,7 +70,7 @@ Not all smart devices carry equal risk. Give particular attention to: any device
 | ✓  WELL DONE IF YOU HAVE THIS If every smart device in your home has its own unique password, sits on your guest network from Chapter 3, and you have reviewed the privacy settings on anything with a camera or microphone, your smart home is already in very good shape. |
 
 
-## Quick review — your chapter 4 checklist
+## Quick review, your chapter 4 checklist
 
 | Done | Item |
 | --- | --- |

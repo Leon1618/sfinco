@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 3 — Family and Home Network Protection  ·  Chapter 1
+Sfinco Guides  ·  Volume 3: Family and Home Network Protection  ·  Chapter 1
 
 
 # Why your home network is a target
@@ -7,11 +7,11 @@ Sfinco Guides  ·  Volume 3 — Family and Home Network Protection  ·  Chapter 
 One router, a dozen devices, and why nobody ever looks at either
 
 
-| ▶  REAL STORY Graham, 71, from Cooroy, noticed his internet had been running slowly for weeks. When his grandson visited and checked the router, he found eleven devices connected that nobody in the house recognised. Someone nearby had guessed the Wi-Fi password — still the default password printed on the box, eight years after it was installed — and had been quietly using Graham's internet connection, and possibly watching his network traffic, for months. Graham is not careless. He simply never thought about the router again after the technician left. That is exactly the gap this chapter closes. |
+| ▶  REAL STORY Graham, 71, from Cooroy, noticed his internet had been running slowly for weeks. When his grandson visited and checked the router, he found eleven devices connected that nobody in the house recognised. Someone nearby had guessed the Wi-Fi password, still the default password printed on the box, eight years after it was installed, and had been quietly using Graham's internet connection, and possibly watching his network traffic, for months. Graham is not careless. He simply never thought about the router again after the technician left. That is exactly the gap this chapter closes. |
 
-Stories like Graham's are common, and they are becoming more common as the average home fills with connected devices. The Australian Cyber Security Centre has repeatedly flagged home routers and smart devices as one of the most under-protected parts of a typical household's digital life — precisely because, unlike a phone or a laptop, nobody feels responsible for maintaining them.
+Stories like Graham's are common, and they are becoming more common as the average home fills with connected devices. The Australian Cyber Security Centre has repeatedly flagged home routers and smart devices as one of the most under-protected parts of a typical household's digital life, precisely because, unlike a phone or a laptop, nobody feels responsible for maintaining them.
 
-Your home network is not just a way to get online. It is the shared front door for every device in your house, and every person who uses it — including visitors, tenants, grandchildren, and increasingly, devices that are not really "computers" at all.
+Your home network is not just a way to get online. It is the shared front door for every device in your house, and every person who uses it, including visitors, tenants, grandchildren, and increasingly, devices that are not really "computers" at all.
 
 
 ## What is actually connected to your home network?
@@ -45,14 +45,14 @@ Outdated router firmware.  Like any computer, a router runs software that occasi
 
 Insecure smart devices.  A single poorly secured smart camera or plug can sometimes be used as a stepping stone into the rest of your network, particularly if every device shares the same network with no separation between them.
 
-Guessed or shared admin passwords.  The password to log in to your router's own settings is different from your Wi-Fi password, and is often left as the factory default — "admin/admin" being the most common example in the world.
+Guessed or shared admin passwords.  The password to log in to your router's own settings is different from your Wi-Fi password, and is often left as the factory default: "admin/admin" being the most common example in the world.
 
 Sharing your Wi-Fi password too freely.  Every person and device you have ever given your password to retains access until you change it, including a tradesperson from three years ago or a visitor's phone that may since have been compromised elsewhere.
 
 
 ## Why this matters more for a shared household
 
-A home network protects everyone who uses it equally poorly if it is left unsecured — including people who never made a single decision about it. Children, grandchildren, and older relatives visiting or living in the home are all exposed by the same weak router password, whether or not they know anything about how it works.
+A home network protects everyone who uses it equally poorly if it is left unsecured, including people who never made a single decision about it. Children, grandchildren, and older relatives visiting or living in the home are all exposed by the same weak router password, whether or not they know anything about how it works.
 
 This is also why home networks are attractive to criminals specifically targeting older Australians: a single successful compromise can expose banking sessions, personal photos, and even live camera feeds from inside the home, without ever needing to trick a person directly.
 

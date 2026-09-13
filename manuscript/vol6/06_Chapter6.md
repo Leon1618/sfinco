@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 6 — Small Business Protection  ·  Chapter 6
+Sfinco Guides  ·  Volume 6: Small Business Protection  ·  Chapter 6
 
 
 # Wi-Fi, point-of-sale, and remote access
@@ -19,7 +19,7 @@ Settings path: usually found in your router or modem's admin panel under Guest N
 
 ![Router settings screen showing a separate guest Wi-Fi network enabled](screenshots/vol6-ch6-guest-network.png)
 
-*Mockup illustration, styled to match a typical router admin panel — reshoot using your actual equipment before final layout.*
+*Mockup illustration, styled to match a typical router admin panel, reshoot using your actual equipment before final layout.*
 
 | ⚠  WARNING If customers and your point-of-sale system share the same Wi-Fi network, a compromised customer device could potentially be used to access your business systems. A separate guest network closes this off entirely, and takes most routers only a few minutes to set up. |
 
@@ -31,7 +31,7 @@ Beyond separating customer Wi-Fi, your point-of-sale or EFTPOS system should ide
 
 ![Network settings showing point-of-sale devices on a separate, dedicated network](screenshots/vol6-ch6-pos-network.png)
 
-*Mockup illustration, styled to match a typical router admin panel — reshoot using your actual equipment before final layout.*
+*Mockup illustration, styled to match a typical router admin panel, reshoot using your actual equipment before final layout.*
 
 ★  TIP:  If you are not sure how to set this up, ask your point-of-sale provider or internet provider for help. Most business-grade routers support multiple separate networks, and providers are usually happy to assist with initial setup.
 
@@ -45,7 +45,7 @@ Settings path: usually found in your router or point-of-sale system's admin pane
 
 ![Router administration settings showing a custom admin password set](screenshots/vol6-ch6-admin-password.png)
 
-*Mockup illustration, styled to match a typical router admin panel — reshoot using your actual equipment before final layout.*
+*Mockup illustration, styled to match a typical router admin panel, reshoot using your actual equipment before final layout.*
 
 | ℹ  DID YOU KNOW? Default router passwords for most makes and models are freely available online with a simple search, meaning an unchanged default password offers essentially no protection at all. |
 
@@ -63,12 +63,12 @@ If any staff member accesses business systems from home or on the road, a VPN ad
 
 ![VPN app screen showing a secure connection active for remote staff access](screenshots/vol6-ch6-vpn-remote-access.png)
 
-*Mockup illustration, styled to match a typical VPN app — reshoot using your actual software before final layout.*
+*Mockup illustration, styled to match a typical VPN app, reshoot using your actual software before final layout.*
 
 | ✓  WELL DONE IF YOU HAVE THIS If remote staff already connect through a VPN before accessing business email, files, or point-of-sale data, you have closed off one of the more common ways businesses are compromised through home or public Wi-Fi. |
 
 
-## Quick review — your chapter 6 checklist
+## Quick review, your chapter 6 checklist
 
 
 | Done | Item |

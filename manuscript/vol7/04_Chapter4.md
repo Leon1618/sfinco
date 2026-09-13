@@ -1,4 +1,4 @@
-Sfinco Guides  ·  Volume 7 — NGO and Not-for-Profit Protection  ·  Chapter 4
+Sfinco Guides  ·  Volume 7: NGO and Not-for-Profit Protection  ·  Chapter 4
 
 
 # Volunteer and committee access worth trimming
@@ -17,7 +17,7 @@ Least privilege simply means giving each person access to only what they need fo
 
 ![Donor management software admin panel showing volunteers with different access levels](screenshots/vol7-ch4-access-levels.png)
 
-*Mockup illustration, styled to match a typical donor management platform — reshoot using your actual software before final layout.*
+*Mockup illustration, styled to match a typical donor management platform, reshoot using your actual software before final layout.*
 
 | ℹ  DID YOU KNOW? Most donor management, email, and accounting platforms let you assign different permission levels to different users, such as "view only," "can edit donor records," or "full admin," rather than giving everyone the same access. |
 
@@ -29,7 +29,7 @@ Settings path: this varies by platform, but is usually found under Settings > Us
 
 ![Volunteer access review screen listing committee members and their permission levels](screenshots/vol7-ch4-staff-review.png)
 
-*Mockup illustration, styled to match a typical donor management platform — reshoot using your actual software before final layout.*
+*Mockup illustration, styled to match a typical donor management platform, reshoot using your actual software before final layout.*
 
 ★  TIP:  Review access at every committee handover, typically at your organisation's AGM, as a standing agenda item rather than something that only happens if someone remembers.
 
@@ -52,7 +52,7 @@ A simple offboarding checklist, kept somewhere handy such as your committee hand
 | ☐ | Collect any organisational devices or access cards |
 
 
-## Shared logins — a habit worth breaking, even for volunteers
+## Shared logins, a habit worth breaking, even for volunteers
 
 
 It is common in small organisations for the entire committee to share a single login to a piece of software, for convenience. This makes it impossible to know who did what, and means removing one person's access requires changing the password for everyone else too.
@@ -60,7 +60,7 @@ It is common in small organisations for the entire committee to share a single l
 | ✓  WELL DONE IF YOU HAVE THIS If every committee member and long-term volunteer has their own individual login for your organisation's key systems, rather than sharing one account between several people, you already have far better visibility and control than most small organisations. |
 
 
-## Quick review — your chapter 4 checklist
+## Quick review, your chapter 4 checklist
 
 
 | Done | Item |

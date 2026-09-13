@@ -113,17 +113,17 @@ This book does not constitute legal or financial advice, and does not replace a 
 
 This guide focuses on the practical, everyday security decisions available to any small business, regardless of size or industry. It does not cover compliance frameworks required of larger or regulated organisations, such as the Australian Privacy Principles in full detail, PCI DSS for businesses processing large volumes of card payments, or industry-specific regulatory obligations. If your business fits any of these categories, this book is a useful starting point, but you should also seek specialist advice.
 
-If you would like a more thorough, tailored assessment of your specific business, Sfinco offers remote SMB Cyber Audits for Sunshine Coast small businesses — see the back of this book for details.
+If you would like a more thorough, tailored assessment of your specific business, Sfinco offers remote SMB Cyber Audits for Sunshine Coast small businesses, see the back of this book for details.
 
 Ready? Chapter 1 starts with why small businesses are targeted at all.
 
 sfinco.com.au
 
-Part of the Sfinco Guides series — protecting Australians online
+Part of the Sfinco Guides series, protecting Australians online
 
 ---
 
-Sfinco Guides  ·  Volume 6 — Small Business Protection  ·  Chapter 1
+Sfinco Guides  ·  Volume 6: Small Business Protection  ·  Chapter 1
 
 
 # Why small businesses are targeted
@@ -142,15 +142,15 @@ Stories like Dave's are extremely common across small businesses in Australia, a
 
 To understand why your business is worth targeting, it helps to think about what a successful attack could cost you. It is usually more than the money involved in a single incident.
 
-Your cash flow — a single successful invoice scam can be a genuinely serious loss for a small business
+Your cash flow, a single successful invoice scam can be a genuinely serious loss for a small business
 
-Your customer data — names, addresses, and sometimes payment details, all of which carry legal obligations if exposed
+Your customer data, names, addresses, and sometimes payment details, all of which carry legal obligations if exposed
 
-Your email account — often the single most valuable target, since it can be used to impersonate you to staff, suppliers, and customers
+Your email account, often the single most valuable target, since it can be used to impersonate you to staff, suppliers, and customers
 
-Your reputation — customers who hear that your business was compromised may lose confidence, even if no fault lies with you
+Your reputation, customers who hear that your business was compromised may lose confidence, even if no fault lies with you
 
-Your time — recovering from an incident, even a minor one, can consume days you do not have to spare
+Your time, recovering from an incident, even a minor one, can consume days you do not have to spare
 
 | ℹ  DID YOU KNOW? The Australian Cyber Security Centre (ACSC) receives a report of a cybercrime roughly every six minutes, and small and medium businesses report a significantly higher average financial loss per incident than individuals. Small businesses are a genuine, ongoing target, not an unlikely edge case. |
 
@@ -188,7 +188,7 @@ The rest of this book walks through exactly what to check, one chapter at a time
 
 ---
 
-Sfinco Guides  ·  Volume 6 — Small Business Protection  ·  Chapter 2
+Sfinco Guides  ·  Volume 6: Small Business Protection  ·  Chapter 2
 
 
 # Locking the front door
@@ -200,7 +200,7 @@ Passwords, multi-factor authentication, and the single change that stops most ac
 Every protection in this book sits behind one gate: the login screen of your business accounts, email, banking, accounting software, and anything else your business relies on. This chapter covers the layers that make that gate a genuine barrier.
 
 
-## Layer 1 — Strong, unique passwords
+## Layer 1, Strong, unique passwords
 
 
 A strong password is long, not reused anywhere else, and not something easily guessed from public information about you or your business, such as your business name or ABN.
@@ -210,7 +210,7 @@ A strong password is long, not reused anywhere else, and not something easily gu
 | ⚠  WARNING If any staff member reuses their personal email password for a business account, a breach of an unrelated website they use personally can hand an attacker direct access to your business systems. This is one of the most common ways small business accounts are compromised. |
 
 
-## Layer 2 — A password manager for the whole business
+## Layer 2, A password manager for the whole business
 
 
 Remembering a unique, strong password for every business account is unrealistic without help. A password manager generates and stores strong passwords, and can share specific logins with staff without them ever seeing the actual password in plain text.
@@ -224,7 +224,7 @@ Remembering a unique, strong password for every business account is unrealistic 
 | ℹ  DID YOU KNOW? A password manager also protects your business if a staff member leaves. Instead of trying to remember every account they had access to, you can revoke their access to shared logins from one place, without needing to change every password individually. |
 
 
-## Layer 3 — Multi-factor authentication (MFA)
+## Layer 3, Multi-factor authentication (MFA)
 
 
 Multi-factor authentication (also called two-factor authentication) requires a second step beyond your password, usually a code from an app or a prompt on your phone, to sign in. This single change is the most effective step in this entire book.
@@ -248,7 +248,7 @@ Turn on MFA on any account that offers it
 Report anything that looks suspicious immediately, rather than trying to handle it alone
 
 
-## Quick review — your chapter 2 checklist
+## Quick review, your chapter 2 checklist
 
 
 | Done | Item |
@@ -262,7 +262,7 @@ With your accounts locked down, the next chapter looks specifically at email sec
 
 ---
 
-Sfinco Guides  ·  Volume 6 — Small Business Protection  ·  Chapter 3
+Sfinco Guides  ·  Volume 6: Small Business Protection  ·  Chapter 3
 
 
 # Email security and protecting your domain
@@ -285,7 +285,7 @@ Settings path (Google Workspace):  Gmail  >  Settings  >  See all settings  >  F
 
 ![Email settings screen showing the forwarding rules section with no unexpected addresses](screenshots/vol6-ch3-forwarding-rules.png)
 
-*Mockup illustration, styled to match a typical business email admin panel — reshoot using your actual email provider before final layout.*
+*Mockup illustration, styled to match a typical business email admin panel, reshoot using your actual email provider before final layout.*
 
 | ⚠  WARNING If you find a forwarding rule you did not set up, treat this as a serious sign your account has been compromised. Remove the rule, change your password immediately, and turn on MFA if it is not already active. |
 
@@ -301,12 +301,12 @@ Settings path (Google Workspace):  Google Account  >  Security  >  Your devices.
 
 ![Email account security page showing recent sign-in activity by location and device](screenshots/vol6-ch3-signin-activity.png)
 
-*Mockup illustration, styled to match a typical business email admin panel — reshoot using your actual email provider before final layout.*
+*Mockup illustration, styled to match a typical business email admin panel, reshoot using your actual email provider before final layout.*
 
 ★  TIP:  If you see a sign-in from a country your business has no connection to, change your password immediately and review your forwarding rules and connected apps.
 
 
-## Domain protections — SPF, DKIM, and DMARC in plain English
+## Domain protections, SPF, DKIM, and DMARC in plain English
 
 
 These three settings, configured once by whoever manages your website or email hosting, make it significantly harder for a scammer to send an email that appears to come from your business's own domain.
@@ -336,7 +336,7 @@ Check the actual sender address, not just the display name, since these can diff
 Avoid opening unexpected attachments, particularly invoices or "remittance advice" from senders you were not expecting
 
 
-## Quick review — your chapter 3 checklist
+## Quick review, your chapter 3 checklist
 
 
 | Done | Item |
@@ -350,7 +350,7 @@ With your email locked down, the next chapter looks at staff access, and making 
 
 ---
 
-Sfinco Guides  ·  Volume 6 — Small Business Protection  ·  Chapter 4
+Sfinco Guides  ·  Volume 6: Small Business Protection  ·  Chapter 4
 
 
 # Staff access worth trimming
@@ -369,7 +369,7 @@ Least privilege simply means giving each person access to only what they need to
 
 ![Business software admin panel showing staff members with different access levels](screenshots/vol6-ch4-access-levels.png)
 
-*Mockup illustration, styled to match a typical business admin panel — reshoot using your actual software before final layout.*
+*Mockup illustration, styled to match a typical business admin panel, reshoot using your actual software before final layout.*
 
 | ℹ  DID YOU KNOW? Most accounting, email, and point-of-sale platforms let you assign different permission levels to different staff, such as "view only," "can invoice," or "full admin," rather than giving everyone the same access. |
 
@@ -381,7 +381,7 @@ Settings path: this varies by platform, but is usually found under Settings > Us
 
 ![Staff access review screen listing team members and their permission levels](screenshots/vol6-ch4-staff-review.png)
 
-*Mockup illustration, styled to match a typical business admin panel — reshoot using your actual software before final layout.*
+*Mockup illustration, styled to match a typical business admin panel, reshoot using your actual software before final layout.*
 
 ★  TIP:  Set a reminder to review staff access every six months. Roles change, responsibilities shift, and access that made sense a year ago may no longer be appropriate.
 
@@ -404,7 +404,7 @@ A simple offboarding checklist, kept somewhere handy, makes this consistent rath
 | ☐ | Collect any business devices, keys, or access cards |
 
 
-## Shared logins — a habit worth breaking
+## Shared logins, a habit worth breaking
 
 
 It is common in small businesses for everyone to share a single login to a piece of software, for convenience. This makes it impossible to know who did what, and means removing one person's access requires changing the password for everyone.
@@ -412,7 +412,7 @@ It is common in small businesses for everyone to share a single login to a piece
 | ✓  WELL DONE IF YOU HAVE THIS If every staff member has their own individual login for your business's key systems, rather than sharing one account between several people, you already have far better visibility and control than most small businesses. |
 
 
-## Quick review — your chapter 4 checklist
+## Quick review, your chapter 4 checklist
 
 
 | Done | Item |
@@ -426,7 +426,7 @@ With access under control, the next chapter looks at the scams most likely to ta
 
 ---
 
-Sfinco Guides  ·  Volume 6 — Small Business Protection  ·  Chapter 5
+Sfinco Guides  ·  Volume 6: Small Business Protection  ·  Chapter 5
 
 
 # Scams targeting small businesses
@@ -435,10 +435,10 @@ Sfinco Guides  ·  Volume 6 — Small Business Protection  ·  Chapter 5
 How to spot them, what to do, and how to recover if you paid
 
 
-## Why scams work — the psychology behind them
+## Why scams work, the psychology behind them
 
 
-Every scam in this chapter relies on the same handful of psychological triggers: urgency, authority, and the everyday busyness of running a small business. A message that arrives at a genuinely busy moment, appears to come from someone you trust, and asks for something that sounds routine, is designed to make you skip the one step that would protect you — stopping to verify.
+Every scam in this chapter relies on the same handful of psychological triggers: urgency, authority, and the everyday busyness of running a small business. A message that arrives at a genuinely busy moment, appears to come from someone you trust, and asks for something that sounds routine, is designed to make you skip the one step that would protect you, stopping to verify.
 
 
 ## The scams most likely to reach your business
@@ -454,9 +454,9 @@ An email appears to come from the business owner, often while they are known to 
 
 | Hi, I'm stuck in meetings all day and can't take calls. Need you to pay this supplier invoice urgently before 3pm, new account details attached. Don't mention it to anyone else yet, it's a bit sensitive. Thanks |
 
-*Illustrative mockup, not a real message — built to show the pattern.*
+*Illustrative mockup, not a real message, built to show the pattern.*
 
-| ✶  CRITICAL — READ THIS CAREFULLY Any request to keep a payment "quiet," bypass your normal approval process, or act with unusual urgency should be treated as a serious warning sign, regardless of who it appears to be from. Always verify by phone, using a number you already have, before paying. |
+| ✶  CRITICAL, READ THIS CAREFULLY Any request to keep a payment "quiet," bypass your normal approval process, or act with unusual urgency should be treated as a serious warning sign, regardless of who it appears to be from. Always verify by phone, using a number you already have, before paying. |
 
 2. Changed bank details from a "supplier"
 
@@ -466,7 +466,7 @@ An email, apparently from a genuine, regular supplier, advises that their bank a
 
 | Please note our bank account details have changed as of this month. Please update your records and use the new BSB and account number below for all future payments. |
 
-*Illustrative mockup, not a real supplier message — built to show the pattern.*
+*Illustrative mockup, not a real supplier message, built to show the pattern.*
 
 Always confirm any change of bank details by phone, calling a number you already have on file for that supplier, never a number provided in the email itself.
 
@@ -478,7 +478,7 @@ An email claims to come from the Australian Taxation Office or ASIC, warning of 
 
 | Your business has an outstanding compliance matter. Failure to respond within 24 hours may result in penalties or suspension of your ABN. Click here to resolve: ato-compliance-portal.info |
 
-*Illustrative mockup, not a real ATO message — built to show the pattern.*
+*Illustrative mockup, not a real ATO message, built to show the pattern.*
 
 The ATO and ASIC do not send emails threatening immediate ABN cancellation with a link to click. If you are ever concerned about a genuine compliance matter, log in directly to your myGovID or ASIC Connect account, or call the ATO or ASIC using their official published numbers.
 
@@ -490,7 +490,7 @@ An email or letter, styled to look official, warns that your business's website 
 
 | Your domain registration is due to expire. Renew now to avoid losing your website and business email: domain-renewal-notice.net |
 
-*Illustrative mockup, not a real registrar message — built to show the pattern.*
+*Illustrative mockup, not a real registrar message, built to show the pattern.*
 
 ★  TIP:  Check your domain's actual renewal date and provider directly, rather than through a link in an unsolicited email. Genuine renewal notices come from the registrar you originally purchased the domain through.
 
@@ -502,7 +502,7 @@ An email or ad claims your Google Ads or Facebook Business account has been susp
 
 | Your Business account has been restricted due to a policy violation. Verify your account within 24 hours to avoid permanent suspension. |
 
-*Illustrative mockup, not a real Meta message — built to show the pattern.*
+*Illustrative mockup, not a real Meta message, built to show the pattern.*
 
 | ⚠  WARNING Clicking a link like this and entering your login details can hand a scammer full control of your business's advertising account, including the ability to spend your advertising budget on their own campaigns. Log in directly through the official app or website instead, never through a link in an email or ad. |
 
@@ -529,7 +529,7 @@ You are asked to click a link and log in to "verify" or "resolve" something
 Contact your bank immediately. Banks can sometimes recall a payment if it is reported within hours, though this becomes far less likely after a day or two. Contact the genuine supplier directly, using a number you already have, to confirm what happened. Report the incident to Scamwatch at scamwatch.gov.au and to ReportCyber at cyber.gov.au. If any customer personal information may have been exposed as part of the incident, review your obligations under the Notifiable Data Breaches scheme, covered in more detail in Chapter 7.
 
 
-## Quick review — your chapter 5 checklist
+## Quick review, your chapter 5 checklist
 
 
 | Done | Item |
@@ -544,7 +544,7 @@ With scams covered, the next chapter looks at keeping your business's network an
 
 ---
 
-Sfinco Guides  ·  Volume 6 — Small Business Protection  ·  Chapter 6
+Sfinco Guides  ·  Volume 6: Small Business Protection  ·  Chapter 6
 
 
 # Wi-Fi, point-of-sale, and remote access
@@ -565,7 +565,7 @@ Settings path: usually found in your router or modem's admin panel under Guest N
 
 ![Router settings screen showing a separate guest Wi-Fi network enabled](screenshots/vol6-ch6-guest-network.png)
 
-*Mockup illustration, styled to match a typical router admin panel — reshoot using your actual equipment before final layout.*
+*Mockup illustration, styled to match a typical router admin panel, reshoot using your actual equipment before final layout.*
 
 | ⚠  WARNING If customers and your point-of-sale system share the same Wi-Fi network, a compromised customer device could potentially be used to access your business systems. A separate guest network closes this off entirely, and takes most routers only a few minutes to set up. |
 
@@ -577,7 +577,7 @@ Beyond separating customer Wi-Fi, your point-of-sale or EFTPOS system should ide
 
 ![Network settings showing point-of-sale devices on a separate, dedicated network](screenshots/vol6-ch6-pos-network.png)
 
-*Mockup illustration, styled to match a typical router admin panel — reshoot using your actual equipment before final layout.*
+*Mockup illustration, styled to match a typical router admin panel, reshoot using your actual equipment before final layout.*
 
 ★  TIP:  If you are not sure how to set this up, ask your point-of-sale provider or internet provider for help. Most business-grade routers support multiple separate networks, and providers are usually happy to assist with initial setup.
 
@@ -591,7 +591,7 @@ Settings path: usually found in your router or point-of-sale system's admin pane
 
 ![Router administration settings showing a custom admin password set](screenshots/vol6-ch6-admin-password.png)
 
-*Mockup illustration, styled to match a typical router admin panel — reshoot using your actual equipment before final layout.*
+*Mockup illustration, styled to match a typical router admin panel, reshoot using your actual equipment before final layout.*
 
 | ℹ  DID YOU KNOW? Default router passwords for most makes and models are freely available online with a simple search, meaning an unchanged default password offers essentially no protection at all. |
 
@@ -609,12 +609,12 @@ If any staff member accesses business systems from home or on the road, a VPN ad
 
 ![VPN app screen showing a secure connection active for remote staff access](screenshots/vol6-ch6-vpn-remote-access.png)
 
-*Mockup illustration, styled to match a typical VPN app — reshoot using your actual software before final layout.*
+*Mockup illustration, styled to match a typical VPN app, reshoot using your actual software before final layout.*
 
 | ✓  WELL DONE IF YOU HAVE THIS If remote staff already connect through a VPN before accessing business email, files, or point-of-sale data, you have closed off one of the more common ways businesses are compromised through home or public Wi-Fi. |
 
 
-## Quick review — your chapter 6 checklist
+## Quick review, your chapter 6 checklist
 
 
 | Done | Item |
@@ -628,7 +628,7 @@ With your network settings squared away, the next chapter covers backups and wha
 
 ---
 
-Sfinco Guides  ·  Volume 6 — Small Business Protection  ·  Chapter 7
+Sfinco Guides  ·  Volume 6: Small Business Protection  ·  Chapter 7
 
 
 # Backups and incident response
@@ -659,12 +659,12 @@ Settings path: this varies by platform, but most cloud accounting, email, and fi
 
 ![Cloud backup settings screen showing a recent, successful backup date](screenshots/vol6-ch7-backup-status.png)
 
-*Mockup illustration, styled to match a typical cloud backup admin panel — reshoot using your actual software before final layout.*
+*Mockup illustration, styled to match a typical cloud backup admin panel, reshoot using your actual software before final layout.*
 
 ★  TIP:  Do not assume a backup is working simply because you set it up once. Check the actual "last backup" date every few months, and periodically confirm you can genuinely restore a file from it.
 
 
-## Ransomware — what it is and how to reduce the damage
+## Ransomware, what it is and how to reduce the damage
 
 
 Ransomware is malware that encrypts your business's files and demands payment to unlock them. The single best defence is a backup that ransomware cannot also reach and encrypt, combined with staff who know not to open unexpected attachments.
@@ -680,7 +680,7 @@ If your business experiences a breach that exposes customer personal information
 ! IMPORTANT: The NDB scheme generally requires businesses to notify affected individuals and the OAIC if a data breach is likely to result in serious harm. Whether your specific business is covered, and whether a particular incident meets this threshold, depends on your circumstances. If you are ever unsure, contact the OAIC directly at oaic.gov.au, or seek advice from a solicitor. This book provides general guidance only and is not a substitute for professional legal advice.
 
 
-## The first sixty minutes — what to do if something goes wrong
+## The first sixty minutes, what to do if something goes wrong
 
 
 If your business is ever affected by a breach, ransomware, or a serious scam, the steps below are designed to be followed calmly, in order.
@@ -702,7 +702,7 @@ If your business is ever affected by a breach, ransomware, or a serious scam, th
 Cyber insurance policies for small businesses have become significantly more accessible in recent years, and can cover costs including data recovery, legal advice, and business interruption following an incident. If your business handles customer data or processes payments, it is worth asking your existing insurance broker whether a cyber insurance policy is available and appropriate for your size of business.
 
 
-## Quick review — your chapter 7 checklist
+## Quick review, your chapter 7 checklist
 
 
 | Done | Item |
@@ -717,7 +717,7 @@ With a proper backup and response plan ready to go, the final chapter brings eve
 
 ---
 
-Sfinco Guides  ·  Volume 6 — Small Business Protection  ·  Chapter 8
+Sfinco Guides  ·  Volume 6: Small Business Protection  ·  Chapter 8
 
 
 # Your 15-minute small business security checkup
@@ -727,7 +727,7 @@ A simple monthly routine to keep your business protected for years to come
 
 You have now worked through every major layer of small business security: your accounts and passwords, email security, staff access, scam awareness, your network and remote access, and your backups and incident response plan. This final chapter brings all of it together into one simple monthly habit.
 
-| ℹ  DID YOU KNOW? Set a recurring reminder right now — the first Monday of every month works well for most business owners. Open your calendar app, create a new reminder called 'Business security checkup', and set it to repeat monthly. This is the single most important step in this chapter: the checklist only works if you actually come back to it. |
+| ℹ  DID YOU KNOW? Set a recurring reminder right now, the first Monday of every month works well for most business owners. Open your calendar app, create a new reminder called 'Business security checkup', and set it to repeat monthly. This is the single most important step in this chapter: the checklist only works if you actually come back to it. |
 
 
 ## The complete monthly checklist
@@ -793,7 +793,7 @@ Talk to your staff about scams regularly, not just once.  A five-minute conversa
 
 Security is not a single project you finish and forget. It is a small, repeated habit, the same way you would reconcile your accounts or check your stock levels. Fifteen minutes a month, done consistently, will protect your business far better than an intense afternoon of changes done once and never revisited.
 
-| ✓  WELL DONE You have completed Sfinco Guides Volume 6 — Small Business Protection. Your business is now meaningfully more secure than it was when you started this book. Well done. Genuinely. |
+| ✓  WELL DONE You have completed Sfinco Guides Volume 6: Small Business Protection. Your business is now meaningfully more secure than it was when you started this book. Well done. Genuinely. |
 
 Continuing your Sfinco journey:  The Sfinco Guides series continues with Volume 7 (NGO and Not-for-Profit Protection), and Volume 8 (Personal Finance Protection), each written in the same plain-English, step-by-step style. See the final pages of this book for details.
 
@@ -803,7 +803,7 @@ Sfinco Guides  ·  Volume 6
 
 ## Glossary
 
-These are the key terms used throughout this book, explained in plain English. You do not need to memorise them — this section is here to help if you encounter a word and want a clear definition.
+These are the key terms used throughout this book, explained in plain English. You do not need to memorise them, this section is here to help if you encounter a word and want a clear definition.
 
 | Term | Definition |
 | --- | --- |
@@ -815,7 +815,7 @@ These are the key terms used throughout this book, explained in plain English. Y
 | NDB scheme | The Notifiable Data Breaches scheme, which may require businesses to report certain data breaches to the OAIC and affected individuals |
 | OAIC | The Office of the Australian Information Commissioner, which administers the Privacy Act 1988 and the NDB scheme |
 | Password manager | Software that generates and securely stores strong, unique passwords for every account |
-| Phishing | A scam that impersonates a trusted organisation — via email — to trick you into handing over personal or financial information |
+| Phishing | A scam that impersonates a trusted organisation, via email, to trick you into handing over personal or financial information |
 | Ransomware | Malware that encrypts your files and demands payment to unlock them |
 | Scamwatch | The Australian government's national scam reporting service, run by the ACCC |
 | SPF | A setting that lists which mail servers are allowed to send email on behalf of your domain |
@@ -844,7 +844,7 @@ Cut out or photograph this page and keep it somewhere handy. These are the numbe
 | My genuine supplier bank details (verified) | _________________________________ |
 | Business email provider support | _________________________________ |
 | IT support contact | _________________________________ |
-| Backup — last checked | _________________________________ |
+| Backup, last checked | _________________________________ |
 
 ### If you suspect a fraudulent payment
 
@@ -915,13 +915,13 @@ Month / Year: _________________     Completed by: _________________
 
 sfinco.com.au · Vol 6 Small Business Protection
 
-## Sfinco Guides — the complete series
+## Sfinco Guides, the complete series
 
 More books in the series
 
-The Sfinco Guides series is designed to cover every device and situation you are likely to encounter. Each book follows the same plain-English, step-by-step format — with real Australian examples, screenshots, and no technical jargon.
+The Sfinco Guides series is designed to cover every device and situation you are likely to encounter. Each book follows the same plain-English, step-by-step format, with real Australian examples, screenshots, and no technical jargon.
 
-### Series 1 — Personal protection
+### Series 1, Personal protection
 
 | Volume | What it covers |
 | --- | --- |
@@ -931,7 +931,7 @@ The Sfinco Guides series is designed to cover every device and situation you are
 | Vol 4 Available now | Windows Protection. A plain-English guide for Windows users. Sign-in & BitLocker · Microsoft account · Defender · Scams · Firewall & VPN · Backups |
 | Vol 5 Available now | Android Protection. Staying safe on your Android phone. Play Protect · app permissions · Google account · 2FA · scam texts and calls |
 
-### Series 2 — Organisational protection
+### Series 2, Organisational protection
 
 | Volume | What it covers |
 | --- | --- |
@@ -939,7 +939,7 @@ The Sfinco Guides series is designed to cover every device and situation you are
 | Vol 7 Coming soon | NGO and Not-for-Profit Protection. Protecting organisations that protect others. Volunteer access · donor data · email compromise · free tools for small teams |
 | Vol 8 Coming soon | Personal Finance Protection. Protecting your money in a digital world. Banking security · investment scams · superannuation · password managers · wills |
 
-| ★  TIP All Sfinco Guides are available on Amazon (search 'Sfinco Guides' or scan the QR code on the next page). Paperback and e-book editions are available. Bulk copies for local business networks, chambers of commerce, and industry associations are available directly through sfinco.com.au — contact us for pricing. |
+| ★  TIP All Sfinco Guides are available on Amazon (search 'Sfinco Guides' or scan the QR code on the next page). Paperback and e-book editions are available. Bulk copies for local business networks, chambers of commerce, and industry associations are available directly through sfinco.com.au, contact us for pricing. |
 
 ## Connect with us
 
@@ -949,13 +949,13 @@ Each QR code below links to a different part of the Sfinco ecosystem. Scan any o
 
 | Where it takes you | What you'll find |
 | --- | --- |
-| [ QR CODE ] WEBSITE | Visit the Sfinco website — free resources, guides, blog, and updates on new books in the series sfinco.com.au |
-| [ QR CODE ] CYBER AUDIT | Book a Sfinco SMB Cyber Audit — a remote-first cyber security risk assessment for Sunshine Coast small businesses sfinco.com.au/business |
-| [ QR CODE ] ALL BOOKS | Browse all Sfinco Guides — the complete series on Amazon and direct from our website sfinco.com.au/guides |
-| [ QR CODE ] TECH HELP | Book a Senior Tech Concierge session — in-person help with your devices on the Sunshine Coast sfinco.com.au/concierge |
-| [ QR CODE ] FREE DOWNLOAD | Free printable resources — scam reference card, monthly checklist, and more (no sign-up required) sfinco.com.au/resources |
+| [ QR CODE ] WEBSITE | Visit the Sfinco website, free resources, guides, blog, and updates on new books in the series sfinco.com.au |
+| [ QR CODE ] CYBER AUDIT | Book a Sfinco SMB Cyber Audit, a remote-first cyber security risk assessment for Sunshine Coast small businesses sfinco.com.au/business |
+| [ QR CODE ] ALL BOOKS | Browse all Sfinco Guides, the complete series on Amazon and direct from our website sfinco.com.au/guides |
+| [ QR CODE ] TECH HELP | Book a Senior Tech Concierge session, in-person help with your devices on the Sunshine Coast sfinco.com.au/concierge |
+| [ QR CODE ] FREE DOWNLOAD | Free printable resources, scam reference card, monthly checklist, and more (no sign-up required) sfinco.com.au/resources |
 
-| ℹ  NOTE QR codes are scanned using your phone's camera app — no separate app needed. All Sfinco links are safe and will never ask for payment details. |
+| ℹ  NOTE QR codes are scanned using your phone's camera app, no separate app needed. All Sfinco links are safe and will never ask for payment details. |
 
 Sfinco Guides  ·  Volume 6
 
@@ -965,11 +965,11 @@ The author of the Sfinco Guides series works in banking and technology on the Su
 
 Holding qualifications in cybersecurity (CompTIA Security+), financial advising (RG146), and information technology, and completing further studies at CQUniversity, the author brings together a rare combination of technical knowledge and the ability to explain it clearly to people who have no interest in becoming technical experts.
 
-The inspiration for this series came from years of seeing the same pattern: intelligent, capable, careful people and businesses being harmed by scams and digital threats — not because they were careless, but because nobody had ever given them a clear, practical guide to protecting themselves. That gap is what these books, and the Sfinco SMB Cyber Audit service, exist to close.
+The inspiration for this series came from years of seeing the same pattern: intelligent, capable, careful people and businesses being harmed by scams and digital threats, not because they were careless, but because nobody had ever given them a clear, practical guide to protecting themselves. That gap is what these books, and the Sfinco SMB Cyber Audit service, exist to close.
 
 The author also volunteers with CoderDojo, teaching digital skills to young people on the Sunshine Coast, and has a background in community technology education across Australia and internationally.
 
-Sfinco was founded on the belief that every Australian, and every Australian small business, deserves to feel safe and confident in their digital life — regardless of size, technical background, or budget.
+Sfinco was founded on the belief that every Australian, and every Australian small business, deserves to feel safe and confident in their digital life, regardless of size, technical background, or budget.
 
 | Sfinco Protecting Australians through technology, money, and trust. sfinco.com.au Noosa · Sunshine Coast · Queensland · Australia |
 

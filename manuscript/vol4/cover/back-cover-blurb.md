@@ -1,4 +1,4 @@
-# Windows Protection — Back Cover Copy
+# Windows Protection, Back Cover Copy
 
 **Blurb:**
 

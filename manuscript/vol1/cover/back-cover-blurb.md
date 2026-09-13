@@ -1,4 +1,4 @@
-# iPhone Protection — Back Cover Copy
+# iPhone Protection, Back Cover Copy
 
 **Blurb:**
 

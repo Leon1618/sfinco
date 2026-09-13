@@ -1,4 +1,4 @@
-# Android Protection — Back Cover Copy
+# Android Protection, Back Cover Copy
 
 **Blurb:**
 
