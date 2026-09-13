@@ -212,7 +212,7 @@ Your bank: "Unusual activity detected on your account"
 
 Apple: "Your Apple ID has been locked"
 
-*[ SCREENSHOT: Example of a fake ATO SMS, note the sender name, urgency, and shortened link ]*
+![Example of a fake ATO SMS, showing the payment link and urgency language](screenshots/ch1-fake-ato-sms.png)
 
 
 
@@ -346,13 +346,13 @@ Select Custom Alphanumeric Code  for the strongest option, or Custom Numeric Cod
 
 Enter your new passcode twice  to confirm it.
 
-*[ SCREENSHOT: Settings > Face ID & Passcode screen showing Change Passcode option ]*
+![Face ID & Passcode screen showing Change Passcode option and Stolen Device Protection turned on](screenshots/ch2-change-passcode.png)
 
 
 
 The Face ID & Passcode screen in Settings. Tap 'Change Passcode' and then 'Passcode Options' to choose a stronger format.
 
-*[ SCREENSHOT: Passcode Options screen showing Custom Alphanumeric Code selected ]*
+![Passcode Options screen showing 4-Digit, 6-Digit, Custom Numeric, and Custom Alphanumeric Code choices](screenshots/ch2-passcode-options.png)
 
 
 
@@ -394,7 +394,7 @@ Follow the on-screen instructions:  move your head slowly in a circle so the cam
 
 Tap Done  when complete. Face ID is now active.
 
-*[ SCREENSHOT: Face ID setup screen showing circular face scan animation ]*
+![Face ID & Passcode screen confirming Face ID is set up, with Reset Face ID and Attention settings shown](screenshots/ch2-faceid-setup.png)
 
 
 
@@ -438,7 +438,7 @@ Settings path:  Settings  >  Display & Brightness  >  Auto-Lock
 
 The recommended setting is 30 seconds or 1 minute. This might feel short at first, but you will quickly get used to it, and it means your phone locks itself almost immediately if you put it down, drop it, or have it taken from you.
 
-*[ SCREENSHOT: Settings > Display & Brightness > Auto-Lock set to 30 Seconds ]*
+![Display & Brightness settings screen showing Auto-Lock set to 30 seconds](screenshots/ch2-autolock.png)
 
 
 
@@ -482,7 +482,7 @@ Scroll down to Stolen Device Protection  and tap Turn On Protection.
 
 Confirm  by authenticating with Face ID.
 
-*[ SCREENSHOT: Settings > Face ID & Passcode > Stolen Device Protection toggle, turned ON ]*
+![Face ID & Passcode screen showing Stolen Device Protection turned on](screenshots/ch2-stolen-device-protection.png)
 
 
 
@@ -556,7 +556,7 @@ To see what Apple ID is currently signed in on your phone, look at the very top 
 
 Settings path:  Settings  >  [Your Name at the top]
 
-*[ SCREENSHOT: Top of Settings screen showing name and Apple ID email address ]*
+![Top of the Settings screen, with the name and photo blacked out for privacy, showing "Apple Account, iCloud+ and more" underneath](screenshots/ch3-appleid-top.png)
 
 
 
@@ -604,7 +604,7 @@ Enter your current Apple ID password,  then type and confirm your new one.
 
 Tap Change  to save.
 
-*[ SCREENSHOT: Settings > [Name] > Sign-In & Security screen showing Change Password option ]*
+![Sign-In & Security screen showing Change Password, Two-Factor Authentication, and Recovery Methods](screenshots/ch3-signin-security.png)
 
 
 
@@ -638,7 +638,7 @@ Settings path:  Settings  >  [Your Name]  >  Sign-In & Security
 
 Look for the line that says Two-Factor Authentication. If it says On next to it, you are already protected. If it says Off, or if you do not see this option at all, follow the steps below to turn it on.
 
-*[ SCREENSHOT: Sign-In & Security screen showing Two-Factor Authentication: On ]*
+![Two-Factor Authentication screen showing trusted devices and a trusted phone number already set up](screenshots/ch3-2fa-status.png)
 
 
 
@@ -662,7 +662,7 @@ Apple will send a six-digit code to that number.  Enter it to confirm.
 
 Two-factor authentication is now active.
 
-*[ SCREENSHOT: Two-Factor Authentication setup screen showing trusted phone number entry ]*
+![Add Phone Number screen with country code and number entry, ready to send a verification code](screenshots/ch3-2fa-trusted-number.png)
 
 
 
@@ -744,7 +744,7 @@ Make sure iCloud Backup is toggled ON  (green).
 
 Check the line that says Last Successful Backup.  If this was more than a week ago, tap Back Up Now to run a manual backup.
 
-*[ SCREENSHOT: Settings > iCloud > iCloud Backup screen showing backup toggle ON and last backup date/time ]*
+![iCloud Backup screen showing the backup toggle on and a recent successful backup date](screenshots/ch3-icloud-backup.png)
 
 
 
@@ -770,7 +770,7 @@ Scroll to the bottom of your Apple ID page. You will see a list of every Apple d
 
 If you see a device you do not recognise, or an old device you no longer own, tap it and select Remove from Account.
 
-*[ SCREENSHOT: Apple ID page scrolled down showing list of trusted devices, iPhone, iPad, MacBook ]*
+![Apple Account page scrolled down showing the list of devices signed in, plus Contact Key Verification and Sign Out](screenshots/ch3-trusted-devices.png)
 
 
 
@@ -884,7 +884,7 @@ What many people do not realise is that these permissions can be changed at any 
 
 
 
-*[ SCREENSHOT: iPhone status bar showing green dot (camera in use) and orange dot (microphone in use) ]*
+![Home Screen with the status bar showing a green dot and an orange dot together, next to the signal, Wi-Fi, and battery icons](screenshots/ch4-camera-mic-dots.png)
 
 
 
@@ -935,7 +935,7 @@ Tap any app  to change its location access. For most apps, While Using is the sa
 
 Go back to Privacy & Security  and repeat for Camera, Microphone, Contacts, and Photos.
 
-*[ SCREENSHOT: Settings > Privacy & Security > Location Services showing list of apps with their access levels ]*
+![Location Services screen showing a list of apps with their access levels](screenshots/ch4-location-services.png)
 
 
 
@@ -953,7 +953,7 @@ Settings path:  Settings  >  [scroll down to the app name]
 
 If you want to see everything a specific app can access, all in one place, scroll down past the standard Settings options until you reach the alphabetical list of your installed apps. Tap any app name to see every permission it holds and toggle them on or off.
 
-*[ SCREENSHOT: Settings screen scrolled to app list showing individual app (e.g. Facebook) with permissions listed ]*
+![App Store's individual settings page showing Location, Siri, Search, Notifications, and Mobile Data permissions](screenshots/ch4-app-permission-detail.png)
 
 
 
@@ -979,7 +979,7 @@ Tap Turn On App Privacy Report.
 
 Wait 24–48 hours  then return to this screen to see a full record of what your apps have been doing.
 
-*[ SCREENSHOT: App Privacy Report screen showing app activity, frequency of location access, network contacts ]*
+![App Privacy Report screen showing recent camera access and the most contacted domains](screenshots/ch4-app-privacy-report.png)
 
 
 
@@ -1007,7 +1007,7 @@ Tap Tracking.
 
 Toggle off Allow Apps to Request to Track.  This will automatically deny tracking requests from all apps without showing you the pop-up.
 
-*[ SCREENSHOT: Settings > Privacy & Security > Tracking screen with 'Allow Apps to Request to Track' toggled OFF ]*
+![Tracking screen showing Allow Apps to Request to Track turned off](screenshots/ch4-tracking.png)
 
 
 
@@ -1141,7 +1141,9 @@ A text message or call appears to come from your bank, warning of suspicious act
 
 
 
-*[ SCREENSHOT: Side-by-side comparison: genuine CommBank SMS vs scam SMS, showing sender name spoofing and fake domain ]*
+![A genuine CommBank text message followed by a scam text spoofing the same sender name](screenshots/ch5-commbank-comparison.png)
+
+*Illustrative mockup, not real CommBank correspondence, built to show the pattern, not to reproduce their branding.*
 
 
 
@@ -1162,6 +1164,11 @@ A call or message claiming to be from the Australian Taxation Office, myGov, Cen
 > "Your myGov account has been suspended due to unusual activity. You must verify your identity within 48 hours to avoid permanent closure. Click here: mygov-id-verify.com.au/confirm"
 
 ⚠ **Red flags:** fake domain, artificial deadline, suspension threat, unsolicited
+
+
+![A fake myGov text claiming the account has been suspended, with a link to a fake domain](screenshots/ch5-mygov-scam.png)
+
+*Illustrative mockup, not a real myGov message, built to show the pattern, not to reproduce their branding.*
 
 
 
@@ -1198,6 +1205,11 @@ A message or email claiming your Apple ID has been locked, that unusual purchase
 ⚠ **Red flags:** fake domain, data loss threat, urgency, unsolicited, Apple emails from apple.com only
 
 
+![A fake Apple text claiming the Apple ID has been locked, with a link to a fake domain](screenshots/ch5-apple-scam.png)
+
+*Illustrative mockup, not a real Apple message, built to show the pattern, not to reproduce their branding.*
+
+
 
 Genuine Apple communications always come from @apple.com email addresses. Apple will never contact you by SMS to tell you your Apple ID is locked, this is handled entirely through your device or through appleid.apple.com. If you are concerned, go directly to appleid.apple.com in a browser you typed yourself.
 
@@ -1210,6 +1222,11 @@ A message claiming you have an unpaid toll road charge or traffic fine, with a l
 > "You have an outstanding toll charge of $4.85 that must be paid within 24 hours to avoid a $65 late fee. Pay now: linkt-payment.com.au/outstanding"
 
 ⚠ **Red flags:** fake domain, small amount designed to seem plausible, deadline threat, unsolicited
+
+
+![A fake Linkt text about an outstanding toll charge, with a link to a fake domain](screenshots/ch5-linkt-scam.png)
+
+*Illustrative mockup, not a real Linkt message, built to show the pattern, not to reproduce their branding.*
 
 
 
@@ -1249,7 +1266,7 @@ The greeting is generic.  'Dear Customer', 'Dear Account Holder'. Your bank know
 
 You feel scared, excited, or pressured.  These feelings are the scammer working. When you feel them, slow down, do not speed up.
 
-*[ SCREENSHOT: Annotated example of a scam SMS with red flags labelled, fake domain, urgency language, generic greeting ]*
+![Annotated scam SMS with the fake domain and small urgent fee highlighted](screenshots/ch5-annotated-scam-sms.png)
 
 
 
@@ -1283,51 +1300,51 @@ iOS has built-in tools to help filter scam messages before they reach you. Here 
 
 Filter unknown senders
 
-Settings path:  Settings  >  Apps  >  Messages  >  Filter Unknown Senders
+Settings path:  Settings  >  Apps  >  Messages  >  Screen Unknown Senders
 
-When this is turned on, messages from people not in your contacts are moved to a separate 'Unknown Senders' tab and cannot send you notifications. This does not block messages, you can still read them, but it removes the urgency and surprise that scammers rely on.
+When this is turned on, messages from people not in your contacts are moved to a separate 'Unknown Senders' tab and cannot send you notifications. This does not block messages, you can still read them, but it removes the urgency and surprise that scammers rely on. iOS also offers a separate Filter Spam toggle in the same section, worth turning on alongside it.
 
 Open Settings  and scroll down to Apps, then tap Messages.
 
-Toggle on Filter Unknown Senders.
+Toggle on Screen Unknown Senders  (this setting was called Filter Unknown Senders in older versions of iOS).
 
-*[ SCREENSHOT: Settings > Apps > Messages showing Filter Unknown Senders toggle switched ON ]*
+![Messages settings showing Screen Unknown Senders and Filter Spam both turned on](screenshots/ch5-filter-unknown-senders.png)
 
 
 
-Filter Unknown Senders moves messages from people not in your contacts into a separate filtered tab. You can still read them, but they no longer interrupt you with notifications.
+Screen Unknown Senders moves messages from people not in your contacts into a separate filtered tab. You can still read them, but they no longer interrupt you with notifications.
 
 Report junk messages
 
-When you receive a suspicious message from an unknown number, iOS gives you the option to report it as junk. This is especially useful for SMS messages.
+On some iPhones, a Report Junk link appears at the bottom of a conversation from an unknown sender, below the messages themselves, not in the contact card you get by tapping the sender's number. Tapping it sends a copy to Apple, deletes the message, and blocks the sender.
 
-Open the message, scroll to the bottom, and tap Report Junk. This sends a copy to Apple and your carrier, helping improve filtering for everyone.
+Whether you see this option depends on your carrier and how the message arrived. It is most reliable for iMessages (blue bubble) from an unknown sender, and is not available on every Australian carrier for standard text messages (green bubble). If you do not see it, do not worry, it is a bonus, not something to chase. Everything else in this chapter, especially Screen Unknown Senders, works regardless.
 
-*[ SCREENSHOT: iMessage conversation from unknown sender showing 'Report Junk' link at the bottom of the screen ]*
+![Messages list showing three unknown-sender texts each tagged with an "Unknown Sender" pill, including a genuine loan-spam message](screenshots/ch5-unknown-senders-tab.png)
 
 
 
-The 'Report Junk' link appears at the bottom of messages from unknown senders. Tapping it blocks the sender, deletes the message, and reports it to Apple and your carrier.
+With Screen Unknown Senders on, messages from numbers not in your contacts are clearly tagged "Unknown Sender" right in your message list. The "Driva" message here is a good real-world example of the kind of unsolicited loan-spam text this chapter warns about. If a Report Junk link happens to be available for a particular message, you'll find it at the bottom of that conversation.
 
 Silence unknown callers
 
-Settings path:  Settings  >  Apps  >  Phone  >  Silence Unknown Callers
+Settings path:  Settings  >  Apps  >  Phone  >  Screen Unknown Callers
 
-This setting sends calls from numbers not in your contacts, your recent calls, or Siri Suggestions straight to voicemail. Legitimate callers, a doctor's office, a tradesperson, a new contact, will leave a message. Scammers almost never do.
+Current iOS offers three choices for calls from numbers not in your contacts, your recent calls, or Siri Suggestions: Never (they ring normally), Ask Reason for Calling (the caller is asked to state their name or reason before your phone rings), and Silence (they go straight to voicemail). Legitimate callers, a doctor's office, a tradesperson, a new contact, will leave a message or state their reason. Scammers almost never do.
 
 Open Settings  and scroll to Apps, then tap Phone.
 
-Toggle on Silence Unknown Callers.
+Choose Ask Reason for Calling or Silence,  whichever you prefer. Ask Reason for Calling is a good middle ground, since it still lets your phone ring for a genuine caller who responds. Also turn on Unknown Callers under Call Filtering, which moves missed calls and voicemail from unknown numbers to a separate list.
 
-*[ SCREENSHOT: Settings > Apps > Phone showing Silence Unknown Callers toggle switched ON ]*
+![Phone settings showing Ask Reason for Calling selected and Unknown Callers turned on under Call Filtering](screenshots/ch5-silence-unknown-callers.png)
 
 
 
-Silence Unknown Callers is one of the most effective tools for reducing scam phone calls. Calls from unknown numbers go to voicemail automatically, giving you time to verify who is calling before responding.
+Screen Unknown Callers is one of the most effective tools for reducing scam phone calls. With Ask Reason for Calling or Silence selected, calls from unknown numbers no longer ring through unfiltered, giving you time to verify who is calling before responding.
 
 > **✓ WELL DONE IF YOU HAVE THIS**
 >
-> With Filter Unknown Senders and Silence Unknown Callers both turned on, the vast majority of scam messages and calls will be automatically filtered before they reach you. This does not block legitimate contacts, it simply removes the element of surprise that scammers depend on to be effective.
+> With Screen Unknown Senders and Screen Unknown Callers both turned on, the vast majority of scam messages and calls will be automatically filtered before they reach you. This does not block legitimate contacts, it simply removes the element of surprise that scammers depend on to be effective.
 
 
 
@@ -1393,9 +1410,9 @@ I know the seven universal red flags of a scam message or call
 
 I have saved my bank's fraud line number in my phone contacts
 
-I have turned on Filter Unknown Senders in Messages settings
+I have turned on Screen Unknown Senders in Messages settings
 
-I have turned on Silence Unknown Callers in Phone settings
+I have turned on Screen Unknown Callers in Phone settings
 
 I know what to do, and who to call, if I ever click something I should not have
 
@@ -1481,7 +1498,7 @@ Toggle off Auto-Join.
 
 Repeat for all public networks  in your saved list.
 
-*[ SCREENSHOT: Settings > Wi-Fi showing saved network detail screen with Auto-Join toggled OFF ]*
+![Wi-Fi network detail screen showing Auto-Join turned off, alongside Private Wi-Fi Address and Limit IP Address Tracking](screenshots/ch6-autojoin-off.png)
 
 
 
@@ -1499,7 +1516,7 @@ Settings path:  Settings  >  Wi-Fi  >  Ask to Join Networks
 
 This setting controls whether your iPhone asks before joining new networks it has not seen before. The recommended setting is Ask, this way your phone prompts you rather than automatically connecting to any open network it finds.
 
-*[ SCREENSHOT: Settings > Wi-Fi showing 'Ask to Join Networks' set to Ask ]*
+![Ask to Join Networks screen showing Ask selected, above Off and Notify](screenshots/ch6-ask-to-join.png)
 
 
 
@@ -1573,7 +1590,7 @@ The website or app you are visiting sees the VPN server's location, not your act
 
 Your internet service provider cannot see your browsing activity
 
-*[ SCREENSHOT: Simple diagram: iPhone → encrypted VPN tunnel → VPN server → internet (vs iPhone → public Wi-Fi → internet without VPN) ]*
+![Diagram comparing an iPhone's connection on public Wi-Fi with and without a VPN](screenshots/ch6-vpn-diagram.png)
 
 
 
@@ -1631,7 +1648,7 @@ Tap Connect  to start the VPN. A VPN icon (a small box with a key) will appear i
 
 Use the VPN whenever you are on public Wi-Fi.  Most VPN apps have an Auto-Connect on Untrusted Networks setting, enable this so the VPN turns on automatically whenever you join a public network.
 
-*[ SCREENSHOT: iPhone status bar showing VPN icon active, alongside Wi-Fi connected to public network ]*
+![Lock Screen showing a "VPN" badge in the top-right corner, next to the carrier name](screenshots/ch6-vpn-status-bar.png)
 
 
 
@@ -1711,7 +1728,7 @@ Tap Find My iPhone.
 
 Confirm Find My iPhone is toggled ON.  Also ensure Find My Network and Send Last Location are both toggled on.
 
-*[ SCREENSHOT: Settings > [Name] > Find My > Find My iPhone screen showing all three toggles ON ]*
+![Find My iPhone screen showing Find My iPhone, Find My network, and Send Last Location all turned on](screenshots/ch7-findmy-toggles.png)
 
 
 
@@ -1767,7 +1784,7 @@ Add at least one emergency contact , ideally a family member who could be reache
 
 Ensure Show When Locked is toggled ON,  so this information is visible to first responders without needing to unlock your phone.
 
-*[ SCREENSHOT: Health app Medical ID screen showing emergency contact and 'Show When Locked' toggled ON ]*
+![Medical ID screen with Show When Locked turned on, name and age filled in, and an emergency contact added](screenshots/ch7-medical-id-intro.png)
 
 
 
@@ -1925,7 +1942,7 @@ Work through this list with your iPhone in hand. Each item references the chapte
 
 | ✓ | Task | Reference |
 | --- | --- | --- |
-| ☐ | Filter Unknown Senders and Silence Unknown Callers are still turned on | Ch. 5 |
+| ☐ | Screen Unknown Senders and Screen Unknown Callers are still turned on | Ch. 5 |
 | ☐ | I have not clicked any suspicious links this month, and if I have, I followed the recovery steps | Ch. 5 |
 
 **Wi-Fi & VPN**
@@ -2111,8 +2128,8 @@ Month / Year: _________________     Completed by: _________________
 
 | ✓ | Task | Reference |
 | --- | --- | --- |
-| ☐ | Filter Unknown Senders still ON | Ch 5 |
-| ☐ | Silence Unknown Callers still ON | Ch 5 |
+| ☐ | Screen Unknown Senders still ON | Ch 5 |
+| ☐ | Screen Unknown Callers still ON | Ch 5 |
 
 **🛰  Wi-Fi & VPN**
 
