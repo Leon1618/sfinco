@@ -639,6 +639,7 @@ function renderTrustedContact() {
   const display = document.getElementById("trusted-contact-display");
   display.innerHTML = "";
   if (contact) document.getElementById("trusted-contact-details").open = true;
+  renderProtectionTile();
   if (!contact) return;
 
   const card = document.createElement("div");
@@ -683,6 +684,7 @@ function renderPassphrase() {
   const display = document.getElementById("passphrase-display");
   display.innerHTML = "";
   if (phrase) document.getElementById("passphrase-details").open = true;
+  renderProtectionTile();
   if (!phrase) return;
 
   const card = document.createElement("div");
@@ -723,6 +725,62 @@ document.getElementById("passphrase-form").addEventListener("submit", (e) => {
 document.querySelectorAll(".read-aloud[data-text]").forEach((btn) => {
   btn.addEventListener("click", () => speak(btn.dataset.text));
 });
+
+/* ---------- 2c. Your protection at a glance ---------- */
+
+function renderProtectionTile() {
+  const list = document.getElementById("protection-list");
+  if (!list) return;
+  list.innerHTML = "";
+
+  const streak = getStreak();
+  const items = [
+    {
+      done: !!loadTrustedContact(),
+      doneText: "Trusted contact saved",
+      todoText: "Add a trusted contact",
+      jumpTo: "tab-btn-contacts",
+    },
+    {
+      done: !!loadPassphrase(),
+      doneText: "Family passphrase set",
+      todoText: "Set a family passphrase",
+      jumpTo: "tab-btn-contacts",
+    },
+    {
+      done: streak > 0,
+      doneText: streak === 1 ? "Practised today" : `${streak}-day practice streak`,
+      todoText: "Practise today to start a streak",
+      jumpTo: "tab-btn-practice",
+    },
+  ];
+
+  items.forEach((item) => {
+    const li = document.createElement("li");
+    li.className = `protection-item ${item.done ? "is-done" : "is-todo"}`;
+
+    const dot = document.createElement("span");
+    dot.className = "protection-dot";
+    dot.setAttribute("aria-hidden", "true");
+    if (item.done) dot.textContent = "✓";
+    li.appendChild(dot);
+
+    if (item.done) {
+      const text = document.createElement("span");
+      text.textContent = item.doneText;
+      li.appendChild(text);
+    } else {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "link-btn";
+      btn.textContent = item.todoText;
+      btn.addEventListener("click", () => document.getElementById(item.jumpTo).click());
+      li.appendChild(btn);
+    }
+
+    list.appendChild(li);
+  });
+}
 
 /* ---------- 4. Spot-the-scam practice quiz ---------- */
 
@@ -864,7 +922,9 @@ const redFlagItems = [
 
 const QUIZ_ROUND_SIZE = 6;
 const REDFLAG_ROUND_SIZE = 5;
-const STREAK_KEY = "sfincoassist-quiz-streak";
+const STREAK_KEY = "sfincoassist-daily-streak";
+const STREAK_DATE_KEY = "sfincoassist-daily-streak-date";
+const STREAK_GRACE_KEY = "sfincoassist-daily-streak-grace-used";
 const BEST_STREAK_KEY = "sfincoassist-quiz-best-streak";
 
 function shuffledIndices(n) {
@@ -895,6 +955,15 @@ function nextRotatedIndices(poolSize, count, storageKey) {
   return picked;
 }
 
+function todayStr() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+function daysBetween(a, b) {
+  return Math.round((new Date(b) - new Date(a)) / 86400000);
+}
+
 function getStreak() {
   return Number(localStorage.getItem(STREAK_KEY) || 0);
 }
@@ -903,27 +972,67 @@ function getBestStreak() {
   return Number(localStorage.getItem(BEST_STREAK_KEY) || 0);
 }
 
-function renderStreak() {
-  const el = document.getElementById("quiz-streak");
-  if (!el) return;
-  const streak = getStreak();
-  const best = getBestStreak();
-  if (streak > 0) {
-    el.textContent = `Current streak: ${streak} in a row. Best: ${best}.`;
-  } else if (best > 0) {
-    el.textContent = `Best streak: ${best} in a row. Play a round below to beat it.`;
-  } else {
-    el.textContent = "Play a round below to start your streak.";
-  }
+function practisedToday() {
+  return localStorage.getItem(STREAK_DATE_KEY) === todayStr();
 }
 
+function renderStreak() {
+  const el = document.getElementById("quiz-streak");
+  if (el) {
+    const streak = getStreak();
+    const best = getBestStreak();
+    if (streak > 0 && practisedToday()) {
+      el.textContent = streak === 1
+        ? "You've practised today. Come back tomorrow to start a streak."
+        : `You've practised today, don't lose your ${streak}-day streak, come back tomorrow.`;
+    } else if (streak > 0) {
+      el.textContent = `Don't lose your ${streak}-day streak, play a round today to keep it going.`;
+    } else if (best > 0) {
+      el.textContent = `Your best streak was ${best} days. Play a round below to start a new one.`;
+    } else {
+      el.textContent = "Play a round below to start a daily practice streak.";
+    }
+  }
+  renderProtectionTile();
+}
+
+/* Daily practice streak: counts consecutive days with at least one practice
+   round, not consecutive correct answers, so one wrong guess never costs the
+   whole streak. One missed day is forgiven per streak (a "grace day"), since
+   Duolingo found this kind of leniency reduces drop-off rather than weakening
+   the habit, missing two days in a row still resets it. */
 function recordAnswer(correct) {
-  let streak = getStreak();
-  let best = getBestStreak();
-  streak = correct ? streak + 1 : 0;
-  if (streak > best) best = streak;
-  localStorage.setItem(STREAK_KEY, String(streak));
-  localStorage.setItem(BEST_STREAK_KEY, String(best));
+  const today = todayStr();
+  const lastDate = localStorage.getItem(STREAK_DATE_KEY);
+
+  if (lastDate !== today) {
+    let streak = getStreak();
+    let best = getBestStreak();
+    let graceUsed = localStorage.getItem(STREAK_GRACE_KEY) === "true";
+
+    if (!lastDate) {
+      streak = 1;
+      graceUsed = false;
+    } else {
+      const gap = daysBetween(lastDate, today);
+      if (gap === 1) {
+        streak += 1;
+      } else if (gap === 2 && !graceUsed) {
+        streak += 1;
+        graceUsed = true;
+      } else {
+        streak = 1;
+        graceUsed = false;
+      }
+    }
+
+    if (streak > best) best = streak;
+    localStorage.setItem(STREAK_KEY, String(streak));
+    localStorage.setItem(STREAK_DATE_KEY, today);
+    localStorage.setItem(STREAK_GRACE_KEY, String(graceUsed));
+    localStorage.setItem(BEST_STREAK_KEY, String(best));
+  }
+
   renderStreak();
 }
 

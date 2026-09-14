@@ -496,6 +496,65 @@ body {
   white-space: nowrap;
 }
 
+.protection-tile {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--lime);
+  border-radius: 8px;
+  padding: 1.1rem 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.protection-tile h2 {
+  font-size: 1.1rem;
+  margin: 0 0 0.8rem;
+}
+
+.protection-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.protection-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 600;
+}
+
+.protection-item.is-done { color: var(--ink); }
+.protection-item.is-todo { color: var(--muted); }
+
+.protection-item .link-btn {
+  color: var(--blue);
+  font-weight: 700;
+  text-align: left;
+}
+
+.protection-dot {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.protection-item.is-done .protection-dot {
+  background: var(--lime);
+  color: var(--bg-deep);
+}
+
+.protection-item.is-todo .protection-dot {
+  border: 2px solid var(--border);
+}
+
 h2 { color: var(--ink); font-size: 1.4rem; margin: 0 0 0.75rem; }
 h3 { color: var(--ink); font-size: 1.1rem; margin: 0 0 0.5rem; }
 
