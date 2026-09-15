@@ -876,11 +876,6 @@ body.light-theme form {
   cursor: pointer;
 }
 
-.example-row {
-  color: var(--muted);
-  margin-bottom: 1rem;
-}
-
 /* ---------- Share / print ---------- */
 
 .share-row {
@@ -1101,7 +1096,7 @@ body.light-theme form {
 }
 
 @media print {
-  header, .notice, .tabs, #scam-check-form, .example-row, .sample-alerts, footer, .share-row, .undo-toast {
+  header, .notice, .tabs, #scam-check-form, .sample-alerts, footer, .share-row, .undo-toast {
     display: none !important;
   }
   body { background: #FFFFFF; color: #000000; }

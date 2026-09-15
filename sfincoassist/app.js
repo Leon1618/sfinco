@@ -561,19 +561,6 @@ document.getElementById("scam-check-form").addEventListener("submit", (e) => {
   renderScamResult(text, matches, text.length > 0);
 });
 
-const EXAMPLE_SCAM_TEXT = "Australia Post: Your parcel has a $3.20 customs fee that must be paid within 24 hours or it will be returned to sender. Pay here: auspost-fee-check.com";
-const EXAMPLE_GENUINE_TEXT = "Hi Sam, it's Grace from book club. Next meet-up is Thursday 7pm at the Noosaville library, see you then!";
-
-document.getElementById("try-scam-example-btn").addEventListener("click", () => {
-  document.getElementById("scam-text").value = EXAMPLE_SCAM_TEXT;
-  document.getElementById("scam-check-form").requestSubmit();
-});
-
-document.getElementById("try-genuine-example-btn").addEventListener("click", () => {
-  document.getElementById("scam-text").value = EXAMPLE_GENUINE_TEXT;
-  document.getElementById("scam-check-form").requestSubmit();
-});
-
 function buildAlertCard(alert) {
   const card = document.createElement("div");
   card.className = `sample-card ${alert.priority}`;
