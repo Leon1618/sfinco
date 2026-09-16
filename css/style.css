@@ -1754,6 +1754,11 @@ form.enquiry .btn-row {
   margin: 0 0 0.3rem;
 }
 
+.footer-block .footer-tagline {
+  color: var(--ink);
+  font-weight: 600;
+}
+
 .footer-block .footer-phone {
   font-size: 1.1rem;
   font-weight: 700;
