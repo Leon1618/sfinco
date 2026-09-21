@@ -1,9 +1,9 @@
-const CACHE_NAME = "sfincoassist-v20260915a";
+const CACHE_NAME = "sfincoassist-v20260921a";
 const CORE_ASSETS = [
   "./",
   "./index.html",
-  "./style.css?v=20260915a",
-  "./app.js?v=20260915a",
+  "./style.css?v=20260921a",
+  "./app.js?v=20260921a",
   "./manifest.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
