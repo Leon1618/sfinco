@@ -629,6 +629,8 @@ function renderTrustedContact() {
   display.innerHTML = "";
   if (contact) document.getElementById("trusted-contact-details").open = true;
   renderProtectionTile();
+  document.getElementById("trusted-name").value = contact ? contact.name : "";
+  document.getElementById("trusted-phone").value = contact ? contact.phone : "";
   if (!contact) return;
 
   const card = document.createElement("div");
@@ -643,12 +645,29 @@ function renderTrustedContact() {
   detail.textContent = contact.phone;
   info.append(name, detail);
 
+  const actions = document.createElement("div");
+  actions.className = "contact-card-actions";
+
   const readBtn = document.createElement("button");
   readBtn.className = "read-aloud";
   readBtn.textContent = "Read aloud";
   readBtn.addEventListener("click", () => speak(`${contact.name}, ${contact.phone}`));
 
-  card.append(info, readBtn);
+  const removeBtn = document.createElement("button");
+  removeBtn.type = "button";
+  removeBtn.className = "link-btn";
+  removeBtn.textContent = "Remove";
+  removeBtn.addEventListener("click", () => {
+    localStorage.removeItem(CONTACT_KEY);
+    renderTrustedContact();
+    showUndo("Trusted contact removed.", () => {
+      localStorage.setItem(CONTACT_KEY, JSON.stringify(contact));
+      renderTrustedContact();
+    });
+  });
+
+  actions.append(readBtn, removeBtn);
+  card.append(info, actions);
   display.appendChild(card);
 }
 
@@ -674,6 +693,7 @@ function renderPassphrase() {
   display.innerHTML = "";
   if (phrase) document.getElementById("passphrase-details").open = true;
   renderProtectionTile();
+  document.getElementById("passphrase-input").value = phrase || "";
   if (!phrase) return;
 
   const card = document.createElement("div");
@@ -689,6 +709,9 @@ function renderPassphrase() {
   let revealed = false;
   info.append(label, value);
 
+  const actions = document.createElement("div");
+  actions.className = "contact-card-actions";
+
   const toggleBtn = document.createElement("button");
   toggleBtn.className = "read-aloud";
   toggleBtn.textContent = "Show";
@@ -698,7 +721,21 @@ function renderPassphrase() {
     toggleBtn.textContent = revealed ? "Hide" : "Show";
   });
 
-  card.append(info, toggleBtn);
+  const removeBtn = document.createElement("button");
+  removeBtn.type = "button";
+  removeBtn.className = "link-btn";
+  removeBtn.textContent = "Remove";
+  removeBtn.addEventListener("click", () => {
+    localStorage.removeItem(PASSPHRASE_KEY);
+    renderPassphrase();
+    showUndo("Family passphrase removed.", () => {
+      localStorage.setItem(PASSPHRASE_KEY, phrase);
+      renderPassphrase();
+    });
+  });
+
+  actions.append(toggleBtn, removeBtn);
+  card.append(info, actions);
   display.appendChild(card);
 }
 
