@@ -1922,8 +1922,7 @@ if (SpeechRecognitionCtor) {
     }
   });
 } else {
-  voiceBtn.disabled = true;
-  voiceBtn.title = "Voice search isn't supported in this browser";
+  voiceBtn.style.display = "none";
 }
 
 renderScamAlerts();
