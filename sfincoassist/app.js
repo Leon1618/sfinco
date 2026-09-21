@@ -65,6 +65,7 @@ document.getElementById("profile-name-form").addEventListener("submit", (e) => {
 
 const profileDialog = document.getElementById("profile-dialog");
 const helpDialog = document.getElementById("help-dialog");
+const introDialog = document.getElementById("intro-dialog");
 const panicDialog = document.getElementById("panic-dialog");
 const qrDialog = document.getElementById("qr-dialog");
 
@@ -80,6 +81,7 @@ document.getElementById("profile-btn").addEventListener("click", () => openDialo
 document.getElementById("help-btn").addEventListener("click", () => openDialog(helpDialog));
 document.getElementById("profile-close-btn").addEventListener("click", () => profileDialog.close());
 document.getElementById("help-close-btn").addEventListener("click", () => helpDialog.close());
+document.getElementById("intro-close-btn").addEventListener("click", () => introDialog.close());
 document.getElementById("panic-btn").addEventListener("click", () => openDialog(panicDialog));
 document.getElementById("panic-close-btn").addEventListener("click", () => panicDialog.close());
 document.getElementById("panic-contacts-link").addEventListener("click", () => {
@@ -87,7 +89,7 @@ document.getElementById("panic-contacts-link").addEventListener("click", () => {
   document.getElementById("tab-btn-contacts").click();
 });
 
-[profileDialog, helpDialog, panicDialog, qrDialog].forEach((dialog) => {
+[profileDialog, helpDialog, introDialog, panicDialog, qrDialog].forEach((dialog) => {
   dialog.addEventListener("click", (e) => {
     if (e.target === dialog) dialog.close();
   });
@@ -1903,6 +1905,12 @@ renderGlossary();
 renderTipOfDay();
 applyGreeting();
 searchIndex = buildSearchIndex();
+
+const SEEN_INTRO_KEY = "sfincoassist-seen-intro";
+if (!localStorage.getItem(SEEN_INTRO_KEY)) {
+  localStorage.setItem(SEEN_INTRO_KEY, "1");
+  openDialog(introDialog);
+}
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {

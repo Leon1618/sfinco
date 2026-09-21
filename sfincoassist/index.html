@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sfinco Personal Cyber Awareness Assistant</title>
-<link rel="stylesheet" href="style.css?v=20260921a">
+<link rel="stylesheet" href="style.css?v=20260921b">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#2B2019">
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js" defer></script>
@@ -88,6 +88,14 @@
   <p>Sfinco helps you spot risk. It doesn't replace your bank's fraud team, the police, or your own judgement, if something still feels wrong after checking here, trust that and call someone.</p>
   <p>Tap the search bar to jump straight to a section or a contact number, or use the microphone to search by voice.</p>
   <button id="help-close-btn" type="button" class="dialog-close">Close</button>
+</dialog>
+
+<dialog id="intro-dialog" class="app-dialog">
+  <h2>Welcome to Sfinco</h2>
+  <p>Sfinco helps you spot scams before they catch you out: check a suspicious message, find who to call, and practise spotting the tricks scammers use.</p>
+  <p>Nothing you type or say here is uploaded anywhere. It all stays on this device.</p>
+  <p>If you ever want to see this again, or check what's stored, tap the profile icon at the top.</p>
+  <button id="intro-close-btn" type="button" class="dialog-close">Get started</button>
 </dialog>
 
 <dialog id="panic-dialog" class="app-dialog">
@@ -592,6 +600,6 @@
   <button id="undo-toast-btn" type="button">Undo</button>
 </div>
 
-<script src="app.js?v=20260921a"></script>
+<script src="app.js?v=20260921b"></script>
 </body>
 </html>
