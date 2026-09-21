@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sfinco Personal Cyber Awareness Assistant</title>
-<link rel="stylesheet" href="style.css?v=20260921e">
+<link rel="stylesheet" href="style.css?v=20260921f">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#2B2019">
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js" defer></script>
@@ -444,6 +444,40 @@
   <section id="tab-practice" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-btn-practice">
     <h2>Practice spotting scams</h2>
 
+    <p id="quiz-streak" class="tip-footer"></p>
+
+    <details class="disclosure" open>
+      <summary>Practice 1: Spot the scam</summary>
+      <div class="disclosure-body">
+        <p>Have a read and decide: scam, or the real deal?</p>
+        <div id="quiz-container" role="status" aria-live="polite"></div>
+      </div>
+    </details>
+
+    <details class="disclosure">
+      <summary>Practice 2: Spot the red flag</summary>
+      <div class="disclosure-body">
+        <p>Read the message, then tap the part that gives it away. Sometimes nothing does.</p>
+        <div id="redflag-container" role="status" aria-live="polite"></div>
+      </div>
+    </details>
+
+    <details class="disclosure">
+      <summary>Practice 3: Handle the call</summary>
+      <div class="disclosure-body">
+        <p>A phone call is playing out. Read what the caller says, then choose how you'd respond. One wrong move and the call is over, so take your time.</p>
+        <div id="callsim-container" role="status" aria-live="polite"></div>
+      </div>
+    </details>
+
+    <details class="disclosure">
+      <summary>Practice 4: Spot the fake website</summary>
+      <div class="disclosure-body">
+        <p>Scammers copy a well-known site almost perfectly, the address is usually the only thing that gives it away. Which of these is the real one?</p>
+        <div id="fakesite-container" role="status" aria-live="polite"></div>
+      </div>
+    </details>
+
     <div class="sample-card notice">
       <p>Scams impersonating trusted names cost Australians millions every year. One recent wave of fake celebrity investment ads alone was linked to $7.4 million in reported losses. The good news: pausing to check is usually all it takes to avoid one. A bit of practice makes that pause easier.</p>
     </div>
@@ -479,40 +513,6 @@
 
         <h3>Social media and apps</h3>
         <p>Scammers set up fake profiles, sometimes using a real person's photo, to approach you on social media, dating apps, or messaging apps like WhatsApp. Be wary of anyone you've never met asking to move to a private chat or asking for money.</p>
-      </div>
-    </details>
-
-    <p id="quiz-streak" class="tip-footer"></p>
-
-    <details class="disclosure" open>
-      <summary>Practice 1: Spot the scam</summary>
-      <div class="disclosure-body">
-        <p>Have a read and decide: scam, or the real deal?</p>
-        <div id="quiz-container" role="status" aria-live="polite"></div>
-      </div>
-    </details>
-
-    <details class="disclosure">
-      <summary>Practice 2: Spot the red flag</summary>
-      <div class="disclosure-body">
-        <p>Read the message, then tap the part that gives it away. Sometimes nothing does.</p>
-        <div id="redflag-container" role="status" aria-live="polite"></div>
-      </div>
-    </details>
-
-    <details class="disclosure">
-      <summary>Practice 3: Handle the call</summary>
-      <div class="disclosure-body">
-        <p>A phone call is playing out. Read what the caller says, then choose how you'd respond. One wrong move and the call is over, so take your time.</p>
-        <div id="callsim-container" role="status" aria-live="polite"></div>
-      </div>
-    </details>
-
-    <details class="disclosure">
-      <summary>Practice 4: Spot the fake website</summary>
-      <div class="disclosure-body">
-        <p>Scammers copy a well-known site almost perfectly, the address is usually the only thing that gives it away. Which of these is the real one?</p>
-        <div id="fakesite-container" role="status" aria-live="polite"></div>
       </div>
     </details>
 
@@ -601,6 +601,6 @@
   <button id="undo-toast-btn" type="button">Undo</button>
 </div>
 
-<script src="app.js?v=20260921e"></script>
+<script src="app.js?v=20260921f"></script>
 </body>
 </html>
