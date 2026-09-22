@@ -82,6 +82,10 @@ document.getElementById("help-btn").addEventListener("click", () => openDialog(h
 document.getElementById("profile-close-btn").addEventListener("click", () => profileDialog.close());
 document.getElementById("help-close-btn").addEventListener("click", () => helpDialog.close());
 document.getElementById("intro-close-btn").addEventListener("click", () => introDialog.close());
+document.getElementById("intro-panic-link").addEventListener("click", () => {
+  introDialog.close();
+  openDialog(panicDialog);
+});
 document.getElementById("panic-btn").addEventListener("click", () => openDialog(panicDialog));
 document.getElementById("panic-close-btn").addEventListener("click", () => panicDialog.close());
 document.getElementById("panic-contacts-link").addEventListener("click", () => {
