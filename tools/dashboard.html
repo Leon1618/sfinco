@@ -422,6 +422,27 @@
     .main { padding: 1.6rem 1.2rem 3rem; }
     .field-row { grid-template-columns: 1fr; }
   }
+
+  /* Print output — a dedicated print-only document, populated from the
+     Agreement/Report textarea right before printing. Printing the app shell
+     directly would include the sidebar and bottom nav, and a <textarea>
+     only prints what's visibly scrolled into it, not its full content. */
+  .print-doc { display: none; }
+
+  @media print {
+    body > *:not(.print-doc) { display: none !important; }
+    .print-doc {
+      display: block !important;
+      background: #fff;
+      color: #000;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 12pt;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      margin: 0;
+      padding: 0;
+    }
+  }
 </style>
 </head>
 <body>
@@ -1480,7 +1501,10 @@ Signed for the Client: ______________________  Date: ________`;
       catch (e) { status.textContent = 'Selected — Cmd/Ctrl+C to copy.'; }
       setTimeout(() => { status.textContent = ''; }, 3000);
     });
-    document.getElementById('ag-printBtn').addEventListener('click', () => window.print());
+    document.getElementById('ag-printBtn').addEventListener('click', () => {
+      document.getElementById('print-doc').textContent = document.getElementById('ag-output').value;
+      window.print();
+    });
 
     document.getElementById('ag-date').value = new Date().toISOString().slice(0, 10);
     renderAgreement();
@@ -1649,7 +1673,10 @@ This audit looked at risk and practice, not formal compliance — it isn't a cer
       catch (e) { status.textContent = 'Selected — Cmd/Ctrl+C to copy.'; }
       setTimeout(() => { status.textContent = ''; }, 3000);
     });
-    document.getElementById('rp-printBtn').addEventListener('click', () => window.print());
+    document.getElementById('rp-printBtn').addEventListener('click', () => {
+      document.getElementById('print-doc').textContent = document.getElementById('rp-output').value;
+      window.print();
+    });
 
     document.getElementById('rp-reportDate').value = new Date().toISOString().slice(0, 10);
     renderReport();
@@ -1693,5 +1720,8 @@ This audit looked at risk and practice, not formal compliance — it isn't a cer
     }
   })();
 </script>
+
+<div class="print-doc" id="print-doc"></div>
+
 </body>
 </html>
