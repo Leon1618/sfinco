@@ -92,6 +92,9 @@ document.getElementById("panic-contacts-link").addEventListener("click", () => {
   panicDialog.close();
   document.getElementById("tab-btn-contacts").click();
 });
+document.getElementById("scam-alerts-ai-link").addEventListener("click", () => {
+  document.getElementById("tab-btn-aisafety").click();
+});
 
 [profileDialog, helpDialog, introDialog, panicDialog, qrDialog].forEach((dialog) => {
   dialog.addEventListener("click", (e) => {
@@ -180,36 +183,12 @@ const scamAlertCategories = [
 
 const scamAlerts = [
   {
-    category: "phone",
-    tactic: "new",
-    tag: "New tactic",
-    priority: "trending",
-    title: "AI-cloned voice calls",
-    text: "It only takes a few seconds of audio from a video or voicemail to clone someone's voice convincingly. If you get a panicked call from a \"family member\" asking for money by gift card or bank transfer, hang up and call them back on their usual number to check it's really them.",
-  },
-  {
-    category: "online",
-    tactic: "new",
-    tag: "New tactic",
-    priority: "trending",
-    title: "Deepfake celebrity endorsements",
-    text: "Fake videos of well-known news presenters or business figures \"endorsing\" a secret investment platform are circulating on social media, generated with AI to look and sound convincing. Real public figures don't tip you off to secret trading platforms.",
-  },
-  {
     category: "online",
     tactic: "new",
     tag: "New tactic",
     priority: "trending",
     title: "Fake QR codes (quishing)",
     text: "Scammers sometimes stick a fake QR code sticker over a real one, on parking meters, cafe tables, or parcel slips, leading to a fake payment page instead of the real one. Look for a sticker that seems peeled or slightly crooked, and type the website in yourself if you're not sure.",
-  },
-  {
-    category: "online",
-    tactic: "new",
-    tag: "New tactic",
-    priority: "trending",
-    title: "AI chatbots building trust before asking for money",
-    text: "Some romance and investment scams now use AI chatbots that can chat naturally with hundreds of people at once, building a friendship or relationship for weeks before asking for money. A connection that eventually asks for money, especially in cryptocurrency, is a warning sign no matter how genuine it felt.",
   },
   {
     category: "phone",
@@ -645,7 +624,7 @@ function renderTrustedContact() {
 
   const removeBtn = document.createElement("button");
   removeBtn.type = "button";
-  removeBtn.className = "link-btn";
+  removeBtn.className = "remove-btn";
   removeBtn.textContent = "Remove";
   removeBtn.addEventListener("click", () => {
     localStorage.removeItem(CONTACT_KEY);
@@ -713,7 +692,7 @@ function renderPassphrase() {
 
   const removeBtn = document.createElement("button");
   removeBtn.type = "button";
-  removeBtn.className = "link-btn";
+  removeBtn.className = "remove-btn";
   removeBtn.textContent = "Remove";
   removeBtn.addEventListener("click", () => {
     localStorage.removeItem(PASSPHRASE_KEY);
