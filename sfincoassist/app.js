@@ -446,6 +446,7 @@ function renderScamResult(text, matches, hasText) {
   wrapper.appendChild(shareRow);
 
   result.appendChild(wrapper);
+  setTimeout(() => wrapper.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
 }
 
 document.getElementById("screenshot-input").addEventListener("change", (e) => {
