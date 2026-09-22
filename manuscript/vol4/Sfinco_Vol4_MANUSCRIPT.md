@@ -42,7 +42,7 @@ Windows runs on more computers than any other operating system in the world, whi
 
 This is not a technical manual. There are no complicated diagrams, no long lists of jargon, and no assumption that you already know what "BitLocker" is or why a padlock icon on your files matters. (It doesn't take long to find out, and by the end of this book, checking it will take you thirty seconds.)
 
-What this guide is, is a plain-English, step-by-step walkthrough of the most important things you can do right now to protect yourself on your Windows PC. Each chapter tackles one area of your digital life, explains why it matters in everyday terms, and then shows you, with real screenshots, exactly what to do and where to find it.
+What this guide is, is a plain-English, step-by-step walkthrough of the most important things you can do right now to protect yourself on your Windows PC. Each chapter tackles one area of your digital life, explains why it matters in everyday terms, and then shows you, with clear illustrations, exactly what to do and where to find it.
 
 Whether you have used Windows since it came on floppy disks, or you only recently moved to a Windows laptop, this book is written for you.
 

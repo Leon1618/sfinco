@@ -4,7 +4,7 @@
 
 Your Android phone holds your banking apps, your messages, and your Google account, the master key to almost everything else in your digital life. Most people have never been shown which settings actually protect it.
 
-This is a plain-English, step-by-step guide to securing your Android phone, written for adults who don't want jargon and just want to feel confident. Real screenshots. Real Australian scam examples. No technical background required.
+This is a plain-English, step-by-step guide to securing your Android phone, written for adults who don't want jargon and just want to feel confident. Clear illustrations. Real Australian scam examples. No technical background required.
 
 **In this book:**
 

@@ -44,7 +44,7 @@ The news you need to hear: "Macs don't get viruses" was never quite true, and it
 
 This is not a technical manual. There are no complicated diagrams, no long lists of jargon, and no assumption that you already know what "FileVault" is or why "Gatekeeper" sounds like something from an airport rather than your laptop. (It isn't, and by the end of this book, checking on it will take you thirty seconds.)
 
-What this guide is, is a plain-English, step-by-step walkthrough of the most important things you can do right now to protect yourself on your Mac. Each chapter tackles one area of your digital life, explains why it matters in everyday terms, and then shows you, with real screenshots, exactly what to do and where to find it.
+What this guide is, is a plain-English, step-by-step walkthrough of the most important things you can do right now to protect yourself on your Mac. Each chapter tackles one area of your digital life, explains why it matters in everyday terms, and then shows you, with clear illustrations, exactly what to do and where to find it.
 
 Whether you are someone who has used a Mac for twenty years and never thought much about security, or someone who just switched from a PC and wants to start off on the right foot, this book is written for you.
 

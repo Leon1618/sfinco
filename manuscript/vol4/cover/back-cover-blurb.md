@@ -4,7 +4,7 @@
 
 Windows runs on more computers than anything else in the world, which is exactly why it's the single most targeted platform for scams and viruses. Most people have never been shown which settings actually matter.
 
-This is a plain-English, step-by-step guide to securing your Windows PC, written for adults who don't want jargon and just want to feel confident at their own desk. Real screenshots. Real Australian scam examples. No technical background required.
+This is a plain-English, step-by-step guide to securing your Windows PC, written for adults who don't want jargon and just want to feel confident at their own desk. Clear illustrations. Real Australian scam examples. No technical background required.
 
 **In this book:**
 

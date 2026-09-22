@@ -16,7 +16,7 @@ Your Android phone holds your banking apps, your photos, your messages to family
 
 This is not a technical manual. There are no complicated diagrams, no long lists of jargon, and no assumption that you already know what "Play Protect" is or why sideloading an app is worth thinking twice about. (It isn't complicated, and by the end of this book, checking it will take you thirty seconds.)
 
-What this guide is, is a plain-English, step-by-step walkthrough of the most important things you can do right now to protect yourself on your Android phone. Each chapter tackles one area of your digital life, explains why it matters in everyday terms, and then shows you, with real screenshots, exactly what to do and where to find it.
+What this guide is, is a plain-English, step-by-step walkthrough of the most important things you can do right now to protect yourself on your Android phone. Each chapter tackles one area of your digital life, explains why it matters in everyday terms, and then shows you, with clear illustrations, exactly what to do and where to find it.
 
 Whether you have had an Android phone for years and never thought much about security, or you just switched from an iPhone and want to start off on the right foot, this book is written for you.
 

@@ -4,7 +4,7 @@
 
 Your Mac holds decades of photos, documents, and passwords, often signed in and ready to go the moment someone opens the lid. Most people have never been shown which settings actually protect that, and which are just there to look impressive.
 
-This is a plain-English, step-by-step guide to securing your Mac, written for adults who don't want jargon and just want to feel confident sitting down at their own computer. Real screenshots. Real Australian scam examples. No technical background required.
+This is a plain-English, step-by-step guide to securing your Mac, written for adults who don't want jargon and just want to feel confident sitting down at their own computer. Clear illustrations. Real Australian scam examples. No technical background required.
 
 **In this book:**
 
