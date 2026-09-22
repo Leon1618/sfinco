@@ -1003,6 +1003,36 @@
     items: {}, review: {}
   };
 
+  /* ---------- Persistence: autosaves every panel as it's typed, so a closed
+     tab between sessions (the methodology's own pacing invites this) never
+     costs a re-entered engagement. `restoring` holds off saveState() until
+     the initial restore pass is done, so each panel's own first render()
+     call at page load can't stomp saved data with empty defaults. ---------- */
+  const STORAGE_KEY = 'sfinco-dashboard-v1';
+  let restoring = true;
+
+  function collectFormState() {
+    const fields = {};
+    document.querySelectorAll('.main [id]').forEach((el) => {
+      const tag = el.tagName;
+      if (tag !== 'INPUT' && tag !== 'TEXTAREA' && tag !== 'SELECT') return;
+      if (el.readOnly) return;
+      fields[el.id] = (el.type === 'checkbox' || el.type === 'radio') ? el.checked : el.value;
+    });
+    const radios = {};
+    ['in-team', 'in-devices', 'pr-team', 'pr-devices'].forEach((name) => {
+      const checked = document.querySelector('input[name="' + name + '"]:checked');
+      if (checked) radios[name] = checked.value;
+    });
+    return { fields, radios };
+  }
+
+  function saveState() {
+    if (restoring) return;
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ shared, form: collectFormState() })); }
+    catch (e) { /* storage unavailable or full — the page itself still has everything typed */ }
+  }
+
   const DOMAIN_LABELS = ['Identity and access', 'Email and phishing exposure', 'Devices and software', 'Backups and recovery', 'Payment and customer data handling', 'Network'];
 
   /* ---------- Navigation ---------- */
@@ -1130,7 +1160,7 @@
       div.className = 'item';
       div.innerHTML = '<p class="item-q">' + item.n + '. ' + item.q + '</p>' +
         '<div class="seg" data-item="' + item.n + '"><button data-val="yes">Yes</button><button data-val="no">No</button><button data-val="unsure">Not sure</button></div>' +
-        '<input type="text" class="item-note" placeholder="Notes">';
+        '<input type="text" class="item-note" id="in-note-' + item.n + '" placeholder="Notes">';
       listEl.appendChild(div);
     });
 
@@ -1205,6 +1235,7 @@ ${checklistLines}
 Tally: ${yes} Yes · ${no} No · ${unsure} Not sure`;
 
       document.getElementById('in-output').value = text;
+      saveState();
     };
 
     document.getElementById('in-copyBtn').addEventListener('click', async () => {
@@ -1243,7 +1274,7 @@ Tally: ${yes} Yes · ${no} No · ${unsure} Not sure`;
         '<button data-val="goodknow">Good</button>' +
         '<button data-val="na">N/A</button>' +
         '</div>' +
-        '<input type="text" class="item-note" placeholder="What was actually seen on the screen-share">';
+        '<input type="text" class="item-note" id="rv-note-' + chk.n + '" placeholder="What was actually seen on the screen-share">';
       listEl.appendChild(div);
     });
 
@@ -1296,6 +1327,7 @@ Rated: ${counts.fixnow} Fix now · ${counts.fixsoon} Fix soon · ${counts.goodkn
 ${lines.join('\n')}`;
 
       document.getElementById('rv-output').value = text;
+      saveState();
     };
 
     document.getElementById('rv-copyBtn').addEventListener('click', async () => {
@@ -1315,18 +1347,18 @@ ${lines.join('\n')}`;
      ========================================================= */
   (function initPricing() {
     const BASE = 299;
-    const svcState = { count: 0 };
+    shared.pricingSvc = shared.pricingSvc || 0;
 
     const domainContainer = document.getElementById('pr-domain-checks');
-    DOMAIN_LABELS.forEach((label) => {
+    DOMAIN_LABELS.forEach((label, i) => {
       const el = document.createElement('label');
       el.className = 'opt';
-      el.innerHTML = '<input type="checkbox" data-domain="' + label + '" checked><span>' + label + '</span>';
+      el.innerHTML = '<input type="checkbox" id="pr-domain-' + DOMAIN_KEYS[i] + '" data-domain="' + label + '" checked><span>' + label + '</span>';
       domainContainer.appendChild(el);
     });
 
-    document.getElementById('pr-svc-minus').addEventListener('click', () => { svcState.count = Math.max(0, svcState.count - 1); document.getElementById('pr-svc-count').textContent = svcState.count; renderPricing(); });
-    document.getElementById('pr-svc-plus').addEventListener('click', () => { svcState.count = Math.min(10, svcState.count + 1); document.getElementById('pr-svc-count').textContent = svcState.count; renderPricing(); });
+    document.getElementById('pr-svc-minus').addEventListener('click', () => { shared.pricingSvc = Math.max(0, shared.pricingSvc - 1); document.getElementById('pr-svc-count').textContent = shared.pricingSvc; renderPricing(); });
+    document.getElementById('pr-svc-plus').addEventListener('click', () => { shared.pricingSvc = Math.min(10, shared.pricingSvc + 1); document.getElementById('pr-svc-count').textContent = shared.pricingSvc; renderPricing(); });
 
     document.getElementById('pr-pull').addEventListener('click', () => {
       document.querySelectorAll('input[name="pr-team"]').forEach((r) => { r.checked = false; });
@@ -1334,8 +1366,8 @@ ${lines.join('\n')}`;
       const devicesMap = { 'Fewer than 5': '0', '5–15': '75', '16–30': '150', '31+': 'custom' };
       document.querySelector('input[name="pr-team"][value="' + teamMap[shared.team] + '"]').checked = true;
       document.querySelector('input[name="pr-devices"][value="' + devicesMap[shared.devices] + '"]').checked = true;
-      svcState.count = shared.svc;
-      document.getElementById('pr-svc-count').textContent = svcState.count;
+      shared.pricingSvc = shared.svc;
+      document.getElementById('pr-svc-count').textContent = shared.pricingSvc;
       document.getElementById('pr-chk-card').checked = shared.chkCard;
       document.getElementById('pr-chk-sensitive').checked = shared.chkSensitive;
       document.getElementById('pr-chk-website').checked = shared.chkWebsite;
@@ -1357,7 +1389,7 @@ ${lines.join('\n')}`;
       if (teamAmt > 0) breakdown.push({ label: 'Team size', amount: teamAmt });
       const devicesAmt = devicesVal === 'custom' ? 0 : parseInt(devicesVal, 10);
       if (devicesAmt > 0) breakdown.push({ label: 'Devices in scope', amount: devicesAmt });
-      const extraServices = Math.max(0, svcState.count - 2);
+      const extraServices = Math.max(0, shared.pricingSvc - 2);
       const svcAmt = extraServices * 35;
       if (svcAmt > 0) breakdown.push({ label: extraServices + ' service' + (extraServices === 1 ? '' : 's') + ' beyond the first two', amount: svcAmt });
       if (document.getElementById('pr-chk-card').checked) breakdown.push({ label: 'Direct card handling', amount: 100 });
@@ -1397,6 +1429,7 @@ ${lines.join('\n')}`;
       scopeListEl.innerHTML = Array.from(domainInputs).map((input) =>
         '<li style="color:' + (input.checked ? 'var(--ink)' : 'var(--muted)') + ';' + (input.checked ? '' : 'text-decoration:line-through;opacity:0.7;') + '">' + input.dataset.domain + '</li>'
       ).join('');
+      saveState();
     };
 
     document.querySelectorAll('#panel-pricing input').forEach((el) => el.addEventListener('change', renderPricing));
@@ -1408,10 +1441,10 @@ ${lines.join('\n')}`;
      ========================================================= */
   (function initAgreement() {
     const domainContainer = document.getElementById('ag-domain-checks');
-    DOMAIN_LABELS.forEach((label) => {
+    DOMAIN_LABELS.forEach((label, i) => {
       const el = document.createElement('label');
       el.className = 'opt';
-      el.innerHTML = '<input type="checkbox" data-domain="' + label + '" checked><span>' + label + '</span>';
+      el.innerHTML = '<input type="checkbox" id="ag-domain-' + DOMAIN_KEYS[i] + '" data-domain="' + label + '" checked><span>' + label + '</span>';
       domainContainer.appendChild(el);
     });
 
@@ -1486,6 +1519,7 @@ Signed for Sfinco: ______________________  Date: ________
 Signed for the Client: ______________________  Date: ________`;
 
       document.getElementById('ag-output').value = text;
+      saveState();
     };
 
     document.querySelectorAll('#panel-agreement input, #panel-agreement select').forEach((el) => {
@@ -1658,6 +1692,7 @@ A FEW THINGS WORTH KNOWING
 This audit looked at risk and practice, not formal compliance — it isn't a certification against any standard, and it isn't a penetration test. If ${bizName} takes card payments directly, separate PCI DSS obligations apply. Nothing in this report is financial advice.`;
 
       document.getElementById('rp-output').value = text;
+      saveState();
     };
 
     document.querySelectorAll('#panel-report input, #panel-report textarea, #panel-report select').forEach((el) => {
@@ -1711,6 +1746,59 @@ This audit looked at risk and practice, not formal compliance — it isn't a cer
       actionsEl.innerHTML = lines.map((l) => '<li><span class="cv-check"></span><span class="cv-label">' + l + '</span></li>').join('');
     }
   };
+
+  /* ---------- Restore any saved session, run once every panel's own init has
+     built its DOM (domain checkboxes, report's per-domain textareas, etc.
+     don't exist until then). Re-runs each panel's render() itself afterward
+     so every output box reflects the restored values, then lets saveState()
+     start working normally for anything typed from here on. ---------- */
+  (function restoreState() {
+    let saved = null;
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) saved = JSON.parse(raw);
+    } catch (e) { /* corrupt or unavailable storage — start fresh */ }
+
+    if (saved) {
+      if (saved.shared) Object.assign(shared, saved.shared);
+
+      if (saved.form && saved.form.fields) {
+        Object.keys(saved.form.fields).forEach((id) => {
+          const el = document.getElementById(id);
+          if (!el) return;
+          if (el.type === 'checkbox' || el.type === 'radio') el.checked = saved.form.fields[id];
+          else el.value = saved.form.fields[id];
+        });
+      }
+      if (saved.form && saved.form.radios) {
+        Object.keys(saved.form.radios).forEach((name) => {
+          const input = document.querySelector('input[name="' + name + '"][value="' + saved.form.radios[name] + '"]');
+          if (input) input.checked = true;
+        });
+      }
+
+      document.getElementById('in-svc-count').textContent = shared.svc;
+      document.getElementById('pr-svc-count').textContent = shared.pricingSvc;
+
+      document.querySelectorAll('#in-checklist .seg').forEach((seg) => {
+        const val = shared.items[seg.dataset.item];
+        if (!val) return;
+        seg.querySelectorAll('button').forEach((b) => b.classList.toggle('active', b.dataset.val === val));
+      });
+      document.querySelectorAll('#rv-checklist .seg').forEach((seg) => {
+        const entry = shared.review[seg.dataset.check];
+        if (!entry || !entry.rating) return;
+        seg.querySelectorAll('button').forEach((b) => b.classList.toggle('active', b.dataset.val === entry.rating));
+      });
+    }
+
+    restoring = false;
+    window.renderIntake();
+    window.renderReview();
+    window.renderPricing();
+    window.renderAgreement();
+    window.renderReport();
+  })();
 
   /* ---------- Deep-link support: dashboard.html#pricing etc, run last so every panel's own init has already populated its DOM ---------- */
   (function initDeepLink() {
