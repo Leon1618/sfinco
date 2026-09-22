@@ -163,23 +163,8 @@ function renderTipOfDay() {
 
 setInterval(renderTipDate, 30000);
 
-document.getElementById("today-check-btn").addEventListener("click", () => {
-  document.getElementById("tab-btn-scam").click();
-});
 document.getElementById("scam-next-btn").addEventListener("click", () => {
   document.getElementById("tab-btn-contacts").click();
-});
-document.getElementById("contacts-next-btn").addEventListener("click", () => {
-  document.getElementById("tab-btn-aisafety").click();
-});
-document.getElementById("aisafety-next-btn").addEventListener("click", () => {
-  document.getElementById("tab-btn-practice").click();
-});
-document.getElementById("practice-next-btn").addEventListener("click", () => {
-  document.getElementById("tab-btn-latest").click();
-});
-document.getElementById("latest-next-btn").addEventListener("click", () => {
-  document.getElementById("tab-btn-today").click();
 });
 
 const scamAlertCategories = [
