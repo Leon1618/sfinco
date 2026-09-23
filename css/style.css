@@ -404,6 +404,14 @@ nav.primary-nav a.is-active {
   transform: scale(0.97);
 }
 
+.btn:focus-visible,
+nav.primary-nav a:focus-visible,
+.card-link:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
 .btn-primary {
   position: relative;
   background: var(--lime);
