@@ -1717,7 +1717,8 @@ function setTheme(light) {
 themeOptions.forEach((btn) => {
   btn.addEventListener("click", () => setTheme(btn.dataset.theme === "light"));
 });
-applyTheme(localStorage.getItem(THEME_KEY) === "1");
+const storedTheme = localStorage.getItem(THEME_KEY);
+applyTheme(storedTheme === null ? true : storedTheme === "1");
 
 /* ---------- Search ---------- */
 
