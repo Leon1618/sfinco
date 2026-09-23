@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /tools/
+Disallow: /concepts/
+
+Sitemap: https://sfinco.com.au/sitemap.xml
