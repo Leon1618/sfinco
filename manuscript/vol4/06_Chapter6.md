@@ -27,7 +27,7 @@ Settings path:  Settings  >  Network & Internet  >  Wi-Fi  >  select the network
 
 ![Windows network settings showing the network profile set to Public](screenshots/ch6-network-profile.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 ★  TIP:  Always choose "Public" for cafes, airports, and any network you do not personally manage. Reserve "Private" only for your own home or work network, where you trust the other devices connected to it.
 
@@ -40,7 +40,7 @@ Settings path:  Settings  >  Privacy & Security  >  Windows Security  >  Firewal
 
 ![Windows Security app showing Firewall and network protection turned on for all network types](screenshots/ch6-firewall.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 | ✓  WELL DONE IF YOU HAVE THIS With the firewall turned on for all three network types, Domain, Private, and Public, unsolicited connection attempts are blocked automatically, before they ever reach an application on your PC. |
 

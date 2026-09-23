@@ -18,7 +18,7 @@ A Windows PIN is tied to your specific device and, despite being shorter than a 
 
 ![Windows Sign-in options screen showing PIN and password settings](screenshots/ch2-signin-options.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 ★  TIP:  Choose a PIN that is not your birth year, your address number, or a simple sequence like 1234. Windows allows longer PINs and even PINs with letters and symbols if you want extra strength.
 
@@ -33,7 +33,7 @@ Settings path:  Settings  >  Accounts  >  Sign-in options  >  Windows Hello.
 
 ![Windows Hello setup screen showing facial recognition and fingerprint options](screenshots/ch2-windows-hello.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 If your PC does not support Windows Hello, a strong PIN used consistently is just as effective. Windows Hello is a convenience layer on top of your PIN, not a replacement for it, your PIN or password still works as a backup.
 
@@ -52,7 +52,7 @@ Settings path:  Settings  >  Accounts  >  Sign-in options  >  "If you've been aw
 
 ![Windows Settings showing sign-in timing set to require sign-in immediately](screenshots/ch2-screen-lock-timing.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 | ⚠  WARNING If your PC is set to require sign-in only after a long delay, or never, anyone who picks it up while you are away from your desk, even for a few minutes at a cafe or in a shared house, has a direct path to everything you are logged in to. |
 
@@ -65,7 +65,7 @@ Settings path:  Settings  >  Privacy & Security  >  Device encryption, or search
 
 ![Windows Device Encryption settings showing BitLocker turned on](screenshots/ch2-bitlocker.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 | ℹ  DID YOU KNOW? Not every edition of Windows includes full BitLocker, some editions offer a simpler "Device Encryption" instead, which works similarly but with fewer options. Either one is far better than no encryption at all, and most PCs sold in the last several years support at least the simpler version. |
 

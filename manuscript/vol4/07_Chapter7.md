@@ -18,7 +18,7 @@ Settings path:  Settings  >  System  >  Storage  >  Backup options, or search "F
 
 ![Windows Backup settings showing File History turned on with an external drive connected](screenshots/ch7-file-history.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 ★  TIP:  Using both OneDrive and an external drive with File History gives you two independent copies of your most important files, useful if one backup method ever fails or is unavailable when you need it most.
 
@@ -33,7 +33,7 @@ Settings path:  Settings  >  Privacy & Security  >  Find my device  >  ensure it
 
 ![Windows Settings showing Find My Device turned on](screenshots/ch7-find-my-device.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 
 ## Ransomware, what it is and how to reduce the damage

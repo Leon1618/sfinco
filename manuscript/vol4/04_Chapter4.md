@@ -18,7 +18,7 @@ Settings path:  Settings  >  Privacy & Security  >  Windows Security  >  Virus &
 
 ![Windows Security app showing Virus and threat protection with real-time protection turned on](screenshots/ch4-windows-defender.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 | ⚠  WARNING If you have installed a third-party antivirus program, Windows Defender may automatically switch to a supporting role. Make sure whichever program is "active" shows a green tick with no warnings, and that you are not paying for a subscription that has quietly expired while believing you are still protected. |
 
@@ -31,7 +31,7 @@ Settings path:  Settings  >  Privacy & Security  >  Windows Security  >  App & b
 
 ![Windows Security app showing SmartScreen settings for apps, files, and websites](screenshots/ch4-smartscreen.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 ★  TIP:  If Windows ever blocks a file you deliberately downloaded from a source you trust, you can choose to run it anyway, but treat any unexpected SmartScreen warning on a file you did not deliberately seek out as a serious red flag.
 
@@ -49,7 +49,7 @@ Beyond built-in security, individual apps can request access to specific parts o
 
 ![Windows Privacy settings showing app permissions for camera and microphone](screenshots/ch4-app-permissions.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 | ℹ  DID YOU KNOW? These permissions can be changed at any time, even long after you granted them. You are never permanently locked in to a choice you made when an app was first installed. Revoking a permission is just as easy as granting one. |
 

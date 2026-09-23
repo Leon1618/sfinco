@@ -221,7 +221,7 @@ A Windows PIN is tied to your specific device and, despite being shorter than a 
 
 ![Windows Sign-in options screen showing PIN and password settings](screenshots/ch2-signin-options.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 ★  TIP:  Choose a PIN that is not your birth year, your address number, or a simple sequence like 1234. Windows allows longer PINs and even PINs with letters and symbols if you want extra strength.
 
@@ -236,7 +236,7 @@ Settings path:  Settings  >  Accounts  >  Sign-in options  >  Windows Hello.
 
 ![Windows Hello setup screen showing facial recognition and fingerprint options](screenshots/ch2-windows-hello.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 If your PC does not support Windows Hello, a strong PIN used consistently is just as effective. Windows Hello is a convenience layer on top of your PIN, not a replacement for it, your PIN or password still works as a backup.
 
@@ -255,7 +255,7 @@ Settings path:  Settings  >  Accounts  >  Sign-in options  >  "If you've been aw
 
 ![Windows Settings showing sign-in timing set to require sign-in immediately](screenshots/ch2-screen-lock-timing.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 | ⚠  WARNING If your PC is set to require sign-in only after a long delay, or never, anyone who picks it up while you are away from your desk, even for a few minutes at a cafe or in a shared house, has a direct path to everything you are logged in to. |
 
@@ -268,7 +268,7 @@ Settings path:  Settings  >  Privacy & Security  >  Device encryption, or search
 
 ![Windows Device Encryption settings showing BitLocker turned on](screenshots/ch2-bitlocker.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 | ℹ  DID YOU KNOW? Not every edition of Windows includes full BitLocker, some editions offer a simpler "Device Encryption" instead, which works similarly but with fewer options. Either one is far better than no encryption at all, and most PCs sold in the last several years support at least the simpler version. |
 
@@ -309,7 +309,7 @@ Settings path:  Settings  >  Accounts  >  Your info shows your Microsoft account
 
 ![Windows Accounts settings showing the Microsoft account panel](screenshots/ch3-microsoft-account.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 
 ## The password, and why it matters more than any other
@@ -327,7 +327,7 @@ Settings path:  account.microsoft.com  >  Security  >  Advanced security options
 
 ![Microsoft account security settings showing two-step verification turned on](screenshots/ch3-two-step-verification.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 | ⚠  WARNING Never share a verification code with anyone, including someone claiming to be from Microsoft. Microsoft will never call you and ask for this code. If you receive a code you did not request, someone else may have your password, change it immediately. |
 
@@ -347,7 +347,7 @@ Settings path:  OneDrive icon in the taskbar  >  Help & Settings  >  Settings  >
 
 ![OneDrive settings showing folder backup turned on for Desktop, Documents, and Pictures](screenshots/ch3-onedrive-backup.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 | ℹ  DID YOU KNOW? OneDrive's ransomware detection feature can notify you if it detects a sudden, unusual pattern of file changes across your account, often the first sign of a ransomware infection, and can help you restore your files to before the attack occurred, within a limited time window. |
 
@@ -358,7 +358,7 @@ Settings path:  account.microsoft.com  >  Devices, shows every device currently 
 
 ![Microsoft account devices page showing a list of signed-in devices](screenshots/ch3-account-devices.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 | ⚠  WARNING If you see a device on this list you do not recognise, or an old device you sold or gave away without removing it first, remove it and change your Microsoft account password as a precaution. |
 
@@ -401,7 +401,7 @@ Settings path:  Settings  >  Privacy & Security  >  Windows Security  >  Virus &
 
 ![Windows Security app showing Virus and threat protection with real-time protection turned on](screenshots/ch4-windows-defender.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 | ⚠  WARNING If you have installed a third-party antivirus program, Windows Defender may automatically switch to a supporting role. Make sure whichever program is "active" shows a green tick with no warnings, and that you are not paying for a subscription that has quietly expired while believing you are still protected. |
 
@@ -414,7 +414,7 @@ Settings path:  Settings  >  Privacy & Security  >  Windows Security  >  App & b
 
 ![Windows Security app showing SmartScreen settings for apps, files, and websites](screenshots/ch4-smartscreen.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 ★  TIP:  If Windows ever blocks a file you deliberately downloaded from a source you trust, you can choose to run it anyway, but treat any unexpected SmartScreen warning on a file you did not deliberately seek out as a serious red flag.
 
@@ -432,7 +432,7 @@ Beyond built-in security, individual apps can request access to specific parts o
 
 ![Windows Privacy settings showing app permissions for camera and microphone](screenshots/ch4-app-permissions.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 | ℹ  DID YOU KNOW? These permissions can be changed at any time, even long after you granted them. You are never permanently locked in to a choice you made when an app was first installed. Revoking a permission is just as easy as granting one. |
 
@@ -592,7 +592,7 @@ Settings path:  Settings  >  Network & Internet  >  Wi-Fi  >  select the network
 
 ![Windows network settings showing the network profile set to Public](screenshots/ch6-network-profile.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 ★  TIP:  Always choose "Public" for cafes, airports, and any network you do not personally manage. Reserve "Private" only for your own home or work network, where you trust the other devices connected to it.
 
@@ -605,7 +605,7 @@ Settings path:  Settings  >  Privacy & Security  >  Windows Security  >  Firewal
 
 ![Windows Security app showing Firewall and network protection turned on for all network types](screenshots/ch6-firewall.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 | ✓  WELL DONE IF YOU HAVE THIS With the firewall turned on for all three network types, Domain, Private, and Public, unsolicited connection attempts are blocked automatically, before they ever reach an application on your PC. |
 
@@ -684,7 +684,7 @@ Settings path:  Settings  >  System  >  Storage  >  Backup options, or search "F
 
 ![Windows Backup settings showing File History turned on with an external drive connected](screenshots/ch7-file-history.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 ★  TIP:  Using both OneDrive and an external drive with File History gives you two independent copies of your most important files, useful if one backup method ever fails or is unavailable when you need it most.
 
@@ -699,7 +699,7 @@ Settings path:  Settings  >  Privacy & Security  >  Find my device  >  ensure it
 
 ![Windows Settings showing Find My Device turned on](screenshots/ch7-find-my-device.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 
 ## Ransomware, what it is and how to reduce the damage

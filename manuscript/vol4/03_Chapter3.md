@@ -18,7 +18,7 @@ Settings path:  Settings  >  Accounts  >  Your info shows your Microsoft account
 
 ![Windows Accounts settings showing the Microsoft account panel](screenshots/ch3-microsoft-account.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 
 ## The password, and why it matters more than any other
@@ -36,7 +36,7 @@ Settings path:  account.microsoft.com  >  Security  >  Advanced security options
 
 ![Microsoft account security settings showing two-step verification turned on](screenshots/ch3-two-step-verification.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 | ⚠  WARNING Never share a verification code with anyone, including someone claiming to be from Microsoft. Microsoft will never call you and ask for this code. If you receive a code you did not request, someone else may have your password, change it immediately. |
 
@@ -56,7 +56,7 @@ Settings path:  OneDrive icon in the taskbar  >  Help & Settings  >  Settings  >
 
 ![OneDrive settings showing folder backup turned on for Desktop, Documents, and Pictures](screenshots/ch3-onedrive-backup.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 | ℹ  DID YOU KNOW? OneDrive's ransomware detection feature can notify you if it detects a sudden, unusual pattern of file changes across your account, often the first sign of a ransomware infection, and can help you restore your files to before the attack occurred, within a limited time window. |
 
@@ -67,7 +67,7 @@ Settings path:  account.microsoft.com  >  Devices, shows every device currently 
 
 ![Microsoft account devices page showing a list of signed-in devices](screenshots/ch3-account-devices.png)
 
-*Mockup illustration, styled to match Windows 11, reshoot on a real PC before final layout.*
+*Illustrative mockup, styled to match Windows 11, not a real PC screen.*
 
 | ⚠  WARNING If you see a device on this list you do not recognise, or an old device you sold or gave away without removing it first, remove it and change your Microsoft account password as a precaution. |
 
