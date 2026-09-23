@@ -8,6 +8,7 @@ Protecting organisations that protect others
 
 ---
 
+Author: Leonardo Pinheiro
 Series: Sfinco Guides
 Volume: 7 of 8
 Category: Nonprofit Cybersecurity / Community Organisation Operations
