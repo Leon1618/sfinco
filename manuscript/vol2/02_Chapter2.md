@@ -13,9 +13,9 @@ Every protection in this book sits behind one gate: the login screen. If someone
 ## Layer 1, Your login password
 
 
-Settings > Login Password  is where you set or change the password required to log in to your Mac.
+Settings path:  System Settings  >  your name at the top (or Users & Groups)  >  Change Password.
 
-Open System Settings, click your name at the top (or Users & Groups), and choose Change Password.
+This is where you set or change the password required to log in to your Mac.
 
 Choose a passphrase rather than a short password.  Three or four random words strung together, like "PelicanTaxi42Verandah", are far harder to guess than a shorter password packed with symbols, and much easier for you to remember and type.
 
