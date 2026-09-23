@@ -3,6 +3,29 @@ const THEME_KEY = "sfincoassist-theme";
 const CONTACT_KEY = "sfincoassist-trusted-contact";
 const PASSPHRASE_KEY = "sfincoassist-family-passphrase";
 
+/* ---------- Lazy-loaded third-party scripts: only fetched once the feature
+   that needs them is actually used, not on every page load ---------- */
+
+const loadedScripts = {};
+
+function loadScript(src) {
+  if (loadedScripts[src]) return loadedScripts[src];
+  loadedScripts[src] = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = src;
+    script.onload = () => resolve();
+    script.onerror = () => {
+      delete loadedScripts[src];
+      reject(new Error(`Failed to load ${src}`));
+    };
+    document.head.appendChild(script);
+  });
+  return loadedScripts[src];
+}
+
+const TESSERACT_SRC = "https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js";
+const JSQR_SRC = "https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js";
+
 /* ---------- Undo toast: lets a destructive action be reversed instead of confirmed upfront ---------- */
 
 let undoTimeout = null;
@@ -438,9 +461,13 @@ document.getElementById("screenshot-input").addEventListener("change", (e) => {
 
   const status = document.getElementById("ocr-status");
   status.classList.remove("hidden");
-  status.textContent = "Reading your screenshot… this can take a few seconds.";
+  status.textContent = "Getting ready to read your screenshot…";
 
-  Tesseract.recognize(file, "eng")
+  loadScript(TESSERACT_SRC)
+    .then(() => {
+      status.textContent = "Reading your screenshot… this can take a few seconds.";
+      return Tesseract.recognize(file, "eng");
+    })
     .then(({ data: { text } }) => {
       document.getElementById("scam-text").value = text.trim();
       status.textContent = 'Done. Here\'s what we could read. Check it looks right below, then press "Check this for me".';
@@ -472,13 +499,24 @@ function startQrScan() {
   const canvas = document.createElement("canvas");
   const ctx = canvas.getContext("2d", { willReadFrequently: true });
 
-  if (!("mediaDevices" in navigator) || !navigator.mediaDevices.getUserMedia || typeof jsQR !== "function") {
+  if (!("mediaDevices" in navigator) || !navigator.mediaDevices.getUserMedia) {
     status.textContent = "Camera scanning isn't supported in this browser. Try uploading a screenshot of the code instead.";
     return;
   }
 
   status.textContent = "Starting camera…";
 
+  loadScript(JSQR_SRC)
+    .catch(() => {
+      status.textContent = "Camera scanning isn't available right now. Try uploading a screenshot of the code instead.";
+    })
+    .then(() => {
+      if (typeof jsQR !== "function") return;
+      startQrScanStream(video, status, canvas, ctx);
+    });
+}
+
+function startQrScanStream(video, status, canvas, ctx) {
   navigator.mediaDevices
     .getUserMedia({ video: { facingMode: "environment" } })
     .then((stream) => {
