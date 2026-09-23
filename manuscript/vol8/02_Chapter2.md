@@ -19,7 +19,7 @@ Settings path: usually found in your banking app under Settings, Notifications, 
 
 ![Banking app notification settings showing transaction alerts turned on for all transaction types](screenshots/ch2-transaction-alerts.png)
 
-*Mockup illustration, styled to match a typical Australian banking app, reshoot using your actual bank's app before final layout.*
+*Illustrative mockup, styled to match a typical Australian banking app, not a real banking app.*
 
 ★  TIP:  Turn on alerts for every transaction type, not just large ones. Many scams start with a small test transaction to check whether a card or account is "live" before a larger amount is taken.
 
@@ -33,7 +33,7 @@ Settings path: usually found in your banking app under Settings, Security, or Lo
 
 ![Banking app security settings showing fingerprint or face login enabled](screenshots/ch2-app-login-security.png)
 
-*Mockup illustration, styled to match a typical Australian banking app, reshoot using your actual bank's app before final layout.*
+*Illustrative mockup, styled to match a typical Australian banking app, not a real banking app.*
 
 Enable fingerprint or face login if your bank offers it, in addition to a PIN or password. This is both more convenient and generally more secure than a PIN alone, since it cannot be observed or guessed by someone nearby.
 
@@ -57,7 +57,7 @@ Settings path: usually found in your banking app under Settings, Limits, or Tran
 
 ![Banking app settings showing a custom daily transfer limit](screenshots/ch2-transfer-limit.png)
 
-*Mockup illustration, styled to match a typical Australian banking app, reshoot using your actual bank's app before final layout.*
+*Illustrative mockup, styled to match a typical Australian banking app, not a real banking app.*
 
 | ⚠  WARNING A lower daily transfer limit, set to slightly above what you would genuinely need in a normal day, acts as a built-in circuit breaker. Even if you are ever convinced to make a fraudulent transfer, a sensible limit can prevent the entire balance of an account from being moved in one transaction. |
 
@@ -69,7 +69,7 @@ Most banking apps let you temporarily freeze a card, turn off overseas transacti
 
 ![Banking app showing card controls including freeze card and disable overseas transactions](screenshots/ch2-card-controls.png)
 
-*Mockup illustration, styled to match a typical Australian banking app, reshoot using your actual bank's app before final layout.*
+*Illustrative mockup, styled to match a typical Australian banking app, not a real banking app.*
 
 | ✓  WELL DONE IF YOU HAVE THIS If you know how to freeze your own card instantly from your banking app, you can respond to a lost card or suspected fraud in seconds, rather than waiting on hold with your bank. |
 

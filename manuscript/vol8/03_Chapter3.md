@@ -19,7 +19,7 @@ Settings path:  my.gov.au  >  Account settings  >  Sign in options.
 
 ![myGov account settings showing sign-in options and linked services](screenshots/ch3-mygov-security.png)
 
-*Mockup illustration, styled to match myGov, reshoot using your actual account before final layout.*
+*Illustrative mockup, styled to match myGov, not a real myGov account.*
 
 ★  TIP:  Use the myGovID app for signing in wherever possible, rather than a code sent by text. It is generally considered more secure and is not vulnerable to a text message being intercepted.
 
@@ -33,7 +33,7 @@ Settings path:  my.gov.au  >  Linked services  >  Australian Taxation Office  > 
 
 ![ATO online services screen showing linked superannuation accounts and balances](screenshots/ch3-super-accounts.png)
 
-*Mockup illustration, styled to match ATO online services, reshoot using your actual account before final layout.*
+*Illustrative mockup, styled to match ATO online services, not a real ATO account.*
 
 | ℹ  DID YOU KNOW? Many Australians have multiple, forgotten superannuation accounts from previous jobs, each charging separate fees. Checking this screen occasionally can reveal genuine, unclaimed money, though any decision to consolidate accounts should consider factors like insurance attached to an older account, best discussed with your fund or a licensed adviser. |
 

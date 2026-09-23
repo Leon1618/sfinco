@@ -26,7 +26,7 @@ Settings path:  contact your super fund directly, or check through my.gov.au  > 
 
 ![ATO online services screen showing a superannuation death benefit nomination status](screenshots/ch7-death-benefit-nomination.png)
 
-*Mockup illustration, styled to match ATO online services, reshoot using your actual account before final layout.*
+*Illustrative mockup, styled to match ATO online services, not a real ATO account.*
 
 ★  TIP:  Check whether your nomination is "binding" or "non-binding" with your fund. A binding nomination is generally legally required to be followed, while a non-binding nomination is only a guide for the fund's trustee. Ask your fund directly if you are unsure which applies to yours.
 

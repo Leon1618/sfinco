@@ -31,7 +31,7 @@ A password manager generates and stores a strong, unique password for every acco
 
 ![Password manager app showing saved logins for banking and superannuation accounts](screenshots/ch4-password-manager.png)
 
-*Mockup illustration, styled to match a typical password manager app, reshoot using your actual app before final layout.*
+*Illustrative mockup, styled to match a typical password manager app, not a real app.*
 
 ★  TIP:  Start with just your three or four most important accounts, your email, your bank, myGov, and your super fund. You do not need to move everything across in one sitting.
 
@@ -43,7 +43,7 @@ Most password managers, and some banks, can tell you if a password you use has a
 
 ![Password manager security dashboard showing a compromised password alert](screenshots/ch4-breach-alert.png)
 
-*Mockup illustration, styled to match a typical password manager app, reshoot using your actual app before final layout.*
+*Illustrative mockup, styled to match a typical password manager app, not a real app.*
 
 | ℹ  DID YOU KNOW? The free website haveibeenpwned.com lets you check whether your email address has appeared in a known data breach, without needing to install anything, and is run by an independent, well-regarded security researcher. |
 
