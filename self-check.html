@@ -13,11 +13,10 @@
 <header class="site-header">
   <div class="container">
     <a class="brand" href="index.html">sfinco</a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Menu">
-    <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">
+    <button type="button" id="nav-toggle" class="nav-toggle-label" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
       <span></span><span></span><span></span>
-    </label>
-    <nav class="primary-nav" aria-label="Primary">
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary">
       <ul>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="resources.html">Free Resources</a></li>
@@ -83,11 +82,20 @@
 
 <script src="search.js?v=2"></script>
 <script>
-document.querySelectorAll(".primary-nav a").forEach(function(a) {
-  a.addEventListener("click", function() {
-    document.getElementById("nav-toggle").checked = false;
+(function () {
+  var toggle = document.getElementById("nav-toggle");
+  var header = document.querySelector(".site-header");
+  toggle.addEventListener("click", function () {
+    var open = header.classList.toggle("nav-open");
+    toggle.setAttribute("aria-expanded", open);
   });
-});
+  document.querySelectorAll(".primary-nav a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      header.classList.remove("nav-open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+})();
 </script>
 </body>
 </html>

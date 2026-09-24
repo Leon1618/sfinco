@@ -119,12 +119,6 @@ a:hover {
   color: var(--ink);
 }
 
-.nav-toggle-input {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
 .nav-toggle-label {
   display: flex;
   flex-direction: column;
@@ -134,6 +128,9 @@ a:hover {
   height: 28px;
   cursor: pointer;
   flex-shrink: 0;
+  background: none;
+  border: 0;
+  padding: 0;
 }
 
 .nav-toggle-label span {
@@ -144,15 +141,15 @@ a:hover {
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
-.nav-toggle-input:checked ~ .nav-toggle-label span:nth-child(1) {
+.site-header.nav-open .nav-toggle-label span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
 
-.nav-toggle-input:checked ~ .nav-toggle-label span:nth-child(2) {
+.site-header.nav-open .nav-toggle-label span:nth-child(2) {
   opacity: 0;
 }
 
-.nav-toggle-input:checked ~ .nav-toggle-label span:nth-child(3) {
+.site-header.nav-open .nav-toggle-label span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
 
@@ -164,7 +161,7 @@ nav.primary-nav {
   transition: max-height 0.25s ease;
 }
 
-.nav-toggle-input:checked ~ nav.primary-nav {
+.site-header.nav-open nav.primary-nav {
   max-height: 2000px;
   overflow: visible;
 }
@@ -177,7 +174,7 @@ nav.primary-nav {
   transition: max-height 0.25s ease;
 }
 
-.nav-toggle-input:checked ~ .site-search {
+.site-header.nav-open .site-search {
   max-height: 200px;
   overflow: visible;
 }
@@ -406,7 +403,8 @@ nav.primary-nav a.is-active {
 
 .btn:focus-visible,
 nav.primary-nav a:focus-visible,
-.card-link:focus-visible {
+.card-link:focus-visible,
+.nav-toggle-label:focus-visible {
   outline: 2px solid var(--blue);
   outline-offset: 3px;
   border-radius: 6px;
