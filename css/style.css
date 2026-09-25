@@ -1,4 +1,18 @@
 :root {
+  --bg: #F5F3EE;
+  --bg-deep: #FFFFFF;
+  --surface: #FFFFFF;
+  --border: #D9D4C7;
+  --ink: #20242A;
+  --muted: #5B5F63;
+  --lime: #1B4F8A;
+  --lime-tint: rgba(27, 79, 138, 0.1);
+  --blue: #1B4F8A;
+  --blue-tint: rgba(27, 79, 138, 0.08);
+  --max-width: 1080px;
+}
+
+body.dark-theme {
   --bg: #2B2019;
   --bg-deep: #201811;
   --surface: #3A2C22;
@@ -9,7 +23,6 @@
   --lime-tint: rgba(217, 164, 65, 0.12);
   --blue: #6FB1E8;
   --blue-tint: rgba(111, 177, 232, 0.12);
-  --max-width: 1080px;
 }
 
 * {
@@ -85,6 +98,11 @@ a:hover {
   border-bottom: 1px solid var(--border);
   padding: 1.1rem 0;
   background: #000000;
+  /* The header bar stays black in both themes (a deliberate brand anchor), so its own
+     text/icon colours are fixed too, independent of --ink/--lime, which swap per theme and
+     would otherwise go dark-on-black and unreadable in light mode. */
+  --header-ink: #F7EDE0;
+  --header-accent: #D9A441;
 }
 
 .site-header .container {
@@ -107,7 +125,7 @@ a:hover {
   gap: 0.6rem;
   flex-shrink: 0;
   text-decoration: none;
-  color: var(--ink);
+  color: var(--header-ink);
   font-family: Georgia, serif;
   font-weight: 700;
   font-size: 1.4rem;
@@ -116,7 +134,7 @@ a:hover {
 }
 
 .brand:hover {
-  color: var(--ink);
+  color: var(--header-ink);
 }
 
 .nav-toggle-label {
@@ -137,7 +155,7 @@ a:hover {
   display: block;
   height: 2px;
   border-radius: 2px;
-  background: var(--ink);
+  background: var(--header-ink);
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
@@ -238,6 +256,12 @@ nav.primary-nav a.is-active {
     border: none;
     background: none;
     font-size: 0.98rem;
+    color: var(--header-ink);
+  }
+
+  nav.primary-nav a:hover,
+  nav.primary-nav a.is-active {
+    color: var(--header-accent);
   }
 
   nav.primary-nav a.is-active {
@@ -275,7 +299,7 @@ nav.primary-nav a.is-active {
 .site-search-input {
   width: 100%;
   padding: 0.55rem 0.8rem 0.55rem 2.3rem;
-  background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23CBB79E' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E") no-repeat 0.7rem center;
+  background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235B5F63' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E") no-repeat 0.7rem center;
   background-size: 16px;
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -283,6 +307,10 @@ nav.primary-nav a.is-active {
   font-family: inherit;
   color: var(--ink);
   transition: border-color 0.15s ease, width 0.2s ease;
+}
+
+body.dark-theme .site-search-input {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23CBB79E' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
 }
 
 .site-search-input::placeholder {
@@ -588,11 +616,7 @@ section > .container > h2 {
 .pillar-card {
   --accent: var(--lime);
   position: relative;
-  background:
-    linear-gradient(var(--surface), var(--surface)),
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: auto, 18px 18px, 18px 18px;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 2.1rem 1.85rem 1.85rem;
@@ -607,6 +631,14 @@ section > .container > h2 {
 }
 
 .pillar-card { --accent: var(--lime); }
+
+body.dark-theme .pillar-card {
+  background:
+    linear-gradient(var(--surface), var(--surface)),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: auto, 18px 18px, 18px 18px;
+}
 
 .pillar-icon {
   display: flex;
@@ -818,7 +850,9 @@ section > .container > h2 {
 .book-cover-art {
   position: relative;
   flex: 1;
-  background-color: var(--bg-deep);
+  /* Fixed, not var(--bg-deep): this is a print-style book jacket mockup, meant to look the
+     same dark-tech-blueprint way regardless of the surrounding site theme, not a themed panel. */
+  background-color: #201811;
   background-image:
     linear-gradient(rgba(217, 164, 65, 0.12) 1px, transparent 1px),
     linear-gradient(90deg, rgba(217, 164, 65, 0.12) 1px, transparent 1px),
@@ -857,7 +891,9 @@ section > .container > h2 {
 }
 
 .book-cover .title {
-  color: var(--bg-deep);
+  /* Fixed, not var(--bg-deep): dark ink on the white title plate, same reasoning as
+     .book-cover-art above. */
+  color: #201811;
   font-size: 1.3rem;
   font-weight: 700;
   line-height: 1.15;
@@ -1797,8 +1833,8 @@ form.enquiry .btn-row {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    linear-gradient(rgba(32, 36, 42, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(32, 36, 42, 0.045) 1px, transparent 1px);
   background-size: 34px 34px;
   pointer-events: none;
 }
@@ -1811,9 +1847,19 @@ form.enquiry .btn-row {
   width: 900px;
   max-width: 140vw;
   height: 700px;
-  background: radial-gradient(circle, rgba(217, 164, 65, 0.07), transparent 70%);
+  background: radial-gradient(circle, rgba(27, 79, 138, 0.06), transparent 70%);
   pointer-events: none;
   animation: glow-drift 24s ease-in-out infinite;
+}
+
+body.dark-theme .grid-texture::before {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+}
+
+body.dark-theme .grid-texture::after {
+  background: radial-gradient(circle, rgba(217, 164, 65, 0.07), transparent 70%);
 }
 
 @keyframes glow-drift {
