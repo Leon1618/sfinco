@@ -204,6 +204,9 @@ const scamAlertCategories = [
   { key: "online", label: "Online & social media", icon: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="12" r="2.3"/><circle cx="18" cy="6" r="2.3"/><circle cx="18" cy="18" r="2.3"/><path d="M8.16 10.9 15.84 7.1M8.16 13.1l7.68 3.8" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>' },
 ];
 
+// Manually update this whenever the scamAlerts list below is added to or edited.
+const SCAM_ALERTS_UPDATED = "25 September 2026";
+
 const scamAlerts = [
   {
     category: "online",
@@ -586,6 +589,8 @@ function buildAlertCard(alert) {
 }
 
 function renderScamAlerts() {
+  document.getElementById("scam-alerts-updated").textContent = `Last checked ${SCAM_ALERTS_UPDATED}.`;
+
   const newTactics = document.getElementById("new-tactics");
   newTactics.innerHTML = "";
   scamAlerts
