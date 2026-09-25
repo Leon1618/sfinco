@@ -416,6 +416,11 @@
 
   .no-tool { display: inline-block; color: var(--muted); font-size: 0.83rem; font-style: italic; margin-top: 0.3rem; }
 
+  .visually-hidden {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
+
   @media (max-width: 860px) {
     .shell { flex-direction: column; }
     .sidebar { width: 100%; height: auto; position: relative; border-right: none; border-bottom: 1px solid var(--border); }
@@ -1160,6 +1165,7 @@
       div.className = 'item';
       div.innerHTML = '<p class="item-q">' + item.n + '. ' + item.q + '</p>' +
         '<div class="seg" data-item="' + item.n + '"><button data-val="yes">Yes</button><button data-val="no">No</button><button data-val="unsure">Not sure</button></div>' +
+        '<label class="visually-hidden" for="in-note-' + item.n + '">Notes for item ' + item.n + '</label>' +
         '<input type="text" class="item-note" id="in-note-' + item.n + '" placeholder="Notes">';
       listEl.appendChild(div);
     });
@@ -1174,6 +1180,10 @@
           renderIntake();
         });
       });
+    });
+
+    listEl.querySelectorAll('.item-note').forEach((input) => {
+      input.addEventListener('input', () => renderIntake());
     });
 
     document.getElementById('in-svc-minus').addEventListener('click', () => { shared.svc = Math.max(0, shared.svc - 1); document.getElementById('in-svc-count').textContent = shared.svc; renderIntake(); });
@@ -1274,6 +1284,7 @@ Tally: ${yes} Yes · ${no} No · ${unsure} Not sure`;
         '<button data-val="goodknow">Good</button>' +
         '<button data-val="na">N/A</button>' +
         '</div>' +
+        '<label class="visually-hidden" for="rv-note-' + chk.n + '">Notes for check ' + chk.n + '</label>' +
         '<input type="text" class="item-note" id="rv-note-' + chk.n + '" placeholder="What was actually seen on the screen-share">';
       listEl.appendChild(div);
     });
