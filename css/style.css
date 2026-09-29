@@ -503,8 +503,11 @@ nav.primary-nav a:focus-visible,
 }
 
 .btn-primary:hover {
+  /* Fixed, not var(--bg-deep): the hover background is always white regardless of
+     theme, so the text needs a fixed dark colour rather than one that turns white
+     itself in light mode. */
   background: #fff;
-  color: var(--bg-deep);
+  color: #201811;
 }
 
 .btn-primary::after {
@@ -530,8 +533,11 @@ nav.primary-nav a:focus-visible,
 }
 
 .btn-secondary:hover {
+  /* --lime and --blue are the same navy in light mode, so the hue swap alone gives
+     no visible feedback there; the tint fill is what actually shows on hover. */
   border-color: var(--blue);
   color: var(--blue);
+  background: var(--blue-tint);
 }
 
 .btn-row {
