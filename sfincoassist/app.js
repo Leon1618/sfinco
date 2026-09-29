@@ -641,6 +641,7 @@ function renderTrustedContact() {
   display.innerHTML = "";
   if (contact) document.getElementById("trusted-contact-details").open = true;
   renderProtectionTile();
+  renderWalletCard();
   document.getElementById("trusted-name").value = contact ? contact.name : "";
   document.getElementById("trusted-phone").value = contact ? contact.phone : "";
   if (!contact) return;
@@ -692,6 +693,32 @@ document.getElementById("trusted-contact-form").addEventListener("submit", (e) =
   e.target.reset();
   renderTrustedContact();
 });
+
+/* ---------- 2c. Printable emergency card ---------- */
+
+function renderWalletCard() {
+  const contact = loadTrustedContact();
+  const dl = document.getElementById("wallet-card-contact");
+  if (!dl) return;
+  dl.innerHTML = "";
+  dl.classList.toggle("hidden", !contact);
+  if (!contact) return;
+
+  const dt = document.createElement("dt");
+  dt.textContent = contact.name;
+  const dd = document.createElement("dd");
+  dd.textContent = contact.phone;
+  dl.append(dt, dd);
+}
+
+const walletCard = document.getElementById("wallet-card");
+const walletCardToggleBtn = document.getElementById("wallet-card-toggle-btn");
+walletCardToggleBtn.addEventListener("click", () => {
+  const nowHidden = walletCard.classList.toggle("hidden");
+  walletCardToggleBtn.textContent = nowHidden ? "Preview emergency card" : "Hide preview";
+});
+
+document.getElementById("wallet-card-print-btn").addEventListener("click", () => window.print());
 
 /* ---------- 2b. Family passphrase ---------- */
 

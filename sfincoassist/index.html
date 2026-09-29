@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sfinco Personal Cyber Awareness Assistant</title>
-<link rel="stylesheet" href="style.css?v=20260923d">
+<link rel="stylesheet" href="style.css?v=20260930a">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#F5F3EE">
 </head>
@@ -219,6 +219,23 @@
   <section id="tab-contacts" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-btn-contacts">
     <h2>Who to call when something feels off</h2>
     <p>If a message asks you to call a number it gives you, don't. Use one of these instead, or a number you already trust. To report a scam online, visit <strong>scamwatch.gov.au</strong>. That one's a website form, there's no phone line for it.</p>
+
+    <p class="tip-footer">Keep the numbers you need most somewhere you can find them without your phone.</p>
+    <button type="button" id="wallet-card-toggle-btn">Preview emergency card</button>
+
+    <div id="wallet-card" class="wallet-card hidden">
+      <h2>In case of a scam</h2>
+      <p class="wallet-card-line"><strong>Stop.</strong> Hang up or don't reply. <strong>Check.</strong> Call back yourself, never a number from the message.</p>
+      <dl id="wallet-card-contact" class="glossary-list hidden"></dl>
+      <dl class="glossary-list">
+        <dt>Australian Cyber Security Hotline</dt>
+        <dd>1300 292 371</dd>
+        <dt>IDCARE (identity theft help)</dt>
+        <dd>1800 595 160</dd>
+      </dl>
+      <p class="wallet-card-footer">From Sfinco &middot; sfinco.com.au</p>
+      <button type="button" id="wallet-card-print-btn" class="wallet-card-print">Print this card</button>
+    </div>
 
     <div class="contact-card">
       <div class="contact-info">
@@ -582,6 +599,6 @@
   <button id="undo-toast-btn" type="button">Undo</button>
 </div>
 
-<script src="app.js?v=20260923d"></script>
+<script src="app.js?v=20260930a"></script>
 </body>
 </html>

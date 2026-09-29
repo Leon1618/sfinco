@@ -438,6 +438,25 @@ body {
   color: var(--muted);
 }
 
+.wallet-card {
+  background: var(--surface);
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  padding: 1.25rem 1.1rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.wallet-card-line { color: var(--ink); }
+
+.wallet-card-footer {
+  margin: 1rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.wallet-card-print { margin-top: 0.5rem; }
+
 .tip-list {
   margin: 0;
   padding-left: 1.3em;
@@ -1129,4 +1148,8 @@ body.light-theme form {
   }
   body { background: #FFFFFF; color: #000000; }
   .sample-card { border-color: #999; }
+
+  #tab-contacts > *:not(.wallet-card) { display: none !important; }
+  .wallet-card { display: block !important; border-color: #000; }
+  .wallet-card-print { display: none !important; }
 }
