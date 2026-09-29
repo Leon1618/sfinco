@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sfinco Personal Cyber Awareness Assistant</title>
-<link rel="stylesheet" href="style.css?v=20260930a">
+<link rel="stylesheet" href="style.css?v=20260930b">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#F5F3EE">
 </head>
@@ -225,8 +225,13 @@
 
     <div id="wallet-card" class="wallet-card hidden">
       <h2>In case of a scam</h2>
-      <p class="wallet-card-line"><strong>Stop.</strong> Hang up or don't reply. <strong>Check.</strong> Call back yourself, never a number from the message.</p>
+      <p class="wallet-card-line"><strong>Stop.</strong> Hang up or don't reply.</p>
+      <p class="wallet-card-line"><strong>Check.</strong> Look up the real number yourself, never one from the message.</p>
+      <p class="wallet-card-line"><strong>Report.</strong> Call one of the numbers below.</p>
       <dl id="wallet-card-contact" class="glossary-list hidden"></dl>
+      <p id="wallet-card-contact-prompt" class="wallet-card-contact-prompt">
+        <button type="button" id="wallet-card-add-contact-btn" class="link-btn">Add an emergency contact</button> under "Your trusted contact" below.
+      </p>
       <dl class="glossary-list">
         <dt>Australian Cyber Security Hotline</dt>
         <dd>1300 292 371</dd>
@@ -599,6 +604,6 @@
   <button id="undo-toast-btn" type="button">Undo</button>
 </div>
 
-<script src="app.js?v=20260930a"></script>
+<script src="app.js?v=20260930b"></script>
 </body>
 </html>

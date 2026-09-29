@@ -457,6 +457,11 @@ body {
 
 .wallet-card-print { margin-top: 0.5rem; }
 
+.wallet-card-contact-prompt {
+  color: var(--muted);
+  margin: 1rem 0 0;
+}
+
 .tip-list {
   margin: 0;
   padding-left: 1.3em;
@@ -1152,4 +1157,5 @@ body.light-theme form {
   #tab-contacts > *:not(.wallet-card) { display: none !important; }
   .wallet-card { display: block !important; border-color: #000; }
   .wallet-card-print { display: none !important; }
+  .wallet-card-contact-prompt { display: none !important; }
 }

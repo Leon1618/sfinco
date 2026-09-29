@@ -699,9 +699,11 @@ document.getElementById("trusted-contact-form").addEventListener("submit", (e) =
 function renderWalletCard() {
   const contact = loadTrustedContact();
   const dl = document.getElementById("wallet-card-contact");
-  if (!dl) return;
+  const prompt = document.getElementById("wallet-card-contact-prompt");
+  if (!dl || !prompt) return;
   dl.innerHTML = "";
   dl.classList.toggle("hidden", !contact);
+  prompt.classList.toggle("hidden", !!contact);
   if (!contact) return;
 
   const dt = document.createElement("dt");
@@ -719,6 +721,12 @@ walletCardToggleBtn.addEventListener("click", () => {
 });
 
 document.getElementById("wallet-card-print-btn").addEventListener("click", () => window.print());
+
+document.getElementById("wallet-card-add-contact-btn").addEventListener("click", () => {
+  const details = document.getElementById("trusted-contact-details");
+  details.open = true;
+  details.scrollIntoView({ behavior: "smooth", block: "start" });
+});
 
 /* ---------- 2b. Family passphrase ---------- */
 
