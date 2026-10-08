@@ -8,7 +8,6 @@ Staying safe on your Android phone
 
 ---
 
-Author: Leonardo Pinheiro
 Series: Sfinco Guides
 Volume: 5 of 8
 Category: Personal Digital Safety / Cybersecurity for Consumers

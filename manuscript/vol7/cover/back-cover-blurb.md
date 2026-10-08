@@ -18,4 +18,4 @@ This is a plain-English, step-by-step guide to protecting your organisation, wri
 
 **Author bio (short):**
 
-Leonardo Pinheiro works in banking and technology on the Sunshine Coast, Queensland, holding qualifications in cybersecurity, financial advising, and information technology. He volunteers with CoderDojo and has a background in community technology education.
+The author works in banking and technology on the Sunshine Coast, Queensland, holding qualifications in cybersecurity, financial advising, and information technology. He volunteers with CoderDojo and has a background in community technology education.

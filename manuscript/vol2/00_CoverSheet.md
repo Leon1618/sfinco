@@ -8,7 +8,6 @@ Securing your Mac in plain English
 
 ---
 
-Author: Leonardo Pinheiro
 Series: Sfinco Guides
 Volume: 2 of 8
 Category: Personal Digital Safety / Cybersecurity for Consumers

@@ -8,7 +8,6 @@ Protecting organisations that protect others
 
 ---
 
-Author: Leonardo Pinheiro
 Series: Sfinco Guides
 Volume: 7 of 8
 Category: Nonprofit Cybersecurity / Community Organisation Operations
@@ -977,7 +976,7 @@ Sfinco Guides  ·  Volume 7
 
 The author of the Sfinco Guides series works in banking and technology on the Sunshine Coast in Queensland, with nearly two decades of experience across customer service, financial services, and digital security.
 
-Holding qualifications in cybersecurity (CompTIA Security+), financial advising (RG146), and information technology, and completing further studies at CQUniversity, the author brings together a rare combination of technical knowledge and the ability to explain it clearly to people who have no interest in becoming technical experts.
+Holding qualifications in cybersecurity, financial advising, and information technology, and completing further studies in digital security, the author brings together a rare combination of technical knowledge and the ability to explain it clearly to people who have no interest in becoming technical experts.
 
 The inspiration for this series came from years of seeing the same pattern: intelligent, capable, careful people and organisations being harmed by scams and digital threats, not because they were careless, but because nobody had ever given them a clear, practical guide to protecting themselves. That gap is what these books exist to close.
 

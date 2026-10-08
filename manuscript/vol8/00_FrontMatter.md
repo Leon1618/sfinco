@@ -38,7 +38,7 @@ simply want peace of mind that your money is as protected as the rest of your di
 ## A quick word from the author
 
 
-I work as a Customer Banking Specialist in Noosaville, holding RG146 accreditation (the qualification required to provide general advice on financial products in Australia) and pursuing further studies in financial crime investigation and compliance. Over years in banking, I have sat across the desk from people who lost genuinely significant money to scams that, in hindsight, had clear warning signs nobody had ever pointed out to them.
+I work in banking on the Sunshine Coast, with qualifications relevant to providing general information on financial products in Australia. Over years in banking, I have sat across the desk from people who lost genuinely significant money to scams that, in hindsight, had clear warning signs nobody had ever pointed out to them.
 
 This book is my attempt to point those warning signs out in advance, in the same plain-English style as the rest of the Sfinco Guides series. It complements, rather than replaces, the guidance you would get from your bank, a licensed financial adviser, or ASIC's MoneySmart service.
 

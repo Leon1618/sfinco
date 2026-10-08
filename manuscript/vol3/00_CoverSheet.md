@@ -8,7 +8,6 @@ Keeping everyone safe under one roof
 
 ---
 
-Author: Leonardo Pinheiro
 Series: Sfinco Guides
 Volume: 3 of 8
 Category: Personal Digital Safety / Cybersecurity for Consumers

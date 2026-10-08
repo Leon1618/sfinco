@@ -8,7 +8,6 @@ Protecting your money in a digital world
 
 ---
 
-Author: Leonardo Pinheiro
 Series: Sfinco Guides
 Volume: 8 of 8
 Category: Personal Finance Security / Cybersecurity for Consumers

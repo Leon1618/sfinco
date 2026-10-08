@@ -18,4 +18,4 @@ This is a plain-English, step-by-step guide, written for adults who want to feel
 
 **Author bio (short):**
 
-Leonardo Pinheiro is a Customer Banking Specialist on the Sunshine Coast, Queensland, holding RG146 accreditation and qualifications in cybersecurity and information technology. This book, and the series it completes, grew out of years spent helping people recognise the warning signs nobody had pointed out to them in time.
+The author works in banking on the Sunshine Coast, Queensland, holding qualifications in cybersecurity and information technology. This book, and the series it completes, grew out of years spent helping people recognise the warning signs nobody had pointed out to them in time.

@@ -18,4 +18,4 @@ This is a plain-English, step-by-step guide to protecting your iPhone, written f
 
 **Author bio (short):**
 
-Leonardo Pinheiro works in banking and technology on the Sunshine Coast, Queensland, holding qualifications in cybersecurity, financial advising, and information technology. He wrote this series after years of watching capable, careful people get caught out by scams nobody had ever warned them about.
+The author works in banking and technology on the Sunshine Coast, Queensland, holding qualifications in cybersecurity, financial advising, and information technology. He wrote this series after years of watching capable, careful people get caught out by scams nobody had ever warned them about.

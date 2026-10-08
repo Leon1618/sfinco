@@ -8,7 +8,6 @@ Protecting your money in a digital world
 
 ---
 
-Author: Leonardo Pinheiro
 Series: Sfinco Guides
 Volume: 8 of 8
 Category: Personal Finance Security / Cybersecurity for Consumers
@@ -64,7 +63,7 @@ simply want peace of mind that your money is as protected as the rest of your di
 ## A quick word from the author
 
 
-I work as a Customer Banking Specialist in Noosaville, holding RG146 accreditation (the qualification required to provide general advice on financial products in Australia) and pursuing further studies in financial crime investigation and compliance. Over years in banking, I have sat across the desk from people who lost genuinely significant money to scams that, in hindsight, had clear warning signs nobody had ever pointed out to them.
+I work in banking on the Sunshine Coast, with qualifications relevant to providing general information on financial products in Australia. Over years in banking, I have sat across the desk from people who lost genuinely significant money to scams that, in hindsight, had clear warning signs nobody had ever pointed out to them.
 
 This book is my attempt to point those warning signs out in advance, in the same plain-English style as the rest of the Sfinco Guides series. It complements, rather than replaces, the guidance you would get from your bank, a licensed financial adviser, or ASIC's MoneySmart service.
 
@@ -931,15 +930,15 @@ Each QR code below links to a different part of the Sfinco ecosystem. Scan any o
 
 Sfinco Guides  ·  Volume 8
 
-## About Leonardo Pinheiro
+## About the author
 
-Leonardo Pinheiro, the author of the Sfinco Guides series, works in banking and technology on the Sunshine Coast in Queensland, with nearly two decades of experience across customer service, financial services, and digital security.
+The author of the Sfinco Guides series works in banking and technology on the Sunshine Coast in Queensland, with nearly two decades of experience across customer service, financial services, and digital security.
 
-Holding qualifications in cybersecurity (CompTIA Security+), financial advising (RG146), and information technology, and completing further studies at CQUniversity, Leonardo brings together a rare combination of technical knowledge and the ability to explain it clearly to people who have no interest in becoming technical experts.
+Holding qualifications in cybersecurity, financial advising, and information technology, and completing further studies in digital security, the author brings together a rare combination of technical knowledge and the ability to explain it clearly to people who have no interest in becoming technical experts.
 
 The inspiration for this series came from years of seeing the same pattern: intelligent, capable, careful people being harmed by scams and digital threats, not because they were careless, but because nobody had ever given them a clear, practical guide to protecting themselves. That gap is what these books, and Sfinco itself, exist to close.
 
-Leonardo also volunteers with CoderDojo, teaching digital skills to young people on the Sunshine Coast, and has a background in community technology education across Australia and internationally.
+The author also volunteers with CoderDojo, teaching digital skills to young people on the Sunshine Coast, and has a background in community technology education across Australia and internationally.
 
 Sfinco was founded on the belief that every Australian deserves to feel safe and confident in their digital life, regardless of their age, their technical background, or how much money they have.
 

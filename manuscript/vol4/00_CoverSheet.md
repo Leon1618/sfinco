@@ -8,7 +8,6 @@ A plain-English guide for Windows users
 
 ---
 
-Author: Leonardo Pinheiro
 Series: Sfinco Guides
 Volume: 4 of 8
 Category: Personal Digital Safety / Cybersecurity for Consumers

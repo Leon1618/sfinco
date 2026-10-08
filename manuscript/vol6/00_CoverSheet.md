@@ -8,7 +8,6 @@ Cyber security for Australian small businesses
 
 ---
 
-Author: Leonardo Pinheiro
 Series: Sfinco Guides
 Volume: 6 of 8
 Category: Business Cybersecurity / Small Business Operations
