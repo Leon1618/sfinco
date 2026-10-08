@@ -37,7 +37,7 @@ A will only takes effect after death. An enduring power of attorney allows someo
 
 | ℹ  DID YOU KNOW? Setting up an enduring power of attorney while you are healthy and able to make your own decisions is generally far simpler and less contested than trying to arrange one after a health crisis has already begun. It is worth arranging well before it feels urgent. |
 
-An enduring power of attorney is a legal document, and requirements vary slightly by state. In Queensland, this is arranged through the Queensland Public Trustee or a solicitor.
+An enduring power of attorney is a legal document, and the rules vary by state and territory. In Queensland, it is arranged through the Queensland Public Trustee or a solicitor. In other states and territories, contact your state or territory's Public Trustee (or equivalent body) or a solicitor directly, since the forms and witnessing requirements differ.
 
 
 ## Building a digital asset list for your family
