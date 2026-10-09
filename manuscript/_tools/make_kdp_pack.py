@@ -3,10 +3,16 @@
 Build Volume 1's KDP production pack: print interior PDF, wraparound
 cover, and a Kindle EPUB, from the manuscript source files.
 
+Print interior is black & white by default (images are converted to
+true grayscale, not left for the printer to desaturate); the Kindle
+EPUB stays full colour but has its images downscaled/recompressed to
+keep the per-MB delivery fee down.
+
 This is Claude's build tooling, not something Leo needs to run day to
 day -- it's saved here so a future session doesn't have to reconstruct
 it from scratch again. Requires: Google Chrome (headless print-to-pdf
-and screenshot), poppler's pdftotext/pdfinfo (`brew install poppler`).
+and screenshot), poppler's pdftotext/pdfinfo (`brew install poppler`),
+Pillow (`pip install pillow`).
 
 Usage:
     python3 make_kdp_pack.py <manuscript_root> <vol_num> <out_dir>
@@ -14,7 +20,8 @@ Usage:
 Example:
     python3 make_kdp_pack.py /Users/leopinheiro/Downloads/sfinco/manuscript 1 /tmp/vol1_kdp_build
 """
-import sys, os, re, json, base64, zipfile, html as _html, hashlib, subprocess, shutil
+import sys, os, re, json, base64, zipfile, html as _html, hashlib, subprocess, shutil, io
+from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
@@ -69,9 +76,9 @@ html,body{ margin:0; padding:0; }
 body{ font-family:'IBM Plex Sans',Arial,sans-serif; font-size:10.6pt; line-height:1.5; color:#17191c; }
 .pbreak{ page-break-before: always; }
 .titlepage{ page-break-before: always; text-align:center; padding-top:1.6in; }
-.titlepage .kicker{ color:#C47F00; font-weight:700; letter-spacing:3px; font-size:11pt; margin-bottom:6px; }
+.titlepage .kicker{ color:#7a7a7a; font-weight:700; letter-spacing:3px; font-size:11pt; margin-bottom:6px; }
 .titlepage h1{ font-family:'Fraunces',Georgia,serif; font-weight:900; font-size:40pt; margin:10px 0 14px; }
-.titlepage .tagline{ font-family:'Fraunces',Georgia,serif; font-style:italic; color:#1B4F8A; font-size:15pt; margin-bottom:60px; }
+.titlepage .tagline{ font-family:'Fraunces',Georgia,serif; font-style:italic; color:#3a3a3a; font-size:15pt; margin-bottom:60px; }
 .titlepage .author{ font-weight:700; font-size:14pt; margin-top:110px; }
 .titlepage .site{ color:#6b6f76; letter-spacing:2px; font-size:9pt; margin-top:6px; }
 .copyright{ page-break-before: always; font-size:8.6pt; color:#444; padding-top:3.2in; line-height:1.6; }
@@ -82,19 +89,19 @@ body{ font-family:'IBM Plex Sans',Arial,sans-serif; font-size:10.6pt; line-heigh
 .toc .entry.sub{ padding-left:18px; font-size:9.5pt; color:#444; border-bottom:none; padding-top:2px; padding-bottom:2px; }
 .toc .entry .pg{ color:#6b6f76; font-variant-numeric: tabular-nums; }
 h1{ font-family:'Fraunces',Georgia,serif; font-weight:900; font-size:21pt; margin:0 0 4px; }
-h1 .chap-num{ display:block; font-family:'IBM Plex Sans',Arial,sans-serif; font-weight:700; color:#C47F00; font-size:10pt; letter-spacing:3px; margin-bottom:6px; }
-h2{ font-family:'Fraunces',Georgia,serif; font-weight:700; font-size:14.5pt; margin:22px 0 8px; color:#1B4F8A; }
+h1 .chap-num{ display:block; font-family:'IBM Plex Sans',Arial,sans-serif; font-weight:700; color:#7a7a7a; font-size:10pt; letter-spacing:3px; margin-bottom:6px; }
+h2{ font-family:'Fraunces',Georgia,serif; font-weight:700; font-size:14.5pt; margin:22px 0 8px; color:#3a3a3a; }
 h3{ font-size:11.5pt; font-weight:700; margin:16px 0 6px; }
-p.subtitle{ font-style:italic; color:#1B4F8A; font-size:11.5pt; margin:0 0 14px; }
+p.subtitle{ font-style:italic; color:#3a3a3a; font-size:11.5pt; margin:0 0 14px; }
 p.lead{ font-size:11.2pt; margin:0 0 12px; }
 p{ margin:0 0 10px; orphans:3; widows:3; }
 p.mini-title{ font-weight:700; margin:18px 0 2px; }
-p.mini-tagline{ font-style:italic; color:#1B4F8A; margin:0 0 10px; }
+p.mini-tagline{ font-style:italic; color:#3a3a3a; margin:0 0 10px; }
 hr{ border:none; border-top:1px solid #ddd; margin:16px 0; }
-.callout{ border-left:4px solid #1B4F8A; background:#f3f6fb; padding:9px 12px; margin:12px 0; page-break-inside:avoid; }
-.callout-label{ display:block; font-weight:700; font-size:9pt; letter-spacing:1px; text-transform:uppercase; color:#1B4F8A; margin-bottom:3px; }
-.callout.callout-warning{ border-color:#C47F00; background:#fbf3e6; }
-.callout.callout-warning .callout-label{ color:#C47F00; }
+.callout{ border-left:4px solid #3a3a3a; background:#f1f1f1; padding:9px 12px; margin:12px 0; page-break-inside:avoid; }
+.callout-label{ display:block; font-weight:700; font-size:9pt; letter-spacing:1px; text-transform:uppercase; color:#3a3a3a; margin-bottom:3px; }
+.callout.callout-warning{ border-color:#7a7a7a; background:#e6e6e6; }
+.callout.callout-warning .callout-label{ color:#7a7a7a; }
 .callout p{ margin:0 0 4px; font-size:9.8pt; }
 .scam-example{ border:1px solid #ddd; border-radius:6px; padding:8px 10px; margin:10px 0; background:#fafafa; page-break-inside:avoid; }
 .scam-from{ display:block; font-weight:700; font-size:9pt; color:#777; margin-bottom:3px; }
@@ -104,12 +111,30 @@ p.img-caption{ text-align:center; font-size:8.6pt; color:#777; margin:0 0 12px; 
 .table-wrap{ margin:12px 0; page-break-inside:avoid; }
 table{ width:100%; border-collapse:collapse; font-size:9.4pt; }
 th, td{ border:1px solid #ddd; padding:5px 7px; text-align:left; vertical-align:top; }
-th{ background:#eef2f7; }
+th{ background:#eeeeee; }
 h4.numbered{ display:flex; align-items:center; gap:8px; margin:18px 0 8px; font-size:12pt; }
-.num-badge{ background:#1B4F8A; color:#fff; width:22px; height:22px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:10pt; font-weight:700; flex:none; }
+.num-badge{ background:#3a3a3a; color:#fff; width:22px; height:22px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:10pt; font-weight:700; flex:none; }
 ul, ol{ margin:0 0 12px; padding-left:20px; }
 li{ margin-bottom:4px; }
 '''
+
+DATA_URI_IMG_RE = re.compile(r'(data:image/(png|jpeg|jpg);base64,)([^"\')\s]+)')
+
+def grayscale_data_uris(html_str):
+    """Convert every embedded image to true grayscale, so the print PDF
+    shows exactly what a black & white KDP print run will produce
+    (rather than leaving it to the printer to desaturate colour)."""
+    cache = {}
+    def repl(m):
+        prefix, b64 = m.group(1), m.group(3)
+        key = hashlib.sha1(b64.encode()).hexdigest()
+        if key not in cache:
+            img = Image.open(io.BytesIO(base64.b64decode(b64))).convert('L')
+            buf = io.BytesIO()
+            img.save(buf, format='PNG', optimize=True)
+            cache[key] = base64.b64encode(buf.getvalue()).decode()
+        return 'data:image/png;base64,' + cache[key]
+    return DATA_URI_IMG_RE.sub(repl, html_str)
 
 H1_RE = re.compile(r'<h1[^>]*>(?:<span[^>]*>.*?</span>)?(.*?)</h1>')
 
@@ -196,16 +221,22 @@ def resolve_toc_numbers(pdf_path, sections):
             numbers[key] = found
     return numbers
 
-def build_interior_pdf(vol_dir, title, tagline, sections, out_dir):
+def build_interior_pdf(vol_dir, title, tagline, sections, out_dir, grayscale=True):
     pass1_html = os.path.join(out_dir, 'interior_pass1.html')
     pass1_pdf = os.path.join(out_dir, 'interior_pass1.pdf')
-    open(pass1_html, 'w').write(build_print_doc(title, tagline, sections))
+    pass1_doc = build_print_doc(title, tagline, sections)
+    if grayscale:
+        pass1_doc = grayscale_data_uris(pass1_doc)
+    open(pass1_html, 'w').write(pass1_doc)
     chrome_print_pdf(pass1_html, pass1_pdf)
     toc_numbers = resolve_toc_numbers(pass1_pdf, sections)
 
     final_html = os.path.join(out_dir, 'interior_final.html')
     final_pdf = os.path.join(out_dir, 'interior.pdf')
-    open(final_html, 'w').write(build_print_doc(title, tagline, sections, toc_numbers))
+    final_doc = build_print_doc(title, tagline, sections, toc_numbers)
+    if grayscale:
+        final_doc = grayscale_data_uris(final_doc)
+    open(final_html, 'w').write(final_doc)
     chrome_print_pdf(final_html, final_pdf)
     import json as _json
     pages_cmd = subprocess.run(['pdfinfo', final_pdf], capture_output=True, text=True).stdout
@@ -216,7 +247,7 @@ def build_interior_pdf(vol_dir, title, tagline, sections, out_dir):
 
 # ------------------------------------------------------------- wraparound
 
-def build_wraparound_cover(vol_dir, page_count, out_path, color_interior=True):
+def build_wraparound_cover(vol_dir, page_count, out_path, color_interior=False):
     factor = 0.002347 if color_interior else 0.002252
     spine_in = round(page_count * factor, 4)
     spine_px = round(spine_in * 300)
@@ -293,12 +324,19 @@ def build_epub(vol_dir, title, tagline, sections, out_path, cover_png_path):
     def replace_images(htmlstr):
         def repl(m):
             ext, b64 = m.group(1), m.group(2)
-            ext = 'jpg' if ext == 'jpeg' else ext
             key = hashlib.sha1(b64.encode()).hexdigest()
             if key not in img_cache:
                 img_counter[0] += 1
-                fname = f'img{img_counter[0]:03d}.{ext}'
-                open(os.path.join(img_dir, fname), 'wb').write(base64.b64decode(b64))
+                fname = f'img{img_counter[0]:03d}.jpg'
+                # Downscale and recompress for e-reader display: these are
+                # 1284x2778 source screenshots, far more than an e-reader
+                # needs, and PNG at that size inflates KDP's per-MB Kindle
+                # delivery fee for no visible benefit on screen.
+                img = Image.open(io.BytesIO(base64.b64decode(b64))).convert('RGB')
+                if img.width > 600:
+                    new_h = round(img.height * 600 / img.width)
+                    img = img.resize((600, new_h), Image.LANCZOS)
+                img.save(os.path.join(img_dir, fname), format='JPEG', quality=82, optimize=True)
                 img_cache[key] = fname
             return f'src="images/{img_cache[key]}"'
         return DATA_URI_RE.sub(repl, htmlstr)
