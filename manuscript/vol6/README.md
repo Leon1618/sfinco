@@ -16,7 +16,7 @@ Private repo. This is the paid product manuscript, not the sfinco.com.au marketi
 
 ## Status
 
-Drafted from scratch by Claude Code, following Volumes 1–5's structure, tone, and chapter shape, at Leo's request. This is the first volume in Series 2 (organisational protection) and the first written for a small business owner audience rather than an individual consumer. All 10 screenshot placeholders are filled with illustrative mockups styled as generic business admin panels (email admin, router admin, business software, cloud backup), since there is no real business software account in this environment to capture directly.
+Drafted from scratch by Claude Code, following Volumes 1–5's structure, tone, and chapter shape, at the author's request. This is the first volume in Series 2 (organisational protection) and the first written for a small business owner audience rather than an individual consumer. All 10 screenshot placeholders are filled with illustrative mockups styled as generic business admin panels (email admin, router admin, business software, cloud backup), since there is no real business software account in this environment to capture directly.
 
 ## Chapter map
 

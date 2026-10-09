@@ -16,7 +16,7 @@ Private repo. This is the paid product manuscript, not the sfinco.com.au marketi
 
 ## Status
 
-Drafted from scratch by Claude Code, following Volumes 1 and 2's structure, tone, and chapter shape, at Leo's request. All 13 screenshot placeholders are filled with illustrative mockups (router app and device-settings screens), since there is no physical router or smart-home hardware in this environment to photograph directly.
+Drafted from scratch by Claude Code, following Volumes 1 and 2's structure, tone, and chapter shape, at the author's request. All 13 screenshot placeholders are filled with illustrative mockups (router app and device-settings screens), since there is no physical router or smart-home hardware in this environment to photograph directly.
 
 ## Chapter map
 

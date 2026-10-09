@@ -16,9 +16,9 @@ Private repo. This is the paid product manuscript, not the sfinco.com.au marketi
 
 ## Status
 
-Drafted from scratch by Claude Code, following Volumes 1–7's structure, tone, and chapter shape, at Leo's request. Closes out the full 8-volume series and returns to an individual consumer audience (aged 60+), this time focused on money rather than a device. All 12 screenshot placeholders are filled with illustrative mockups (banking app screens, myGov/ATO online services, a password manager, a digital wallet, and a genuine-vs-fake-store comparison diagram), since there is no real banking or myGov account in this environment to capture directly.
+Drafted from scratch by Claude Code, following Volumes 1–7's structure, tone, and chapter shape, at the author's request. Closes out the full 8-volume series and returns to an individual consumer audience (aged 60+), this time focused on money rather than a device. All 12 screenshot placeholders are filled with illustrative mockups (banking app screens, myGov/ATO online services, a password manager, a digital wallet, and a genuine-vs-fake-store comparison diagram), since there is no real banking or myGov account in this environment to capture directly.
 
-Regulatory boundary held throughout: the book explains how to recognise scams and secure accounts, but explicitly does **not** give personal financial, investment, or legal advice, and repeatedly points to AFSL-licensed advisers, MoneySmart, a solicitor, or the person's own super fund for anything requiring RG146/AFSL-regulated advice, per Sfinco's standing rule and Leo's own RG146 accreditation.
+Regulatory boundary held throughout: the book explains how to recognise scams and secure accounts, but explicitly does **not** give personal financial, investment, or legal advice, and repeatedly points to AFSL-licensed advisers, MoneySmart, a solicitor, or the person's own super fund for anything requiring RG146/AFSL-regulated advice, per Sfinco's standing rule to flag Australian regulatory frameworks wherever they come up.
 
 ## Chapter map
 

@@ -16,7 +16,7 @@ Private repo. This is the paid product manuscript, not the sfinco.com.au marketi
 
 ## Status
 
-Drafted from scratch by Claude Code, following Volumes 1–6's structure, tone, and chapter shape, at Leo's request. Second volume in Series 2 (organisational protection), written for volunteers, committee members, and staff of small charities rather than a business audience, covering volunteer turnover, donor data, and free/discounted nonprofit software specifically. All 10 screenshot placeholders are filled with illustrative mockups styled as generic donor-management, email, and network admin panels, since there is no real nonprofit software account in this environment to capture directly.
+Drafted from scratch by Claude Code, following Volumes 1–6's structure, tone, and chapter shape, at the author's request. Second volume in Series 2 (organisational protection), written for volunteers, committee members, and staff of small charities rather than a business audience, covering volunteer turnover, donor data, and free/discounted nonprofit software specifically. All 10 screenshot placeholders are filled with illustrative mockups styled as generic donor-management, email, and network admin panels, since there is no real nonprofit software account in this environment to capture directly.
 
 ## Chapter map
 

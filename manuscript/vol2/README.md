@@ -16,7 +16,7 @@ Private repo. This is the paid product manuscript, not the sfinco.com.au marketi
 
 ## Status
 
-Unlike Volume 1 (which started as Leo's own Word manuscript), this manuscript was drafted from scratch by Claude Code at Leo's request, following Volume 1's structure, tone, and chapter shape. See `CHANGELOG.md` for the full detail on scope and known gaps.
+Unlike Volume 1 (which started as the author's own Word manuscript), this manuscript was drafted from scratch by Claude Code at the author's request, following Volume 1's structure, tone, and chapter shape. See `CHANGELOG.md` for the full detail on scope and known gaps.
 
 ## Known gaps
 

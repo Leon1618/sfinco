@@ -16,7 +16,7 @@ Private repo. This is the paid product manuscript, not the sfinco.com.au marketi
 
 ## Status
 
-Drafted from scratch by Claude Code, following Volumes 1–3's structure, tone, and chapter shape, at Leo's request. All 16 screenshot placeholders are filled with illustrative mockups styled to match Windows 11, since there is no Windows PC in this environment to photograph directly.
+Drafted from scratch by Claude Code, following Volumes 1–3's structure, tone, and chapter shape, at the author's request. All 16 screenshot placeholders are filled with illustrative mockups styled to match Windows 11, since there is no Windows PC in this environment to photograph directly.
 
 ## Chapter map
 

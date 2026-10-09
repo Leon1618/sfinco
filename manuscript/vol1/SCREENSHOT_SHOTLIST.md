@@ -44,7 +44,7 @@ I've flagged exactly which shots below need this.
 | 8 | `ch3-2fa-status.png` | Settings > [Your Name] > Sign-In & Security | Two-Factor Authentication showing "On" |
 | 9 | `ch3-2fa-trusted-number.png` | Settings > [Your Name] > Sign-In & Security > Two-Factor Authentication | The trusted phone number entry screen, **blur the number**, or use a placeholder number if you're demonstrating rather than adding a real one |
 | 10 | `ch3-icloud-backup.png` | Settings > [Your Name] > iCloud > iCloud Backup | The backup toggle ON, with the "last backup" date/time visible |
-| 11 | `ch3-trusted-devices.png` | Settings > [Your Name] (scroll down) | The list of devices signed in, **blur device names** if they reveal anything personal (e.g. "Leo's MacBook") |
+| 11 | `ch3-trusted-devices.png` | Settings > [Your Name] (scroll down) | The list of devices signed in, **blur device names** if they reveal anything personal (e.g. "Dave's MacBook") |
 
 ## Chapter 4: App permissions, camera/mic indicators, tracking
 
