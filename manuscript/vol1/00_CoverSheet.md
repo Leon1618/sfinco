@@ -8,6 +8,7 @@ Your simple guide to staying safe online
 
 ---
 
+Author: Leon Tavares
 Series: Sfinco Guides
 Volume: 1 of 8
 Category: Personal Digital Safety / Cybersecurity for Consumers
