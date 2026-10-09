@@ -4,7 +4,7 @@
 
 Your iPhone holds your bank details, your family's photos, and messages you'd never want a stranger to see. Most people have never been shown how to lock it down properly, or which settings actually matter versus which are just noise.
 
-This is a plain-English, step-by-step guide to protecting your iPhone, written for adults who don't want to be lectured, don't want jargon, and just want to feel confident. Real screenshots. Real Australian scam examples. No technical background required.
+This is a plain-English, step-by-step guide to protecting your iPhone, written for adults who don't want to be lectured, don't want jargon, and just want to feel confident. Clear illustrations. Real Australian scam examples. No technical background required.
 
 **In this book:**
 

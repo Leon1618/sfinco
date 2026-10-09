@@ -18,7 +18,7 @@ That is why this guide exists.
 
 This is not a technical manual. There are no complicated diagrams, no long lists of jargon, and no assumption that you already know what a "VPN" is or why "two-factor authentication" sounds like something from a spy film. (It isn't, and by the end of this book, you will wonder how you ever went without it.)
 
-What this guide is, is a plain-English, step-by-step walkthrough of the most important things you can do right now to protect yourself on your iPhone. Each chapter tackles one area of your digital life, explains why it matters in everyday terms, and then shows you, with real screenshots, exactly what to do and where to find it.
+What this guide is, is a plain-English, step-by-step walkthrough of the most important things you can do right now to protect yourself on your iPhone. Each chapter tackles one area of your digital life, explains why it matters in everyday terms, and then shows you, with clear illustrations, exactly what to do and where to find it.
 
 Whether you are someone who has had an iPhone for years and never thought much about security, or someone who recently heard a story about a friend getting scammed and wants to make sure it never happens to you, this book is written for you.
 
