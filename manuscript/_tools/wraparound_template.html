@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1B4F8A;
+    --amber:#C47F00;
+    --grey:#6b6f76;
+    --ink:#17191c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  /* 300dpi px values. Trim 1800x2700 each side. Bleed 38px (0.125in). Spine 83px. */
+  html,body{width:3759px;height:2776px;background:#fff;}
+  body{font-family:'IBM Plex Sans',Arial,sans-serif;position:relative;}
+
+  .bar-top{position:absolute;top:0;left:0;width:3759px;height:32px;background:var(--blue);}
+  .bar-bottom{position:absolute;bottom:0;left:0;width:3759px;height:32px;background:var(--amber);}
+
+  /* trim guides (not printed - for dev reference only, removed before final render) */
+
+  .back{position:absolute;top:0;left:38px;width:1800px;height:2776px;display:flex;flex-direction:column;justify-content:center;padding:0 170px;}
+  .spine{position:absolute;top:0;left:1838px;width:83px;height:2776px;display:flex;align-items:center;justify-content:center;}
+  .front{position:absolute;top:0;left:1921px;width:1800px;height:2776px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+
+  .back .kicker{color:var(--amber);font-weight:700;font-size:22px;letter-spacing:4px;margin-bottom:28px;}
+  .back p{color:var(--ink);font-size:24px;line-height:1.5;margin-bottom:22px;}
+  .back h2{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:28px;color:var(--blue);margin:34px 0 16px;}
+  .back ul{list-style:none;margin:0 0 22px;padding:0;}
+  .back li{font-size:22px;line-height:1.5;margin-bottom:12px;padding-left:30px;position:relative;}
+  .back li::before{content:"";position:absolute;left:0;top:10px;width:9px;height:9px;border-radius:50%;background:var(--amber);}
+  .back .bio{font-size:20px;color:#444;line-height:1.55;border-top:2px solid #e4e4e4;padding-top:24px;margin-top:10px;}
+  .back .bio strong{color:var(--ink);}
+  .back .footer-row{display:flex;justify-content:space-between;align-items:flex-end;margin-top:34px;}
+  .back .site{color:var(--grey);font-weight:600;font-size:18px;letter-spacing:2px;}
+  .back .isbn-box{width:260px;height:150px;border:2px dashed #bbb;display:flex;align-items:center;justify-content:center;color:#999;font-size:16px;text-align:center;padding:10px;}
+
+  .spine-text{writing-mode:vertical-rl;transform:rotate(180deg);display:flex;align-items:center;gap:28px;}
+  .spine-title{font-family:'Fraunces',Georgia,serif;font-weight:900;font-size:34px;color:var(--ink);letter-spacing:0.5px;}
+  .spine-author{font-weight:600;font-size:20px;color:var(--blue);letter-spacing:1px;}
+
+  .front .kicker{color:var(--amber);font-weight:700;font-size:30px;letter-spacing:6px;margin-bottom:14px;}
+  .front .series{color:var(--grey);font-weight:600;font-size:21px;letter-spacing:3px;margin-bottom:60px;}
+  .front .icon{margin-bottom:70px;}
+  .front h1{font-family:'Fraunces',Georgia,serif;font-weight:900;color:var(--ink);font-size:108px;line-height:1;margin-bottom:38px;letter-spacing:-1px;}
+  .front .tagline{font-family:'Fraunces',Georgia,serif;font-weight:600;font-style:italic;color:var(--blue);font-size:44px;margin-bottom:48px;}
+  .front .divider{width:110px;height:5px;background:var(--amber);margin-bottom:48px;}
+  .front .volume{color:var(--grey);font-weight:600;font-size:26px;letter-spacing:3px;margin-bottom:70px;}
+  .front .features{color:var(--blue);font-weight:700;font-size:22px;letter-spacing:2px;margin-bottom:56px;}
+  .front .features .dot{color:var(--amber);margin:0 18px;}
+  .front .author{color:var(--ink);font-weight:700;font-size:40px;margin-bottom:14px;}
+  .front .role{color:var(--grey);font-weight:500;font-size:24px;margin-bottom:58px;}
+  .front .site{color:var(--grey);font-weight:600;font-size:21px;letter-spacing:3px;}
+</style>
+</head>
+<body>
+
+  <div class="back">
+    <div class="kicker">SFINCO GUIDES &middot; VOLUME 1</div>
+    <p>Your iPhone holds your bank details, your family's photos, and messages you'd never want a stranger to see. Most people have never been shown how to lock it down properly, or which settings actually matter versus which are just noise.</p>
+    <p>This is a plain-English, step-by-step guide to protecting your iPhone, written for adults who don't want to be lectured, don't want jargon, and just want to feel confident. Clear illustrations. Real Australian scam examples. No technical background required.</p>
+    <h2>In this book</h2>
+    <ul>
+      <li>Setting up a passcode and Face ID properly</li>
+      <li>Locking down your Apple ID, the master key to everything</li>
+      <li>Checking which apps can see your location, camera, and contacts</li>
+      <li>Spotting the scam texts and calls currently targeting Australians</li>
+      <li>Staying safe on public Wi-Fi</li>
+      <li>Setting up Find My so a lost phone is a hassle, not a disaster</li>
+      <li>A 15-minute monthly checkup to keep it that way</li>
+    </ul>
+    <div class="bio"><strong>Leon Tavares</strong> works in banking and technology on the Sunshine Coast, Queensland, holding qualifications in cybersecurity, financial advising, and information technology. He wrote this series after years of watching capable, careful people get caught out by scams nobody had ever warned them about.</div>
+    <div class="footer-row">
+      <div class="site">SFINCO.COM.AU</div>
+      <div class="isbn-box">ISBN barcode<br>(added by KDP at upload)</div>
+    </div>
+  </div>
+
+  <div class="spine">
+    <div class="spine-text">
+      <span class="spine-title">iPhone Protection</span>
+      <span class="spine-author">Leon Tavares</span>
+    </div>
+  </div>
+
+  <div class="front">
+    <div class="kicker">SFINCO GUIDES</div>
+    <div class="series">SERIES 1 &middot; PERSONAL PROTECTION</div>
+    <div class="icon">
+      <svg width="260" height="300" viewBox="0 0 260 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M130 6 L250 46 V146 C250 220 198 268 130 294 C62 268 10 220 10 146 V46 Z" fill="#EAF1FA" stroke="#1B4F8A" stroke-width="7"/>
+        <rect x="100" y="96" width="60" height="110" rx="12" fill="none" stroke="#1B4F8A" stroke-width="7"/>
+        <line x1="116" y1="114" x2="144" y2="114" stroke="#1B4F8A" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="130" cy="186" r="6" fill="#C47F00"/>
+      </svg>
+    </div>
+    <h1>iPhone Protection</h1>
+    <div class="tagline">Your simple guide to staying safe online</div>
+    <div class="divider"></div>
+    <div class="volume">VOLUME 1 OF 8</div>
+    <div class="features">PLAIN ENGLISH<span class="dot">&bull;</span>STEP BY STEP<span class="dot">&bull;</span>REAL AUSTRALIAN EXAMPLES</div>
+    <div class="author">Leon Tavares</div>
+    <div class="role">Banking &amp; Cybersecurity Professional, Sunshine Coast</div>
+    <div class="site">SFINCO.COM.AU</div>
+  </div>
+
+  <div class="bar-top"></div>
+  <div class="bar-bottom"></div>
+</body>
+</html>

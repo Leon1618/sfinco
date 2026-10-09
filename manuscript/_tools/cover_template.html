@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1B4F8A;
+    --amber:#C47F00;
+    --grey:#6b6f76;
+    --ink:#17191c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:1800px;height:2700px;background:#fff;}
+  body{font-family:'IBM Plex Sans',Arial,sans-serif;}
+  .bar-top{position:absolute;top:0;left:0;width:1800px;height:32px;background:var(--blue);}
+  .bar-bottom{position:absolute;bottom:0;left:0;width:1800px;height:32px;background:var(--amber);}
+  .stage{
+    position:absolute;top:0;left:0;width:1800px;height:2700px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;
+  }
+  .kicker{
+    color:var(--amber);font-weight:700;font-size:30px;letter-spacing:6px;
+    margin-bottom:14px;
+  }
+  .series{
+    color:var(--grey);font-weight:600;font-size:21px;letter-spacing:3px;
+    margin-bottom:60px;
+  }
+  .icon{margin-bottom:70px;}
+  h1.title{
+    font-family:'Fraunces',Georgia,serif;font-weight:900;font-style:normal;
+    color:var(--ink);font-size:108px;line-height:1;margin-bottom:38px;
+    letter-spacing:-1px;
+  }
+  .tagline{
+    font-family:'Fraunces',Georgia,serif;font-weight:600;font-style:italic;
+    color:var(--blue);font-size:44px;margin-bottom:48px;
+  }
+  .divider{width:110px;height:5px;background:var(--amber);margin-bottom:48px;}
+  .volume{
+    color:var(--grey);font-weight:600;font-size:26px;letter-spacing:3px;
+    margin-bottom:70px;
+  }
+  .features{
+    color:var(--blue);font-weight:700;font-size:22px;letter-spacing:2px;
+    margin-bottom:56px;
+  }
+  .features .dot{color:var(--amber);margin:0 18px;}
+  .author{
+    color:var(--ink);font-weight:700;font-size:40px;margin-bottom:14px;
+  }
+  .role{
+    color:var(--grey);font-weight:500;font-size:24px;margin-bottom:58px;
+  }
+  .site{
+    color:var(--grey);font-weight:600;font-size:21px;letter-spacing:3px;
+  }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="kicker">SFINCO GUIDES</div>
+    <div class="series">SERIES 1 &middot; PERSONAL PROTECTION</div>
+    <div class="icon">
+      <svg width="260" height="300" viewBox="0 0 260 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M130 6 L250 46 V146 C250 220 198 268 130 294 C62 268 10 220 10 146 V46 Z" fill="#EAF1FA" stroke="#1B4F8A" stroke-width="7"/>
+        <rect x="100" y="96" width="60" height="110" rx="12" fill="none" stroke="#1B4F8A" stroke-width="7"/>
+        <line x1="116" y1="114" x2="144" y2="114" stroke="#1B4F8A" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="130" cy="186" r="6" fill="#C47F00"/>
+      </svg>
+    </div>
+    <h1 class="title">iPhone Protection</h1>
+    <div class="tagline">Your simple guide to staying safe online</div>
+    <div class="divider"></div>
+    <div class="volume">VOLUME 1 OF 8</div>
+    <div class="features">PLAIN ENGLISH<span class="dot">&bull;</span>STEP BY STEP<span class="dot">&bull;</span>REAL AUSTRALIAN EXAMPLES</div>
+    <div class="author">AUTHOR_NAME</div>
+    <div class="role">Banking &amp; Cybersecurity Professional, Sunshine Coast</div>
+    <div class="site">SFINCO.COM.AU</div>
+  </div>
+  <div class="bar-top"></div>
+  <div class="bar-bottom"></div>
+</body>
+</html>
