@@ -13,7 +13,7 @@ Series: Sfinco Guides
 Volume: 1 of 8
 Category: Personal Digital Safety / Cybersecurity for Consumers
 Format: Non-fiction, instructional, plain-English guide
-Audience: Adults with limited technical background, particularly Australians aged 60–75
+Audience: Adults with any level of technical background, specially aged 60-75
 Region: Australia (Sunshine Coast, Queensland focus, nationally applicable)
 
 Publisher: Sfinco
