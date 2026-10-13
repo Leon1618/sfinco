@@ -12,7 +12,7 @@ Series: Sfinco Guides
 Volume: 6 of 8
 Category: Business Cybersecurity / Small Business Operations
 Format: Non-fiction, instructional, plain-English guide
-Audience: Small business owners and sole traders, particularly on the Sunshine Coast
+Audience: Small business owners and sole traders, specially on the Sunshine Coast
 Region: Australia (Sunshine Coast, Queensland focus, nationally applicable)
 
 Publisher: Sfinco

@@ -12,7 +12,7 @@ Series: Sfinco Guides
 Volume: 7 of 8
 Category: Nonprofit Cybersecurity / Community Organisation Operations
 Format: Non-fiction, instructional, plain-English guide
-Audience: Volunteers, committee members, and staff of small charities and not-for-profits, particularly on the Sunshine Coast
+Audience: Volunteers, committee members, and staff of small charities and not-for-profits, specially on the Sunshine Coast
 Region: Australia (Sunshine Coast, Queensland focus, nationally applicable)
 
 Publisher: Sfinco
