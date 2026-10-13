@@ -193,13 +193,13 @@ Sfinco Guides  ·  Volume 1
 
 # About the author
 
-Leon Tavares, author of the Sfinco Guides series, works in banking and technology on the Sunshine Coast in Queensland, with nearly two decades of experience across customer service, financial services, and digital security.
+Leonardo Pinheiro, author of the Sfinco Guides series, works in banking and technology on the Sunshine Coast in Queensland, with nearly two decades of experience across customer service, financial services, and digital security.
 
-Holding qualifications in cybersecurity, financial advising, and information technology, and completing further studies in digital security, Leon brings together a rare combination of technical knowledge and the ability to explain it clearly to people who have no interest in becoming technical experts.
+Holding qualifications in cybersecurity, financial advising, and information technology, and completing further studies in digital security, Leonardo brings together a rare combination of technical knowledge and the ability to explain it clearly to people who have no interest in becoming technical experts.
 
 The inspiration for this series came from years of seeing the same pattern: intelligent, capable, careful people being harmed by scams and digital threats, not because they were careless, but because nobody had ever given them a clear, practical guide to protecting themselves. That gap is what these books exist to close.
 
-Leon also volunteers with CoderDojo, teaching digital skills to young people on the Sunshine Coast, and has a background in community technology education across Australia and internationally.
+Leonardo also volunteers with CoderDojo, teaching digital skills to young people on the Sunshine Coast, and has a background in community technology education across Australia and internationally.
 
 Sfinco was founded on the belief that every Australian deserves to feel safe and confident in their digital life, regardless of their age, their technical background, or how much money they have.
 

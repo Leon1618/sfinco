@@ -28,7 +28,7 @@ sys.path.insert(0, HERE)
 import build_ebook_preview as B
 
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-AUTHOR = 'Leon Tavares'
+AUTHOR = 'Leonardo Pinheiro'
 YEAR = '2025'
 
 
@@ -257,6 +257,7 @@ def build_wraparound_cover(vol_dir, page_count, out_path, color_interior=False):
     total_h = bleed_px * 2 + 2700
 
     tpl = open(os.path.join(HERE, 'wraparound_template.html')).read()
+    tpl = tpl.replace('AUTHOR_NAME', AUTHOR)
     tpl = tpl.replace('width:3759px;height:2776px', f'width:{total_w}px;height:{total_h}px')
     tpl = tpl.replace('width:3759px;height:2776px;background', f'width:{total_w}px;height:{total_h}px;background')
     tpl = re.sub(r'width:3759px', f'width:{total_w}px', tpl)

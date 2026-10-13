@@ -43,7 +43,7 @@ $7.99 is roughly half the paperback price (a common convention), comfortably ins
 
 ## Still outstanding (not done here)
 
-- Author name "Leon Tavares" is applied consistently across the cover, back-cover blurb, in-book bio, and both production files. This reverses the earlier full-anonymisation pass for Volume 1 specifically — the other 7 volumes are untouched and still fully anonymised.
+- Author name is "Leonardo Pinheiro" (the original pen name, restored after briefly trying the real-name-adjacent "Leon Tavares"), applied consistently across the cover, back-cover blurb, in-book bio, and both production files. This reverses the earlier full-anonymisation pass for Volume 1 specifically — the other 7 volumes are untouched and still fully anonymised.
 - Trim size (6x9in) is my working assumption — confirm before final upload, it affects the cover's exact spine width if changed.
 - QR codes and ABN: Leo's own step.
 - Both prices above are estimates pending KDP's live calculator confirming the exact AU print cost at 118 pages.
