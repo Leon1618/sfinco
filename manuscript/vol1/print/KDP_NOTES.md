@@ -1,6 +1,21 @@
 # Volume 1 — KDP production notes
 
-## Paperback (interior.pdf + wraparound-cover.png)
+## KDP compliance checklist
+
+**Verified against KDP's published specs:**
+- Interior trim size is exactly 6 x 9 in (432 x 648 pt) — matches the declared trim size.
+- All fonts are embedded in interior.pdf (checked with `pdffonts`) — nothing will substitute at KDP's end.
+- 118 pages clears KDP's 79-page minimum for spine text to print at all (below that, KDP rejects any cover with spine text and makes you blank it out).
+- Cover has 0.125in bleed on all outer edges, interior has none — correct for a non-bleed interior with a full-bleed cover.
+- Cover pixel dimensions (3756 x 2776 px) match 300 DPI at the full bleed size for a 118pp B&W spine.
+- Margins (0.75in sides, 0.95in top, 0.85in bottom) clear KDP's gutter minimum for this page count.
+
+**Not verified — conflicting or unconfirmed, check KDP's live upload page before submitting:**
+- **Cover file format.** Some sources say KDP only accepts PDF, JPEG or TIFF for covers and rejects PNG; others don't mention this restriction. I've generated `.jpg` versions of both front-cover and wraparound-cover alongside the `.png` originals as a hedge — use the JPEG if KDP's uploader complains about the PNG.
+- **Cover colour space.** Sources disagree on whether KDP's print pipeline wants RGB (and converts internally) or CMYK (supplied pre-converted). Both the PNG and JPEG covers here are RGB. If KDP's uploader flags this, that's the fix needed, not a redo of the whole cover.
+- I did not run interior.pdf or the covers through KDP's own online previewer/checker — that's the actual authority, everything above is me checking against published specs, not KDP's own validation pass.
+
+## Paperback (interior.pdf + wraparound-cover.png / .jpg)
 
 - Trim size: 6 x 9 in (standard non-fiction default, not yet confirmed with Leo).
 - Interior: 118 pages, **black & white**. The in-text iPhone screenshots are converted to true grayscale (not left for the printer to desaturate), and the brand blue/amber accent colours in headings and callout boxes are swapped for two distinct greys, so interior.pdf shows exactly what the printed book will look like — TIP and WARNING boxes stay visually distinct even without colour.
