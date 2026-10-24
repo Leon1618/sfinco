@@ -11,7 +11,7 @@
 */
 (function () {
   // Which days can be picked. 0 = Sunday, 1 = Monday ... 6 = Saturday.
-  var CALL_DAYS = [0, 1, 2, 3, 4, 5, 6];
+  var CALL_DAYS = [1, 2, 3, 4, 5];
 
   // The time-of-day choices. "name" is the big word, "hours" sits underneath.
   var CALL_TIMES = [
@@ -40,6 +40,15 @@
   }
   // A message was just sent, so there's nothing to switch between.
   if (params.get("sent") === "true" || !messageForm) return;
+
+  // e.g. "Monday to Friday", for the date picker hint and error message.
+  var DAY_NAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var sortedDays = CALL_DAYS.slice().sort();
+  var consecutive = sortedDays.every(function (n, i) { return i === 0 || n === sortedDays[i - 1] + 1; });
+  var openDays = sortedDays.length === 7 ? "" :
+    consecutive && sortedDays.length > 2
+      ? DAY_NAMES[sortedDays[0]] + " to " + DAY_NAMES[sortedDays[sortedDays.length - 1]]
+      : sortedDays.map(function (n) { return DAY_NAMES[n]; }).join(", ");
 
   function longDate(d) {
     return d.toLocaleDateString("en-AU", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
@@ -83,7 +92,7 @@
         "<legend>1. Which day suits you?</legend>" +
         '<div class="day-grid" id="day-grid"></div>' +
         '<div class="other-date">' +
-          '<label for="call-date">Need a date further out? Choose it here</label>' +
+          '<label for="call-date">Need a date further out? Choose it here' + (openDays ? " (" + openDays + " only)" : "") + "</label>" +
           '<input type="date" id="call-date" name="Preferred date">' +
         "</div>" +
       "</fieldset>" +
@@ -179,7 +188,7 @@
     var picked = pickedDate();
     if (!chosenDay()) { problems.push("a day"); first = first || grid.querySelector("input"); }
     else if (picked && (!dateInput.checkValidity() || CALL_DAYS.indexOf(picked.getDay()) === -1)) {
-      problems.push("a different date (that one isn't available)");
+      problems.push(openDays ? "a date from " + openDays + " in the next three months" : "a date in the next three months");
       first = first || dateInput;
     }
     if (!chosenTime()) { problems.push("a time of day"); first = first || form.querySelector('input[name="Time of day"]'); }
