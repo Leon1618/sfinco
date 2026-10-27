@@ -84,7 +84,18 @@ if (localStorage.getItem("sfinco-theme") === "dark") {
           <button class="btn btn-primary" type="submit">Check this for me</button>
         </div>
       </form>
-      <div id="home-scam-result"></div>
+      <div id="home-scam-result" role="status" aria-live="polite"></div>
+
+      <details class="scam-help" id="scam-help">
+        <summary>Already clicked, replied or paid?</summary>
+        <p>Acting quickly helps, so start with whichever of these fits.</p>
+        <ol>
+          <li><strong>If you paid, or shared card or bank details,</strong> call your bank's fraud line now, using the number on the back of your card. Banks can sometimes stop or recover a payment if they hear about it quickly.</li>
+          <li><strong>If you typed in a password,</strong> change it straight away on the real website or app, and anywhere else you use the same one.</li>
+          <li><strong>If you shared personal details</strong> like your driver's licence, Medicare or passport number, call IDCARE on <a href="tel:1800595160">1800 595 160</a>. It's free, and they'll help you work out what to do next.</li>
+        </ol>
+        <p>Not sure which applies? The Australian Cyber Security Hotline on <a href="tel:1300292371">1300 292 371</a> can talk it through with you.</p>
+      </details>
     </div>
 
     <div class="safety-panel">
@@ -289,28 +300,52 @@ if (localStorage.getItem("sfinco-theme") === "dark") {
     return textFlags.concat(checkLinks(text));
   }
 
+  var nextSteps =
+    "<h3>What to do now</h3><ol>" +
+    "<li>Don't reply, and don't tap any link or call any number in it.</li>" +
+    "<li>If you want to know whether it's real, contact the organisation yourself on a number you already trust, like the one on your bank card or their official website.</li>" +
+    '<li>Report it at <a href="https://www.scamwatch.gov.au/report-a-scam" target="_blank" rel="noopener">Scamwatch</a> if you like, then delete it.</li>' +
+    "</ol>";
+  var helpLink = '<p class="scam-help-link"><a href="#scam-help">Already clicked, replied or paid? Here\'s what to do.</a></p>';
+
   var form = document.getElementById("home-scam-check-form");
   if (!form) return;
+  var textarea = document.getElementById("home-scam-text");
+  var result = document.getElementById("home-scam-result");
+  var help = document.getElementById("scam-help");
+
+  textarea.addEventListener("input", function () {
+    textarea.removeAttribute("aria-invalid");
+  });
+
+  result.addEventListener("click", function (e) {
+    if (e.target.closest('a[href="#scam-help"]')) help.open = true;
+  });
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    var text = document.getElementById("home-scam-text").value.trim();
-    var result = document.getElementById("home-scam-result");
-    if (!text) return;
+    var text = textarea.value.trim();
+    if (!text) {
+      textarea.setAttribute("aria-invalid", "true");
+      result.innerHTML = '<p class="form-error">Paste the message into the box first, then press "Check this for me".</p>';
+      textarea.focus();
+      return;
+    }
+    textarea.removeAttribute("aria-invalid");
 
     var matches = checkMessage(text);
     var html;
     if (matches.length === 0) {
-      html = '<div class="callout blue"><h3>Nothing obvious jumped out</h3><p>That doesn\'t guarantee it\'s genuine. If it still feels off, trust that instinct, and use the numbers below to check directly with the organisation.</p></div>';
+      html = '<div class="callout blue"><h3>Nothing obvious jumped out</h3><p>That doesn\'t guarantee it\'s genuine. If it still feels off, trust that instinct, and contact the organisation yourself on a number you already trust, not one from the message.</p>' + helpLink + "</div>";
     } else {
       html = '<div class="callout"><h3>' + matches.length + (matches.length === 1 ? " thing" : " things") + " worth a second look</h3><ul>";
       matches.forEach(function (m) {
         html += "<li><strong>" + m.label + ":</strong> " + m.tip + "</li>";
       });
-      html += "</ul></div>";
+      html += "</ul>" + nextSteps + helpLink + "</div>";
     }
     result.innerHTML = html;
-    result.scrollIntoView({ behavior: "smooth", block: "center" });
+    result.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 })();
 </script>

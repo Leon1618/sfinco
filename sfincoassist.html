@@ -62,6 +62,10 @@ if (localStorage.getItem("sfinco-theme") === "dark") {
     <div class="callout blue">
       <h3>Prefer a real conversation instead?</h3>
       <p>A <a href="check-up.html">Digital Check-up</a> covers a lot of the same ground: a real, plain-English conversation about your phone and accounts, done together on a call, no app required.</p>
+
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#book-call">Book a free call</a>
+      </div>
     </div>
   </div>
 </section>
@@ -152,6 +156,9 @@ if (localStorage.getItem("sfinco-theme") === "dark") {
     <h2>Start with a conversation</h2>
     <p class="section-intro">Send through a few details and you'll hear back personally, usually within a couple of business days.</p>
 
+    <div data-book-call="Personal Cyber Awareness"></div>
+
+
     <div id="enquiry-sent" class="hidden">
       <p><strong>Thanks, that's through.</strong> You'll hear back personally, usually within a couple of business days.</p>
     </div>
@@ -213,6 +220,7 @@ if (localStorage.getItem("sfinco-theme") === "dark") {
 </footer>
 
 <script src="search.js?v=2"></script>
+<script src="book-call.js?v=2"></script>
 <script>
 (function () {
   var toggle = document.getElementById("nav-toggle");
