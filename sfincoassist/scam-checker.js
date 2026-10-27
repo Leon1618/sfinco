@@ -19,7 +19,9 @@ function checkLinks(text) {
     });
   }
 
-  if (bankKeywords.some((k) => lower.includes(k)) && !lower.includes(".com.au") && !lower.includes(".gov.au")) {
+  // only a message that actually contains a link can have a lookalike one
+  const hasLink = /https?:\/\/|www\.|\b[a-z0-9][a-z0-9-]*\.[a-z]{2,}\b/.test(lower);
+  if (hasLink && bankKeywords.some((k) => lower.includes(k)) && !lower.includes(".com.au") && !lower.includes(".gov.au")) {
     flags.push({
       label: "Possible lookalike website",
       tip: "This mentions a bank or government name but doesn't go to a proper .com.au or .gov.au address. Type the real website in yourself instead.",

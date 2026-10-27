@@ -124,7 +124,7 @@ const scamSignals = [
   },
   {
     label: "Moves the chat somewhere private",
-    regex: /\b(whatsapp|telegram|signal)\b.{0,40}\binstead\b|\binstead\b.{0,40}\b(whatsapp|telegram)\b/i,
+    regex: /\b(whatsapp|telegram|signal)\b.{0,40}\binstead of (here|this)\b/i,
     tip: "Scammers often move you off a dating site or marketplace to WhatsApp or Telegram, where nobody is watching and you can't report them. Take care if this is someone you've only just met.",
   },
   {
@@ -134,7 +134,7 @@ const scamSignals = [
   },
   {
     label: "Asks you to keep it secret",
-    regex: /(?=.*\b(don'?t tell|do not tell|keep (this|it) (a )?secret|between (you and me|us))\b)(?=.*(\$|\bmoney\b|\btransfer\b|\bsend\b|\bpay\b|\bbank\b))/is,
+    regex: /(?=.*\b(don'?t tell|do not tell|keep (this|it) (a )?secret|between (you and me|us))\b)(?=.*(\$|\bmoney\b|\btransfer\b|\bbank\b))/is,
     tip: "Being told to keep it from your family is a classic scam move, because they're the ones who'd spot it. Check the story with them first, using a number you already have.",
   },
 ];
