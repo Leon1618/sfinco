@@ -1181,7 +1181,7 @@ function renderQuiz() {
   const okBtn = document.createElement("button");
   okBtn.type = "button";
   okBtn.className = "swipe-choice-btn swipe-choice-ok";
-  okBtn.setAttribute("aria-label", "Looks okay");
+  okBtn.setAttribute("aria-label", "Looks genuine");
   okBtn.innerHTML = '<span class="swipe-choice-circle"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="swipe-choice-label">Genuine</span>';
 
   let answered = false;
