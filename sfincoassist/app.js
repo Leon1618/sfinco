@@ -84,6 +84,7 @@ document.getElementById("profile-name-form").addEventListener("submit", (e) => {
     localStorage.removeItem(USERNAME_KEY);
   }
   applyGreeting();
+  renderSavedData();
 });
 
 const profileDialog = document.getElementById("profile-dialog");
@@ -100,7 +101,10 @@ function openDialog(dialog) {
   dialog.scrollTop = 0;
 }
 
-document.getElementById("profile-btn").addEventListener("click", () => openDialog(profileDialog));
+document.getElementById("profile-btn").addEventListener("click", () => {
+  renderSavedData();
+  openDialog(profileDialog);
+});
 document.getElementById("help-btn").addEventListener("click", () => openDialog(helpDialog));
 document.getElementById("profile-close-btn").addEventListener("click", () => profileDialog.close());
 document.getElementById("help-close-btn").addEventListener("click", () => helpDialog.close());
@@ -125,26 +129,94 @@ document.getElementById("scam-alerts-ai-link").addEventListener("click", () => {
   });
 });
 
-document.getElementById("clear-data-btn").addEventListener("click", () => {
-  const snapshot = {
-    username: localStorage.getItem(USERNAME_KEY),
-    contact: localStorage.getItem(CONTACT_KEY),
-    passphrase: localStorage.getItem(PASSPHRASE_KEY),
-  };
-  localStorage.removeItem(USERNAME_KEY);
-  localStorage.removeItem(CONTACT_KEY);
-  localStorage.removeItem(PASSPHRASE_KEY);
+/* ---------- Your data: what's saved on this device ---------- */
+
+function personalKeys() {
+  return [USERNAME_KEY, CONTACT_KEY, PASSPHRASE_KEY, STREAK_KEY, STREAK_DATE_KEY, STREAK_GRACE_KEY, BEST_STREAK_KEY];
+}
+
+function snapshotKeys(keys) {
+  const snapshot = {};
+  keys.forEach((key) => { snapshot[key] = localStorage.getItem(key); });
+  return snapshot;
+}
+
+function restoreKeys(snapshot) {
+  Object.entries(snapshot).forEach(([key, value]) => {
+    if (value !== null) localStorage.setItem(key, value);
+  });
+}
+
+function refreshPersonalData() {
   applyGreeting();
   renderTrustedContact();
   renderPassphrase();
+  renderStreak();
+  renderSavedData();
+}
+
+function removePersonalData(keys, message) {
+  const snapshot = snapshotKeys(keys);
+  keys.forEach((key) => localStorage.removeItem(key));
+  refreshPersonalData();
+  showUndo(message, () => {
+    restoreKeys(snapshot);
+    refreshPersonalData();
+  });
+}
+
+function renderSavedData() {
+  const list = document.getElementById("saved-data-list");
+  if (!list) return;
+  list.innerHTML = "";
+
+  const name = localStorage.getItem(USERNAME_KEY);
+  const contact = loadTrustedContact();
+  const streak = getStreak();
+  const best = getBestStreak();
+  const items = [
+    { label: "Your name", value: name, keys: [USERNAME_KEY], message: "Your name was removed." },
+    { label: "Trusted contact", value: contact ? `${contact.name}, ${contact.phone}` : null, keys: [CONTACT_KEY], message: "Trusted contact removed." },
+    { label: "Family passphrase", value: loadPassphrase() ? "Saved (hidden)" : null, keys: [PASSPHRASE_KEY], message: "Family passphrase removed." },
+    { label: "Practice streak", value: streak > 0 || best > 0 ? `${streak}-day streak, best ${best}` : null, keys: [STREAK_KEY, STREAK_DATE_KEY, STREAK_GRACE_KEY, BEST_STREAK_KEY], message: "Practice streak cleared." },
+  ];
+
+  items.forEach((item) => {
+    const li = document.createElement("li");
+    li.className = "saved-data-item";
+
+    const text = document.createElement("div");
+    text.className = "saved-data-text";
+    const label = document.createElement("strong");
+    label.textContent = item.label;
+    const value = document.createElement("span");
+    value.className = item.value ? "saved-data-value" : "saved-data-value is-empty";
+    value.textContent = item.value || "Not saved";
+    text.append(label, value);
+    li.appendChild(text);
+
+    if (item.value) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "remove-btn";
+      btn.textContent = "Remove";
+      btn.setAttribute("aria-label", `Remove ${item.label.toLowerCase()}`);
+      btn.addEventListener("click", () => removePersonalData(item.keys, item.message));
+      li.appendChild(btn);
+    }
+
+    list.appendChild(li);
+  });
+}
+
+document.getElementById("clear-data-btn").addEventListener("click", () => {
+  const snapshot = snapshotKeys(personalKeys());
+  personalKeys().forEach((key) => localStorage.removeItem(key));
+  refreshPersonalData();
   profileDialog.close();
   showUndo("Your data was cleared.", () => {
-    if (snapshot.username) localStorage.setItem(USERNAME_KEY, snapshot.username);
-    if (snapshot.contact) localStorage.setItem(CONTACT_KEY, snapshot.contact);
-    if (snapshot.passphrase) localStorage.setItem(PASSPHRASE_KEY, snapshot.passphrase);
-    applyGreeting();
-    renderTrustedContact();
-    renderPassphrase();
+    restoreKeys(snapshot);
+    refreshPersonalData();
   });
 });
 
