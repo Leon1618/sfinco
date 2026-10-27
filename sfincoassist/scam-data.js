@@ -114,7 +114,7 @@ const scamSignals = [
   },
   {
     label: "Too good to be true",
-    regex: /\b(you'?ve won|lottery|prize|claim your reward|congratulations you)\b/i,
+    regex: /\b(you'?ve won|lottery|prize|claim your reward|congratulations you|selected to win)\b/i,
     tip: "Unexpected prizes or winnings almost always come with a catch. If you didn't enter, you can't have won.",
   },
   {

@@ -24,7 +24,7 @@ module.exports = [
   { scam: true, text: "Dear customer, your NetBank access has been limited. Click here to restore it: netbank-secure.net" },
   { scam: true, gap: true, text: "To complete verification please send a photo of your driver licence and Medicare card." },
   { scam: true, text: "We have changed our bank details. Please pay the attached invoice to the new account, BSB 062-000 account number 1234 5678." },
-  { scam: true, gap: true, text: "You have been selected to win an iPhone 15. Claim now before it expires." },
+  { scam: true, text: "You have been selected to win an iPhone 15. Claim now before it expires." },
   { scam: true, text: "I need $3,000 for a plane ticket so I can come and see you. I will pay you back, please keep this between us." },
   { scam: true, gap: true, text: "You are eligible for a $5,000 government grant. Pay a $50 processing fee to release your funds." },
   { scam: true, gap: true, text: "Parking fine notice: scan this QR code to pay the $45 fee today to avoid a late penalty." },
@@ -61,5 +61,6 @@ module.exports = [
   { scam: false, text: "Your appointment at Noosa Dental is confirmed for Tuesday 14 October at 10am." },
   { scam: false, text: "I just paid the plumber $240 by bank transfer, let me know when you're home so he can come back." },
   { scam: false, text: "Your parcel from Amazon has been delivered. Total $29.99." },
+  { scam: false, text: "Woolworths Rewards: you have 500 points ready to claim now in the app." },
   { scam: false, falseAlarm: true, text: "Gift cards for the grandkids are half price at Coles this week, if you're after something easy." },
 ];
