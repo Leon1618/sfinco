@@ -301,7 +301,7 @@ const scamSignals = [
   },
   {
     label: "Wants payment in an unusual way",
-    regex: /\b(gift card|itunes card|google play card|wire transfer|cryptocurrency|bitcoin|western union)\b/i,
+    regex: /\b(gift cards?|itunes cards?|google play cards?|wire transfer|cryptocurrency|bitcoin|western union)\b/i,
     tip: "No legitimate bill, fine, or debt is ever paid with gift cards or crypto. This is one of the strongest scam signs there is.",
   },
   {
