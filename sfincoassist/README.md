@@ -17,3 +17,12 @@ Also: large-text and light/dark theme toggles, a right-to-left thread of "next s
 **Phase 2** (real-time Open Banking data) needs CDR accreditation, and possibly an AFSL, before it can touch a real account. Do not wire this prototype up to any live financial feed without that in place.
 
 Open `index.html` directly in a browser, or run `python3 -m http.server` from the repo root and visit `/sfincoassist/`. No build step. The screenshot-reading feature loads a ~2-4MB OCR library from a CDN on first use, needing an internet connection the first time, cached after.
+
+## Updating the scam alerts and warning signs
+
+The scam alerts shown on the Scam Alerts tab, and the warning signs the Check a message tool looks for, live in one file: `scam-data.js`. The checker logic is in `scam-checker.js`. To update:
+
+1. Edit `scam-data.js` (add an alert, or add or tweak a warning sign). If you changed the alerts, update `SCAM_ALERTS_UPDATED` too.
+2. Run `node sfincoassist/test/eval-checker.js` (once the test folder exists) to check the change didn't cause false alarms or break existing catches.
+3. Bump the `?v=` number on the `scam-data.js` script tag in `index.html`, and the matching numbers and `CACHE_NAME` in `sw.js`, so installed copies pick up the change.
+4. Push to `main`. GitHub Pages republishes automatically.
