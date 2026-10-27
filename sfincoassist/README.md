@@ -23,6 +23,6 @@ Open `index.html` directly in a browser, or run `python3 -m http.server` from th
 The scam alerts shown on the Scam Alerts tab, and the warning signs the Check a message tool looks for, live in one file: `scam-data.js`. The checker logic is in `scam-checker.js`. To update:
 
 1. Edit `scam-data.js` (add an alert, or add or tweak a warning sign). If you changed the alerts, update `SCAM_ALERTS_UPDATED` too.
-2. Run `node sfincoassist/test/eval-checker.js` (once the test folder exists) to check the change didn't cause false alarms or break existing catches.
+2. Run `node sfincoassist/test/eval-checker.js` to check the change didn't cause false alarms or break existing catches.
 3. Bump the `?v=` number on the `scam-data.js` script tag in `index.html`, and the matching numbers and `CACHE_NAME` in `sw.js`, so installed copies pick up the change.
 4. Push to `main`. GitHub Pages republishes automatically.
