@@ -314,6 +314,26 @@ const scamSignals = [
     regex: /\b(you'?ve won|lottery|prize|claim your reward|congratulations you)\b/i,
     tip: "Unexpected prizes or winnings almost always come with a catch. If you didn't enter, you can't have won.",
   },
+  {
+    label: "Asks you to upgrade an account to get paid",
+    regex: /(?=.*\bupgrade\b.{0,40}\baccount\b)(?=.*\b(pay|paid|paypal)\b)/is,
+    tip: "Buyers never need you to upgrade or verify an account just to pay you. It's a common trick to steal your login or card details. Don't use the link, go to the site yourself instead.",
+  },
+  {
+    label: "Moves the chat somewhere private",
+    regex: /\b(whatsapp|telegram|signal)\b.{0,40}\binstead\b|\binstead\b.{0,40}\b(whatsapp|telegram)\b/i,
+    tip: "Scammers often move you off a dating site or marketplace to WhatsApp or Telegram, where nobody is watching and you can't report them. Take care if this is someone you've only just met.",
+  },
+  {
+    label: "Promises big, fast returns",
+    regex: /\b(guaranteed (returns?|profits?|income)|turn \$?\d[\d,]*\s+into\s+\$?\d[\d,]*|double your (money|investment)|risk[- ]free|limited spots|\d+%\s+(returns?|profit)\s+(in|per|a|every)\s+(a\s+)?(day|week|month))\b/i,
+    tip: "Real investments can't promise big profits in days. Countdowns and \"limited spots\" are there to rush you. Check the company on ASIC's free register before you put any money in.",
+  },
+  {
+    label: "Asks you to keep it secret",
+    regex: /(?=.*\b(don'?t tell|do not tell|keep (this|it) (a )?secret|between (you and me|us))\b)(?=.*(\$|\bmoney\b|\btransfer\b|\bsend\b|\bpay\b|\bbank\b))/is,
+    tip: "Being told to keep it from your family is a classic scam move, because they're the ones who'd spot it. Check the story with them first, using a number you already have.",
+  },
 ];
 
 const shortenerDomains = ["bit.ly", "tinyurl.com", "t.co", "goo.gl", "ow.ly", "is.gd", "buff.ly"];
