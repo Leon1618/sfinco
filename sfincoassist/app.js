@@ -364,7 +364,7 @@ function checkMessage(text) {
 function resultToText(text, matches) {
   const lines = ["Sfinco scam check:"];
   if (matches.length === 0) {
-    lines.push("No obvious warning signs found. If it still feels off, trust that instinct.");
+    lines.push("No obvious warning signs found. This check can miss scams, so check with the organisation using a number you already know.");
   } else {
     matches.forEach((m) => lines.push(`- ${m.label}: ${m.tip}`));
   }
@@ -411,7 +411,7 @@ function renderScamResult(text, matches, hasText) {
     const card = document.createElement("div");
     card.className = "sample-card notice";
     const p = document.createElement("p");
-    p.textContent = "We didn't spot the usual warning signs in this one. That's a good sign, but if something still feels off, trust that instinct. Call the organisation directly using a number you already know, not one from the message.";
+    p.textContent = "We didn't spot any of the usual warning signs, but that doesn't mean it's safe. This check can miss scams, so before you click, pay or reply, check with the organisation using a number you already know, not one from the message.";
     card.appendChild(p);
     wrapper.appendChild(card);
   } else {
