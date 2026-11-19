@@ -142,6 +142,11 @@ const scamSignals = [
     regex: /\b(you are|you're|you have been) (owed|eligible for|entitled to) (a |an )?(\$[\d,.]+ )?(\w+ )?(refund|rebate|grant)\b|\b(refund|rebate|grant)\b.{0,40}\b(waiting|pending|unclaimed|ready to claim|available to claim)\b/i,
     tip: "Government agencies don't text or email to say you're owed money, and they never ask you to click a link to claim it. Log in to the real website yourself to check.",
   },
+  {
+    label: "Asks for a fee to release money",
+    regex: /\b(fee|charge)\b.{0,50}\b(release|unlock|receive|collect) (your )?(funds|money|parcel|package|winnings|prize|grant|payment)\b|\b(release|unlock) (your )?(funds|money|parcel|package|winnings|grant)\b.{0,40}\b(fee|charge)\b/is,
+    tip: "Genuine refunds, grants and winnings never need you to pay a fee first. Paying to \"release\" money is how the scam works.",
+  },
 ];
 
 const shortenerDomains = ["bit.ly", "tinyurl.com", "t.co", "goo.gl", "ow.ly", "is.gd", "buff.ly"];

@@ -68,4 +68,6 @@ module.exports = [
   { scam: false, text: "You're eligible for a free flu shot at your local pharmacy this month." },
   { scam: false, text: "Your tax refund of $412 has been paid into your account ending 4521." },
   { scam: false, text: "You are eligible for a payment plan on your rates, call the council to set one up." },
+  { scam: true, text: "A $40 fee is required to release your winnings. Pay today to avoid losing them." },
+  { scam: false, text: "A $2 processing fee applies to card payments at the surf club canteen." },
 ];
