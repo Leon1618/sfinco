@@ -14,7 +14,7 @@ module.exports = [
   { scam: true, text: "Medicare: you are owed a refund of $212.50. Claim it at medicare-refunds.com" },
   { scam: true, gap: true, text: "Hi Mum, this is my new number, my old phone broke. Save this one and message me on WhatsApp." },
   { scam: true, gap: true, text: "NAB: a payment of $1,490 to J Smith was just made. If this wasn't you, call 1800 555 0123 now." },
-  { scam: true, gap: true, text: "StarTrack: your parcel is on hold. Reschedule delivery at startrack-delivery.net" },
+  { scam: true, text: "StarTrack: your parcel is on hold. Reschedule delivery at startrack-delivery.net" },
   { scam: true, gap: true, text: "I made $12,000 last month with this platform. My mentor can teach you too, message me and I'll show you how." },
   { scam: true, gap: true, text: "Your Windows licence has expired. Call Microsoft support on 1300 000 000 to renew." },
   { scam: true, gap: true, text: "Work from home and earn $500 a day liking videos. No experience needed. Message us on WhatsApp to start." },
@@ -70,4 +70,9 @@ module.exports = [
   { scam: false, text: "You are eligible for a payment plan on your rates, call the council to set one up." },
   { scam: true, text: "A $40 fee is required to release your winnings. Pay today to avoid losing them." },
   { scam: false, text: "A $2 processing fee applies to card payments at the surf club canteen." },
+  { scam: true, text: "DHL: your package is held at customs, pay the $2.50 clearance fee at dhl-customs.net" },
+  { scam: true, text: "AusPost: We attempted delivery but nobody was home. Rebook your delivery here: auspost-rebook.com" },
+  { scam: false, text: "Your parcel from Kmart is on hold at the post office, collect it with your ID by Friday." },
+  { scam: false, text: "Your Woolworths delivery was missed, we'll try again tomorrow. Track it in the app." },
+  { scam: false, text: "DHL: your parcel is on hold, track it at dhl.com.au/track" },
 ];

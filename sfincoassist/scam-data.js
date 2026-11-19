@@ -147,6 +147,11 @@ const scamSignals = [
     regex: /\b(fee|charge)\b.{0,50}\b(release|unlock|receive|collect) (your )?(funds|money|parcel|package|winnings|prize|grant|payment)\b|\b(release|unlock) (your )?(funds|money|parcel|package|winnings|grant)\b.{0,40}\b(fee|charge)\b/is,
     tip: "Genuine refunds, grants and winnings never need you to pay a fee first. Paying to \"release\" money is how the scam works.",
   },
+  {
+    label: "Delivery problem with a link",
+    regex: /(?=.*(https?:\/\/|www\.|\b[a-z0-9][a-z0-9-]*\.(com|net|org|info|co|xyz|top|biz|online|site|link|click)\b))(?!.*\.(com|gov)\.au)(?=.*\b(parcel|package|delivery)\b.{0,60}\b(on hold|held|could not be delivered|failed|missed|reschedule|redeliver|redelivery|unpaid|attempted|rebook|re-book|nobody (was )?home|unable to deliver)\b)/is,
+    tip: "Real couriers rarely ask you to reschedule or pay through a link in a text. Use the tracking number on their official website or app instead.",
+  },
 ];
 
 const shortenerDomains = ["bit.ly", "tinyurl.com", "t.co", "goo.gl", "ow.ly", "is.gd", "buff.ly"];
