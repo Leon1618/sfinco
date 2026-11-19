@@ -162,6 +162,11 @@ const scamSignals = [
     regex: /\b(earn|make)\b.{0,15}\$?\d[\d,]*\s*(a|per|\/)\s*(day|hour|week)\b.{0,80}\b(no experience|from home|liking|rating|reviews?)\b|\bno experience (needed|required|necessary)\b.{0,80}\b(earn|\$\d)/is,
     tip: "Real jobs don't pay hundreds of dollars a day for liking videos or writing reviews. These offers usually lead to a request for money or personal details.",
   },
+  {
+    label: "Rental asking for money before you've seen it",
+    regex: /\b(overseas|abroad|out of (the )?country)\b.{0,100}\b(bond|deposit|keys)\b/is,
+    tip: "Never pay a bond or deposit for a rental you haven't inspected, especially to someone who says they're overseas and will post the keys. Real agents let you see the place first.",
+  },
 ];
 
 const shortenerDomains = ["bit.ly", "tinyurl.com", "t.co", "goo.gl", "ow.ly", "is.gd", "buff.ly"];

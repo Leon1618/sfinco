@@ -18,7 +18,7 @@ module.exports = [
   { scam: true, gap: true, text: "I made $12,000 last month with this platform. My mentor can teach you too, message me and I'll show you how." },
   { scam: true, text: "Your Windows licence has expired. Call Microsoft support on 1300 000 000 to renew." },
   { scam: true, text: "Work from home and earn $500 a day liking videos. No experience needed. Message us on WhatsApp to start." },
-  { scam: true, gap: true, text: "Beautiful 2 bed unit, rent only $250 a week. I'm overseas so please send the bond by bank transfer and I'll post you the keys." },
+  { scam: true, text: "Beautiful 2 bed unit, rent only $250 a week. I'm overseas so please send the bond by bank transfer and I'll post you the keys." },
   { scam: true, text: "I have recorded you through your webcam. Send $2000 in bitcoin within 48 hours or I will send the video to all your contacts." },
   { scam: true, text: "AGL: Your bill is overdue. Pay immediately to avoid disconnection: agl-billing.com" },
   { scam: true, text: "Dear customer, your NetBank access has been limited. Click here to restore it: netbank-secure.net" },
@@ -79,4 +79,6 @@ module.exports = [
   { scam: false, text: "Your Microsoft 365 subscription renews on 3 December. Manage it any time in your account settings." },
   { scam: true, text: "Earn $300 per day from home rating products, no experience required." },
   { scam: false, text: "We're hiring casual kitchen hands at the surf club, $28 an hour, no experience needed, just bring a smile." },
+  { scam: true, text: "Gorgeous unit for rent, I'm currently abroad so I'll need the deposit first, then I'll courier the keys." },
+  { scam: false, text: "Rental inspection Saturday 10am. Bond and first week's rent are due on signing, I'll post you the keys after." },
 ];
