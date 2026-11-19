@@ -137,6 +137,11 @@ const scamSignals = [
     regex: /(?=.*\b(don'?t tell|do not tell|keep (this|it) (a )?secret|between (you and me|us))\b)(?=.*(\$|\bmoney\b|\btransfer\b|\bbank\b))/is,
     tip: "Being told to keep it from your family is a classic scam move, because they're the ones who'd spot it. Check the story with them first, using a number you already have.",
   },
+  {
+    label: "Unexpected refund or grant",
+    regex: /\b(you are|you're|you have been) (owed|eligible for|entitled to) (a |an )?(\$[\d,.]+ )?(\w+ )?(refund|rebate|grant)\b|\b(refund|rebate|grant)\b.{0,40}\b(waiting|pending|unclaimed|ready to claim|available to claim)\b/i,
+    tip: "Government agencies don't text or email to say you're owed money, and they never ask you to click a link to claim it. Log in to the real website yourself to check.",
+  },
 ];
 
 const shortenerDomains = ["bit.ly", "tinyurl.com", "t.co", "goo.gl", "ow.ly", "is.gd", "buff.ly"];

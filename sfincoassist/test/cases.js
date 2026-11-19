@@ -11,7 +11,7 @@
 module.exports = [
   // ----- scams -----
   { scam: true, text: "Linkt: You have an unpaid toll of $8.45. Pay within 24 hours to avoid a $150 fine: linkt-pay.info" },
-  { scam: true, gap: true, text: "Medicare: you are owed a refund of $212.50. Claim it at medicare-refunds.com" },
+  { scam: true, text: "Medicare: you are owed a refund of $212.50. Claim it at medicare-refunds.com" },
   { scam: true, gap: true, text: "Hi Mum, this is my new number, my old phone broke. Save this one and message me on WhatsApp." },
   { scam: true, gap: true, text: "NAB: a payment of $1,490 to J Smith was just made. If this wasn't you, call 1800 555 0123 now." },
   { scam: true, gap: true, text: "StarTrack: your parcel is on hold. Reschedule delivery at startrack-delivery.net" },
@@ -26,7 +26,7 @@ module.exports = [
   { scam: true, text: "We have changed our bank details. Please pay the attached invoice to the new account, BSB 062-000 account number 1234 5678." },
   { scam: true, text: "You have been selected to win an iPhone 15. Claim now before it expires." },
   { scam: true, text: "I need $3,000 for a plane ticket so I can come and see you. I will pay you back, please keep this between us." },
-  { scam: true, gap: true, text: "You are eligible for a $5,000 government grant. Pay a $50 processing fee to release your funds." },
+  { scam: true, text: "You are eligible for a $5,000 government grant. Pay a $50 processing fee to release your funds." },
   { scam: true, gap: true, text: "Parking fine notice: scan this QR code to pay the $45 fee today to avoid a late penalty." },
   { scam: true, text: "ATO: you have an unpaid tax debt. A warrant has been issued. Pay now with gift cards." },
   { scam: true, text: "Hi Mum, I lost my phone, this is my new number. I need to pay a bill today but my banking app is locked. Can you transfer $850? Don't tell Dad yet." },
@@ -63,4 +63,9 @@ module.exports = [
   { scam: false, text: "Your parcel from Amazon has been delivered. Total $29.99." },
   { scam: false, text: "Woolworths Rewards: you have 500 points ready to claim now in the app." },
   { scam: false, falseAlarm: true, text: "Gift cards for the grandkids are half price at Coles this week, if you're after something easy." },
+  { scam: true, text: "Congratulations, you're entitled to a $1,200 rebate. Pay a $30 admin fee to claim it." },
+  { scam: true, text: "ATO: You have a tax refund of $890 waiting. Claim now at ato-refund.info" },
+  { scam: false, text: "You're eligible for a free flu shot at your local pharmacy this month." },
+  { scam: false, text: "Your tax refund of $412 has been paid into your account ending 4521." },
+  { scam: false, text: "You are eligible for a payment plan on your rates, call the council to set one up." },
 ];
