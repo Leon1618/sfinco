@@ -15,7 +15,7 @@ module.exports = [
   { scam: true, gap: true, text: "Hi Mum, this is my new number, my old phone broke. Save this one and message me on WhatsApp." },
   { scam: true, gap: true, text: "NAB: a payment of $1,490 to J Smith was just made. If this wasn't you, call 1800 555 0123 now." },
   { scam: true, text: "StarTrack: your parcel is on hold. Reschedule delivery at startrack-delivery.net" },
-  { scam: true, gap: true, text: "I made $12,000 last month with this platform. My mentor can teach you too, message me and I'll show you how." },
+  { scam: true, text: "I made $12,000 last month with this platform. My mentor can teach you too, message me and I'll show you how." },
   { scam: true, text: "Your Windows licence has expired. Call Microsoft support on 1300 000 000 to renew." },
   { scam: true, text: "Work from home and earn $500 a day liking videos. No experience needed. Message us on WhatsApp to start." },
   { scam: true, text: "Beautiful 2 bed unit, rent only $250 a week. I'm overseas so please send the bond by bank transfer and I'll post you the keys." },
@@ -81,4 +81,6 @@ module.exports = [
   { scam: false, text: "We're hiring casual kitchen hands at the surf club, $28 an hour, no experience needed, just bring a smile." },
   { scam: true, text: "Gorgeous unit for rent, I'm currently abroad so I'll need the deposit first, then I'll courier the keys." },
   { scam: false, text: "Rental inspection Saturday 10am. Bond and first week's rent are due on signing, I'll post you the keys after." },
+  { scam: true, text: "I turned $500 into $9,000 in a month with this crypto trading group, message me to join." },
+  { scam: false, text: "I made $200 at the markets selling jam, thanks for the jars!" },
 ];

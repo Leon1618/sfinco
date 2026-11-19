@@ -167,6 +167,11 @@ const scamSignals = [
     regex: /\b(overseas|abroad|out of (the )?country)\b.{0,100}\b(bond|deposit|keys)\b/is,
     tip: "Never pay a bond or deposit for a rental you haven't inspected, especially to someone who says they're overseas and will post the keys. Real agents let you see the place first.",
   },
+  {
+    label: "Shows off big profits to lure you in",
+    regex: /\b(i|we) (made|earned|profited|turned)\b.{0,25}\$[\d,]+\b.{0,100}\b(platform|mentor|crypto|trading|investment|forex|dm me|message me|teach you)\b/is,
+    tip: "Messages that brag about big profits and invite you to get in touch are a common way into investment scams. Real investing doesn't start with a pitch from a stranger.",
+  },
 ];
 
 const shortenerDomains = ["bit.ly", "tinyurl.com", "t.co", "goo.gl", "ow.ly", "is.gd", "buff.ly"];
