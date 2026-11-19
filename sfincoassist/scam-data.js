@@ -157,6 +157,11 @@ const scamSignals = [
     regex: /\b(microsoft|windows|apple|norton|mcafee|antivirus)\b.{0,80}\b(support|helpdesk|technician)\b.{0,60}\b(call|phone)\b|\b(licen[cs]e|virus|infected|malware)\b.{0,60}\b(call|phone)\b.{0,40}\d/is,
     tip: "Microsoft, Apple and your internet provider don't contact you out of the blue about a virus or an expired licence. Don't call the number in the message. If you're worried, contact them yourself.",
   },
+  {
+    label: "Too-good-to-be-true job offer",
+    regex: /\b(earn|make)\b.{0,15}\$?\d[\d,]*\s*(a|per|\/)\s*(day|hour|week)\b.{0,80}\b(no experience|from home|liking|rating|reviews?)\b|\bno experience (needed|required|necessary)\b.{0,80}\b(earn|\$\d)/is,
+    tip: "Real jobs don't pay hundreds of dollars a day for liking videos or writing reviews. These offers usually lead to a request for money or personal details.",
+  },
 ];
 
 const shortenerDomains = ["bit.ly", "tinyurl.com", "t.co", "goo.gl", "ow.ly", "is.gd", "buff.ly"];
