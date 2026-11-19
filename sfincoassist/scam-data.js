@@ -172,6 +172,11 @@ const scamSignals = [
     regex: /\b(i|we) (made|earned|profited|turned)\b.{0,25}\$[\d,]+\b.{0,100}\b(platform|mentor|crypto|trading|investment|forex|dm me|message me|teach you)\b/is,
     tip: "Messages that brag about big profits and invite you to get in touch are a common way into investment scams. Real investing doesn't start with a pitch from a stranger.",
   },
+  {
+    label: "Asks you to scan a QR code to pay",
+    regex: /\bscan\b.{0,25}\bqr\b.{0,80}\b(fee|fine|penalty|overdue|unpaid)\b/is,
+    tip: "Scammers stick fake QR codes on notices and signs. If you're asked to pay a fine or fee by scanning one, go to the official website yourself instead.",
+  },
 ];
 
 const shortenerDomains = ["bit.ly", "tinyurl.com", "t.co", "goo.gl", "ow.ly", "is.gd", "buff.ly"];

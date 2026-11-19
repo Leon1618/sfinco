@@ -27,7 +27,7 @@ module.exports = [
   { scam: true, text: "You have been selected to win an iPhone 15. Claim now before it expires." },
   { scam: true, text: "I need $3,000 for a plane ticket so I can come and see you. I will pay you back, please keep this between us." },
   { scam: true, text: "You are eligible for a $5,000 government grant. Pay a $50 processing fee to release your funds." },
-  { scam: true, gap: true, text: "Parking fine notice: scan this QR code to pay the $45 fee today to avoid a late penalty." },
+  { scam: true, text: "Parking fine notice: scan this QR code to pay the $45 fee today to avoid a late penalty." },
   { scam: true, text: "ATO: you have an unpaid tax debt. A warrant has been issued. Pay now with gift cards." },
   { scam: true, text: "Hi Mum, I lost my phone, this is my new number. I need to pay a bill today but my banking app is locked. Can you transfer $850? Don't tell Dad yet." },
   { scam: true, text: "Hello dear, I am a widow with a large inheritance. Chat with me on Telegram instead of here and I will send you a share." },
@@ -83,4 +83,7 @@ module.exports = [
   { scam: false, text: "Rental inspection Saturday 10am. Bond and first week's rent are due on signing, I'll post you the keys after." },
   { scam: true, text: "I turned $500 into $9,000 in a month with this crypto trading group, message me to join." },
   { scam: false, text: "I made $200 at the markets selling jam, thanks for the jars!" },
+  { scam: true, text: "Scan the QR code on this notice to pay your speeding fine." },
+  { scam: false, text: "Parking is free at the surf club, scan the QR code at the gate to log in." },
+  { scam: false, text: "Scan the QR code on the menu to order, then pay at the table." },
 ];
