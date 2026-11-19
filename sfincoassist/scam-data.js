@@ -152,6 +152,11 @@ const scamSignals = [
     regex: /(?=.*(https?:\/\/|www\.|\b[a-z0-9][a-z0-9-]*\.(com|net|org|info|co|xyz|top|biz|online|site|link|click)\b))(?!.*\.(com|gov)\.au)(?=.*\b(parcel|package|delivery)\b.{0,60}\b(on hold|held|could not be delivered|failed|missed|reschedule|redeliver|redelivery|unpaid|attempted|rebook|re-book|nobody (was )?home|unable to deliver)\b)/is,
     tip: "Real couriers rarely ask you to reschedule or pay through a link in a text. Use the tracking number on their official website or app instead.",
   },
+  {
+    label: "Tech support asking you to call",
+    regex: /\b(microsoft|windows|apple|norton|mcafee|antivirus)\b.{0,80}\b(support|helpdesk|technician)\b.{0,60}\b(call|phone)\b|\b(licen[cs]e|virus|infected|malware)\b.{0,60}\b(call|phone)\b.{0,40}\d/is,
+    tip: "Microsoft, Apple and your internet provider don't contact you out of the blue about a virus or an expired licence. Don't call the number in the message. If you're worried, contact them yourself.",
+  },
 ];
 
 const shortenerDomains = ["bit.ly", "tinyurl.com", "t.co", "goo.gl", "ow.ly", "is.gd", "buff.ly"];
